@@ -7,3 +7,4 @@ data/problems/*.tmp
 data/images/
 data/images.json
 web/tsconfig.tsbuildinfo
+.env

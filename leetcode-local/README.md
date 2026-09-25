@@ -86,6 +86,27 @@ Then restart the server (or `POST /api/reload`).
 Optional: `pip install sortedcontainers` to get `SortedList` in Python like on
 LeetCode.
 
+## AI assistant (Azure OpenAI)
+
+The **✨ AI** tab on every problem gives you a coach that sees the statement, your
+current code and your latest run result: progressive **hints** (never the full
+answer), **explain problem**, **debug my code** (root-causes failing cases),
+**review solution** (complexity + improvements), **show solution**, and free
+chat. Responses stream in, and any code block can be inserted into the editor.
+
+It talks to an Azure OpenAI deployment through the Responses API. Put your
+credentials in `leetcode-local/.env` (git-ignored; see `.env.example`):
+
+```
+AZURE_OPENAI_ENDPOINT=https://<resource>.services.ai.azure.com   # or the full /openai/v1/responses URL
+AZURE_OPENAI_API_KEY=...
+AZURE_OPENAI_MODEL=<deployment name>
+AZURE_OPENAI_REASONING=low        # none | low | medium | high (reasoning models)
+```
+
+The key stays on the server; the browser only talks to `/api/ai/chat`. Chat
+history is kept per problem in your browser.
+
 ## Keyboard shortcuts
 
 | Keys | Action |

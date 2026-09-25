@@ -3,6 +3,9 @@ services:
     build: .
     ports:
       - "3000:3000"
+    env_file:
+      - path: .env
+        required: false
     volumes:
       # problem data + your progress live outside the container
       - ./data:/app/data

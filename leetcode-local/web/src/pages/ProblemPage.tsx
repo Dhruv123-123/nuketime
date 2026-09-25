@@ -4,8 +4,9 @@ import Editor from '@monaco-editor/react';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 import { api, JudgeResult, Language, Problem, Submission, TestResult } from '../api';
 import StatusIcon from '../components/StatusIcon';
+import AiPanel from '../components/AiPanel';
 
-type LeftTab = 'description' | 'submissions' | 'hints' | 'similar' | 'notes';
+type LeftTab = 'description' | 'ai' | 'submissions' | 'hints' | 'similar' | 'notes';
 type BottomTab = 'testcase' | 'result';
 
 const LS = {
@@ -166,13 +167,13 @@ export default function ProblemPage() {
         <Panel defaultSize={45} minSize={25}>
           <div className="h-full flex flex-col" style={{ background: 'var(--panel)' }}>
             <div className="flex border-b overflow-x-auto" style={{ borderColor: 'var(--border)' }}>
-              {(['description', 'submissions', 'hints', 'similar', 'notes'] as LeftTab[]).map(t => (
+              {(['description', 'ai', 'submissions', 'hints', 'similar', 'notes'] as LeftTab[]).map(t => (
                 <div key={t} className={`tab ${leftTab === t ? 'tab-active' : ''}`} onClick={() => setLeftTab(t)}>
-                  {t === 'description' ? '📄 Description' : t === 'submissions' ? '🕘 Submissions' : t === 'hints' ? `💡 Hints${problem.hints.length ? ` (${problem.hints.length})` : ''}` : t === 'similar' ? '🔗 Similar' : '📝 Notes'}
+                  {t === 'description' ? '📄 Description' : t === 'ai' ? '✨ AI' : t === 'submissions' ? '🕘 Submissions' : t === 'hints' ? `💡 Hints${problem.hints.length ? ` (${problem.hints.length})` : ''}` : t === 'similar' ? '🔗 Similar' : '📝 Notes'}
                 </div>
               ))}
             </div>
-            <div className="flex-1 overflow-auto p-4">
+            <div className={`flex-1 overflow-auto p-4 ${leftTab === 'ai' ? 'flex flex-col' : ''}`}>
               {leftTab === 'description' && (
                 <div>
                   <div className="flex items-start gap-2">
@@ -202,6 +203,7 @@ export default function ProblemPage() {
                   </div>
                 </div>
               )}
+              {leftTab === 'ai' && <AiPanel slug={problem.slug} lang={lang} code={code} lastResult={result} onInsertCode={c => { setCode(c); scheduleSave(c); }} />}
               {leftTab === 'submissions' && <SubmissionsTab subs={submissions} onLoad={s => { changeLang(s.lang); setCode(s.code); scheduleSave(s.code); }} />}
               {leftTab === 'hints' && (
                 <div className="space-y-3">

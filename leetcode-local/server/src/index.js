@@ -9,8 +9,14 @@ import { buildExampleTests, buildCustomTests, judgeSupport, isDesign } from './j
 import { LANGUAGE_LIST, getLanguage } from './judge/langs/index.js';
 import { problemFlags } from './judge/compare.js';
 import { STUDY_LISTS } from './lists.js';
+import { aiConfig, buildSystemPrompt, streamChat } from './ai.js';
+
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// Load .env from the project root (or the server dir) without a dependency.
+for (const f of [path.resolve(__dirname, '../../.env'), path.resolve(__dirname, '../.env')]) {
+  try { process.loadEnvFile(f); break; } catch { /* no .env there */ }
+}
 const PORT = Number(process.env.PORT || 3000);
 const app = express();
 app.use(express.json({ limit: '2mb' }));
@@ -110,6 +116,30 @@ async function judgeRequest(req, res, isSubmit) {
 }
 app.post('/api/problems/:slug/run', (req, res) => judgeRequest(req, res, false));
 app.post('/api/problems/:slug/submit', (req, res) => judgeRequest(req, res, true));
+
+// ---------- AI assistant ----------
+app.get('/api/ai/status', (req, res) => { const c = aiConfig(); res.json({ configured: c.configured, model: c.model, reasoning: c.reasoning }); });
+
+app.post('/api/ai/chat', async (req, res) => {
+  const { slug, lang = 'python3', code = '', mode = 'chat', messages = [], lastResult = null, hintLevel = 1 } = req.body || {};
+  const p = getProblem(slug);
+  if (!p) return res.status(404).json({ error: 'not found' });
+  if (!Array.isArray(messages) || !messages.length) return res.status(400).json({ error: 'messages required' });
+  res.setHeader('Content-Type', 'text/event-stream');
+  res.setHeader('Cache-Control', 'no-cache');
+  res.setHeader('X-Accel-Buffering', 'no');
+  res.flushHeaders?.();
+  const send = obj => res.write(`data: ${JSON.stringify(obj)}\n\n`);
+  const ac = new AbortController();
+  res.on('close', () => { if (!res.writableFinished) ac.abort(); });
+  try {
+    const system = buildSystemPrompt({ problem: p, lang, code, mode, lastResult, hintLevel });
+    for await (const ev of streamChat({ system, messages, signal: ac.signal })) send(ev);
+  } catch (e) {
+    if (!ac.signal.aborted) send({ error: e.message });
+  }
+  res.end();
+});
 
 // ---------- misc ----------
 app.get('/api/tags', (req, res) => res.json(getTags()));

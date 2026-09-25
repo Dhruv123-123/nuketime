@@ -68,5 +68,22 @@ export const api = {
   stats: () => j<Stats>('/api/stats'),
   recent: () => j<ProblemRow[]>('/api/recent'),
   settings: () => j<Settings>('/api/settings'),
+  aiStatus: () => j<{ configured: boolean; model: string }>('/api/ai/status'),
+  /** Streams server-sent events from the AI endpoint; onEvent receives {delta}|{done}|{error}. */
+  aiChat: async (body: Record<string, unknown>, onEvent: (ev: { delta?: string; done?: boolean; error?: string }) => void, signal?: AbortSignal) => {
+    const r = await fetch('/api/ai/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal });
+    if (!r.ok || !r.body) { let msg = r.statusText; try { msg = (await r.json()).error || msg; } catch { /* ignore */ } throw new Error(msg); }
+    const reader = r.body.getReader(); const dec = new TextDecoder(); let buf = '';
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      let i: number;
+      while ((i = buf.indexOf('\n\n')) >= 0) {
+        const line = buf.slice(0, i).trim(); buf = buf.slice(i + 2);
+        if (line.startsWith('data:')) { try { onEvent(JSON.parse(line.slice(5))); } catch { /* skip */ } }
+      }
+    }
+  },
   saveSettings: (patch: Partial<Settings>) => j<Settings>('/api/settings', { method: 'PUT', body: JSON.stringify(patch) }),
 };
