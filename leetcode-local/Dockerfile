@@ -21,9 +21,11 @@ RUN npm run build
 ARG FETCH_IMAGES=0
 RUN if [ "$FETCH_IMAGES" = "1" ]; then python3 scraper/fetch_images.py; fi
 
-# Run as an unprivileged user; user data lives on a volume mounted at /data.
+# Run as an unprivileged user by default; user data lives on a volume mounted at /data.
+# Some hosts mount volumes root-only (Azure Files): build with --build-arg APP_USER=root there.
+ARG APP_USER=app
 RUN useradd -m app && mkdir -p /data && chown -R app:app /app /data
-USER app
+USER ${APP_USER}
 
 ENV NODE_ENV=production \
     PORT=3000 \
