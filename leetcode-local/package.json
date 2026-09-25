@@ -1,0 +1,18 @@
+{
+  "name": "leetcode-local",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A self-hosted LeetCode clone: scraped problems, Monaco editor, local judge for Python/JS/TS/C++/Java.",
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,green \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -w web",
+    "start": "npm run start -w server",
+    "scrape": "python3 scraper/scrape.py --resume",
+    "test": "npm test -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": { "node": ">=20" }
+}

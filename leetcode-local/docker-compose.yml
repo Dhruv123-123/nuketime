@@ -1,0 +1,9 @@
+services:
+  leetcode-local:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      # problem data + your progress live outside the container
+      - ./data:/app/data
+    restart: unless-stopped

@@ -1,0 +1,9 @@
+node_modules/
+web/dist/
+data/user/
+data/problems/*.tmp
+*.log
+.DS_Store
+data/images/
+data/images.json
+web/tsconfig.tsbuildinfo
