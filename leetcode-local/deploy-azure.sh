@@ -4,6 +4,9 @@
 # Usage: APP_PASSWORD=... AZURE_OPENAI_API_KEY=... ./deploy-azure.sh
 set -euo pipefail
 
+command -v az >/dev/null || { echo "Install the Azure CLI first: https://aka.ms/installazurecli"; exit 1; }
+az account show >/dev/null 2>&1 || { echo "Run: az login"; exit 1; }
+
 RG="${RG:-leetcode-local-rg}"
 LOC="${LOC:-eastus}"
 ACR="${ACR:-lclocal$RANDOM}"          # must be globally unique, lowercase
@@ -19,7 +22,8 @@ az extension add --name containerapp --upgrade -y >/dev/null
 az group create -n "$RG" -l "$LOC" >/dev/null
 az acr create -n "$ACR" -g "$RG" --sku Basic --admin-enabled true >/dev/null
 echo "Building image in ACR..."
-az acr build -r "$ACR" -t leetcode-local:latest "$(dirname "$0")"
+# APP_USER=root: Azure Files SMB mounts are root-owned, so the app must run as root to write /data.
+az acr build -r "$ACR" -t leetcode-local:latest --build-arg APP_USER=root "$(dirname "$0")"
 
 echo "Creating persistent storage for /data..."
 az storage account create -n "$STORAGE" -g "$RG" -l "$LOC" --sku Standard_LRS >/dev/null
@@ -35,9 +39,9 @@ az containerapp create -n "$APP" -g "$RG" --environment "$ENV_NAME" \
   --image "$ACR.azurecr.io/leetcode-local:latest" \
   --registry-server "$ACR.azurecr.io" --registry-username "$ACR" --registry-password "$ACR_PW" \
   --target-port 3000 --ingress external --cpu 1 --memory 2Gi --min-replicas 0 --max-replicas 1 \
-  --secrets "appPassword=$APP_PASSWORD" "aiKey=$AZURE_OPENAI_API_KEY" \
-  --env-vars NODE_ENV=production LC_USER_DIR=/data APP_PASSWORD=secretref:appPassword \
-             AZURE_OPENAI_ENDPOINT="$AZURE_OPENAI_ENDPOINT" AZURE_OPENAI_API_KEY=secretref:aiKey \
+  --secrets "app-password=$APP_PASSWORD" "ai-key=$AZURE_OPENAI_API_KEY" \
+  --env-vars NODE_ENV=production LC_USER_DIR=/data APP_PASSWORD=secretref:app-password \
+             AZURE_OPENAI_ENDPOINT="$AZURE_OPENAI_ENDPOINT" AZURE_OPENAI_API_KEY=secretref:ai-key \
              AZURE_OPENAI_MODEL="$AZURE_OPENAI_MODEL" AZURE_OPENAI_REASONING=low >/dev/null
 
 # Mount the file share at /data (needs a YAML patch).
@@ -52,4 +56,5 @@ t['containers'][0]['volumeMounts'] = [{'volumeName': 'lcdata', 'mountPath': '/da
 json.dump(d, open(p, 'w'))
 PY
 az containerapp update -n "$APP" -g "$RG" --yaml "$TMP" >/dev/null
-echo "Deployed: https://$(az containerapp show -n "$APP" -g "$RG" --query properties.configuration.ingress.fqdn -o tsv)"
+echo
+echo "Deployed. Open: https://$(az containerapp show -n "$APP" -g "$RG" --query properties.configuration.ingress.fqdn -o tsv)"
