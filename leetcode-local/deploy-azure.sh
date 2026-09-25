@@ -67,7 +67,7 @@ az containerapp create -n "$APP" -g "$RG" --environment "$ENV_NAME" \
              AZURE_OPENAI_MODEL="$AZURE_OPENAI_MODEL" AZURE_OPENAI_REASONING=low >/dev/null
 
 # Mount the file share at /data (needs a YAML patch).
-TMP=$(mktemp --suffix .json)
+TMP=$(mktemp)   # BSD/macOS mktemp has no --suffix; az accepts JSON via --yaml
 az containerapp show -n "$APP" -g "$RG" -o json > "$TMP"
 python3 - "$TMP" <<'PY'
 import sys, json
