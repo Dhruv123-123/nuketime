@@ -18,7 +18,12 @@ STORAGE="${STORAGE:-lcdata$RANDOM}"
 AZURE_OPENAI_ENDPOINT="${AZURE_OPENAI_ENDPOINT:?set AZURE_OPENAI_ENDPOINT}"
 AZURE_OPENAI_MODEL="${AZURE_OPENAI_MODEL:?set AZURE_OPENAI_MODEL}"
 
-az extension add --name containerapp --upgrade -y >/dev/null
+az extension add --name containerapp --upgrade -y >/dev/null 2>&1 || true
+
+echo "Registering resource providers (a new subscription needs this once; takes a minute)..."
+for ns in Microsoft.ContainerRegistry Microsoft.App Microsoft.OperationalInsights Microsoft.Storage; do
+  az provider register --namespace "$ns" --wait >/dev/null
+done
 az group create -n "$RG" -l "$LOC" >/dev/null
 az acr create -n "$ACR" -g "$RG" --sku Basic --admin-enabled true >/dev/null
 echo "Building image in ACR..."
