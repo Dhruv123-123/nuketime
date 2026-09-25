@@ -32,17 +32,20 @@ export function cppDriver(spec) {
   L.push('    lc::begin(__i); auto __t0 = std::chrono::steady_clock::now();');
   L.push('    try {');
   if (isDesign(spec)) {
-    const ctor = spec.ctorTypes.map((t, k) => `lc::from<${cppType(t)}>(__args[0][${k}])`).join(', ');
+    // Materialize every argument into a named local first: LeetCode's C++ signatures take
+    // non-const references (vector<int>& nums), which cannot bind to temporaries.
     L.push('      const auto& __ops = __tests[__i]["ops"].arr(); const auto& __args = __tests[__i]["args"].arr();');
-    L.push(`      ${spec.classname}* __obj = new ${spec.classname}(${ctor});`);
+    spec.ctorTypes.forEach((t, k) => L.push(`      ${cppType(t)} __c${k} = lc::from<${cppType(t)}>(__args[0][${k}]);`));
+    L.push(`      ${spec.classname}* __obj = new ${spec.classname}(${spec.ctorTypes.map((_, k) => `__c${k}`).join(', ')});`);
     L.push('      std::string __out = "[null";');
     L.push('      for (size_t __j = 1; __j < __ops.size(); ++__j) {');
     L.push('        const std::string& __op = __ops[__j].str(); const auto& __a = __args[__j];');
     L.push('        __out += ",";');
     let first = true;
     for (const [name, m] of Object.entries(spec.methods)) {
-      const call = `__obj->${name}(${m.params.map((t, k) => `lc::from<${cppType(t)}>(__a[${k}])`).join(', ')})`;
-      L.push(`        ${first ? '' : 'else '}if (__op == "${name}") { ${m.return === 'void' ? `${call}; __out += "null";` : `__out += lc::dump(${call});`} }`);
+      const locals = m.params.map((t, k) => `${cppType(t)} __m${k} = lc::from<${cppType(t)}>(__a[${k}]);`).join(' ');
+      const call = `__obj->${name}(${m.params.map((_, k) => `__m${k}`).join(', ')})`;
+      L.push(`        ${first ? '' : 'else '}if (__op == "${name}") { ${locals} ${m.return === 'void' ? `${call}; __out += "null";` : `__out += lc::dump(${call});`} }`);
       first = false;
     }
     L.push('        else { __out += "null"; }');

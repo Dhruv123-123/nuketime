@@ -87,6 +87,14 @@ for (const [slug, sols] of Object.entries(SOLUTIONS)) {
   }
 }
 
+test('C++ design class with vector& constructor argument compiles and runs', async () => {
+  const problem = getProblem('shuffle-an-array');
+  const code = 'class Solution {\n    vector<int> orig;\npublic:\n    Solution(vector<int>& nums) : orig(nums) {}\n    vector<int> reset() { return orig; }\n    vector<int> shuffle() { return orig; }\n};';
+  const r = await runJudge({ problem, langId: 'cpp', code, tests: buildExampleTests(problem) });
+  assert.notEqual(r.status, 'Compile Error', r.compileError);
+  assert.deepEqual(r.tests[0].output[2], [1, 2, 3]);
+});
+
 test('wrong answer is detected', async () => {
   const problem = getProblem('two-sum');
   const r = await runJudge({ problem, langId: 'python3', code: 'class Solution:\n    def twoSum(self, nums, target):\n        return [0, 0]\n', tests: buildExampleTests(problem) });

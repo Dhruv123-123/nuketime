@@ -69,7 +69,7 @@ export async function runJudge({ problem, langId, code, tests }) {
       const c = await exec(prep.compile, { cwd: dir, timeoutMs: 60000 });
       if (c.code !== 0) {
         if (c.code === -1) return { status: 'Judge Error', tests: [], message: c.stderr.trim() };
-        return { status: 'Compile Error', compileError: (c.stdout + c.stderr).slice(0, 8000).replace(new RegExp(dir.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), ''), tests: [] };
+        return { status: 'Compile Error', compileError: (c.stdout + c.stderr).split('\n').filter(l => !l.startsWith('Picked up JAVA_TOOL_OPTIONS')).join('\n').slice(0, 8000).replace(new RegExp(dir.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), ''), tests: [] };
       }
     }
     const timeoutMs = lang.timeLimitMs + 1500 * tests.length;
