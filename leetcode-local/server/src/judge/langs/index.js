@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 import { isDesign } from '../testcases.js';
 import { cppDriver } from './cpp.js';
 import { javaDriver } from './java.js';
@@ -33,7 +34,23 @@ export function buildSpec(meta, tests) {
   };
 }
 
-const SH = (script) => ({ cmd: 'sh', args: ['-c', script] });
+const WIN = process.platform === 'win32';
+
+/** Pick the Python executable once (python3 on POSIX, often just `python` on Windows). */
+function detectPython() {
+  for (const c of [process.env.LC_PYTHON, 'python3', 'python'].filter(Boolean)) {
+    try { const r = spawnSync(c, ['--version'], { encoding: 'utf8' }); if (r.status === 0 && /Python 3/.test(r.stdout + r.stderr)) return c; } catch { /* next */ }
+  }
+  return 'python3';
+}
+export const PYTHON = detectPython();
+
+/**
+ * Build a run command. On POSIX we raise the stack limit (deep recursion is normal in
+ * these problems) through a tiny sh wrapper; on Windows we spawn the program directly.
+ */
+const RUN = (cmd, args) => (WIN ? { cmd, args } : { cmd: 'sh', args: ['-c', 'ulimit -s unlimited 2>/dev/null || ulimit -s 1048576 2>/dev/null; exec "$0" "$@"', cmd, ...args] });
+const COMPILE = (cmd, args) => ({ cmd, args });
 
 export const LANGUAGES = {
   python3: {
@@ -42,7 +59,7 @@ export const LANGUAGES = {
     prepare(code, spec) {
       return {
         files: [{ name: 'main.py', content: read('prelude.py') + '\n' + code + '\n' + read('driver.py') }],
-        run: SH('ulimit -s unlimited 2>/dev/null; exec python3 main.py'),
+        run: RUN(PYTHON, ['main.py']),
       };
     },
   },
@@ -52,7 +69,7 @@ export const LANGUAGES = {
     prepare(code, spec) {
       return {
         files: [{ name: 'main.js', content: read('prelude.js') + code + '\n' + read('driver.js') }],
-        run: SH('ulimit -s unlimited 2>/dev/null || ulimit -s 1048576 2>/dev/null; exec node --stack-size=65500 main.js'),
+        run: RUN(process.execPath, ['--stack-size=65500', 'main.js']),
       };
     },
   },
@@ -66,7 +83,7 @@ export const LANGUAGES = {
       const driver = read('driver.js').replace('const fs = require', "const fs = require");
       return {
         files: [{ name: 'main.ts', content: '// @ts-nocheck\n' + prelude + code + '\n' + driver }],
-        run: SH('ulimit -s unlimited 2>/dev/null || ulimit -s 1048576 2>/dev/null; exec node --stack-size=65500 --experimental-strip-types --no-warnings main.ts'),
+        run: RUN(process.execPath, ['--stack-size=65500', '--experimental-strip-types', '--no-warnings', 'main.ts']),
       };
     },
   },
@@ -79,8 +96,8 @@ export const LANGUAGES = {
           { name: 'lc.hpp', content: read('lc.hpp') },
           { name: 'main.cpp', content: '#include "lc.hpp"\n// ---- your solution ----\n' + code + '\n' + cppDriver(spec) },
         ],
-        compile: SH('g++ -std=c++20 -O2 -o main main.cpp 2>&1'),
-        run: SH('ulimit -s unlimited 2>/dev/null; exec ./main'),
+        compile: COMPILE('g++', ['-std=c++20', '-O2', '-o', 'main', 'main.cpp']),
+        run: RUN(WIN ? 'main.exe' : './main', []),
       };
     },
   },
@@ -90,8 +107,8 @@ export const LANGUAGES = {
     prepare(code, spec) {
       return {
         files: [{ name: 'Main.java', content: read('Main.java.tmpl').replace('/*__USER_CODE__*/', code).replace('/*__DRIVER__*/', javaDriver(spec)) }],
-        compile: SH('javac -Xlint:none -encoding UTF-8 Main.java 2>&1'),
-        run: SH('exec java -Xss512m -XX:+UseSerialGC -XX:TieredStopAtLevel=1 -Dfile.encoding=UTF-8 Main'),
+        compile: COMPILE('javac', ['-Xlint:none', '-encoding', 'UTF-8', 'Main.java']),
+        run: { cmd: 'java', args: ['-Xss512m', '-XX:+UseSerialGC', '-XX:TieredStopAtLevel=1', '-Dfile.encoding=UTF-8', 'Main'] },
       };
     },
   },

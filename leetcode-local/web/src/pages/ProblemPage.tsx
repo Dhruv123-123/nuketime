@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Editor from '@monaco-editor/react';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
@@ -306,16 +306,16 @@ function SubmissionsTab({ subs, onLoad }: { subs: Submission[]; onLoad: (s: Subm
       <thead><tr className="text-xs text-gray-400 text-left"><th className="py-1">Status</th><th>Language</th><th>Runtime</th><th>When</th><th /></tr></thead>
       <tbody>
         {subs.map(s => (
-          <>
-            <tr key={s.id} className="border-t cursor-pointer hover:bg-[#2f2f2f]" style={{ borderColor: 'var(--border)' }} onClick={() => setOpen(open === s.id ? null : s.id)}>
+          <Fragment key={s.id}>
+            <tr className="border-t cursor-pointer hover:bg-[#2f2f2f]" style={{ borderColor: 'var(--border)' }} onClick={() => setOpen(open === s.id ? null : s.id)}>
               <td className="py-2 font-medium" style={{ color: statusColor(s.status) }}>{s.status}<div className="text-[11px] text-gray-400 font-normal">{s.passed}/{s.total} cases</div></td>
               <td>{s.lang}</td>
               <td>{s.runtimeMs != null ? `${s.runtimeMs < 1 ? '<1' : Math.round(s.runtimeMs)} ms` : '—'}</td>
               <td className="text-gray-400 text-xs">{new Date(s.at).toLocaleString()}</td>
               <td><button className="btn btn-ghost !py-0.5 text-xs" onClick={e => { e.stopPropagation(); onLoad(s); }}>Load</button></td>
             </tr>
-            {open === s.id && <tr key={s.id + 'c'}><td colSpan={5}><pre className="mono text-xs p-3 rounded overflow-auto max-h-80" style={{ background: '#1e1e1e' }}>{s.code}</pre></td></tr>}
-          </>
+            {open === s.id && <tr><td colSpan={5}><pre className="mono text-xs p-3 rounded overflow-auto max-h-80" style={{ background: '#1e1e1e' }}>{s.code}</pre></td></tr>}
+          </Fragment>
         ))}
       </tbody>
     </table>

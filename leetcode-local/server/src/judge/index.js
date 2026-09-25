@@ -15,13 +15,13 @@ const MAX_STDOUT = 8000;
 
 function exec({ cmd, args }, { cwd, input, timeoutMs, env }) {
   return new Promise(resolve => {
-    const child = spawn(cmd, args, { cwd, env: { ...process.env, ...env }, stdio: ['pipe', 'pipe', 'pipe'] });
+    const child = spawn(cmd, args, { cwd, env: { ...process.env, ...env }, stdio: ['pipe', 'pipe', 'pipe'], detached: process.platform !== 'win32' });
     let stdout = '', stderr = '', killed = false;
     const t0 = Date.now();
     const timer = setTimeout(() => { killed = true; try { process.kill(-child.pid, 'SIGKILL'); } catch { /* */ } try { child.kill('SIGKILL'); } catch { /* */ } }, timeoutMs);
     child.stdout.on('data', d => { if (stdout.length < 2_000_000) stdout += d; });
     child.stderr.on('data', d => { if (stderr.length < 200_000) stderr += d; });
-    child.on('error', e => { clearTimeout(timer); resolve({ code: -1, stdout, stderr: stderr + '\n' + e.message, killed, ms: Date.now() - t0 }); });
+    child.on('error', e => { clearTimeout(timer); const msg = e.code === 'ENOENT' ? `Cannot find \`${cmd}\` on this machine. Install it (see README) or use the Docker setup.` : e.message; resolve({ code: -1, stdout, stderr: stderr + '\n' + msg, killed, ms: Date.now() - t0 }); });
     child.on('close', (code, signal) => { clearTimeout(timer); resolve({ code, signal, stdout, stderr, killed, ms: Date.now() - t0 }); });
     if (input != null) { child.stdin.on('error', () => {}); child.stdin.end(input); } else child.stdin.end();
   });
@@ -68,6 +68,7 @@ export async function runJudge({ problem, langId, code, tests }) {
     if (prep.compile) {
       const c = await exec(prep.compile, { cwd: dir, timeoutMs: 60000 });
       if (c.code !== 0) {
+        if (c.code === -1) return { status: 'Judge Error', tests: [], message: c.stderr.trim() };
         return { status: 'Compile Error', compileError: (c.stdout + c.stderr).slice(0, 8000).replace(new RegExp(dir.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), ''), tests: [] };
       }
     }
