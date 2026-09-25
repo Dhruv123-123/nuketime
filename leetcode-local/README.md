@@ -107,6 +107,62 @@ AZURE_OPENAI_REASONING=low        # none | low | medium | high (reasoning models
 The key stays on the server; the browser only talks to `/api/ai/chat`. Chat
 history is kept per problem in your browser.
 
+## Hosting it online
+
+The judge compiles and runs code and keeps state on disk, so it needs a real
+container with a persistent volume, not a serverless platform (Vercel/Netlify
+won't work). The `Dockerfile` runs anywhere; three ready-made routes:
+
+**Always set `APP_PASSWORD`** when the app is reachable from the internet. It
+turns on a login prompt (user `admin`, or `APP_USER`). Without it anyone who
+finds the URL can execute code on your container and spend your Azure credits.
+
+| Env var | Purpose |
+| --- | --- |
+| `APP_PASSWORD` / `APP_USER` | login gate (required online) |
+| `LC_USER_DIR` | where progress/submissions are stored; point it at the mounted volume (`/data`) |
+| `AZURE_OPENAI_*` | AI assistant (see above) |
+| `PORT` | listening port (default 3000) |
+
+### Render (easiest, one click)
+
+1. Push this repo to GitHub. In Render choose **New + → Blueprint** and pick
+   the repo; it reads `render.yaml` at the repo root.
+2. When prompted, fill in `APP_PASSWORD` and the `AZURE_OPENAI_*` values.
+3. Deploy. You get `https://leetcode-local-xxxx.onrender.com` with a 1 GB disk
+   mounted at `/data` for your progress. Persistent disks need the paid
+   Starter instance (~$7/mo); the free tier works too if you drop the `disk:`
+   block and accept losing progress on each redeploy.
+
+### Fly.io
+
+```bash
+cd leetcode-local
+fly launch --copy-config --no-deploy        # uses fly.toml; pick a unique app name
+fly volumes create lc_data --size 1
+fly secrets set APP_PASSWORD=... AZURE_OPENAI_ENDPOINT=... AZURE_OPENAI_API_KEY=... AZURE_OPENAI_MODEL=gpt-5.6-luna
+fly deploy
+```
+
+Machines auto-stop when idle, so a single 1 GB machine costs a couple of
+dollars a month at most.
+
+### Azure Container Apps (you already have Azure)
+
+```bash
+cd leetcode-local
+az login
+APP_PASSWORD=... AZURE_OPENAI_ENDPOINT=... AZURE_OPENAI_API_KEY=... AZURE_OPENAI_MODEL=gpt-5.6-luna ./deploy-azure.sh
+```
+
+The script builds the image in Azure Container Registry (no local Docker
+needed), creates a Container Apps environment with an Azure Files share
+mounted at `/data`, and prints the public HTTPS URL. Scale-to-zero is enabled.
+
+Railway, Google Cloud Run, DigitalOcean App Platform and any VPS with Docker
+work the same way: build the `Dockerfile` in `leetcode-local/`, expose port
+3000, mount a volume at `/data`, set the env vars above.
+
 ## Keyboard shortcuts
 
 | Keys | Action |

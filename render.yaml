@@ -1,0 +1,30 @@
+# Render Blueprint: New + > Blueprint > pick this repo. Fill in the env vars when prompted.
+services:
+  - type: web
+    name: leetcode-local
+    runtime: docker
+    plan: starter            # persistent disks need a paid instance
+    rootDir: leetcode-local
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true
+    disk:
+      name: lc-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: LC_USER_DIR
+        value: /data
+      - key: NODE_ENV
+        value: production
+      - key: APP_PASSWORD
+        sync: false          # set in the dashboard; required when public
+      - key: AZURE_OPENAI_ENDPOINT
+        sync: false
+      - key: AZURE_OPENAI_API_KEY
+        sync: false
+      - key: AZURE_OPENAI_MODEL
+        sync: false
+      - key: AZURE_OPENAI_REASONING
+        value: low

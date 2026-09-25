@@ -7,6 +7,6 @@ services:
       - path: .env
         required: false
     volumes:
-      # problem data + your progress live outside the container
-      - ./data:/app/data
+      # your progress, drafts, submissions and notes
+      - ./data/user:/data
     restart: unless-stopped

@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DATA_DIR } from './problems.js';
 
-const USER_DIR = path.join(DATA_DIR, 'user');
+// Persistent user state. Point LC_USER_DIR at a mounted volume when hosting online.
+const USER_DIR = process.env.LC_USER_DIR ? path.resolve(process.env.LC_USER_DIR) : path.join(DATA_DIR, 'user');
 const PROGRESS = path.join(USER_DIR, 'progress.json');
 const SUBS_DIR = path.join(USER_DIR, 'submissions');
 const DRAFTS_DIR = path.join(USER_DIR, 'drafts');

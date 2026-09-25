@@ -19,6 +19,28 @@ for (const f of [path.resolve(__dirname, '../../.env'), path.resolve(__dirname, 
 }
 const PORT = Number(process.env.PORT || 3000);
 const app = express();
+app.set('trust proxy', true);
+
+// ---------- optional password gate (set APP_PASSWORD when exposing this to the internet) ----------
+// Anyone who can reach the app can run code on this machine and use your AI key, so
+// never host it publicly without a password.
+const APP_PASSWORD = process.env.APP_PASSWORD || '';
+const APP_USER = process.env.APP_USER || 'admin';
+app.get('/api/health', (req, res) => res.json({ ok: true, problems: allProblems().length, uptime: Math.round(process.uptime()) }));
+if (APP_PASSWORD) {
+  app.use((req, res, next) => {
+    const h = req.headers.authorization || '';
+    if (h.startsWith('Basic ')) {
+      const [u, ...rest] = Buffer.from(h.slice(6), 'base64').toString('utf8').split(':');
+      if (u === APP_USER && rest.join(':') === APP_PASSWORD) return next();
+    }
+    res.setHeader('WWW-Authenticate', 'Basic realm="leetcode-local", charset="UTF-8"');
+    res.status(401).send('Authentication required');
+  });
+} else if (process.env.NODE_ENV === 'production') {
+  console.warn('[security] APP_PASSWORD is not set: anyone who can reach this server can run code and use your AI key.');
+}
+
 app.use(express.json({ limit: '2mb' }));
 app.use('/images', express.static(path.join(DATA_DIR, 'images'), { maxAge: '30d' }));
 
