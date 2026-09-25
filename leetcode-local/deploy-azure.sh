@@ -9,10 +9,8 @@ az account show >/dev/null 2>&1 || { echo "Run: az login"; exit 1; }
 
 RG="${RG:-leetcode-local-rg}"
 LOC="${LOC:-eastus}"
-ACR="${ACR:-lclocal$RANDOM}"          # must be globally unique, lowercase
 ENV_NAME="${ENV_NAME:-leetcode-local-env}"
 APP="${APP:-leetcode-local}"
-STORAGE="${STORAGE:-lcdata$RANDOM}"
 : "${APP_PASSWORD:?set APP_PASSWORD}"
 : "${AZURE_OPENAI_API_KEY:?set AZURE_OPENAI_API_KEY}"
 AZURE_OPENAI_ENDPOINT="${AZURE_OPENAI_ENDPOINT:?set AZURE_OPENAI_ENDPOINT}"
@@ -25,21 +23,40 @@ for ns in Microsoft.ContainerRegistry Microsoft.App Microsoft.OperationalInsight
   az provider register --namespace "$ns" --wait >/dev/null
 done
 az group create -n "$RG" -l "$LOC" >/dev/null
-az acr create -n "$ACR" -g "$RG" --sku Basic --admin-enabled true >/dev/null
-echo "Building image in ACR..."
-# APP_USER=root: Azure Files SMB mounts are root-owned, so the app must run as root to write /data.
-az acr build -r "$ACR" -t leetcode-local:latest --build-arg APP_USER=root "$(dirname "$0")"
+
+# Reuse a registry already in the resource group (reruns), otherwise create one.
+ACR="${ACR:-$(az acr list -g "$RG" --query '[0].name' -o tsv 2>/dev/null || true)}"
+if [ -z "$ACR" ]; then
+  ACR="lclocal$RANDOM"                 # must be globally unique, lowercase
+  az acr create -n "$ACR" -g "$RG" --sku Basic --admin-enabled true >/dev/null
+fi
+if [ "${REBUILD:-0}" = "1" ] || ! az acr repository show -n "$ACR" --image leetcode-local:latest >/dev/null 2>&1; then
+  echo "Building image in ACR $ACR..."
+  # APP_USER=root: Azure Files SMB mounts are root-owned, so the app must run as root to write /data.
+  az acr build -r "$ACR" -t leetcode-local:latest --build-arg APP_USER=root "$(dirname "$0")"
+else
+  echo "Image already in $ACR (set REBUILD=1 to rebuild)."
+fi
 
 echo "Creating persistent storage for /data..."
-az storage account create -n "$STORAGE" -g "$RG" -l "$LOC" --sku Standard_LRS >/dev/null
+STORAGE="${STORAGE:-$(az storage account list -g "$RG" --query '[0].name' -o tsv 2>/dev/null || true)}"
+if [ -z "$STORAGE" ]; then
+  STORAGE="lcdata$RANDOM"
+  az storage account create -n "$STORAGE" -g "$RG" -l "$LOC" --sku Standard_LRS >/dev/null
+fi
 KEY=$(az storage account keys list -n "$STORAGE" -g "$RG" --query '[0].value' -o tsv)
-az storage share-rm create --storage-account "$STORAGE" -n lcdata --quota 1 >/dev/null
+az storage share-rm create --storage-account "$STORAGE" -g "$RG" -n lcdata --quota 1 >/dev/null 2>&1 || true
 
-az containerapp env create -n "$ENV_NAME" -g "$RG" -l "$LOC" >/dev/null
+echo "Creating Container Apps environment..."
+az containerapp env show -n "$ENV_NAME" -g "$RG" >/dev/null 2>&1 || az containerapp env create -n "$ENV_NAME" -g "$RG" -l "$LOC" >/dev/null
 az containerapp env storage set -n "$ENV_NAME" -g "$RG" --storage-name lcdata \
   --azure-file-account-name "$STORAGE" --azure-file-account-key "$KEY" --azure-file-share-name lcdata --access-mode ReadWrite >/dev/null
 
+echo "Creating the app..."
 ACR_PW=$(az acr credential show -n "$ACR" --query 'passwords[0].value' -o tsv)
+if az containerapp show -n "$APP" -g "$RG" >/dev/null 2>&1; then
+  az containerapp delete -n "$APP" -g "$RG" --yes >/dev/null   # recreate with fresh config
+fi
 az containerapp create -n "$APP" -g "$RG" --environment "$ENV_NAME" \
   --image "$ACR.azurecr.io/leetcode-local:latest" \
   --registry-server "$ACR.azurecr.io" --registry-username "$ACR" --registry-password "$ACR_PW" \
