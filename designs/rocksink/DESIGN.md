@@ -169,8 +169,10 @@ all water supplies, no operator action, ever.
   moved on day 1).
 
 Figures: `figures/fig1_timeseries.png` (loads, temperatures, capacity margin),
-`figures/fig2_rockfield.png` (rock temperature on a vertical section and a plan at 44 m
-depth at days 1, 7, 30 and 365), `figures/schematic.svg`.
+`figures/fig2_rockfield.png` (rock temperature on a vertical section and a plan at 36 m
+depth at days 1, 7, 30 and 365; after day 1 the gas front closes the upper condensers
+and the load concentrates on the lower 40 m; by a year the ring volume is a uniform
+50 to 58 °C and the warm zone reaches about 40 m from the axis), `figures/schematic.svg`.
 
 ## 6. Sensitivity
 

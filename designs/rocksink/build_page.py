@@ -166,7 +166,7 @@ a {{ color:var(--accent); }}
 <li>From day 3 on, heat into rock equals heat generated. The gas front throttles the array to hold the jacket in the 50 to 60 °C band, and the field never approaches saturation: the year-1 load of 0.14 MW is 2 % of what the array moved on day 1.</li>
 </ul>
 <figure><img src="{fig1}" alt="Three panels: heat flows, temperatures, and thermosyphon capacity margin versus time after scram on a log axis from minutes to three years"><figcaption>Loads, temperatures and capacity margin from scram to three years. The rock line in the top panel starts when the gas front opens at 45 °C; from about day 3 it tracks the decay curve exactly.</figcaption></figure>
-{'<figure><img src="' + fig2 + '" alt="Rock temperature maps on a vertical section and a horizontal plan at days 1, 7, 30 and 365"><figcaption>Rock temperature on a vertical section through the shaft axis (top) and a plan at 44 m depth (bottom). Dashed: the shaft; solid: the containment jacket. The warm region stays within about 30 m of the shaft after a year.</figcaption></figure>' if fig2 else ''}
+{'<figure><img src="' + fig2 + '" alt="Rock temperature maps on a vertical section and a horizontal plan at days 1, 7, 30 and 365"><figcaption>Rock temperature on a vertical section through the shaft axis (top) and a plan at 36 m depth (bottom). Dashed: the shaft; solid: the containment jacket. After day 1 the gas front closes the upper condensers and the load concentrates on the lower 40 m; by a year the ring volume is a uniform 50 to 58 °C and the warm zone reaches about 40 m from the axis. The field uses a coarsened load history, accurate to about 3 K.</figcaption></figure>' if fig2 else ''}
 
 <h2><span class="num">05</span>Sensitivity</h2>
 <div class="tablewrap"><table>
