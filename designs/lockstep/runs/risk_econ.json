@@ -1,0 +1,141 @@
+{
+ "cdf": {
+  "baseline": 3.1815e-06,
+  "islanding": 6.489e-07,
+  "dc_ac": 9.975e-08,
+  "both": 1.6589999999999998e-08
+ },
+ "detail": {
+  "baseline": {
+   "plant_centered": {
+    "f_loop": 0.0025,
+    "f_eff": 0.0025,
+    "p_ac_fail": 0.0014,
+    "cdf": 8.750000000000001e-08
+   },
+   "switchyard_centered": {
+    "f_loop": 0.01,
+    "f_eff": 0.01,
+    "p_ac_fail": 0.0014,
+    "cdf": 5.6e-07
+   },
+   "grid_related": {
+    "f_loop": 0.019,
+    "f_eff": 0.019,
+    "p_ac_fail": 0.0014,
+    "cdf": 1.33e-06
+   },
+   "weather_related": {
+    "f_loop": 0.0043,
+    "f_eff": 0.0043,
+    "p_ac_fail": 0.0014,
+    "cdf": 1.204e-06
+   }
+  },
+  "islanding": {
+   "plant_centered": {
+    "f_loop": 0.0025,
+    "f_eff": 0.0025,
+    "p_ac_fail": 0.0014,
+    "cdf": 8.750000000000001e-08
+   },
+   "switchyard_centered": {
+    "f_loop": 0.01,
+    "f_eff": 0.0055000000000000005,
+    "p_ac_fail": 0.0014,
+    "cdf": 3.0800000000000006e-07
+   },
+   "grid_related": {
+    "f_loop": 0.019,
+    "f_eff": 0.0018999999999999996,
+    "p_ac_fail": 0.0014,
+    "cdf": 1.3299999999999999e-07
+   },
+   "weather_related": {
+    "f_loop": 0.0043,
+    "f_eff": 0.0004299999999999999,
+    "p_ac_fail": 0.0014,
+    "cdf": 1.2039999999999997e-07
+   }
+  },
+  "dc_ac": {
+   "plant_centered": {
+    "f_loop": 0.0025,
+    "f_eff": 0.0025,
+    "p_ac_fail": 2.8e-05,
+    "cdf": 1.7500000000000002e-09
+   },
+   "switchyard_centered": {
+    "f_loop": 0.01,
+    "f_eff": 0.01,
+    "p_ac_fail": 2.8e-05,
+    "cdf": 1.1200000000000001e-08
+   },
+   "grid_related": {
+    "f_loop": 0.019,
+    "f_eff": 0.019,
+    "p_ac_fail": 2.8e-05,
+    "cdf": 2.66e-08
+   },
+   "weather_related": {
+    "f_loop": 0.0043,
+    "f_eff": 0.0043,
+    "p_ac_fail": 7.000000000000001e-05,
+    "cdf": 6.020000000000001e-08
+   }
+  },
+  "both": {
+   "plant_centered": {
+    "f_loop": 0.0025,
+    "f_eff": 0.0025,
+    "p_ac_fail": 2.8e-05,
+    "cdf": 1.7500000000000002e-09
+   },
+   "switchyard_centered": {
+    "f_loop": 0.01,
+    "f_eff": 0.0055000000000000005,
+    "p_ac_fail": 2.8e-05,
+    "cdf": 6.16e-09
+   },
+   "grid_related": {
+    "f_loop": 0.019,
+    "f_eff": 0.0018999999999999996,
+    "p_ac_fail": 2.8e-05,
+    "cdf": 2.6599999999999995e-09
+   },
+   "weather_related": {
+    "f_loop": 0.0043,
+    "f_eff": 0.0004299999999999999,
+    "p_ac_fail": 7.000000000000001e-05,
+    "cdf": 6.019999999999999e-09
+   }
+  }
+ },
+ "inputs": {
+  "LOOP": {
+   "plant_centered": 0.0025,
+   "switchyard_centered": 0.01,
+   "grid_related": 0.019,
+   "weather_related": 0.0043
+  },
+  "NONREC_4H": {
+   "plant_centered": 0.05,
+   "switchyard_centered": 0.08,
+   "grid_related": 0.1,
+   "weather_related": 0.4
+  },
+  "EDG_TRAIN": 0.02,
+  "EDG_CCF_BETA": 0.05,
+  "P_EDG_ALL": 0.0014,
+  "P_CD_GIVEN_SBO": 0.5
+ },
+ "economics": {
+  "plant_output_loss_M_per_yr": 5.356651892873943,
+  "dc_cooling_energy_saved_M_per_yr": 14.016,
+  "dc_cooling_capex_avoided_M": 125.0,
+  "system_capex_M": 90.0,
+  "avoided_trips_M_per_yr": 0.21000000000000002,
+  "net_annual_M": 8.869348107126058,
+  "net_capex_M": 35.0
+ }
+}
