@@ -13,6 +13,9 @@ n_gain = sum(len(e["how"]) for e in E)
 DATE = "2026-09-29"
 
 def quality(s):
+    tag = s.split(" [")[-1]
+    if "unverified" in tag and "[independent" not in s: return "unverified"
+    if "unverified" in tag or "corrected" in tag: return "partly verified"
     return "independent" if "[independent" in s else ("vendor" if "[vendor" in s else ("synthetic" if "[synthetic" in s else "mixed"))
 
 def short_analogue(e):
@@ -24,7 +27,8 @@ md = ["# The Analogue Atlas: who already solved nuclear's twenty software proble
       "structurally identical problem, the method and the measured gain (with an evidence grade), the regulatory document",
       "that let a model or a process be credited, the nuclear rule that could carry the transfer today, what maps one to one,",
       "what breaks, and who to hire. Built from five parallel research streams on %s and synthesised. Every gain figure is" % DATE,
-      "tagged independent (regulator, audit office, peer review), vendor (self-reported) or synthetic (benchmark study).", "",
+      "tagged independent (regulator, audit office, peer review), vendor (self-reported) or synthetic (benchmark study); a second-round",
+      "fact-check verified, corrected or flagged twenty figures, and the flags are carried in the text.", "",
       "Transfer grades: %s" % " ".join("**%s** (%s)." % (v[0], v[1]) for v in GRADES.values()),
       "Count: %d direct, %d adapt, %d partial." % (gcount["direct"], gcount["adapt"], gcount["partial"]), "",
       "## What the atlas says", ""]
@@ -78,7 +82,7 @@ open("ANALOG_ATLAS.md", "w").write("\n".join(md))
 # ------------------------------------------------------------------ html
 def e_(x): return H.escape(str(x))
 gcls = {"direct": "g-direct", "adapt": "g-adapt", "partial": "g-partial"}
-qcls = {"independent": "q-ind", "vendor": "q-ven", "synthetic": "q-syn", "mixed": "q-mix"}
+qcls = {"independent": "q-ind", "vendor": "q-ven", "synthetic": "q-syn", "mixed": "q-mix", "unverified": "q-unv", "partly verified": "q-unv"}
 
 def how_li(h):
     q = quality(h)
@@ -157,7 +161,7 @@ thead th { font-family:var(--disp); font-weight:600; font-size:13px; letter-spac
 td.id { min-width:150px; } td.id .nm { font-family:var(--disp); font-weight:600; font-size:13.5px; } td.gcell { min-width:110px; } .sub { color:var(--ink-2); font-size:12px; }
 .badge { display:inline-block; font-family:var(--disp); font-weight:600; font-size:12px; padding:2px 8px; border-radius:3px; white-space:nowrap; }
 .g-direct { background:var(--ok-soft); color:var(--ok); } .g-adapt { background:var(--accent-soft); color:var(--accent); } .g-partial { background:var(--warn-soft); color:var(--warn); }
-.q { font-family:var(--mono); font-size:11px; padding:1px 6px; border-radius:3px; margin-left:4px; white-space:nowrap; } .q-ind { background:var(--ok-soft); color:var(--ok); } .q-ven { background:var(--heat-soft); color:var(--heat); } .q-syn { background:var(--warn-soft); color:var(--warn); } .q-mix { background:var(--paper-2); color:var(--ink-2); border:1px solid var(--rule); }
+.q { font-family:var(--mono); font-size:11px; padding:1px 6px; border-radius:3px; margin-left:4px; white-space:nowrap; } .q-ind { background:var(--ok-soft); color:var(--ok); } .q-ven { background:var(--heat-soft); color:var(--heat); } .q-syn { background:var(--warn-soft); color:var(--warn); } .q-mix { background:var(--paper-2); color:var(--ink-2); border:1px solid var(--rule); } .q-unv { background:var(--paper-2); color:var(--warn); border:1px solid var(--warn); }
 tr.op[hidden], article.entry[hidden] { display:none; }
 article.entry { border:1px solid var(--rule); background:var(--paper-2); margin:0 0 18px; padding:14px 16px; }
 article.entry > header { display:grid; grid-template-columns:48px 1fr auto; gap:12px; align-items:start; border-bottom:1px solid var(--rule); padding-bottom:10px; margin-bottom:6px; }
@@ -196,7 +200,7 @@ footer.page { margin-top:56px; padding-top:14px; border-top:1px solid var(--rule
 <tbody>%s</tbody></table></div>
 
 <h2><span class="num">04</span>The twenty, in full</h2>
-<p>Each evidence bullet carries a tag: <span class="q q-ind">independent</span> regulator, audit office or peer review; <span class="q q-ven">vendor</span> self-reported; <span class="q q-syn">synthetic</span> benchmark or model study. The filter above applies here too.</p>
+<p>Each evidence bullet carries a tag: <span class="q q-ind">independent</span> regulator, audit office or peer review; <span class="q q-ven">vendor</span> self-reported; <span class="q q-syn">synthetic</span> benchmark or model study; <span class="q q-unv">partly verified</span> or <span class="q q-unv">unverified</span> where the fact-check round corrected a figure or could not reach the primary source. The filter above applies here too.</p>
 %s
 
 <h2><span class="num">05</span>Hiring map</h2>
