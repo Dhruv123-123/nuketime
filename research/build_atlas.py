@@ -70,8 +70,8 @@ for skill, orgs, ranks in HIRE_MAP:
 md += ["", "## Method and limits", "",
        "Five research agents each took four opportunities and searched for the analogue industry, its method, its measured",
        "gains and the regulatory instrument, returning sourced reports on %s; the synthesis, grades, patterns and findings" % DATE,
-       "are the author's. Opportunity 20 (laser enrichment control) was not covered by the streams and is built from analogues",
-       "the author already knew. Vendor figures are marked and should be re-verified before external use. Several agents",
+       "are the author's. Opportunity 20 (laser enrichment control) was researched in a second round through OSTI, arXiv and",
+       "publisher APIs after the web-search budget was spent. Vendor figures are marked and should be re-verified before external use. Several agents",
        "exhausted their search budget, so a few numbers are from secondary sources; those are flagged in the entries.", ""]
 open("ANALOG_ATLAS.md", "w").write("\n".join(md))
 
@@ -204,7 +204,7 @@ footer.page { margin-top:56px; padding-top:14px; border-top:1px solid var(--rule
 <div class="tablewrap"><table class="hire"><thead><tr><th>Skill</th><th>Where it lives</th><th>Unlocks</th></tr></thead><tbody>%s</tbody></table></div>
 
 <h2><span class="num">06</span>Method and limits</h2>
-<p>Five research agents each took four opportunities and searched for the analogue industry, its method, its measured gains and the regulatory instrument, returning sourced reports on %s; the synthesis, grades, patterns and findings are the author's. Opportunity 20 was not covered by the streams and is built from analogues the author already knew. Vendor figures are marked and should be re-verified before external use. Several agents exhausted their search budget, so a few numbers come from secondary sources; those are flagged in the entries.</p>
+<p>Five research agents each took four opportunities and searched for the analogue industry, its method, its measured gains and the regulatory instrument, returning sourced reports on %s; the synthesis, grades, patterns and findings are the author's. Opportunity 20 (laser enrichment control) was researched in a second round through OSTI, arXiv and publisher APIs after the web-search budget was spent; a fact-check round then verified or corrected twenty flagged figures. Vendor figures are marked and should be re-verified before external use. Several agents exhausted their search budget, so a few numbers come from secondary sources; those are flagged in the entries.</p>
 <footer class="page">Nuclear Analogue Atlas, %s. Companion to the <a href="https://claude.ai/artifact/WBHJtS9bU3agH8MvnLynwq">Nuclear Vertical Atlas</a>. Data and generator: <code>research/analog_atlas_data.py</code>, <code>research/build_atlas.py</code>.</footer>
 </div>
 <script>

@@ -37,7 +37,7 @@ Count: 9 direct, 8 adapt, 3 partial.
 
 **P6. Publish the baseline, re-estimate annually, name the laggards.** The clearest causal evidence for cost improvement is a regulator-owned public baseline with an annual re-estimate and per-asset benchmarking: NSTA's North Sea decommissioning estimate fell 25 percent in five years, NASA's joint confidence level cut development cost growth from about 45 percent to under 2 percent, HM Treasury's optimism-bias uplifts are mandatory at business-case stage, EPA tracked 645 optimisation recommendations to closure. DOE EM and the NDA pay the whole bill and still have no per-facility public benchmark. Opportunities: 4, 6, 11, 12, 16.
 
-**P7. An ensemble of realisations, optimised against all of them.** Subsurface and rare-event problems were solved by replacing the single best model with an ensemble and optimising the decision against the whole set: closed-loop reservoir management (Brugge), stochastic mine planning (COSMO), weather ensembles trained on probabilistic scores, KoBold's thousands of geological models, USACE's two-loop Monte Carlo. ISR well control, drill-hole selection, tank-waste mission planning and repository assessment are the same mathematics with different chemistry. Opportunities: 3, 10, 11, 15, 17.
+**P7. An ensemble of realisations, optimised against all of them.** Subsurface and rare-event problems were solved by replacing the single best model with an ensemble and optimising the decision against the whole set: closed-loop reservoir management (Brugge), stochastic mine planning (COSMO), weather ensembles trained on probabilistic scores, KoBold's thousands of geological models, USACE's two-loop Monte Carlo. ISR well control, drill-hole selection, tank-waste mission planning and repository assessment are the same mathematics with different chemistry. Opportunities: 3, 10, 11, 15, 17, 20.
 
 **P8. A delegated signatory over an automated pipeline.** High-volume safety analysis was industrialised by codifying the routine tiers into software and leaving a qualified individual as signatory of record: FAA designated engineering representatives over Airbus and Boeing stress pipelines, API 579 Level 1 and 2 in fitness-for-service software, RSTRENG named in pipeline regulation. Criticality safety already qualifies engineers under ANSI/ANS-8.26; the pipeline half is missing. Opportunities: 9.
 
@@ -68,7 +68,7 @@ Count: 9 direct, 8 adapt, 3 partial.
 | 17 | Regulator-credible surrogates for the back end | Operational weather forecasting (ECMWF, DeepMind); Florida hurricane-model certification; Insurance internal models (Solvency II); Dams and levees (USACE), environmental regulation (EPA CREM) | ECMWF AIFS Single: pre-operational from October 2023, operational 25 February 2025 after sixteen months in parallel with IFS: 5 to 15 percent lower medium-range error, about 10 percent precipitation gain, tropical-cyc... | Florida Statutes section 627.0628 and the biennial hurricane standards | NRC already requires probabilistic performance assessment with uncertainty quantification under 10 CFR 63.114 and reviews it under NUREG-1804 | Direct |
 | 18 | Reload optimisation in an approved methodology | Wholesale electricity markets (PJM, MISO, CAISO, FERC); Medical devices (FDA PCCP) | PJM benchmarked mixed-integer unit commitment against Lagrangian relaxation after FERC's 1999 software conference, found about 60 million dollars a year, deployed it in day-ahead 2004 and real-time 2006 (about 100 mil... | FERC 2011 staff report on ISO software enhancements; MISO technical-conference filings (2018) | The NRC-approved core-physics and safety-analysis chain (the vendors' topical-report methods under 10 CFR 50.34 and the reload safety evaluation process) is already the verifier | Direct |
 | 19 | Commissioning and ITAAC automation | EPC completions (Hexagon, AVEVA, Chiyoda); Rules as code (Singapore CORENET, ICC Code Connect, FCA digital regulatory reporting); Structured regulatory templates (FDA eSTAR) | Singapore CORENET e-PlanCheck automated about 92 percent of building-code rules; ICC's Code Connect API (2022) delivers code sections as data into permitting software; the FCA and Bank of England digital-regulatory-re... | Singapore Building Control Act and BCA circulars making IFC-SG submissions the legal application | ITAAC under 10 CFR 52.99 are already written as acceptance criteria with a defined inspection, test or analysis | Adapt |
-| 20 | Laser enrichment control | High-energy laser facilities (LLNL National Ignition Facility); Semiconductor advanced process control (ASML, SEMI E133) | NIF's Laser Performance Operations Model has set the front-end and amplifier configuration for 192 beams on every shot since 2008, using a physics model calibrated shot to shot; that is the closest public example of m... | None needed: enrichment control sits inside the licensee's process and is not a safety-basis credit; NRC's 10 CFR 70 and the classified-technology regime constrain who may see the data, not how it is controlled | The GLE and LIS licences under 10 CFR 70 and the DOE classification regime | Partial |
+| 20 | Laser enrichment control | National Ignition Facility laser performance model (LLNL); EUV lithography sources (ASML, Cymer, Trumpf); Bayesian optimisation of high-power laser experiments (RAL Gemini, Queen's Belfast); Historical AVLIS, MLIS and SILVA programmes (LLNL, Los Alamos, CEA) | LPOM (deployed 2002, integrated 2007): total energy predicted within 5 percent and quad balance within 2 percent (2004); requested energies matched to 2 to 4 percent with beam-to-beam balance about 1 percent over more... | None needed: enrichment process control sits inside the licensee's process and is not a safety-basis credit; 10 CFR 70 and the classified-technology regime constrain who may see the data, not how the plant is controlled | The GLE and LIS licences under 10 CFR 70 and the DOE classification regime | Partial |
 
 ## The twenty, in full
 
@@ -992,39 +992,55 @@ Sources: https://aliresources.hexagon.com/oil-gas/digitizing-epc-completions-and
 
 ### 20. Laser enrichment control  —  Partial
 
-**The nuclear problem.** A high-dimensional pulsed-laser separation process whose cost per SWU depends on holding many coupled parameters on target, invisible from outside GLE and LIS until about 2030.
+**The nuclear problem.** A pulsed infrared laser bank driving UF6 free jets: separation per pulse depends jointly on fluence, wavelength centring on a 0.013 per cm line, repetition rate against jet velocity, nozzle and jet conditions and dimer formation, and the laser bank's availability, not the physics, set cost per SWU in every previous programme.
 
-**The twin.** Setting up a 192-beam laser facility for every shot; holding an extreme-ultraviolet lithography source and a fab process on target run after run.
+**The twin.** Setting up 192 beamlines to deliver a requested energy and pulse shape, balanced to about 1 percent, every shot, without manual tuning; keeping a 50 kHz laser-on-droplet source stable for months; finding a non-additive optimum across many coupled laser knobs with expensive shots.
 
 **Who solved it.**
-- *High-energy laser facilities (LLNL National Ignition Facility).* A physics model with learned corrections predicts and sets the pulse shape and energy of every beam for every shot, tuned from the previous shots.
-- *Semiconductor advanced process control (ASML, SEMI E133).* Run-to-run and fab-wide control loops that correct drift from metrology, with the source's droplet timing and dose closed-loop.
+- *National Ignition Facility laser performance model (LLNL).* A per-beamline physics model in the control loop solves the inverse problem for the front-end setup, recalibrates from cheap sub-scale shots before each system shot, gates the shot against the damage envelope, and now corrects requested pulses from historical shots instead of full-chain calibration shots.
+- *EUV lithography sources (ASML, Cymer, Trumpf).* Closed-loop droplet steering, laser-to-droplet timing and per-pulse energy control on a pulsed CO2 laser hitting 25-micron tin droplets at about 50 kHz, with collector degradation as the long-campaign drift.
+- *Bayesian optimisation of high-power laser experiments (RAL Gemini, Queen's Belfast).* Closed-loop optimisation over coupled laser parameters finds optima that one-dimensional scans miss and reproduces manually tuned results at 60 percent of the laser energy.
+- *Historical AVLIS, MLIS and SILVA programmes (LLNL, Los Alamos, CEA).* Diagnostics-led control with in-line laser-absorption spectroscopy and hands-off vapour-rate control; cancelled on economics and laser-bank maintenance, not on control accuracy.
 
 **How, and how much.**
-- NIF's Laser Performance Operations Model has set the front-end and amplifier configuration for 192 beams on every shot since 2008, using a physics model calibrated shot to shot; that is the closest public example of model-based control of a large pulsed-laser plant. [independent, from the author's knowledge rather than this research round]
-- Fab-wide advanced process control under SEMI E133 and run-to-run controllers is universal at advanced nodes; ASML's EUV source holds tin-droplet timing and dose in closed loop at 50 kHz-class rates. [independent, from the author's knowledge rather than this research round]
+- LPOM (deployed 2002, integrated 2007): total energy predicted within 5 percent and quad balance within 2 percent (2004); requested energies matched to 2 to 4 percent with beam-to-beam balance about 1 percent over more than 500 system shots (2008); for the 2.05 MJ ignition shot, delivered energy within 2 percent and pulse-shape error under 2 percent on 200-to-1 contrast pulses; a 2023 tool corrects the requested pulse from historical shots with similar setup instead of a risky calibration shot; the new fibre front end gave a three-fold shot-to-shot stability gain. Flashlamp gain stability held below 3 percent rms only with very resource-intensive maintenance. [independent, LLNL operating data]
+- ASML and Cymer EUV sources: conversion efficiency 5 to 6 percent at about 250 W with closed-loop timing and dose control; source availability reportedly rose from about 70 percent (2015) to above 90 percent (2019). [vendor; the availability figures are recalled from SPIE papers and not re-fetched]
+- Shalloo et al. (Nature Communications 2020): Bayesian optimisation over six coupled parameters on Gemini found a 1 percent pulse-length change worth 80 percent more electron-beam charge that scans would miss; Loughran et al. (2023) reproduced manually optimised proton energy at 60 percent of the laser energy; Glenn et al. (2025) gained 11 percent maximum proton energy in real time over manual tuning. [independent]
+- LLNL U-AVLIS: copper-laser chains above 9 kW run 24 hours a day for seven years with mean time between failures of 1,100 to 1,200 hours; the 1992 demonstration processed tonne quantities at above 96 percent availability with product above 2 percent U-235 as predicted; diode-laser vapour-rate control ran hands-off for more than 147 hours with one adjustment. USEC cancelled it in June 1999 because returns did not outweigh the risk and about 659 million dollars of remaining development. [independent, DOE and OSTI reports]
+- Snyder (Science and Global Security 2016) on SILEX-type condensation repression: laser energy 1 to 15 kWh per SWU on paper, rising to about 90 to 150 kWh per SWU at practical separation lengths once CO2 electro-optic and Raman efficiencies are included, against about 50 kWh per SWU for centrifuges; high-pressure laser gas stability is a reported challenge. GLE reached technology readiness level 6 in October 2025 and completed its Paducah licence application in July 2025. [independent]
+- Semiconductor run-to-run and fab-wide advanced process control (SEMI E133-0524; Applied Materials, PDF Solutions): the organisational pattern of a standard interface between tools and a plant-wide controller; quantified fab-level gains are practitioner claims of 30 to 50 percent variance reduction. [vendor]
 
 **The precedent.**
-- None needed: enrichment control sits inside the licensee's process and is not a safety-basis credit; NRC's 10 CFR 70 and the classified-technology regime constrain who may see the data, not how it is controlled
+- None needed: enrichment process control sits inside the licensee's process and is not a safety-basis credit; 10 CFR 70 and the classified-technology regime constrain who may see the data, not how the plant is controlled
 
-**Existing nuclear hook.** The GLE and LIS licences under 10 CFR 70 and the DOE classification regime; the transfer is internal engineering, not a regulatory credit.
+**Existing nuclear hook.** The GLE and LIS licences under 10 CFR 70 and the DOE classification regime; the transfer is internal engineering, not a regulatory credit. AVLIS's own control-system architecture (Viebeck 1994) and its in-line absorption spectroscopy are the nearest domestic precedent.
 
 **What transfers.**
-- Physics-model-plus-learned-correction shot setup.
-- Run-to-run drift correction from downstream assay metrology.
+- LPOM's architecture: a calibrated first-principles model in the loop, cheap sub-scale calibration runs before expensive campaigns, model-gated equipment protection, automatic post-run model updating and correction from historical runs; the calibration shot becomes periodic in-line spectroscopy.
+- EUV-source control as the same shape at plant duty cycle: pulsed infrared laser on a fast-moving target stream under tight timing, with optics and cell degradation as the long-campaign drift.
+- Bayesian optimisation over coupled laser knobs as the way to find non-additive optima with few expensive runs; the 60-percent-of-laser-energy result is the closest published proxy for the same separation at lower energy per pulse.
+- The AVLIS lesson: laser-bank availability and maintenance, not separation physics, set cost per SWU, so the control system's first job is availability.
 
 **What does not.**
-- The process is classified and the two operators are the only possible customers; no benchmark can be published.
+- NIF fires one shot every few hours with lavish per-shot diagnostics; an enrichment plant runs at kilohertz continuously with slow, integrated assay.
+- EUV is a single-source product with no cascade coupling; enrichment stages are coupled through feed, product and tails.
+- The published optimisation results are single-objective, minutes-long runs on Ti:sapphire systems, not month-long campaigns.
+- AVLIS was atomic and visible; SILEX is molecular and infrared, so the diagnostics differ.
 
-**Barriers.** Classification; two possible customers; the process is not observable from outside until the plants run.
+**Barriers.** Classification; two possible customers; the process is unobservable from outside until the plants run; nobody outside GLE and LIS publishes SWU-versus-parameter data, so the analogue supplies the method, not the numbers.
 
 **Who to hire.**
-- LLNL NIF laser performance operations group: model-based setup of a large pulsed-laser plant
-- ASML source and APC engineers, fab advanced-process-control teams: run-to-run control
+- LLNL NIF laser performance and LPOM team, LLNL cognitive-simulation group, Rochester LLE: model-based setup of a large pulsed-laser plant and learned residual correction
+- Cymer and ASML San Diego source group, Trumpf Ditzingen, Gigaphoton: closed-loop pulsed-CO2 source control at 50 kHz
+- Imperial and RAL, Queen's Belfast, DESY, ELI Beamlines optimisation groups: Bayesian optimisation of laser experiments
+- LLNL isotope-separation alumni, Oak Ridge and Y-12 laser groups: AVLIS control and diagnostics
+- Applied Materials and PDF Solutions advanced-process-control teams: fab-wide run-to-run control
 
-*Caveat: This entry was not researched by the five agent streams; it is built from adjacent analogues the author already knew and should be verified before quoting.*
+Patterns: P7.
 
-Sources: https://lasers.llnl.gov/ · https://www.semi.org/en/standards
+*Caveat: Researched in a second round after the five main streams; EUV availability and dose-stability percentages and fab-level run-to-run gains are unverified vendor or recalled figures.*
+
+Sources: https://www.osti.gov/servlets/purl/15014262 · https://doi.org/10.1088/1742-6596/112/3/032022 · https://www.osti.gov/servlets/purl/2202544 · https://www.osti.gov/servlets/purl/2440791 · https://arxiv.org/abs/2205.13519 · https://doi.org/10.1515/aot-2017-0029 · https://doi.org/10.1117/12.2515017 · https://arxiv.org/abs/2007.14340 · https://arxiv.org/abs/2303.00823 · https://arxiv.org/abs/2508.06462 · https://www.osti.gov/servlets/purl/10178583 · https://www.osti.gov/servlets/purl/10113010 · https://www.globalsecurity.org/wmd/intro/u-laser.htm · https://doi.org/10.1080/08929882.2016.1184528 · https://www.world-nuclear-news.org/articles/laser-enrichment-technology-moves-to-next-level · https://store-us.semi.org/products/e13300-semi-e133-specification-for-automated-process-control-systems-interface
 
 ## Hiring map
 
@@ -1047,6 +1063,6 @@ Where the people who did this already work, grouped by skill, with the opportuni
 
 Five research agents each took four opportunities and searched for the analogue industry, its method, its measured
 gains and the regulatory instrument, returning sourced reports on 2026-09-29; the synthesis, grades, patterns and findings
-are the author's. Opportunity 20 (laser enrichment control) was not covered by the streams and is built from analogues
-the author already knew. Vendor figures are marked and should be re-verified before external use. Several agents
+are the author's. Opportunity 20 (laser enrichment control) was researched in a second round through OSTI, arXiv and
+publisher APIs after the web-search budget was spent. Vendor figures are marked and should be re-verified before external use. Several agents
 exhausted their search budget, so a few numbers are from secondary sources; those are flagged in the entries.

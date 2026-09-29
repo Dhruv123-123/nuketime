@@ -201,5 +201,19 @@ URLs cited per opportunity, as returned by the research streams on 2026-09-29 an
 
 ## 20. Laser enrichment control
 
-- https://lasers.llnl.gov/
-- https://www.semi.org/en/standards
+- https://www.osti.gov/servlets/purl/15014262
+- https://doi.org/10.1088/1742-6596/112/3/032022
+- https://www.osti.gov/servlets/purl/2202544
+- https://www.osti.gov/servlets/purl/2440791
+- https://arxiv.org/abs/2205.13519
+- https://doi.org/10.1515/aot-2017-0029
+- https://doi.org/10.1117/12.2515017
+- https://arxiv.org/abs/2007.14340
+- https://arxiv.org/abs/2303.00823
+- https://arxiv.org/abs/2508.06462
+- https://www.osti.gov/servlets/purl/10178583
+- https://www.osti.gov/servlets/purl/10113010
+- https://www.globalsecurity.org/wmd/intro/u-laser.htm
+- https://doi.org/10.1080/08929882.2016.1184528
+- https://www.world-nuclear-news.org/articles/laser-enrichment-technology-moves-to-next-level
+- https://store-us.semi.org/products/e13300-semi-e133-specification-for-automated-process-control-systems-interface
