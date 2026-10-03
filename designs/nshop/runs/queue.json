@@ -1,0 +1,1009 @@
+{
+ "low": {
+  "base": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 63.3,
+    "capacity": 103.0,
+    "utilisation": 0.615,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 70.0,
+    "capacity": 106.1,
+    "utilisation": 0.66,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 86.7,
+    "capacity": 109.3,
+    "utilisation": 0.793,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2030,
+    "demand": 103.3,
+    "capacity": 112.6,
+    "utilisation": 0.918,
+    "lead_months": 3.1
+   },
+   {
+    "year": 2031,
+    "demand": 116.7,
+    "capacity": 115.9,
+    "utilisation": 1.006,
+    "lead_months": 3.6
+   },
+   {
+    "year": 2032,
+    "demand": 133.3,
+    "capacity": 123.6,
+    "utilisation": 1.079,
+    "lead_months": 4.1
+   },
+   {
+    "year": 2033,
+    "demand": 136.7,
+    "capacity": 134.7,
+    "utilisation": 1.014,
+    "lead_months": 4.5
+   },
+   {
+    "year": 2034,
+    "demand": 140.0,
+    "capacity": 149.6,
+    "utilisation": 0.936,
+    "lead_months": 3.7
+   },
+   {
+    "year": 2035,
+    "demand": 140.0,
+    "capacity": 163.1,
+    "utilisation": 0.859,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2036,
+    "demand": 140.0,
+    "capacity": 174.3,
+    "utilisation": 0.803,
+    "lead_months": 3.0
+   }
+  ],
+  "network_5": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 63.3,
+    "capacity": 103.0,
+    "utilisation": 0.615,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 70.0,
+    "capacity": 111.1,
+    "utilisation": 0.63,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 86.7,
+    "capacity": 119.3,
+    "utilisation": 0.727,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2030,
+    "demand": 103.3,
+    "capacity": 127.6,
+    "utilisation": 0.81,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2031,
+    "demand": 116.7,
+    "capacity": 135.9,
+    "utilisation": 0.858,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2032,
+    "demand": 133.3,
+    "capacity": 148.6,
+    "utilisation": 0.898,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2033,
+    "demand": 136.7,
+    "capacity": 164.7,
+    "utilisation": 0.83,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2034,
+    "demand": 140.0,
+    "capacity": 184.6,
+    "utilisation": 0.759,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2035,
+    "demand": 140.0,
+    "capacity": 203.1,
+    "utilisation": 0.689,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2036,
+    "demand": 140.0,
+    "capacity": 219.3,
+    "utilisation": 0.638,
+    "lead_months": 3.0
+   }
+  ],
+  "saved_5_B": 0.28,
+  "network_10": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 63.3,
+    "capacity": 103.0,
+    "utilisation": 0.615,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 70.0,
+    "capacity": 116.1,
+    "utilisation": 0.603,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 86.7,
+    "capacity": 129.3,
+    "utilisation": 0.67,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2030,
+    "demand": 103.3,
+    "capacity": 142.6,
+    "utilisation": 0.725,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2031,
+    "demand": 116.7,
+    "capacity": 155.9,
+    "utilisation": 0.748,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2032,
+    "demand": 133.3,
+    "capacity": 173.6,
+    "utilisation": 0.768,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2033,
+    "demand": 136.7,
+    "capacity": 194.7,
+    "utilisation": 0.702,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2034,
+    "demand": 140.0,
+    "capacity": 219.6,
+    "utilisation": 0.638,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2035,
+    "demand": 140.0,
+    "capacity": 243.1,
+    "utilisation": 0.576,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2036,
+    "demand": 140.0,
+    "capacity": 264.3,
+    "utilisation": 0.53,
+    "lead_months": 3.0
+   }
+  ],
+  "saved_10_B": 0.28,
+  "network_20": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 63.3,
+    "capacity": 103.0,
+    "utilisation": 0.615,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 70.0,
+    "capacity": 126.1,
+    "utilisation": 0.555,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 86.7,
+    "capacity": 149.3,
+    "utilisation": 0.581,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2030,
+    "demand": 103.3,
+    "capacity": 172.6,
+    "utilisation": 0.599,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2031,
+    "demand": 116.7,
+    "capacity": 195.9,
+    "utilisation": 0.595,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2032,
+    "demand": 133.3,
+    "capacity": 223.6,
+    "utilisation": 0.596,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2033,
+    "demand": 136.7,
+    "capacity": 254.7,
+    "utilisation": 0.536,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2034,
+    "demand": 140.0,
+    "capacity": 289.6,
+    "utilisation": 0.483,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2035,
+    "demand": 140.0,
+    "capacity": 323.1,
+    "utilisation": 0.433,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2036,
+    "demand": 140.0,
+    "capacity": 354.3,
+    "utilisation": 0.395,
+    "lead_months": 3.0
+   }
+  ],
+  "saved_20_B": 0.28
+ },
+ "base": {
+  "base": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 66.7,
+    "capacity": 103.0,
+    "utilisation": 0.647,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 86.7,
+    "capacity": 106.1,
+    "utilisation": 0.817,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 110.0,
+    "capacity": 109.3,
+    "utilisation": 1.007,
+    "lead_months": 3.7
+   },
+   {
+    "year": 2030,
+    "demand": 143.3,
+    "capacity": 113.1,
+    "utilisation": 1.267,
+    "lead_months": 5.4
+   },
+   {
+    "year": 2031,
+    "demand": 180.0,
+    "capacity": 123.6,
+    "utilisation": 1.457,
+    "lead_months": 9.5
+   },
+   {
+    "year": 2032,
+    "demand": 210.0,
+    "capacity": 143.8,
+    "utilisation": 1.461,
+    "lead_months": 13.7
+   },
+   {
+    "year": 2033,
+    "demand": 233.3,
+    "capacity": 173.5,
+    "utilisation": 1.345,
+    "lead_months": 16.2
+   },
+   {
+    "year": 2034,
+    "demand": 240.0,
+    "capacity": 208.3,
+    "utilisation": 1.152,
+    "lead_months": 16.6
+   },
+   {
+    "year": 2035,
+    "demand": 240.0,
+    "capacity": 244.1,
+    "utilisation": 0.983,
+    "lead_months": 15.2
+   },
+   {
+    "year": 2036,
+    "demand": 240.0,
+    "capacity": 274.4,
+    "utilisation": 0.875,
+    "lead_months": 12.7
+   }
+  ],
+  "network_5": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 66.7,
+    "capacity": 103.0,
+    "utilisation": 0.647,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 86.7,
+    "capacity": 111.1,
+    "utilisation": 0.78,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 110.0,
+    "capacity": 119.3,
+    "utilisation": 0.922,
+    "lead_months": 3.1
+   },
+   {
+    "year": 2030,
+    "demand": 143.3,
+    "capacity": 128.1,
+    "utilisation": 1.119,
+    "lead_months": 4.3
+   },
+   {
+    "year": 2031,
+    "demand": 180.0,
+    "capacity": 143.6,
+    "utilisation": 1.254,
+    "lead_months": 6.4
+   },
+   {
+    "year": 2032,
+    "demand": 210.0,
+    "capacity": 168.8,
+    "utilisation": 1.244,
+    "lead_months": 8.6
+   },
+   {
+    "year": 2033,
+    "demand": 233.3,
+    "capacity": 203.5,
+    "utilisation": 1.147,
+    "lead_months": 9.7
+   },
+   {
+    "year": 2034,
+    "demand": 240.0,
+    "capacity": 243.3,
+    "utilisation": 0.986,
+    "lead_months": 9.2
+   },
+   {
+    "year": 2035,
+    "demand": 240.0,
+    "capacity": 284.1,
+    "utilisation": 0.845,
+    "lead_months": 7.0
+   },
+   {
+    "year": 2036,
+    "demand": 240.0,
+    "capacity": 319.4,
+    "utilisation": 0.751,
+    "lead_months": 4.2
+   }
+  ],
+  "saved_5_B": 4.56,
+  "network_10": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 66.7,
+    "capacity": 103.0,
+    "utilisation": 0.647,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 86.7,
+    "capacity": 116.1,
+    "utilisation": 0.747,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 110.0,
+    "capacity": 129.3,
+    "utilisation": 0.851,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2030,
+    "demand": 143.3,
+    "capacity": 143.1,
+    "utilisation": 1.002,
+    "lead_months": 3.4
+   },
+   {
+    "year": 2031,
+    "demand": 180.0,
+    "capacity": 163.6,
+    "utilisation": 1.101,
+    "lead_months": 4.0
+   },
+   {
+    "year": 2032,
+    "demand": 210.0,
+    "capacity": 193.8,
+    "utilisation": 1.084,
+    "lead_months": 4.9
+   },
+   {
+    "year": 2033,
+    "demand": 233.3,
+    "capacity": 233.5,
+    "utilisation": 0.999,
+    "lead_months": 4.9
+   },
+   {
+    "year": 2034,
+    "demand": 240.0,
+    "capacity": 278.3,
+    "utilisation": 0.862,
+    "lead_months": 3.5
+   },
+   {
+    "year": 2035,
+    "demand": 240.0,
+    "capacity": 324.1,
+    "utilisation": 0.74,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2036,
+    "demand": 240.0,
+    "capacity": 364.4,
+    "utilisation": 0.659,
+    "lead_months": 3.0
+   }
+  ],
+  "saved_10_B": 7.26,
+  "network_20": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 66.7,
+    "capacity": 103.0,
+    "utilisation": 0.647,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 86.7,
+    "capacity": 126.1,
+    "utilisation": 0.687,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2029,
+    "demand": 110.0,
+    "capacity": 149.3,
+    "utilisation": 0.737,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2030,
+    "demand": 143.3,
+    "capacity": 173.1,
+    "utilisation": 0.828,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2031,
+    "demand": 180.0,
+    "capacity": 203.6,
+    "utilisation": 0.884,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2032,
+    "demand": 210.0,
+    "capacity": 243.8,
+    "utilisation": 0.861,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2033,
+    "demand": 233.3,
+    "capacity": 293.5,
+    "utilisation": 0.795,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2034,
+    "demand": 240.0,
+    "capacity": 348.3,
+    "utilisation": 0.689,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2035,
+    "demand": 240.0,
+    "capacity": 404.1,
+    "utilisation": 0.594,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2036,
+    "demand": 240.0,
+    "capacity": 454.4,
+    "utilisation": 0.528,
+    "lead_months": 3.0
+   }
+  ],
+  "saved_20_B": 8.02
+ },
+ "high": {
+  "base": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 80.0,
+    "capacity": 103.0,
+    "utilisation": 0.777,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 116.7,
+    "capacity": 106.1,
+    "utilisation": 1.1,
+    "lead_months": 4.3
+   },
+   {
+    "year": 2029,
+    "demand": 173.3,
+    "capacity": 109.3,
+    "utilisation": 1.586,
+    "lead_months": 8.6
+   },
+   {
+    "year": 2030,
+    "demand": 243.3,
+    "capacity": 122.5,
+    "utilisation": 1.987,
+    "lead_months": 17.3
+   },
+   {
+    "year": 2031,
+    "demand": 306.7,
+    "capacity": 153.0,
+    "utilisation": 2.004,
+    "lead_months": 25.3
+   },
+   {
+    "year": 2032,
+    "demand": 350.0,
+    "capacity": 203.0,
+    "utilisation": 1.724,
+    "lead_months": 28.6
+   },
+   {
+    "year": 2033,
+    "demand": 370.0,
+    "capacity": 266.7,
+    "utilisation": 1.387,
+    "lead_months": 28.0
+   },
+   {
+    "year": 2034,
+    "demand": 370.0,
+    "capacity": 333.3,
+    "utilisation": 1.11,
+    "lead_months": 25.4
+   },
+   {
+    "year": 2035,
+    "demand": 370.0,
+    "capacity": 392.3,
+    "utilisation": 0.943,
+    "lead_months": 22.1
+   },
+   {
+    "year": 2036,
+    "demand": 370.0,
+    "capacity": 436.3,
+    "utilisation": 0.848,
+    "lead_months": 18.9
+   }
+  ],
+  "network_5": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 80.0,
+    "capacity": 103.0,
+    "utilisation": 0.777,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 116.7,
+    "capacity": 111.1,
+    "utilisation": 1.05,
+    "lead_months": 3.9
+   },
+   {
+    "year": 2029,
+    "demand": 173.3,
+    "capacity": 119.3,
+    "utilisation": 1.453,
+    "lead_months": 7.1
+   },
+   {
+    "year": 2030,
+    "demand": 243.3,
+    "capacity": 137.5,
+    "utilisation": 1.77,
+    "lead_months": 13.7
+   },
+   {
+    "year": 2031,
+    "demand": 306.7,
+    "capacity": 173.0,
+    "utilisation": 1.773,
+    "lead_months": 19.8
+   },
+   {
+    "year": 2032,
+    "demand": 350.0,
+    "capacity": 228.0,
+    "utilisation": 1.535,
+    "lead_months": 22.5
+   },
+   {
+    "year": 2033,
+    "demand": 370.0,
+    "capacity": 296.7,
+    "utilisation": 1.247,
+    "lead_months": 21.8
+   },
+   {
+    "year": 2034,
+    "demand": 370.0,
+    "capacity": 368.3,
+    "utilisation": 1.005,
+    "lead_months": 19.3
+   },
+   {
+    "year": 2035,
+    "demand": 370.0,
+    "capacity": 432.3,
+    "utilisation": 0.856,
+    "lead_months": 15.8
+   },
+   {
+    "year": 2036,
+    "demand": 370.0,
+    "capacity": 481.3,
+    "utilisation": 0.769,
+    "lead_months": 12.3
+   }
+  ],
+  "saved_5_B": 7.8,
+  "network_10": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 80.0,
+    "capacity": 103.0,
+    "utilisation": 0.777,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 116.7,
+    "capacity": 116.1,
+    "utilisation": 1.005,
+    "lead_months": 3.6
+   },
+   {
+    "year": 2029,
+    "demand": 173.3,
+    "capacity": 129.3,
+    "utilisation": 1.341,
+    "lead_months": 5.8
+   },
+   {
+    "year": 2030,
+    "demand": 243.3,
+    "capacity": 152.5,
+    "utilisation": 1.596,
+    "lead_months": 10.8
+   },
+   {
+    "year": 2031,
+    "demand": 306.7,
+    "capacity": 193.0,
+    "utilisation": 1.589,
+    "lead_months": 15.5
+   },
+   {
+    "year": 2032,
+    "demand": 350.0,
+    "capacity": 253.0,
+    "utilisation": 1.383,
+    "lead_months": 17.5
+   },
+   {
+    "year": 2033,
+    "demand": 370.0,
+    "capacity": 326.7,
+    "utilisation": 1.133,
+    "lead_months": 16.7
+   },
+   {
+    "year": 2034,
+    "demand": 370.0,
+    "capacity": 403.3,
+    "utilisation": 0.917,
+    "lead_months": 14.1
+   },
+   {
+    "year": 2035,
+    "demand": 370.0,
+    "capacity": 472.3,
+    "utilisation": 0.783,
+    "lead_months": 10.6
+   },
+   {
+    "year": 2036,
+    "demand": 370.0,
+    "capacity": 526.3,
+    "utilisation": 0.703,
+    "lead_months": 6.9
+   }
+  ],
+  "saved_10_B": 14.21,
+  "network_20": [
+   {
+    "year": 2026,
+    "demand": 60.0,
+    "capacity": 100.0,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2027,
+    "demand": 80.0,
+    "capacity": 103.0,
+    "utilisation": 0.777,
+    "lead_months": 3.0
+   },
+   {
+    "year": 2028,
+    "demand": 116.7,
+    "capacity": 126.1,
+    "utilisation": 0.925,
+    "lead_months": 3.1
+   },
+   {
+    "year": 2029,
+    "demand": 173.3,
+    "capacity": 149.3,
+    "utilisation": 1.161,
+    "lead_months": 4.5
+   },
+   {
+    "year": 2030,
+    "demand": 243.3,
+    "capacity": 182.5,
+    "utilisation": 1.333,
+    "lead_months": 7.1
+   },
+   {
+    "year": 2031,
+    "demand": 306.7,
+    "capacity": 233.0,
+    "utilisation": 1.316,
+    "lead_months": 9.7
+   },
+   {
+    "year": 2032,
+    "demand": 350.0,
+    "capacity": 303.0,
+    "utilisation": 1.155,
+    "lead_months": 10.4
+   },
+   {
+    "year": 2033,
+    "demand": 370.0,
+    "capacity": 386.7,
+    "utilisation": 0.957,
+    "lead_months": 9.1
+   },
+   {
+    "year": 2034,
+    "demand": 370.0,
+    "capacity": 473.3,
+    "utilisation": 0.782,
+    "lead_months": 6.4
+   },
+   {
+    "year": 2035,
+    "demand": 370.0,
+    "capacity": 552.3,
+    "utilisation": 0.67,
+    "lead_months": 3.4
+   },
+   {
+    "year": 2036,
+    "demand": 370.0,
+    "capacity": 616.3,
+    "utilisation": 0.6,
+    "lead_months": 3.0
+   }
+  ],
+  "saved_20_B": 22.76
+ },
+ "sensitivity_base": [
+  {
+   "case": "as set",
+   "peak_lead": 16.6,
+   "peak_lead_net": 4.9,
+   "saved_B": 7.26
+  },
+  {
+   "case": "capacity x1.5",
+   "peak_lead": 7.2,
+   "peak_lead_net": 3.0,
+   "saved_B": 2.15
+  },
+  {
+   "case": "capacity x2",
+   "peak_lead": 3.1,
+   "peak_lead_net": 3.0,
+   "saved_B": 0.03
+  },
+  {
+   "case": "work per unit x0.5",
+   "peak_lead": 5.6,
+   "peak_lead_net": 3.0,
+   "saved_B": 1.24
+  },
+  {
+   "case": "work per unit x2",
+   "peak_lead": 29.8,
+   "peak_lead_net": 17.8,
+   "saved_B": 7.77
+  },
+  {
+   "case": "entry lag 1 yr",
+   "peak_lead": 6.2,
+   "peak_lead_net": 3.0,
+   "saved_B": 1.37
+  },
+  {
+   "case": "entry lag 3 yr",
+   "peak_lead": 27.4,
+   "peak_lead_net": 8.3,
+   "saved_B": 11.62
+  }
+ ]
+}
