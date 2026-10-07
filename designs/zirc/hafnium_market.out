@@ -1,0 +1,8 @@
+export controls hold  rivals + 0 t  elasticity -0.3: best 45 t at $4.1k/kg = $187M/yr
+export controls hold  rivals + 0 t  elasticity -0.5: best 110 t at $3.2k/kg = $358M/yr
+export controls hold  rivals +40 t  elasticity -0.3: best 25 t at $2.8k/kg = $70M/yr
+export controls hold  rivals +40 t  elasticity -0.5: best 89 t at $2.8k/kg = $245M/yr
+controls relaxed      rivals + 0 t  elasticity -0.3: best 26 t at $2.8k/kg = $70M/yr
+controls relaxed      rivals + 0 t  elasticity -0.5: best 45 t at $2.8k/kg = $125M/yr
+controls relaxed      rivals +40 t  elasticity -0.3: best 0 t at $2.8k/kg = $0M/yr
+controls relaxed      rivals +40 t  elasticity -0.5: best 5 t at $2.8k/kg = $15M/yr
