@@ -4,7 +4,7 @@ Written 11 October 2026, after Dhruv scrapped heat-to-power and asked to go back
 software only. Constraints carried forward: no prospecting, exploration or drilling; size is the first
 filter (a $100-200M a year tool market is too small); prefer a named, large bottleneck an ML team can
 execute on over a novel but small gap (the lesson of `PICK4.md`). Research notes with every source:
-`ml_software_notes.md`. Models and prototype: `designs/margin/`.
+`ml_software_notes.md`. Models and prototype: `designs/margin/`. Claude Doc: https://claude.ai/artifact/YbZdBa2TyWF6SUrKXrvo3z
 
 ## The answer
 
@@ -125,7 +125,7 @@ Two findings matter for the pitch:
 - **The tail is the product.** The engine cuts the median analysis time by about a third but the P90
   by more than half, because it removes late-found scope. Utilities plan to P90.
 - **Engineering only pays when it is on the critical path.** Where a new turbine with a 42-month lead
-  binds, faster engineering is worth a tenth as much. So the sales motion starts with the margin map
+  binds, faster engineering is worth about a fifth as much. So the sales motion starts with the margin map
   (which tells the owner what to order first) and with MURs and pump-and-heat-exchanger EPUs.
 - Engineering effort falls 22-44 % on uprate scope alone, before reuse of the plant's graph on the
   next job.
