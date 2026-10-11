@@ -1,0 +1,14 @@
+Part A: bottoming blocks on the planned BTM data-centre gas fleet
+  recip engines         33.6 GW  uplift  9.3%  -> + 3.1 GW
+  aero/industrial GT    16.8 GW  uplift 28.6%  -> + 4.8 GW
+  fuel cells/other       5.6 GW  uplift  0.0%  -> + 0.0 GW
+  total extra output: 7.9 GW with no extra fuel or gas supply
+  hardware value at $2000/kW: $15.9B
+  fuel avoided per bottoming MW: $226k/yr (simple payback on fuel alone 8.9 yr)
+  the real value is MW the campus cannot otherwise get: no turbine slot, no new gas lateral, no new air-permit tonnage
+
+Part B: islanded campus, 4 training jobs x 60 MW + 60 MW inference, 24 h at 1 s
+  uncoordinated      battery  82.2 MW /  0.40 MWh = $ 12.5M; extra fuel   0.0 MWh/day ($0.00M/yr); compute deferred  0.0 MWh/day
+  coordinated        battery  62.7 MW /  0.43 MWh = $  9.5M; extra fuel 141.1 MWh/day ($1.56M/yr); compute deferred 17.9 MWh/day
+  coordinated+floor  battery  36.9 MW /  0.18 MWh = $  5.6M; extra fuel 485.1 MWh/day ($5.37M/yr); compute deferred 17.9 MWh/day
+  engines online: 14 x 25 MW (N+1) = 350 MW, fleet ramp 3.5 MW/s; campus peak 312 MW; daily energy 6,169 MWh
