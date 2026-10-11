@@ -1,0 +1,130 @@
+[
+ {
+  "kind": "MUR",
+  "MW": 17,
+  "hardware_lead_months": 12,
+  "today": {
+   "analysis_p50": 7.5,
+   "analysis_p90": 11.9,
+   "online_p50_months": 28.1,
+   "online_mean_months": 28.1,
+   "effort_eng_months": 106.0
+  },
+  "impact_engine": {
+   "analysis_p50": 4.7,
+   "analysis_p90": 5.4,
+   "online_p50_months": 21.6,
+   "online_mean_months": 21.7,
+   "effort_eng_months": 59.0,
+   "months_earlier_mean": 6.4,
+   "value_$M": 6.3,
+   "effort_saved_share": 0.44
+  },
+  "weak_engine": {
+   "analysis_p50": 6.1,
+   "analysis_p90": 9.0,
+   "online_p50_months": 24.3,
+   "online_mean_months": 24.4,
+   "effort_eng_months": 83.0,
+   "months_earlier_mean": 3.8,
+   "value_$M": 3.7,
+   "effort_saved_share": 0.22
+  }
+ },
+ {
+  "kind": "SPU",
+  "MW": 40,
+  "hardware_lead_months": 18,
+  "today": {
+   "analysis_p50": 12.9,
+   "analysis_p90": 20.5,
+   "online_p50_months": 37.0,
+   "online_mean_months": 37.2,
+   "effort_eng_months": 183.0
+  },
+  "impact_engine": {
+   "analysis_p50": 8.0,
+   "analysis_p90": 9.4,
+   "online_p50_months": 28.3,
+   "online_mean_months": 28.2,
+   "effort_eng_months": 102.0,
+   "months_earlier_mean": 9.0,
+   "value_$M": 20.7,
+   "effort_saved_share": 0.44
+  },
+  "weak_engine": {
+   "analysis_p50": 10.4,
+   "analysis_p90": 15.8,
+   "online_p50_months": 31.8,
+   "online_mean_months": 31.9,
+   "effort_eng_months": 142.0,
+   "months_earlier_mean": 5.3,
+   "value_$M": 12.2,
+   "effort_saved_share": 0.22
+  }
+ },
+ {
+  "kind": "EPU",
+  "MW": 160,
+  "hardware_lead_months": 24,
+  "today": {
+   "analysis_p50": 21.4,
+   "analysis_p90": 33.8,
+   "online_p50_months": 48.8,
+   "online_mean_months": 49.8,
+   "effort_eng_months": 304.0
+  },
+  "impact_engine": {
+   "analysis_p50": 13.4,
+   "analysis_p90": 15.6,
+   "online_p50_months": 36.1,
+   "online_mean_months": 36.1,
+   "effort_eng_months": 171.0,
+   "months_earlier_mean": 13.7,
+   "value_$M": 126.4,
+   "effort_saved_share": 0.44
+  },
+  "weak_engine": {
+   "analysis_p50": 17.4,
+   "analysis_p90": 26.3,
+   "online_p50_months": 41.8,
+   "online_mean_months": 42.3,
+   "effort_eng_months": 237.0,
+   "months_earlier_mean": 7.5,
+   "value_$M": 69.5,
+   "effort_saved_share": 0.22
+  }
+ },
+ {
+  "kind": "EPU",
+  "MW": 160,
+  "hardware_lead_months": 42,
+  "today": {
+   "analysis_p50": 21.5,
+   "analysis_p90": 34.2,
+   "online_p50_months": 53.7,
+   "online_mean_months": 54.0,
+   "effort_eng_months": 305.0
+  },
+  "impact_engine": {
+   "analysis_p50": 13.5,
+   "analysis_p90": 15.7,
+   "online_p50_months": 51.3,
+   "online_mean_months": 51.1,
+   "effort_eng_months": 171.0,
+   "months_earlier_mean": 2.9,
+   "value_$M": 27.1,
+   "effort_saved_share": 0.44
+  },
+  "weak_engine": {
+   "analysis_p50": 17.4,
+   "analysis_p90": 26.0,
+   "online_p50_months": 51.3,
+   "online_mean_months": 51.4,
+   "effort_eng_months": 236.0,
+   "months_earlier_mean": 2.7,
+   "value_$M": 24.5,
+   "effort_saved_share": 0.22
+  }
+ }
+]

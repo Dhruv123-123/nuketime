@@ -1,0 +1,188 @@
+{
+ "bear": {
+  "us_pool_B": 1.14,
+  "fleet_pool_B": 2.28,
+  "years": [
+   {
+    "year": 2027,
+    "addressable_B": 2.28,
+    "fee_M": 0,
+    "bonus_M": 0,
+    "revenue_M": 0,
+    "engineers": 0
+   },
+   {
+    "year": 2028,
+    "addressable_B": 2.28,
+    "fee_M": 5,
+    "bonus_M": 1,
+    "revenue_M": 5,
+    "engineers": 15
+   },
+   {
+    "year": 2029,
+    "addressable_B": 2.28,
+    "fee_M": 14,
+    "bonus_M": 1,
+    "revenue_M": 15,
+    "engineers": 45
+   },
+   {
+    "year": 2030,
+    "addressable_B": 2.61,
+    "fee_M": 31,
+    "bonus_M": 1,
+    "revenue_M": 32,
+    "engineers": 102
+   },
+   {
+    "year": 2031,
+    "addressable_B": 2.94,
+    "fee_M": 59,
+    "bonus_M": 1,
+    "revenue_M": 60,
+    "engineers": 192
+   },
+   {
+    "year": 2032,
+    "addressable_B": 3.28,
+    "fee_M": 92,
+    "bonus_M": 1,
+    "revenue_M": 93,
+    "engineers": 300
+   },
+   {
+    "year": 2033,
+    "addressable_B": 3.61,
+    "fee_M": 126,
+    "bonus_M": 1,
+    "revenue_M": 128,
+    "engineers": 413
+   }
+  ]
+ },
+ "base": {
+  "us_pool_B": 1.14,
+  "fleet_pool_B": 2.28,
+  "years": [
+   {
+    "year": 2027,
+    "addressable_B": 2.28,
+    "fee_M": 0,
+    "bonus_M": 1,
+    "revenue_M": 1,
+    "engineers": 0
+   },
+   {
+    "year": 2028,
+    "addressable_B": 2.28,
+    "fee_M": 9,
+    "bonus_M": 1,
+    "revenue_M": 10,
+    "engineers": 30
+   },
+   {
+    "year": 2029,
+    "addressable_B": 2.28,
+    "fee_M": 27,
+    "bonus_M": 2,
+    "revenue_M": 29,
+    "engineers": 89
+   },
+   {
+    "year": 2030,
+    "addressable_B": 2.61,
+    "fee_M": 65,
+    "bonus_M": 2,
+    "revenue_M": 68,
+    "engineers": 213
+   },
+   {
+    "year": 2031,
+    "addressable_B": 2.94,
+    "fee_M": 118,
+    "bonus_M": 2,
+    "revenue_M": 120,
+    "engineers": 385
+   },
+   {
+    "year": 2032,
+    "addressable_B": 3.28,
+    "fee_M": 180,
+    "bonus_M": 2,
+    "revenue_M": 183,
+    "engineers": 589
+   },
+   {
+    "year": 2033,
+    "addressable_B": 3.61,
+    "fee_M": 253,
+    "bonus_M": 2,
+    "revenue_M": 255,
+    "engineers": 826
+   }
+  ]
+ },
+ "bull": {
+  "us_pool_B": 1.92,
+  "fleet_pool_B": 3.83,
+  "years": [
+   {
+    "year": 2027,
+    "addressable_B": 3.83,
+    "fee_M": 4,
+    "bonus_M": 2,
+    "revenue_M": 6,
+    "engineers": 9
+   },
+   {
+    "year": 2028,
+    "addressable_B": 3.83,
+    "fee_M": 31,
+    "bonus_M": 3,
+    "revenue_M": 34,
+    "engineers": 72
+   },
+   {
+    "year": 2029,
+    "addressable_B": 3.83,
+    "fee_M": 77,
+    "bonus_M": 5,
+    "revenue_M": 82,
+    "engineers": 180
+   },
+   {
+    "year": 2030,
+    "addressable_B": 4.17,
+    "fee_M": 167,
+    "bonus_M": 7,
+    "revenue_M": 173,
+    "engineers": 392
+   },
+   {
+    "year": 2031,
+    "addressable_B": 4.5,
+    "fee_M": 292,
+    "bonus_M": 7,
+    "revenue_M": 299,
+    "engineers": 688
+   },
+   {
+    "year": 2032,
+    "addressable_B": 4.83,
+    "fee_M": 435,
+    "bonus_M": 7,
+    "revenue_M": 442,
+    "engineers": 1023
+   },
+   {
+    "year": 2033,
+    "addressable_B": 5.17,
+    "fee_M": 568,
+    "bonus_M": 7,
+    "revenue_M": 575,
+    "engineers": 1337
+   }
+  ]
+ }
+}

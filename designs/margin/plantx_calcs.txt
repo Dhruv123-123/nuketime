@@ -1,0 +1,168 @@
+# Plant X: an illustrative calculation-of-record index for a 4-loop PWR (3,411 MWt).
+# SYNTHETIC. Values are plausible round numbers for a plant of this class, written for the
+# prototype; they are not taken from any real plant's design basis. The format mimics the header
+# block of a real calc (number, inputs with their source, results, acceptance limit), which is the
+# information a design-basis impact engine has to pull out of thousands of legacy PDFs.
+
+CALC: PX-HB-001  Heat balance at rated thermal power
+INPUT: RTP = 3411 MWt (Tech Spec 1.1)
+OUTPUT: STEAM_FLOW = 15.1 Mlb/hr
+OUTPUT: FW_FLOW = 15.1 Mlb/hr
+OUTPUT: GROSS_MWE = 1195 MWe
+SENS: STEAM_FLOW 1.0 per % RTP
+SENS: FW_FLOW 1.0 per % RTP
+SENS: GROSS_MWE 1.0 per % RTP
+
+CALC: PX-NS-010  NSSS design parameters (PCWG), analysed at RTP x (1 + CAL_UNC)
+INPUT: RTP (PX-HB-001)
+INPUT: CAL_UNC = 2.0 % (10 CFR 50 App K allowance)
+OUTPUT: TAVG = 588 F
+OUTPUT: DECAY_HEAT = 1.0 relative
+SENS: DECAY_HEAT 1.0 per % RTP
+
+CALC: PX-FA-101  Large-break LOCA peak cladding temperature (Appendix K method)
+INPUT: RTP (PX-HB-001)
+INPUT: CAL_UNC (PX-NS-010)
+INPUT: DECAY_HEAT (PX-NS-010)
+RESULT: PCT = 2050 F
+LIMIT: PCT <= 2200 F (10 CFR 50.46)
+SENS: PCT +14 F per % RTP
+RECOVER: BEPU realistic LOCA method recovers 150 F (assumption, class of RG 1.157 methods)
+
+CALC: PX-FA-102  Non-LOCA transients, minimum DNBR (loss of flow)
+INPUT: RTP (PX-HB-001)
+INPUT: CAL_UNC (PX-NS-010)
+INPUT: TAVG (PX-NS-010)
+RESULT: DNBR = 1.42
+LIMIT: DNBR >= 1.30 (safety analysis limit)
+SENS: DNBR -0.012 per % RTP
+RECOVER: statistical combination of uncertainties recovers 0.04 (assumption)
+
+CALC: PX-FA-103  Pressurizer safety valve capacity, loss of load
+INPUT: RTP (PX-HB-001)
+INPUT: STEAM_FLOW (PX-HB-001)
+RESULT: RCS_PEAK_P = 2690 psia
+LIMIT: RCS_PEAK_P <= 2748 psia (110% design)
+SENS: RCS_PEAK_P +6 psia per % RTP
+
+CALC: PX-CN-201  Containment LOCA mass and energy release
+INPUT: RTP (PX-HB-001)
+INPUT: CAL_UNC (PX-NS-010)
+INPUT: DECAY_HEAT (PX-NS-010)
+OUTPUT: ME_RELEASE = 1.0 relative
+SENS: ME_RELEASE 1.0 per % RTP
+
+CALC: PX-CN-202  Containment peak pressure and temperature
+INPUT: ME_RELEASE (PX-CN-201)
+RESULT: CONT_P = 46.0 psig
+LIMIT: CONT_P <= 60.0 psig (containment design pressure)
+SENS: CONT_P +0.55 psig per % RTP
+OUTPUT: CONT_T = 1.0 relative
+SENS: CONT_T 1.0 per % RTP
+
+CALC: PX-EQ-301  Environmental qualification temperature profile, inside containment
+INPUT: CONT_T (PX-CN-202)
+RESULT: EQ_TEMP = 305 F
+LIMIT: EQ_TEMP <= 340 F (qualified envelope)
+SENS: EQ_TEMP +1.6 F per % RTP
+
+CALC: PX-EQ-302  ECCS sump NPSH margin, recirculation
+INPUT: CONT_T (PX-CN-202)
+INPUT: DECAY_HEAT (PX-NS-010)
+RESULT: NPSH_MARGIN = 3.1 ft
+LIMIT: NPSH_MARGIN >= 0.0 ft
+SENS: NPSH_MARGIN -0.18 ft per % RTP
+
+CALC: PX-RD-401  Control room operator dose, alternative source term
+INPUT: RTP (PX-HB-001)
+INPUT: CAL_UNC (PX-NS-010)
+RESULT: CR_DOSE = 4.1 rem TEDE
+LIMIT: CR_DOSE <= 5.0 rem TEDE (10 CFR 50.67)
+SENS: CR_DOSE +0.041 rem per % RTP
+
+CALC: PX-RD-402  Exclusion area boundary dose, LOCA
+INPUT: RTP (PX-HB-001)
+INPUT: CAL_UNC (PX-NS-010)
+RESULT: EAB_DOSE = 14.0 rem TEDE
+LIMIT: EAB_DOSE <= 25.0 rem TEDE (10 CFR 50.67)
+SENS: EAB_DOSE +0.14 rem per % RTP
+
+CALC: PX-AF-501  Auxiliary feedwater capacity, loss of normal feedwater
+INPUT: DECAY_HEAT (PX-NS-010)
+RESULT: AFW_MARGIN = 9.0 %
+LIMIT: AFW_MARGIN >= 0.0 %
+SENS: AFW_MARGIN -1.0 % per % RTP
+
+CALC: PX-SW-601  Component cooling and service water heat removal, design-basis UHS temperature
+INPUT: DECAY_HEAT (PX-NS-010)
+RESULT: CCW_T = 112 F
+LIMIT: CCW_T <= 120 F (component cooling design)
+SENS: CCW_T +0.7 F per % RTP
+
+CALC: PX-SF-602  Spent fuel pool heat-up, full core offload
+INPUT: DECAY_HEAT (PX-NS-010)
+RESULT: SFP_T = 141 F
+LIMIT: SFP_T <= 150 F (pool design)
+SENS: SFP_T +0.9 F per % RTP
+
+CALC: PX-TG-701  HP turbine flow-passing capability (valves wide open)
+INPUT: STEAM_FLOW (PX-HB-001)
+RESULT: TURB_FLOW = 100.0 % of current
+LIMIT: TURB_FLOW <= 104.5 % of current (VWO capability)
+SENS: TURB_FLOW +1.0 % per % RTP
+HARDWARE: HP turbine retrofit, 36-42 month lead (assumption)
+
+CALC: PX-TG-702  Main generator capability
+INPUT: GROSS_MWE (PX-HB-001)
+RESULT: GEN_LOAD = 1195 MWe
+LIMIT: GEN_LOAD <= 1240 MWe (rating at 0.9 pf)
+SENS: GEN_LOAD +11.95 MWe per % RTP
+HARDWARE: generator rewind or replacement, 30-40 month lead (assumption)
+
+CALC: PX-TG-703  Main step-up transformer loading
+INPUT: GROSS_MWE (PX-HB-001)
+RESULT: GSU_LOAD = 1260 MVA
+LIMIT: GSU_LOAD <= 1330 MVA (nameplate, forced cooling)
+SENS: GSU_LOAD +12.6 MVA per % RTP
+HARDWARE: replacement GSU, 36-48 month lead (assumption)
+
+CALC: PX-FW-801  Main feedwater pump capability
+INPUT: FW_FLOW (PX-HB-001)
+RESULT: FWP_DUTY = 100.0 % of current
+LIMIT: FWP_DUTY <= 109.0 % of current (runout margin)
+SENS: FWP_DUTY +1.0 % per % RTP
+HARDWARE: pump impeller upgrade, 18 month lead (assumption)
+
+CALC: PX-FW-802  Condensate pump NPSH and heater drain capacity
+INPUT: FW_FLOW (PX-HB-001)
+RESULT: COND_DUTY = 100.0 % of current
+LIMIT: COND_DUTY <= 106.0 % of current
+SENS: COND_DUTY +1.0 % per % RTP
+HARDWARE: condensate pump replacement, 18-24 month lead (assumption)
+
+CALC: PX-FA-901  Flow-accelerated corrosion wear rates, feedwater and extraction lines
+INPUT: FW_FLOW (PX-HB-001)
+INPUT: STEAM_FLOW (PX-HB-001)
+RESULT: FAC_LIFE = 14 years minimum remaining
+LIMIT: FAC_LIFE >= 6 years (inspection programme)
+SENS: FAC_LIFE -0.3 years per % RTP
+
+CALC: PX-SG-911  Steam generator tube vibration and wear (FIV)
+INPUT: STEAM_FLOW (PX-HB-001)
+RESULT: SG_FIV = 0.78 stability ratio
+LIMIT: SG_FIV <= 1.0 stability ratio
+SENS: SG_FIV +0.012 per % RTP
+
+CALC: PX-IC-950  Reactor trip setpoint, overtemperature delta-T
+INPUT: TAVG (PX-NS-010)
+INPUT: RTP (PX-HB-001)
+INPUT: CAL_UNC (PX-NS-010)
+OUTPUT: SETPOINT_REV = 1.0 relative
+SENS: SETPOINT_REV 1.0 per % RTP
+
+CALC: PX-PR-990  PRA, internal events
+INPUT: DECAY_HEAT (PX-NS-010)
+INPUT: AFW_MARGIN (PX-AF-501)
+RESULT: CDF = 3.2e-6 per year
+LIMIT: CDF <= 1.0e-4 per year (RG 1.174 region)
+SENS: CDF +0.02e-6 per % RTP
