@@ -1,0 +1,6 @@
+cladding share of thermal absorptions by boron ppm: [(0, 0.0034), (600, 0.0033), (1200, 0.0032)]
+reactivity freed by removing Zr-91: 201-340 pcm
+   201 pcm, SWU $110: fuel 3,720 $/kgU, saving 0.6% = $22/kgU = $80/kg Zr; world value pool $161M/yr
+   201 pcm, SWU $190: fuel 4,270 $/kgU, saving 0.6% = $26/kgU = $92/kg Zr; world value pool $184M/yr
+   340 pcm, SWU $110: fuel 3,720 $/kgU, saving 1.0% = $38/kgU = $136/kg Zr; world value pool $271M/yr
+   340 pcm, SWU $190: fuel 4,270 $/kgU, saving 1.0% = $44/kgU = $156/kg Zr; world value pool $311M/yr
