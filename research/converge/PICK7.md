@@ -4,7 +4,7 @@ Written 13 October 2026, after Dhruv rejected Margin as "not plausible" and aske
 public datasets created by a law or quirk that forces private work into the open (his example is SMAD,
 which Terranox uses to find uranium), on which ML could do something revolutionary. Constraints carried
 forward: size is the first filter (a $100-200M a year market is too small); no Terranox clone; no
-prospecting or drilling for resources. Raw output and every candidate: `research/forced/`.
+prospecting or drilling for resources. Raw output and every candidate: `research/forced/`. Claude Doc: https://claude.ai/code/artifact/a6157d9d-02d3-463c-93b4-234e30430d11
 
 ## How the hunt ran
 
