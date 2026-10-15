@@ -35,17 +35,19 @@ COUNTIES = [
 SNAPSHOTS = [2004, 2007, 2010, 2013, 2016, 2019]
 HORIZON = 5
 
-# Analyte codes as they appear in GeoTracker EDF PARLABEL (valid value list) plus common variants.
+# Analyte codes as they appear in GeoTracker EDF PARLABEL (valid value list) plus common variants. The TPH,
+# toluene (BZME) and extra VOC codes were added after checking real PARLABEL counts (Sacramento, Oct 2026).
 # `schema.py` writes the real top codes so the runner can extend this map if a code is missing.
 ANALYTES = {
     "benzene": {"BZ", "BENZENE"},
-    "toluene": {"TOL", "TOLUENE"},
+    "toluene": {"BZME", "TOL", "TOLUENE"},
     "ethylbenzene": {"EBZ", "ETHYLBENZENE"},
-    "xylenes": {"XYLENES", "XYL", "XYLENES,TOTAL", "XYLENESTOTAL", "TXYL"},
+    "xylenes": {"XYLENES", "XYL", "XYLENES,TOTAL", "XYLENESTOTAL", "TXYL"},  # total only; XYLO/XYLENES1314 are its parts
     "mtbe": {"MTBE"},
     "tba": {"TBA"},
-    "tphg": {"TPHG", "TPH-G", "TPHGAS"},
-    "tphd": {"TPHD", "TPH-D", "TPHDIESEL"},
+    "tphg": {"PHCG", "GRO", "GROC6C12", "GROC4C12", "GROC4C13", "GROC6C10", "GROC5C12", "GASOLINE", "TPHG", "TPH-G", "TPHGAS"},
+    "tphd": {"PHCD", "DRO", "DROC10C28", "DROC13C22", "DROC12C22", "DROC12C24", "DROC10C36", "DROC10C23", "DIESEL2", "TPHD", "TPH-D", "TPHDIESEL"},
+    "motoroil": {"MOIL", "MOILC16C36", "TPHMOTOROIL"},
     "tce": {"TCE"},
     "pce": {"PCE"},
     "cis12dce": {"C12DCE", "CIS12DCE", "DCE12C", "C-1,2-DCE"},
@@ -58,7 +60,12 @@ ANALYTES = {
     "nitrate": {"NO3", "NO3N", "NO3NO2N", "NITRATE", "NO3-N"},
     "perchlorate": {"CLO4", "PERCHLORATE"},
     "pfoa": {"PFOA"},
-    "pfos": {"PFOS"},
+    "pfos": {"PFOS", "PFOS_A"},
+    "tca111": {"TCA111"},
+    "dca12": {"DCA12"},
+    "dce11": {"DCE11"},
+    "edb": {"EDB"},
+    "naphthalene": {"NAPH"},
 }
 CODE_TO_ANALYTE = {c: a for a, cs in ANALYTES.items() for c in cs}
 

@@ -29,6 +29,9 @@ from sklearn.model_selection import GroupKFold
 from common import RESULTS, WORK, log
 
 panel = pd.read_pickle(os.path.join(WORK, "panel.pkl"))
+for c in ("county", "case_type", "agency", "status_at_T"):  # a few cases have no county; pandas 3 keeps NaN in str columns
+    panel[c] = panel[c].fillna("Unknown").astype(str)
+panel = panel.copy()
 panel["yo_bucket"] = pd.cut(panel.years_open, [-1, 2, 5, 10, 20, 100], labels=["0-2", "2-5", "5-10", "10-20", "20+"]).astype(str)
 META = {"gid", "T", "y", "ttc", "closed_ever", "closure_date", "open_date", "text_all", "yo_bucket"}
 CAT = ["case_type", "county", "agency", "status_at_T"]
@@ -47,7 +50,7 @@ def frame(df, cols, cats_from, txt=None):
         X[c] = pd.to_numeric(X[c], errors="coerce")
     for c in CAT:
         if c in cols:
-            X[c] = pd.Categorical(df[c].astype(str), categories=sorted(set(cats_from[c].astype(str))))
+            X[c] = pd.Categorical(df[c].astype(str).fillna("nan"), categories=sorted(set(cats_from[c].astype(str).fillna("nan"))))
     if txt is not None:
         for i in range(txt.shape[1]):
             X[f"txt{i}"] = txt[:, i]
@@ -66,8 +69,8 @@ def text_blocks(train, test):
 
 
 def lookup(train, test, cols):
-    kt = train[cols].astype(str).agg("|".join, axis=1)
-    ks = test[cols].astype(str).agg("|".join, axis=1)
+    kt = train[cols].astype(str).fillna("nan").agg("|".join, axis=1)
+    ks = test[cols].astype(str).fillna("nan").agg("|".join, axis=1)
     m = train.y.groupby(kt).agg(["sum", "count"])
     prior = train.y.mean()
     rate = ((m["sum"] + 5 * prior) / (m["count"] + 5))
@@ -137,7 +140,7 @@ if "has_edf" in test:
         results["temporal"]["with_edf_only"] = evaluate(test.y[he], {k: v[he] for k, v in sc.items()})
 results["feature_importance_top30"] = {k: int(v) for k, v in imp.head(30).items()}
 imp_groups = {"edf": imp[[c for c in imp.index if c.startswith(("w_", "s_", "edf_"))]].sum(), "text": imp[[c for c in imp.index if c.startswith("txt")]].sum(),
-              "geo": imp[[c for c in imp.index if c in ("n_fpt", "n_wells", "n_borings", "depth_max", "depth_med", "spread_km", "dtw_med_all", "dtw_med_before", "dtw_n_before", "first_year", "last_year", "n_xy", "n_well_rows")]].sum(),
+              "geo": imp[[c for c in imp.index if c in ("n_fpt", "n_wells", "n_borings", "depth_max", "depth_med", "spread_km", "dtw_med_before", "dtw_n_before", "first_year", "n_fpt_3y")]].sum(),
               "neighbours": imp[[c for c in imp.index if c.startswith("nb_")]].sum(), "struct": imp[[c for c in imp.index if c in STRUCT]].sum()}
 tot = sum(imp_groups.values()) or 1
 results["importance_share"] = {k: round(float(v / tot), 3) for k, v in imp_groups.items()}
@@ -164,7 +167,7 @@ if len(tr_c) > 300 and len(te_c) > 100:
     ttr, tte = text_blocks(tr_c, te_c)
     mR = LGBMRegressor(**{**PARAMS, "n_estimators": 500}).fit(frame(tr_c, FULL, tr_c, ttr), tr_c.ttc)
     pr = mR.predict(frame(te_c, FULL, tr_c, tte))
-    base = te_c[["case_type", "county"]].astype(str).agg("|".join, axis=1).map(tr_c.ttc.groupby(tr_c[["case_type", "county"]].astype(str).agg("|".join, axis=1)).median()).fillna(tr_c.ttc.median())
+    base = te_c[["case_type", "county"]].astype(str).fillna("nan").agg("|".join, axis=1).map(tr_c.ttc.groupby(tr_c[["case_type", "county"]].astype(str).fillna("nan").agg("|".join, axis=1)).median()).fillna(tr_c.ttc.median())
     results["time_to_close"] = {"n_train": int(len(tr_c)), "n_test": int(len(te_c)), "median_ttc_test": round(float(te_c.ttc.median()), 2),
                                 "mae_model": round(float(mean_absolute_error(te_c.ttc, pr)), 3), "mae_lookup": round(float(mean_absolute_error(te_c.ttc, base)), 3),
                                 "spearman_model": round(float(spearmanr(te_c.ttc, pr).correlation), 3), "spearman_lookup": round(float(spearmanr(te_c.ttc, base).correlation), 3)}
@@ -181,7 +184,7 @@ if len(cuf) > 200:
             ttr, tte = text_blocks(a, b)
             m = LGBMRegressor(**{**PARAMS, "n_estimators": 400}).fit(frame(a, FULL, a, ttr), a.lr)
             p = m.predict(frame(b, FULL, a, tte))
-            base = b[["case_type", "county"]].astype(str).agg("|".join, axis=1).map(a.lr.groupby(a[["case_type", "county"]].astype(str).agg("|".join, axis=1)).mean()).fillna(a.lr.mean())
+            base = b[["case_type", "county"]].astype(str).fillna("nan").agg("|".join, axis=1).map(a.lr.groupby(a[["case_type", "county"]].astype(str).fillna("nan").agg("|".join, axis=1)).mean()).fillna(a.lr.mean())
             rs.append((spearmanr(b.lr, p).correlation, spearmanr(b.lr, base).correlation, mean_absolute_error(b.lr, p), mean_absolute_error(b.lr, base)))
         rs = np.array(rs).mean(axis=0)
         results["cost"] = {"n_sites_with_reimb": int(len(c)), "median_reimb_usd": float(c.reimb.median()),

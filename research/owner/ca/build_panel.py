@@ -7,9 +7,9 @@ Writes work/panel.pkl. Columns:
             closed_ever, closure_date, open_date
   struct:   status_at_T, years_open, n_status_changes, n_regact, n_regact_3y, n_contam, has_gw (media),
             contaminant / media tokens (multi-hot, top 25), T
-  text:     regact_text (activities before T) + site_history  (vectorised later in backtest.py)
+  text:     regact_text (activities before T; site_history is excluded as a leak)  (vectorised in backtest.py)
   edf:      per analyte x matrix stats before T, plus n_samples_all, n_years_sampled, first/last sample year
-  geo:      static well/boring counts, depth, spread, dtw_med_before_T
+  geo:      well/boring counts, depth, spread from field points first seen before T, dtw_med_before_T
   nb:       neighbour closure rate within 3 km among sites whose 5-year outcome was known by T
 """
 import os
@@ -19,15 +19,21 @@ import numpy as np
 import pandas as pd
 from sklearn.neighbors import BallTree
 
-from common import ANALYTES, HORIZON, SNAPSHOTS, WORK, log
+from common import ANALYTES, HORIZON, SNAPSHOTS, WORK, haversine_km, log
 
 sites = pd.read_pickle(os.path.join(WORK, "sites.pkl"))
 sh = pd.read_pickle(os.path.join(WORK, "status_history.pkl"))
 ra = pd.read_pickle(os.path.join(WORK, "regact.pkl"))
 edf = pd.read_pickle(os.path.join(WORK, "edf_agg.pkl")) if os.path.exists(os.path.join(WORK, "edf_agg.pkl")) else pd.DataFrame()
 edf_all = pd.read_pickle(os.path.join(WORK, "edf_all.pkl")) if os.path.exists(os.path.join(WORK, "edf_all.pkl")) else pd.DataFrame()
-geo = pd.read_pickle(os.path.join(WORK, "geo_static.pkl")) if os.path.exists(os.path.join(WORK, "geo_static.pkl")) else pd.DataFrame(columns=["gid"])
+geo = pd.read_pickle(os.path.join(WORK, "geo_fpt.pkl")) if os.path.exists(os.path.join(WORK, "geo_fpt.pkl")) else pd.DataFrame(columns=["gid", "first_date"])
 dtw = pd.read_pickle(os.path.join(WORK, "geo_dtw_year.pkl")) if os.path.exists(os.path.join(WORK, "geo_dtw_year.pkl")) else pd.DataFrame(columns=["gid", "year", "dtw_med", "n_meas"])
+
+# Only cleanup cases have a cleanup outcome. Permits (WDR), cannabis, produced-water ponds, land disposal
+# and "non-case information" records are not contaminated-site cleanups and would pollute the label.
+CLEANUP_TYPES = r"LUST|CLEANUP PROGRAM|MILITARY CLEANUP|MILITARY UST"
+sites = sites[sites.case_type.str.upper().str.contains(CLEANUP_TYPES, regex=True, na=False)].copy()
+log(f"cleanup cases: {len(sites):,} {sites.case_type.value_counts().to_dict()}")
 
 # ---- open and closure dates --------------------------------------------------------------------------
 sh["is_closed"] = sh.status.str.upper().str.startswith("COMPLETED") | sh.status.str.upper().str.contains("CASE CLOSED")
@@ -153,13 +159,21 @@ for T in SNAPSHOTS:
         u["regact_text"] = txt.reindex(u.index).fillna("")
     else:
         u["n_regact"] = 0; u["n_regact_3y"] = 0; u["yrs_since_regact"] = np.nan; u["regact_text"] = ""
-    u["text_all"] = (u.regact_text + " " + u.site_history.fillna("")).str.lower().str.slice(0, 5000)
+    # site_history is today's free text and can describe the closure, so it is left out (leak).
+    u["text_all"] = u.regact_text.str.lower().str.slice(0, 5000)
     u = u.join(contam_tok).join(media_tok)
     ef = edf_features(T)
     u = u.join(ef, how="left")
     u["has_edf"] = u.index.isin(ef.index).astype(int)
     if len(geo):
-        u = u.join(geo.set_index("gid"), how="left")
+        gb = geo[geo.first_date < t0]
+        gg = gb.groupby("gid").agg(n_fpt=("fpt", "nunique"), n_wells=("is_well", "sum"), n_borings=("is_boring", "sum"),
+                                   depth_max=("depth", "max"), depth_med=("depth", "median"), first_year=("first_date", "min"),
+                                   lat0=("lat", "min"), lat1=("lat", "max"), lon0=("lon", "min"), lon1=("lon", "max"))
+        gg["first_year"] = gg.first_year.dt.year
+        gg["spread_km"] = haversine_km(gg.lat0.to_numpy(), gg.lon0.to_numpy(), gg.lat1.to_numpy(), gg.lon1.to_numpy())
+        gg["n_fpt_3y"] = gb[gb.first_date >= t0 - pd.DateOffset(years=3)].groupby("gid").fpt.nunique()
+        u = u.join(gg.drop(columns=["lat0", "lat1", "lon0", "lon1"]), how="left")
     if len(dtw):
         d = dtw[dtw.year < T].groupby("gid").agg(dtw_med_before=("dtw_med", "median"), dtw_n_before=("n_meas", "sum"))
         u = u.join(d, how="left")
