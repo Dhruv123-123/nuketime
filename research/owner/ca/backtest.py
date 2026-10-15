@@ -175,21 +175,40 @@ if len(tr_c) > 300 and len(te_c) > 100:
 # ---- cost (Cleanup Fund reimbursed-to-date, 2020 active claims) --------------------------------------
 cuf = pd.read_pickle(os.path.join(WORK, "cuf.pkl")) if os.path.exists(os.path.join(WORK, "cuf.pkl")) else pd.DataFrame()
 if len(cuf) > 200:
-    c = panel[panel["T"] == 2010].merge(cuf, on="gid")
-    c = c[c.reimb > 0].copy(); c["lr"] = np.log10(c.reimb)
-    if len(c) > 200:
+    # Label: log10 reimbursed-to-date in the Oct 2020 Cleanup Fund capture (capped at the $1.5M per-occurrence
+    # limit). Features as of 1 Jan T. Run at T=2010 (main) and T=2007 (check), with the full model, the
+    # structured-only model and the case_type x county lookup, 5-fold leave-counties-out.
+    results["cost"] = {}
+    for Tc in (2010, 2007):
+        c = panel[panel["T"] == Tc].merge(cuf, on="gid")
+        c = c[c.reimb > 0].reset_index(drop=True); c["lr"] = np.log10(c.reimb)
+        if len(c) < 200:
+            continue
         rs = []
         for tr, te in GroupKFold(n_splits=min(5, c.county.nunique())).split(c, c.lr, groups=c.county):
             a, b = c.iloc[tr], c.iloc[te]
             ttr, tte = text_blocks(a, b)
             m = LGBMRegressor(**{**PARAMS, "n_estimators": 400}).fit(frame(a, FULL, a, ttr), a.lr)
             p = m.predict(frame(b, FULL, a, tte))
-            base = b[["case_type", "county"]].astype(str).fillna("nan").agg("|".join, axis=1).map(a.lr.groupby(a[["case_type", "county"]].astype(str).fillna("nan").agg("|".join, axis=1)).mean()).fillna(a.lr.mean())
-            rs.append((spearmanr(b.lr, p).correlation, spearmanr(b.lr, base).correlation, mean_absolute_error(b.lr, p), mean_absolute_error(b.lr, base)))
-        rs = np.array(rs).mean(axis=0)
-        results["cost"] = {"n_sites_with_reimb": int(len(c)), "median_reimb_usd": float(c.reimb.median()),
-                           "spearman_model": round(float(rs[0]), 3), "spearman_lookup": round(float(rs[1]), 3),
-                           "mae_log10_model": round(float(rs[2]), 3), "mae_log10_lookup": round(float(rs[3]), 3)}
+            mS = LGBMRegressor(**{**PARAMS, "n_estimators": 400}).fit(frame(a, STRUCT, a), a.lr)
+            pS = mS.predict(frame(b, STRUCT, a))
+            # counties are held out, so the lookup keys on case type x status x years-open (the L2 buyer heuristic)
+            kcols = ["case_type", "status_at_T", "yo_bucket"]
+            base = b[kcols].astype(str).fillna("nan").agg("|".join, axis=1).map(a.lr.groupby(a[kcols].astype(str).fillna("nan").agg("|".join, axis=1)).mean()).fillna(a.lr.mean())
+            # structured + how much sampling had been done before T: reimbursed-to-date includes money spent before T,
+            # so sampling volume is partly an accounting proxy for past spend rather than a read of the contamination
+            VOL = STRUCT + [x for x in ("edf_n_samples", "edf_n_years", "edf_first_year", "edf_n_fpt_max", "n_fpt", "n_wells", "n_borings") if x in c.columns]
+            mV = LGBMRegressor(**{**PARAMS, "n_estimators": 400}).fit(frame(a, VOL, a), a.lr)
+            pV = mV.predict(frame(b, VOL, a))
+            rs.append((spearmanr(b.lr, p).correlation, spearmanr(b.lr, pS).correlation, spearmanr(b.lr, base).correlation,
+                       mean_absolute_error(b.lr, p), mean_absolute_error(b.lr, pS), mean_absolute_error(b.lr, base),
+                       spearmanr(b.lr, pV).correlation, mean_absolute_error(b.lr, pV)))
+        rs = np.nanmean(np.array(rs, dtype=float), axis=0)
+        results["cost"][f"T{Tc}"] = {"n_sites_with_reimb": int(len(c)), "median_reimb_usd": float(c.reimb.median()),
+                                     "share_at_cap_1.4M+": round(float((c.reimb >= 1.4e6).mean()), 3), "has_edf_share": round(float(c.has_edf.mean()), 3),
+                                     "spearman_model": round(float(rs[0]), 3), "spearman_structured": round(float(rs[1]), 3), "spearman_lookup": round(float(rs[2]), 3),
+                                     "mae_log10_model": round(float(rs[3]), 3), "mae_log10_structured": round(float(rs[4]), 3), "mae_log10_lookup": round(float(rs[5]), 3),
+                                     "spearman_structured_plus_sampling_volume": round(float(rs[6]), 3), "mae_log10_structured_plus_sampling_volume": round(float(rs[7]), 3)}
 else:
     results["cost"] = "no Cleanup Fund table parsed (cuf.pkl empty)"
 

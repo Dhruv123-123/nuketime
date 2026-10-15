@@ -37,6 +37,6 @@ Top features: agency, county, case_type, edf_last_year, w_benzene_max_3y, yrs_si
 
 ## Time to closure (closed sites): {'n_train': 24191, 'n_test': 5449, 'median_ttc_test': 1.92, 'mae_model': 1.125, 'mae_lookup': 1.264, 'spearman_model': 0.339, 'spearman_lookup': -0.01}
 
-## Cost: no Cleanup Fund table parsed (cuf.pkl empty)
+## Cost: {'T2010': {'n_sites_with_reimb': 1185, 'median_reimb_usd': 807912.0, 'share_at_cap_1.4M+': 0.111, 'has_edf_share': 0.893, 'spearman_model': 0.6, 'spearman_structured': 0.368, 'spearman_lookup': 0.263, 'mae_log10_model': 0.207, 'mae_log10_structured': 0.267, 'mae_log10_lookup': 0.264, 'spearman_structured_plus_sampling_volume': 0.548, 'mae_log10_structured_plus_sampling_volume': 0.224}, 'T2007': {'n_sites_with_reimb': 1195, 'median_reimb_usd': 803810.0, 'share_at_cap_1.4M+': 0.11, 'has_edf_share': 0.823, 'spearman_model': 0.542, 'spearman_structured': 0.32, 'spearman_lookup': 0.234, 'mae_log10_model': 0.23, 'mae_log10_structured': 0.288, 'mae_log10_lookup': 0.268, 'spearman_structured_plus_sampling_volume': 0.479, 'mae_log10_structured_plus_sampling_volume': 0.249}}
 
 ## Verdict: {'temporal_gain_over_best_lookup': 0.0773, 'temporal_gain_over_structured_ml': 0.004, 'spatial_gain_over_best_lookup': 0.1001, 'spatial_gain_over_structured_ml': 0.0257, 'passes_kill_bar': False, 'kill_bar': 'F - max(L1,L2) >= 0.05 AUC (temporal) and F - S >= 0.02'}
