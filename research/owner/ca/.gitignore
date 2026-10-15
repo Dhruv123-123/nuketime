@@ -1,0 +1,4 @@
+data/*
+!data/ca_substations.csv
+work/
+__pycache__/
