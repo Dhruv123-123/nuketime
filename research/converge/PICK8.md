@@ -204,10 +204,17 @@ leg of the corrected test: ML is not what makes the problem solvable here, it ma
 little better solved. A brownfield buyer with this model would beat the field, and nothing would stop the
 next buyer from building the same model.
 
-Still open: **cost**. Closure timing is the part of price a buyer can already read from the status field;
-cost is the part the lab record should explain if anything does. The Cleanup Fund claims (3,779 claims with
-reimbursed-to-date, 2020 archive copy, now in `research/owner/ca/data/cuf/`) are being run through the cost
-model; this section will be updated with the result. Also untested: mispricing. The simulation shows which
+**Cost (run after the closure numbers).** The 3,779 archived Cleanup Fund claims (2020 capture, in
+`research/owner/ca/data/cuf/`) gave 1,530 sites with a reimbursed-to-date figure, 1,185 of them open at the
+2010 snapshot; median $808k, 11% at the $1.5M cap. Leave-counties-out, predicting log10 reimbursed-to-date:
+Spearman **0.60** for the full model, 0.55 for structured fields plus sampling volume, 0.37 structured only,
+0.26 for the lookup (MAE in log10: 0.21 / 0.22 / 0.27 / 0.26; 2007 snapshot similar). That looks like the lab
+record finally earning its keep, but it is weaker than it looks: reimbursed-to-date includes money spent
+before the snapshot, and the count of lab samples before the snapshot is a direct record of that spend. Volume
+alone takes the structured model from 0.37 to 0.55; concentrations, trends and text add about +0.05. So the
+lab record mostly tells you what has already been spent, not what cleanup will cost from here. A forward cost
+test needs dated reimbursements per site, which the archive does not hold (the FY2024-25 payments file has no
+site id). The verdict stands. Also untested: mispricing. The simulation shows which
 sites close, not which are cheap; the sites the model likes may already be priced near clean. The listed
 discount versus predicted cost test on 20 powered sites needs listing data this environment does not have.
 
