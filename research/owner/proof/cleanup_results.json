@@ -1,0 +1,27 @@
+{
+  "source": "PA DEP storage-tank cleanup incidents via github.com/Eastern-Research-Group/UST",
+  "n_incidents": 20390,
+  "n_train_1995_2007": 7602,
+  "n_test_2008_2012": 1327,
+  "closed_within_3y_rate_train": 0.218,
+  "closed_within_3y_rate_test": 0.46,
+  "auc_model": 0.727,
+  "auc_lookup_impact_x_substance": 0.695,
+  "auc_lookup_county": 0.546,
+  "auc_neighbour_history_only": 0.535,
+  "top_decile_lift_model": 1.79,
+  "top_decile_lift_lookup": 1.68,
+  "median_years_to_close_test_closed": 2.51,
+  "top_features_gain": {
+    "impact": 8139,
+    "year": 5550,
+    "nb_rate": 5275,
+    "county": 5159,
+    "owner_n": 4179,
+    "txt1": 4096,
+    "nb_n": 3485,
+    "substance": 2552,
+    "discovered": 2320,
+    "txt19": 2172
+  }
+}

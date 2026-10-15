@@ -133,7 +133,42 @@ DrugCentral (Nov 2023), the EMA EPAR list (Feb 2023), WHO ATC and a 401-row FDA 
 known Europe-first drugs would have been flagged 0.2-11.6 years early (pitolisant 3.4 years,
 amifampridine 8.9). Limit: US data ends in 2023, so this is not a point-in-time test.
 
-## The decision for Dhruv
+## Round 4: Dhruv's correction (15 Oct, 04:56Z)
+
+Dhruv corrected test part 1: Terranox does not get claims first-come, it **buys** mineral rights. The real
+bar is that **ML/AI is what makes the pain point solvable**. Corrected test: buy the right at a price set by
+people who cannot see its value; the value hides in illegible public data that only ML can read at scale;
+the asset is worth far more than its price; the company realises the value itself. Every candidate was
+rescored (`research/owner/r4_rescore.md`) and a fresh sweep run (`r4_sweep.md`).
+
+**New lead: powered brownfields (8/8 on the corrected test).** Buy contaminated former industrial and
+power sites, which already carry substations, rail and water, at the stigma discount. Price the real
+cleanup cost and time from state case files (California GeoTracker alone has 230M+ lab rows, boring logs
+and reports, forced public by its electronic-submittal rules). Then clean them up and sell or develop them
+as powered industrial and data-centre land. Sellers and lenders cannot price the cleanup; a model trained
+on decades of case files can. No ML-led principal buyer was found (Liora sells AI remediation as a
+service; Cherokee-style brownfield funds underwrite by hand). It is energy-adjacent, not core energy.
+
+**Proof run (`research/owner/proof/cleanup_backtest.py`).** On 20,390 Pennsylvania storage-tank cleanup
+incidents (structured fields and short descriptions only, GitHub mirror of PA DEP data): train on
+1995-2007, test on 2008-2012, predicting closure within 3 years. Model AUC **0.727** vs **0.695** for an
+impact x substance lookup (+0.03; top-decile lift 1.79 vs 1.68). That is a real but small edge, under our
+0.05 bar. The structured record alone is not enough; the thesis rests on reading the illegible part (lab
+time series, boring logs, consultant reports), which is blocked from this environment. **Kill test:** on
+GeoTracker, a model using lab and boring-log data must beat the lookup by 0.05 AUC on time-to-closure,
+and listed sale discounts must exceed predicted cost on at least 20 powered sites.
+
+**Rescored shortlist on the corrected test.**
+
+| Idea | Score | Sector | Main doubt |
+|---|---|---|---|
+| Powered brownfields | 8/8 | Energy-adjacent | Proof above shows structured data alone gives +0.03 AUC |
+| Orphaned OT/ICS software lines | 7/8 | Security | ML finds targets; value is M&A skill |
+| Corridor rights from scanned railroad deeds and valuation maps | 6/10 | Energy (transmission, fibre) | Big railroads hold the best corridors; siting approval |
+| Underperforming solar/wind bought on a public screen, fixed with robotic O&M | 6/8 | Energy, robotics | Gap is visible in diligence data |
+| Lineage (SBIR) | 5/8 | Deeptech | Agency can decline Phase III; FPDS linkage makes matching a join |
+
+## The decision for Dhruv (written before round 4)
 
 1. **Take Lineage to its kill test.** It fits your sectors and is the only survivor. Expect it to look
    more like a defence hardware company with a data-driven acquisition engine than like Terranox.
