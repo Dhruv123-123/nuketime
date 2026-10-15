@@ -168,15 +168,73 @@ and listed sale discounts must exceed predicted cost on at least 20 powered site
 | Underperforming solar/wind bought on a public screen, fixed with robotic O&M | 6/8 | Energy, robotics | Gap is visible in diligence data |
 | Lineage (SBIR) | 5/8 | Deeptech | Agency can decline Phase III; FPDS linkage makes matching a join |
 
-## The decision for Dhruv (written before round 4)
+## Round 5: the California kill test (15 Oct, 23:12Z)
 
-1. **Take Lineage to its kill test.** It fits your sectors and is the only survivor. Expect it to look
-   more like a defence hardware company with a data-driven acquisition engine than like Terranox.
-2. **Accept that the Terranox moat is geological.** If "unattackable via a cheap first-come claim" is the
-   real requirement, the hunt says it lives in mineral tenure, which you have ruled out. Terranox itself
-   may be the strongest YC application.
-3. **Drop the claim requirement** and rank ideas in your sectors on execution moats (a robot that cuts a
-   cost tenfold, a factory, a licence that takes years). That is a different hunt.
+Dhruv, 21:32Z: "use a lot of compute and actually run a really deep experiment of doing this in cali."
+Run on the full GeoTracker record in a cloud environment with network access (pipeline `research/owner/ca/`,
+results `research/owner/ca/results/`): the statewide case table, 232 county well and boring files and 58
+county lab files, 4.4 GB zipped, 230M+ lab rows. Panel: every cleanup case (LUST, Cleanup Program,
+Military) open on 1 January of 2004, 2007, 2010, 2013, 2016 and 2019, with features built only from records
+dated before that day, and the label "closed within five years". 96,761 site-snapshots over 27,956 cases.
+Two leaks were found and removed before any number was read (present-day site-history text; all-time well
+counts), and dropping the present-day lead-agency field moves the result by under 0.005.
+
+Four scorers on the temporal test (train through 2013, test on 2016 and 2019, n = 21,502):
+
+| scorer | AUC | top-decile lift |
+|---|---|---|
+| lookup: case type x county | 0.763 | 2.1 |
+| lookup: case type x status x years open (the buyer's heuristic) | 0.768 | 2.9 |
+| LightGBM on the structured fields only | 0.842 | 3.3 |
+| LightGBM on everything (lab series per analyte, wells, activity text, neighbours) | **0.846** | 3.2 |
+
+Held-out counties: 0.694 / 0.768 / 0.794 for the heuristic, structured and full models. On the sites that
+have lab data: structured 0.815, full 0.844. Time to closure among sites that did close: MAE 1.13 vs 1.26
+years, Spearman 0.34 vs 0.01 for the lookup.
+
+Buying simulation at 2016: among 1,277 open sites within 3 km of a 230 kV or larger substation, the full
+model's top 300 closed within five years at 75%, the buyer's heuristic's top 300 at 60%, a random 300 at 29%.
+Within 3 km of 115 kV or larger (4,216 sites): 88% vs 80% vs 28%.
+
+**Verdict: fails the kill bar.** ML beats what buyers use by +0.08 AUC (bar 0.05: passed). The illegible
+record adds **+0.004** over ML on the structured fields alone (bar 0.02: failed); it is worth about +0.03
+only where lab data exists and in counties the model has never seen. The edge is real and it is ML, but it
+comes from a 40 MB case table anyone can model in a week, not from the 230M-row record. That fails the second
+leg of the corrected test: ML is not what makes the problem solvable here, it makes a solvable problem a
+little better solved. A brownfield buyer with this model would beat the field, and nothing would stop the
+next buyer from building the same model.
+
+Still open: **cost**. Closure timing is the part of price a buyer can already read from the status field;
+cost is the part the lab record should explain if anything does. The Cleanup Fund claims (3,779 claims with
+reimbursed-to-date, 2020 archive copy, now in `research/owner/ca/data/cuf/`) are being run through the cost
+model; this section will be updated with the result. Also untested: mispricing. The simulation shows which
+sites close, not which are cheap; the sites the model likes may already be priced near clean. The listed
+discount versus predicted cost test on 20 powered sites needs listing data this environment does not have.
+
+**What it does to the shortlist.** Powered brownfields drops from 8/8 to about 5/8: still a business (an
+ML-underwritten brownfield developer near substations), not an unattackable one; its moat would be capital
+and execution, like any developer's. The pattern across the three backtests (grid queue: no edge; PA tanks:
++0.03 from structured fields; California: +0.08 from structured fields and +0.004 from the illegible part) is
+that in regulatory case records the legible fields carry the signal, because the regulator already writes the
+outcome-relevant facts into them. Terranox's edge survives because geology logs are illegible **and** the
+outcome (ore) is not summarised anywhere in the record. That is the property to look for next, and it is
+rare: scanned deeds and valuation maps (corridor title), scanned interconnection and system-impact studies,
+and old well logs have it; status tables, permits and advisories do not.
+
+## The decision for Dhruv (updated after round 5)
+
+1. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
+   backtests say the "public data only ML can read, outcome not summarised anywhere" moat lives in geology.
+   Terranox has it. (Recommended.)
+2. **Keep brownfields as a developer play** with ML underwriting and an execution moat. It is a real edge
+   over today's buyers (+15 points of closure in a 300-site portfolio near 230 kV) but it is copyable, and
+   the cost and mispricing legs are unproven.
+3. **One more kill test on a record with the Terranox property**: corridor title from scanned railroad
+   deeds and ICC valuation maps (6/10 in round 4; transmission and fibre siting), or scanned interconnection
+   studies. Expect a data-access fight before any modelling.
+
+Earlier decision list (written before round 4): take Lineage to its kill test; accept the moat is
+geological; or drop the claim requirement and rank on execution moats.
 
 Search budget used: about 360 web searches across three rounds. Government data hosts (fda.gov, sbir.gov,
 eia.gov, NRC, EMA) were blocked from this environment; datasets were checked against documentation, and

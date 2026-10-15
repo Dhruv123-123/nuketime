@@ -146,7 +146,7 @@ def to_date(s):
 
 
 def to_num(s):
-    return pd.to_numeric(s.astype(str).str.replace(",", "").str.strip(), errors="coerce")
+    return pd.to_numeric(s.astype(str).str.replace(r"[$,\s]", "", regex=True), errors="coerce")
 
 
 def haversine_km(lat1, lon1, lat2, lon2):
