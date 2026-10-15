@@ -1,0 +1,21 @@
+# US approvals that the data snapshots MISS (DrugCentral FDA table ends 2023-08-18; no Purple Book).
+# Source for every row: analyst memory on 2026-10-15, NOT verified against FDA (fda.gov unreachable
+# from this environment). Used only to fill the column us_approved_after_snapshot_manual; rows are
+# never dropped. "matching_gap" = US approval predates the snapshot but the data did not link it.
+ingredient,us_brand,us_approval,source
+vadadustat,Vafseo,2024-03,memory:post_snapshot
+landiolol,Rapiblyk,2024-11,memory:post_snapshot
+treosulfan,Grafapex,2025-01,memory:post_snapshot
+sofpironium bromide,Sofdra,2024-06,memory:post_snapshot
+foslevodopa,Vyalev,2024-10,memory:post_snapshot
+foscarbidopa,Vyalev,2024-10,memory:post_snapshot
+delgocitinib,Anzupgo,2025-07,memory:post_snapshot
+mirikizumab,Omvoh,2023-10,memory:post_snapshot
+bimekizumab,Bimzelx,2023-10,memory:post_snapshot
+cipaglucosidase alfa,Pombiliti,2023-09,memory:post_snapshot
+nemolizumab,Nemluvio,2024-08,memory:post_snapshot
+isavuconazole,Cresemba (isavuconazonium sulfate),2015-03,memory:matching_gap
+edotreotide,Ga 68 DOTATOC,2019-08,memory:matching_gap
+ferric coordination complex,Auryxia (ferric citrate),2014-09,memory:matching_gap
+depreotide,NeoTect,1999,memory:matching_gap
+zinc,Galzin (zinc acetate),1997,memory:matching_gap

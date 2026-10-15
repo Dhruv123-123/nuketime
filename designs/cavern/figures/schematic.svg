@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 820" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="12">
+<defs><pattern id="rock" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="14" stroke="#dcdad3" stroke-width="1"/></pattern>
+<linearGradient id="hot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbd9c6"/><stop offset="1" stop-color="#eb6834"/></linearGradient>
+<linearGradient id="warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdeee4"/><stop offset="1" stop-color="#f2a679"/></linearGradient></defs>
+<rect width="1050" height="820" fill="#fcfcfb"/>
+<text x="20" y="28" font-size="16" font-weight="bold" fill="#0b0b0b">CAVERN: two lined rock caverns of pressurised hot water as a daily peaking store (vertical section, 2.2 px per metre)</text>
+<text x="20" y="46" fill="#52514e">1,100 MWe PWR. Charge 09:00 to 15:00 with extraction steam; discharge 17:00 to 22:00 by four-stage flash into a 315 MW peaking turbine.</text>
+<text x="20" y="61" fill="#52514e">Each cavern holds a constant temperature and pressure; only the water level moves.</text>
+<rect x="40.0" y="150" width="880.0000000000001" height="616.0" fill="url(#rock)" stroke="#c3c2b7"/>
+<line x1="40.0" y1="150" x2="920.0000000000001" y2="150" stroke="#0b0b0b" stroke-width="2"/>
+<text x="44.4" y="164" fill="#52514e" font-size="11">ground surface</text>
+<line x1="914.0000000000001" y1="150.0" x2="926.0000000000001" y2="150.0" stroke="#52514e"/><text x="930.0000000000001" y="154.0" fill="#52514e" font-size="11">0 m</text>
+<line x1="914.0000000000001" y1="260.0" x2="926.0000000000001" y2="260.0" stroke="#52514e"/><text x="930.0000000000001" y="264.0" fill="#52514e" font-size="11">-50 m</text>
+<line x1="914.0000000000001" y1="370.0" x2="926.0000000000001" y2="370.0" stroke="#52514e"/><text x="930.0000000000001" y="374.0" fill="#52514e" font-size="11">-100 m</text>
+<line x1="914.0000000000001" y1="480.0" x2="926.0000000000001" y2="480.0" stroke="#52514e"/><text x="930.0000000000001" y="484.0" fill="#52514e" font-size="11">-150 m</text>
+<line x1="914.0000000000001" y1="590.0" x2="926.0000000000001" y2="590.0" stroke="#52514e"/><text x="930.0000000000001" y="594.0" fill="#52514e" font-size="11">-200 m</text>
+<line x1="914.0000000000001" y1="700.0" x2="926.0000000000001" y2="700.0" stroke="#52514e"/><text x="930.0000000000001" y="704.0" fill="#52514e" font-size="11">-250 m</text>
+<rect x="106.0" y="78" width="176.0" height="72" fill="#f0efec" stroke="#52514e"/>
+<text x="194.0" y="98" text-anchor="middle" fill="#0b0b0b" font-size="11">turbine hall</text>
+<text x="194.0" y="113" text-anchor="middle" fill="#52514e" font-size="10">main turbine 1,156 MW</text>
+<text x="194.0" y="128" text-anchor="middle" fill="#52514e" font-size="10">6 extraction points</text>
+<rect x="315.0" y="78" width="165.0" height="72" fill="#f0efec" stroke="#52514e"/>
+<text x="397.50000000000006" y="98" text-anchor="middle" fill="#0b0b0b" font-size="11">peaking hall</text>
+<text x="397.50000000000006" y="113" text-anchor="middle" fill="#52514e" font-size="10">315 MW wet-steam turbine</text>
+<text x="397.50000000000006" y="128" text-anchor="middle" fill="#52514e" font-size="10">4 flash vessels, condenser</text>
+<rect x="513.0" y="78" width="132.0" height="72" fill="#f0efec" stroke="#52514e"/>
+<text x="579.0" y="98" text-anchor="middle" fill="#0b0b0b" font-size="11">charge train</text>
+<text x="579.0" y="113" text-anchor="middle" fill="#52514e" font-size="10">6 closed heaters, pumps</text>
+<rect x="365.6" y="475.6" width="74.80000000000001" height="225.5271094913382" rx="8" fill="#e6e5e1" stroke="#52514e"/>
+<rect x="370.0" y="480.0" width="66.0" height="216.72710949133818" rx="6" fill="#f7f6f2" stroke="#1c5cab" stroke-width="2.5"/>
+<rect x="372.0" y="620.8726211693698" width="62.0" height="73.85448832196836" rx="5" fill="url(#hot)"/>
+<rect x="541.6" y="475.6" width="74.80000000000001" height="204.71983347983098" rx="8" fill="#e6e5e1" stroke="#52514e"/>
+<rect x="546.0" y="480.0" width="66.0" height="195.91983347983097" rx="6" fill="#f7f6f2" stroke="#1c5cab" stroke-width="2.5"/>
+<rect x="548.0" y="528.9799583699578" width="62.0" height="144.93987510987324" rx="5" fill="url(#warm)"/>
+<text x="364.00000000000006" y="472.0" text-anchor="end" font-size="11" font-weight="bold" fill="#0b0b0b">hot cavern</text><text x="364.00000000000006" y="486.0" text-anchor="end" font-size="10" fill="#52514e">235 °C · 3.06 MPa · 70,000 m³</text>
+<text x="618.0" y="472.0" text-anchor="start" font-size="11" font-weight="bold" fill="#0b0b0b">warm cavern</text><text x="618.0" y="486.0" text-anchor="start" font-size="10" fill="#52514e">160 °C · 0.62 MPa · 63,000 m³</text>
+<text x="403.00000000000006" y="712.7271094913382" text-anchor="middle" font-size="10" fill="#52514e">level: full at 15:00, low at 22:00</text>
+<line x1="403.00000000000006" y1="150" x2="403.00000000000006" y2="480.0" stroke="#52514e" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="392.0" y1="150" x2="392.0" y2="480.0" stroke="#b2431a" stroke-width="3"/>
+<line x1="414.00000000000006" y1="150" x2="414.00000000000006" y2="480.0" stroke="#1c5cab" stroke-width="3"/>
+<line x1="579.0" y1="150" x2="579.0" y2="480.0" stroke="#52514e" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="568.0" y1="150" x2="568.0" y2="480.0" stroke="#b2431a" stroke-width="3"/>
+<line x1="590.0" y1="150" x2="590.0" y2="480.0" stroke="#1c5cab" stroke-width="3"/>
+<text x="491.00000000000006" y="304.0" text-anchor="middle" font-size="10" fill="#52514e">access shafts, hot (orange) and warm (blue) water risers,</text><text x="491.00000000000006" y="317.20000000000005" text-anchor="middle" font-size="10" fill="#52514e">drainage gallery around each cavern</text>
+<rect x="700.0" y="183.0" width="209.00000000000003" height="264.0" fill="#fcfcfb" stroke="#c3c2b7"/>
+<text x="708.0" y="201.0" font-size="11" font-weight="bold" fill="#0b0b0b">wall build-up, inside to rock</text>
+<rect x="708.0" y="213.0" width="34" height="22" fill="#fbd9c6" stroke="#8a8984" stroke-width="0.5"/>
+<text x="750.0" y="228.0" font-size="10" fill="#52514e">water at 235 °C</text>
+<rect x="708.0" y="239.0" width="34" height="14" fill="#52514e" stroke="#8a8984" stroke-width="0.5"/>
+<text x="750.0" y="250.0" font-size="10" fill="#52514e">15 mm steel liner</text>
+<rect x="708.0" y="257.0" width="34" height="12" fill="#0b0b0b" stroke="#8a8984" stroke-width="0.5"/>
+<text x="750.0" y="267.0" font-size="10" fill="#52514e">bitumen sliding layer</text>
+<rect x="708.0" y="273.0" width="34" height="30" fill="#c3c2b7" stroke="#8a8984" stroke-width="0.5"/>
+<text x="750.0" y="292.0" font-size="10" fill="#52514e">1.5 m refractory concrete</text>
+<rect x="708.0" y="307.0" width="34" height="24" fill="#e6e5e1" stroke="#8a8984" stroke-width="0.5"/>
+<text x="750.0" y="323.0" font-size="10" fill="#52514e">1 m insulating castable, k = 0.15</text>
+<rect x="708.0" y="335.0" width="34" height="34" fill="#dcdad3" stroke="#8a8984" stroke-width="0.5"/>
+<text x="750.0" y="356.0" font-size="10" fill="#52514e">drained bedrock</text>
+<text x="708.0" y="387.0" font-size="10" fill="#52514e">rock wall 119 °C after 30 y</text><text x="708.0" y="400.0" font-size="10" fill="#52514e">liner at a steady 235 °C, no cycling</text>
+<text x="48.8" y="227.0" font-weight="bold" fill="#0b0b0b" font-size="11.5">Charge (6 h, midday)</text>
+<text x="48.8" y="241.0" fill="#52514e" font-size="11">Warm water is pumped up, heated 160 to 235 °C</text>
+<text x="48.8" y="255.0" fill="#52514e" font-size="11">in six closed heaters fed from the main</text>
+<text x="48.8" y="269.0" fill="#52514e" font-size="11">turbine's extraction points, and stored hot.</text>
+<text x="48.8" y="283.0" fill="#52514e" font-size="11">Output drops 352 MW while prices are lowest.</text>
+<text x="48.8" y="392.0" font-weight="bold" fill="#0b0b0b" font-size="11.5">Discharge (5 h, evening)</text>
+<text x="48.8" y="406.0" fill="#52514e" font-size="11">Hot water flashes at 2.2, 1.5, 1.0 and</text>
+<text x="48.8" y="420.0" fill="#52514e" font-size="11">0.6 MPa; the steam drives the peaking</text>
+<text x="48.8" y="434.0" fill="#52514e" font-size="11">turbine at 315 MW. Residual water</text>
+<text x="48.8" y="448.0" fill="#52514e" font-size="11">returns to the warm cavern.</text>
+<text x="48.8" y="557.0" font-weight="bold" fill="#0b0b0b" font-size="11.5">Round trip</text>
+<text x="48.8" y="571.0" fill="#52514e" font-size="11">74.6 % electric: 109 kJ back for</text>
+<text x="48.8" y="585.0" fill="#52514e" font-size="11">146 kJ forgone, per kg of hot water.</text>
+<text x="48.8" y="599.0" fill="#52514e" font-size="11">1574 MWh delivered per evening.</text>
+<text x="20" y="788.0" fill="#52514e" font-size="11">Lined rock cavern method as used for high-pressure gas storage (Skallen, Sweden, 20 MPa): the rock mass carries the pressure, the steel liner only seals.</text>
+<text x="20" y="803.0" fill="#52514e" font-size="11">Crowns at 150 m; rigid-cone uplift safety factor 23 at 3.1 MPa.</text>
+</svg>

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="12">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker>
+<marker id="arrb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1c5cab"/></marker>
+<marker id="arro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b2431a"/></marker></defs>
+<rect width="1100" height="760" fill="#fcfcfb"/>
+<text x="20" y="28" font-size="16" font-weight="bold" fill="#0b0b0b">LOCKSTEP: a PWR and a data centre engineered as one island (electrical one-line above, heat rejection below)</text>
+<text x="20" y="46" fill="#52514e">1,180 MWe gross PWR with a 520 MW liquid-cooled data centre. Three provisions: island on the data-centre load, share the cooling tower, tie the data-centre backup fleet to the plant safety buses.</text>
+<rect x="20" y="66" width="1060" height="322" fill="none" stroke="#c3c2b7" stroke-dasharray="4 3"/>
+<text x="30" y="82" text-anchor="start" font-size="10.5" fill="#52514e" font-weight="bold">ELECTRICAL</text>
+<rect x="40" y="120" width="120" height="70" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="100.0" y="137" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Reactor + SGs</text>
+<text x="100.0" y="152" text-anchor="middle" font-size="10" fill="#52514e">3,400 MWth</text>
+<text x="100.0" y="165" text-anchor="middle" font-size="10" fill="#52514e">rods, dump, runback</text>
+<rect x="190" y="120" width="120" height="70" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="250.0" y="137" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Turbine</text>
+<text x="250.0" y="152" text-anchor="middle" font-size="10" fill="#52514e">fast valving</text>
+<text x="250.0" y="165" text-anchor="middle" font-size="10" fill="#52514e">droop + island freq. control</text>
+<rect x="340" y="120" width="110" height="70" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="395.0" y="137" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Generator</text>
+<text x="395.0" y="152" text-anchor="middle" font-size="10" fill="#52514e">1,300 MVA</text>
+<text x="395.0" y="165" text-anchor="middle" font-size="10" fill="#52514e">H = 5.5 s</text>
+<line x1="160" y1="155" x2="190" y2="155" stroke="#52514e" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="310" y1="155" x2="340" y2="155" stroke="#52514e" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="450" y1="155" x2="520" y2="155" stroke="#52514e" stroke-width="2"/>
+<circle cx="520" cy="155" r="4" fill="#0b0b0b"/>
+<rect x="560" y="130" width="26" height="50" rx="4" fill="#fcfcfb" stroke="#52514e" stroke-width="1.2"/>
+<text x="573" y="123" text-anchor="middle" font-size="9" fill="#52514e">GCB</text>
+<line x1="520" y1="155" x2="560" y2="155" stroke="#52514e" stroke-width="2"/>
+<line x1="586" y1="155" x2="640" y2="155" stroke="#52514e" stroke-width="2"/>
+<rect x="640" y="125" width="100" height="60" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="690.0" y="142" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Main transformer</text>
+<text x="690.0" y="157" text-anchor="middle" font-size="10" fill="#52514e">24 / 345 kV</text>
+<line x1="740" y1="155" x2="800" y2="155" stroke="#52514e" stroke-width="2"/>
+<rect x="800" y="125" width="110" height="60" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="855.0" y="142" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Switchyard</text>
+<text x="855.0" y="157" text-anchor="middle" font-size="10" fill="#52514e">345 kV</text>
+<line x1="910" y1="155" x2="1000" y2="155" stroke="#52514e" stroke-width="2"/>
+<rect x="1000" y="130" width="60" height="50" rx="4" fill="#e6e5e1" stroke="#52514e" stroke-width="1.2"/>
+<text x="1030.0" y="147" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Grid</text>
+<text x="955" y="145" text-anchor="middle" font-size="9" fill="#b2431a">opens on grid loss</text>
+<line x1="950" y1="140" x2="965" y2="170" stroke="#b2431a" stroke-width="2"/>
+<line x1="520" y1="155" x2="520" y2="246" stroke="#52514e" stroke-width="2"/>
+<rect x="460" y="246" width="120" height="50" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="520.0" y="263" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Unit aux. transformer</text>
+<text x="520.0" y="278" text-anchor="middle" font-size="10" fill="#52514e">house load 60 MW</text>
+<line x1="520" y1="296" x2="520" y2="330" stroke="#52514e" stroke-width="2"/>
+<rect x="400" y="330" width="120" height="46" rx="4" fill="#f7f6f2" stroke="#52514e" stroke-width="1.2"/>
+<text x="460.0" y="347" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Non-safety buses</text>
+<text x="460.0" y="362" text-anchor="middle" font-size="10" fill="#52514e">RCPs, feed, CW pumps</text>
+<rect x="540" y="330" width="130" height="46" rx="4" fill="#dbe7f7" stroke="#1c5cab" stroke-width="1.2"/>
+<text x="605.0" y="347" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Safety buses A / B</text>
+<text x="605.0" y="362" text-anchor="middle" font-size="10" fill="#52514e">ESF loads, 2 × EDG</text>
+<line x1="520" y1="330" x2="460" y2="330" stroke="#52514e" stroke-width="2"/>
+<line x1="520" y1="330" x2="605" y2="330" stroke="#52514e" stroke-width="2"/>
+<line x1="520" y1="155" x2="520" y2="106" stroke="#52514e" stroke-width="2"/>
+<line x1="520" y1="106" x2="760" y2="106" stroke="#52514e" stroke-width="2"/>
+<rect x="760" y="70" width="130" height="48" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="825.0" y="87" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">DC feeder transformer</text>
+<text x="825.0" y="102" text-anchor="middle" font-size="10" fill="#52514e">24 / 34.5 kV, 600 MVA</text>
+<line x1="890" y1="106" x2="930" y2="106" stroke="#52514e" stroke-width="2"/>
+<line x1="930" y1="106" x2="930" y2="210" stroke="#52514e" stroke-width="2"/>
+<rect x="870" y="210" width="190" height="90" rx="4" fill="#fdeee4" stroke="#b2431a" stroke-width="1.2"/>
+<text x="965.0" y="227" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Data centre 520 MW</text>
+<text x="965.0" y="242" text-anchor="middle" font-size="10" fill="#52514e">liquid-cooled AI halls</text>
+<text x="965.0" y="255" text-anchor="middle" font-size="10" fill="#52514e">UPS batteries 520 MW / 10 min</text>
+<text x="965.0" y="268" text-anchor="middle" font-size="10" fill="#52514e">gensets N+1, 560 MW</text>
+<line x1="870" y1="280" x2="700" y2="280" stroke="#1c5cab" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="700" y1="280" x2="700" y2="353" stroke="#1c5cab" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrb)"/>
+<line x1="700" y1="353" x2="672" y2="353" stroke="#1c5cab" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrb)"/>
+<circle cx="700" cy="280" r="4" fill="#1c5cab"/>
+<text x="860" y="268" text-anchor="end" font-size="9" fill="#1c5cab">normally open diverse-AC tie: gensets + batteries</text>
+<text x="860" y="298" text-anchor="end" font-size="9" fill="#1c5cab">sync-check, seismically qualified breaker</text>
+<rect x="20" y="400" width="1060" height="330" fill="none" stroke="#c3c2b7" stroke-dasharray="4 3"/>
+<text x="30" y="416" text-anchor="start" font-size="10.5" fill="#52514e" font-weight="bold">HEAT REJECTION</text>
+<rect x="40" y="450" width="130" height="70" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="105.0" y="467" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Condenser</text>
+<text x="105.0" y="482" text-anchor="middle" font-size="10" fill="#52514e">2,000 MWth</text>
+<text x="105.0" y="495" text-anchor="middle" font-size="10" fill="#52514e">TTD 3 K</text>
+<rect x="300" y="440" width="150" height="90" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="375.0" y="457" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Natural-draft tower</text>
+<text x="375.0" y="472" text-anchor="middle" font-size="10" fill="#52514e">43,400 kg/s water</text>
+<text x="375.0" y="485" text-anchor="middle" font-size="10" fill="#52514e">design 25.6 °C WB</text>
+<text x="375.0" y="498" text-anchor="middle" font-size="10" fill="#52514e">approach 5.4 K</text>
+<rect x="620" y="450" width="150" height="70" rx="4" fill="#f0efec" stroke="#52514e" stroke-width="1.2"/>
+<text x="695.0" y="467" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Plate heat exchangers</text>
+<text x="695.0" y="482" text-anchor="middle" font-size="10" fill="#52514e">2 K pinch</text>
+<text x="695.0" y="495" text-anchor="middle" font-size="10" fill="#52514e">open CW / closed DC loop</text>
+<rect x="870" y="450" width="190" height="70" rx="4" fill="#fdeee4" stroke="#b2431a" stroke-width="1.2"/>
+<text x="965.0" y="467" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">Data centre cooling loop</text>
+<text x="965.0" y="482" text-anchor="middle" font-size="10" fill="#52514e">520 MW at 12 K rise</text>
+<text x="965.0" y="495" text-anchor="middle" font-size="10" fill="#52514e">supply ≤ 35 °C 99 % of hours</text>
+<line x1="170" y1="470" x2="300" y2="470" stroke="#b2431a" stroke-width="3" marker-end="url(#arro)"/>
+<text x="235" y="462" text-anchor="middle" font-size="9" fill="#b2431a">hot return 42 °C</text>
+<line x1="620" y1="470" x2="450" y2="470" stroke="#b2431a" stroke-width="3" marker-end="url(#arro)"/>
+<text x="535" y="462" text-anchor="middle" font-size="9" fill="#b2431a">DC heat joins hot return</text>
+<line x1="870" y1="470" x2="770" y2="470" stroke="#b2431a" stroke-width="3" marker-end="url(#arro)"/>
+<line x1="300" y1="505" x2="170" y2="505" stroke="#1c5cab" stroke-width="3" marker-end="url(#arrb)"/>
+<text x="235" y="522" text-anchor="middle" font-size="9" fill="#1c5cab">cold water 31 °C design</text>
+<line x1="450" y1="505" x2="620" y2="505" stroke="#1c5cab" stroke-width="3" marker-end="url(#arrb)"/>
+<text x="535" y="522" text-anchor="middle" font-size="9" fill="#1c5cab">12 m³/s tapped (28 %)</text>
+<line x1="770" y1="505" x2="870" y2="505" stroke="#1c5cab" stroke-width="3" marker-end="url(#arrb)"/>
+<text x="375" y="560" text-anchor="middle" font-size="10" fill="#0b0b0b" font-weight="bold">plant penalty: 7.6 MW average</text>
+<text x="375" y="574" text-anchor="middle" font-size="9.5" fill="#52514e">(0.6 %), max cold water 33.8 °C</text>
+<text x="965" y="560" text-anchor="middle" font-size="10" fill="#0b0b0b" font-weight="bold">data centre: no towers, no dry coolers,</text>
+<text x="965" y="574" text-anchor="middle" font-size="9.5" fill="#52514e">no chillers; 20 MW of fans avoided</text>
+<rect x="40" y="610" width="1020" height="100" rx="4" fill="#f7f6f2" stroke="#52514e" stroke-width="1.2"/>
+<text x="550.0" y="627" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#0b0b0b">What the island gives each party</text>
+<text x="550.0" y="642" text-anchor="middle" font-size="10" fill="#52514e">Plant: rides through grid loss without a reactor trip (needs data-centre load ≥ 40 % of rating with a 40 % steam dump); station-blackout core-damage frequency ÷ 190 with both provisions</text>
+<text x="550.0" y="655" text-anchor="middle" font-size="10" fill="#52514e">Data centre: firm nuclear power that survives the grid, water at 26 to 35 °C from the plant's tower, and $125 M of cooling plant not built</text>
+<text x="550.0" y="668" text-anchor="middle" font-size="10" fill="#52514e">Both: one switchyard interface, one water permit, one control room watching the island; the reactor never manoeuvres for the grid, only for the island</text>
+</svg>

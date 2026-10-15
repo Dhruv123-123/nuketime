@@ -1,0 +1,67 @@
+{
+  "spatial_leave_one_region_out": {
+    "n_projects": 9940,
+    "withdrawal_rate_2025": 0.299,
+    "auc_model": 0.721,
+    "auc_baseline_type_x_phase": 0.727,
+    "auc_baseline_age": 0.357,
+    "auc_model_by_region": {
+      "CAISO": 0.788,
+      "ERCOT": 0.527,
+      "ISO-NE": 0.803,
+      "MISO": 0.698,
+      "NYISO": 0.792,
+      "PJM": 0.533,
+      "SPP": 0.736,
+      "Southeast": 0.565,
+      "West": 0.748
+    },
+    "poi_capture_mw": {
+      "top25_model": 0.084,
+      "top25_naive_mw": 0.072,
+      "top50_model": 0.117,
+      "top50_naive_mw": 0.108,
+      "top100_model": 0.179,
+      "top100_naive_mw": 0.145,
+      "pois": 7507,
+      "freed_mw_total": 531268
+    }
+  },
+  "temporal_train2023_test2024": {
+    "n_train": 5009,
+    "train_withdrawal_rate": 0.211,
+    "n_test": 3662,
+    "test_withdrawal_rate": 0.257,
+    "auc_model": 0.629,
+    "auc_baseline_region_x_type": 0.648,
+    "auc_baseline_age": 0.549,
+    "auc_model_by_region": {
+      "ERCOT": 0.516,
+      "ISO-NE": 0.262,
+      "PJM": 0.638
+    },
+    "poi_capture_mw": {
+      "top25_model": 0.11,
+      "top25_naive_mw": 0.098,
+      "top50_model": 0.186,
+      "top50_naive_mw": 0.185,
+      "top100_model": 0.225,
+      "top100_naive_mw": 0.271,
+      "pois": 2977,
+      "freed_mw_total": 103145
+    },
+    "top_features_gain": {
+      "age_yr": 10771,
+      "prop_slip_yr": 8361,
+      "has_name": 6148,
+      "poi_mw": 5684,
+      "log_mw": 5021,
+      "cty_mw": 4351,
+      "cty_wd_rate": 3797,
+      "cty_hist_n": 2968,
+      "state": 2511,
+      "poi_share": 1783
+    }
+  },
+  "match_rate_end2024_active": 0.943
+}

@@ -1,0 +1,19 @@
+Tower design: L=43435 kg/s water, G=31025 kg/s air, Me_design=1.098
+  Q=2.0 GW T_wb=  5.0: cold water  19.5 C, approach 14.5 K
+  Q=2.0 GW T_wb= 15.0: cold water  24.6 C, approach  9.6 K
+  Q=2.0 GW T_wb= 25.6: cold water  31.0 C, approach  5.4 K
+  Q=2.0 GW T_wb= 28.0: cold water  32.6 C, approach  4.6 K
+  design wet-bulb, DC    0 MW: cold water  31.0 C, tower range 11.0 K, condenser sat  45.0 C
+  design wet-bulb, DC  250 MW: cold water  31.3 C, tower range 12.4 K, condenser sat  45.3 C
+  design wet-bulb, DC  500 MW: cold water  31.6 C, tower range 13.8 K, condenser sat  45.6 C
+  design wet-bulb, DC  750 MW: cold water  31.9 C, tower range 15.1 K, condenser sat  45.9 C
+reference condenser saturation at design day: 45.0 C
+reference condenser saturation at design day: 45.0 C
+tower x1.00, DC   0 MW: mean 1224.3 MWe (min 1167.0), lost    0.0 MW avg,     0.0 GWh/yr; cold water max 33.3 C, DC supply p99 34.0 C, hours >40 C: 0
+tower x1.00, DC 250 MW: mean 1220.2 MWe (min 1165.5), lost    4.1 MW avg,    35.5 GWh/yr; cold water max 33.6 C, DC supply p99 34.3 C, hours >40 C: 0
+tower x1.00, DC 500 MW: mean 1216.7 MWe (min 1164.2), lost    7.6 MW avg,    67.0 GWh/yr; cold water max 33.8 C, DC supply p99 34.5 C, hours >40 C: 0
+tower x1.00, DC 750 MW: mean 1213.5 MWe (min 1163.0), lost   10.8 MW avg,    94.8 GWh/yr; cold water max 34.0 C, DC supply p99 34.8 C, hours >40 C: 0
+tower x1.25, DC   0 MW: mean 1225.8 MWe (min 1168.2), lost   -1.5 MW avg,   -13.3 GWh/yr; cold water max 33.1 C, DC supply p99 33.7 C, hours >40 C: 0
+tower x1.25, DC 250 MW: mean 1221.7 MWe (min 1166.7), lost    2.6 MW avg,    23.0 GWh/yr; cold water max 33.3 C, DC supply p99 34.0 C, hours >40 C: 0
+tower x1.25, DC 500 MW: mean 1218.0 MWe (min 1165.4), lost    6.3 MW avg,    55.2 GWh/yr; cold water max 33.6 C, DC supply p99 34.3 C, hours >40 C: 0
+tower x1.25, DC 750 MW: mean 1214.7 MWe (min 1164.2), lost    9.6 MW avg,    83.8 GWh/yr; cold water max 33.8 C, DC supply p99 34.6 C, hours >40 C: 0

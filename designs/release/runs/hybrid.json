@@ -1,0 +1,162 @@
+[
+ {
+  "p50": 5e-06,
+  "sigma": 1.0,
+  "visible_share": 0.0,
+  "c": 6,
+  "n": 118422,
+  "reject": 0.012,
+  "cost_M": 3.11,
+  "saving_M": 0.0
+ },
+ {
+  "p50": 5e-06,
+  "sigma": 1.0,
+  "visible_share": 0.3,
+  "c": 6,
+  "n": 118422,
+  "reject": 0.004,
+  "cost_M": 2.18,
+  "saving_M": 0.92
+ },
+ {
+  "p50": 5e-06,
+  "sigma": 1.0,
+  "visible_share": 0.5,
+  "c": 4,
+  "n": 91533,
+  "reject": 0.004,
+  "cost_M": 1.8,
+  "saving_M": 1.31
+ },
+ {
+  "p50": 5e-06,
+  "sigma": 1.0,
+  "visible_share": 0.8,
+  "c": 2,
+  "n": 62956,
+  "reject": 0.002,
+  "cost_M": 1.21,
+  "saving_M": 1.9
+ },
+ {
+  "p50": 1e-05,
+  "sigma": 1.0,
+  "visible_share": 0.0,
+  "c": 14,
+  "n": 218861,
+  "reject": 0.033,
+  "cost_M": 7.43,
+  "saving_M": 0.0
+ },
+ {
+  "p50": 1e-05,
+  "sigma": 1.0,
+  "visible_share": 0.3,
+  "c": 14,
+  "n": 218861,
+  "reject": 0.015,
+  "cost_M": 4.93,
+  "saving_M": 2.5
+ },
+ {
+  "p50": 1e-05,
+  "sigma": 1.0,
+  "visible_share": 0.5,
+  "c": 10,
+  "n": 169619,
+  "reject": 0.009,
+  "cost_M": 3.43,
+  "saving_M": 4.0
+ },
+ {
+  "p50": 1e-05,
+  "sigma": 1.0,
+  "visible_share": 0.8,
+  "c": 4,
+  "n": 91533,
+  "reject": 0.003,
+  "cost_M": 1.66,
+  "saving_M": 5.77
+ },
+ {
+  "p50": 2e-05,
+  "sigma": 1.0,
+  "visible_share": 0.0,
+  "c": 28,
+  "n": 383884,
+  "reject": 0.097,
+  "cost_M": 18.94,
+  "saving_M": 0.0
+ },
+ {
+  "p50": 2e-05,
+  "sigma": 1.0,
+  "visible_share": 0.3,
+  "c": 22,
+  "n": 314144,
+  "reject": 0.056,
+  "cost_M": 12.18,
+  "saving_M": 6.76
+ },
+ {
+  "p50": 2e-05,
+  "sigma": 1.0,
+  "visible_share": 0.5,
+  "c": 16,
+  "n": 243008,
+  "reject": 0.033,
+  "cost_M": 7.91,
+  "saving_M": 11.03
+ },
+ {
+  "p50": 2e-05,
+  "sigma": 1.0,
+  "visible_share": 0.8,
+  "c": 10,
+  "n": 169619,
+  "reject": 0.006,
+  "cost_M": 3.07,
+  "saving_M": 15.87
+ },
+ {
+  "p50": 3e-05,
+  "sigma": 1.2,
+  "visible_share": 0.0,
+  "c": 32,
+  "n": 429820,
+  "reject": 0.225,
+  "cost_M": 38.77,
+  "saving_M": 0.0
+ },
+ {
+  "p50": 3e-05,
+  "sigma": 1.2,
+  "visible_share": 0.3,
+  "c": 30,
+  "n": 406900,
+  "reject": 0.152,
+  "cost_M": 27.58,
+  "saving_M": 11.19
+ },
+ {
+  "p50": 3e-05,
+  "sigma": 1.2,
+  "visible_share": 0.5,
+  "c": 24,
+  "n": 337520,
+  "reject": 0.103,
+  "cost_M": 19.44,
+  "saving_M": 19.33
+ },
+ {
+  "p50": 3e-05,
+  "sigma": 1.2,
+  "visible_share": 0.8,
+  "c": 16,
+  "n": 243008,
+  "reject": 0.033,
+  "cost_M": 7.87,
+  "saving_M": 30.9
+ }
+]
