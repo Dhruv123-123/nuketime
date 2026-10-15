@@ -1,0 +1,12 @@
+services:
+  leetcode-local:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # your progress, drafts, submissions and notes
+      - ./data/user:/data
+    restart: unless-stopped
