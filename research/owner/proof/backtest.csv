@@ -1,0 +1,21 @@
+drug,eu_first,jp_first,us_first,us_evidence,verdict
+pitolisant,2016-03-31,,2019-08-14,drugcentral_fda_or_orangebook,WOULD FLAG for 3.4 yrs before US approval (date reconstruction)
+amifampridine,2009-12-23,,2018-11-28,drugcentral_fda_or_orangebook,WOULD FLAG for 8.9 yrs before US approval (date reconstruction)
+deflazacort,,,2017-02-09,drugcentral_fda_or_orangebook,MISSED: no EU-centralised or PMDA record in data
+vamorolone,,,,,MISSED: no EU-centralised or PMDA record in data
+tafamidis,2011-11-16,2013-09-20,2019-03-05,drugcentral_fda_or_orangebook,WOULD FLAG for 7.3 yrs before US approval (date reconstruction)
+migalastat,2016-05-25,2018-03-23,2018-08-08,drugcentral_fda_or_orangebook,WOULD FLAG for 2.2 yrs before US approval (date reconstruction)
+ivabradine,2005-10-25,2019-09-20,2015-04-15,drugcentral_fda_or_orangebook,WOULD FLAG for 9.5 yrs before US approval (date reconstruction)
+sugammadex,2008-07-25,,2015-12-15,drugcentral_fda_or_orangebook,WOULD FLAG for 7.4 yrs before US approval (date reconstruction)
+stiripentol,2007-01-03,,2018-08-20,drugcentral_fda_or_orangebook,WOULD FLAG for 11.6 yrs before US approval (date reconstruction)
+afamelanotide,2014-12-12,,2019-10-08,drugcentral_fda_or_orangebook,WOULD FLAG for 4.8 yrs before US approval (date reconstruction)
+carglumic acid,2003-01-24,,2010-03-18,drugcentral_fda_or_orangebook,WOULD FLAG for 7.1 yrs before US approval (date reconstruction)
+eslicarbazepine acetate,2009-04-21,,2013-11-08,drugcentral_fda_or_orangebook,WOULD FLAG for 4.6 yrs before US approval (date reconstruction)
+retigabine,2011-03-27,,2011-06-10,drugcentral_fda_or_orangebook,WOULD FLAG for 0.2 yrs before US approval (date reconstruction)
+cholic acid,2013-09-12,2023-03-27,2015-03-17,drugcentral_fda_or_orangebook,WOULD FLAG for 1.5 yrs before US approval (date reconstruction)
+idebenone,2015-09-08,,,,ON CURRENT LIST (no US approval in data)
+ataluren,2014-07-31,,,,ON CURRENT LIST (no US approval in data)
+dinutuximab beta,2017-05-08,,,,ON CURRENT LIST (no US approval in data)
+eliglustat,2014-11-20,,2014-08-19,drugcentral_fda_or_orangebook,NOT FLAGGED: US approval came first
+lumacaftor,2015-11-18,,2015-07-02,drugcentral_fda_or_orangebook,NOT FLAGGED: US approval came first
+trientine tetrahydrochloride,2017-09-05,,1985-11-08,drugcentral_fda_or_orangebook,NOT FLAGGED: US approval came first
