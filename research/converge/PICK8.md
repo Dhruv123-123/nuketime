@@ -259,15 +259,38 @@ the buyer's heuristic, median 1.5 years to close; the list with names and addres
 and about 1,400 within 1.5 km of power: enough for one fund's book, not a national roll-up from one state.
 Caveats: GeoTracker is one point per case, so refineries, bases and plants are undercounted at 300 m; the
 substation layer misses plant switchyards; EIA-860 misses plants demolished before about 2001; nothing here
-checks parcel size, zoning or interconnection capacity. Remaining validations: the discount on real
-listings, a forward cleanup margin (needs dated reimbursements), and the one use case.
+checks parcel size, zoning or interconnection capacity. Remaining validations after this: the discount
+(next), a forward cleanup margin, and the one use case.
+
+**Discount test (16 Oct, 00:42Z; `fetch_la_roll.py`, `fetch_la_parcels.py`, `discount.py`; results in
+`results/discount.md`). Recorded prices show no stigma discount.** Under Prop 13 the assessor resets a
+parcel's value to its purchase price at every change of ownership, so LA County's public roll (2006-2025,
+from the county's ArcGIS services: 401k commercial, industrial and vacant parcels, 6.2M parcel-years) is a
+dated sale-price record. 13,834 of LA's 15,288 GeoTracker cases fall inside a parcel polygon. After screens,
+118,513 sale events on commercial and industrial parcels, 1,484 of them while a cleanup case was open.
+Hedonic model against nearby clean sales (lot, building, age, use code, sale year, 1 km cell; standard
+errors clustered by cell): open-case sales **+5.4%** [0.8, 10.3], 0-2 years after closure +11.3%, 2-5
+years +11.9%, 5+ years +7.4%. Repeat sales on the same parcel (sold while open, then after closure, 224
+pairs) **+6.9%** [0.2, 14.2] against clean repeat sales over the same years. By case type: LUST open +6.0%,
+closed +11%; Cleanup Program open +4.8%, closed 2-5 years +23% (n=50, wide). Rough margin on the 312 LA
+parcels with a Cleanup Fund reimbursed figure (309 gas stations): median parcel $1.3M, median uplift from
+closure $60k, median cleanup reimbursed $643k; uplift minus cost positive for 13%. So the "buy at a steal"
+leg fails in the record: an open case does not depress the price of a commercial or industrial parcel in
+LA, closure adds mid-single digits, and on gas stations the cleanup costs ten times the uplift. Caveats:
+assessor value at transfer, not the deed price; some resets are non-sale transfers; operating gas stations
+carry business value; a case point on the street or a neighbouring parcel biases the estimates toward
+zero; LA County only, San Francisco not run; the industrial class is thin (n=58 recently closed) and has the
+largest point estimates. What survives for the thesis: any discount would have to be won off-market, and
+the value of a closed, powered industrial parcel to a load customer is not in any public price record.
 
 ## The decision for Dhruv (updated after the PoC reframe)
 
 1. **Continue the brownfield PoC** against the cofounder's four validations: built-out premise and site
-   count (done: low hundreds on the parcel, about 1,400 within 1.5 km of power), discount on 20 real
-   listings, forward cleanup margin, one use case (powered load on the industrial and plant class).
-   (Current direction.)
+   count (done: low hundreds on the parcel, about 1,400 within 1.5 km of power), discount (done: none in
+   LA's recorded prices; closure adds 5-7%), forward cleanup margin (payment ledger fetched, model next),
+   one use case (powered load on the industrial and plant class). With the stigma discount gone, the
+   thesis has to rest on what a closed, powered industrial parcel is worth to a load customer, which no
+   public price record measures. (Current direction.)
 2. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
    backtests say the "public data only ML can read, outcome not summarised anywhere" moat lives in geology.
 3. **One more kill test on a record with the Terranox property**: corridor title from scanned railroad
