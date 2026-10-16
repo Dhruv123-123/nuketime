@@ -168,15 +168,143 @@ and listed sale discounts must exceed predicted cost on at least 20 powered site
 | Underperforming solar/wind bought on a public screen, fixed with robotic O&M | 6/8 | Energy, robotics | Gap is visible in diligence data |
 | Lineage (SBIR) | 5/8 | Deeptech | Agency can decline Phase III; FPDS linkage makes matching a join |
 
-## The decision for Dhruv (written before round 4)
+## Round 5: the California kill test (15 Oct, 23:12Z)
 
-1. **Take Lineage to its kill test.** It fits your sectors and is the only survivor. Expect it to look
-   more like a defence hardware company with a data-driven acquisition engine than like Terranox.
-2. **Accept that the Terranox moat is geological.** If "unattackable via a cheap first-come claim" is the
-   real requirement, the hunt says it lives in mineral tenure, which you have ruled out. Terranox itself
-   may be the strongest YC application.
-3. **Drop the claim requirement** and rank ideas in your sectors on execution moats (a robot that cuts a
-   cost tenfold, a factory, a licence that takes years). That is a different hunt.
+Dhruv, 21:32Z: "use a lot of compute and actually run a really deep experiment of doing this in cali."
+Run on the full GeoTracker record in a cloud environment with network access (pipeline `research/owner/ca/`,
+results `research/owner/ca/results/`): the statewide case table, 232 county well and boring files and 58
+county lab files, 4.4 GB zipped, 230M+ lab rows. Panel: every cleanup case (LUST, Cleanup Program,
+Military) open on 1 January of 2004, 2007, 2010, 2013, 2016 and 2019, with features built only from records
+dated before that day, and the label "closed within five years". 96,761 site-snapshots over 27,956 cases.
+Two leaks were found and removed before any number was read (present-day site-history text; all-time well
+counts), and dropping the present-day lead-agency field moves the result by under 0.005.
+
+Four scorers on the temporal test (train through 2013, test on 2016 and 2019, n = 21,502):
+
+| scorer | AUC | top-decile lift |
+|---|---|---|
+| lookup: case type x county | 0.763 | 2.1 |
+| lookup: case type x status x years open (the buyer's heuristic) | 0.768 | 2.9 |
+| LightGBM on the structured fields only | 0.842 | 3.3 |
+| LightGBM on everything (lab series per analyte, wells, activity text, neighbours) | **0.846** | 3.2 |
+
+Held-out counties: 0.694 / 0.768 / 0.794 for the heuristic, structured and full models. On the sites that
+have lab data: structured 0.815, full 0.844. Time to closure among sites that did close: MAE 1.13 vs 1.26
+years, Spearman 0.34 vs 0.01 for the lookup.
+
+Buying simulation at 2016: among 1,277 open sites within 3 km of a 230 kV or larger substation, the full
+model's top 300 closed within five years at 75%, the buyer's heuristic's top 300 at 60%, a random 300 at 29%.
+Within 3 km of 115 kV or larger (4,216 sites): 88% vs 80% vs 28%.
+
+**Verdict: fails the kill bar.** ML beats what buyers use by +0.08 AUC (bar 0.05: passed). The illegible
+record adds **+0.004** over ML on the structured fields alone (bar 0.02: failed); it is worth about +0.03
+only where lab data exists and in counties the model has never seen. The edge is real and it is ML, but it
+comes from a 40 MB case table anyone can model in a week, not from the 230M-row record. That fails the second
+leg of the corrected test: ML is not what makes the problem solvable here, it makes a solvable problem a
+little better solved. A brownfield buyer with this model would beat the field, and nothing would stop the
+next buyer from building the same model.
+
+**Cost (run after the closure numbers).** The 3,779 archived Cleanup Fund claims (2020 capture, in
+`research/owner/ca/data/cuf/`) gave 1,530 sites with a reimbursed-to-date figure, 1,185 of them open at the
+2010 snapshot; median $808k, 11% at the $1.5M cap. Leave-counties-out, predicting log10 reimbursed-to-date:
+Spearman **0.60** for the full model, 0.55 for structured fields plus sampling volume, 0.37 structured only,
+0.26 for the lookup (MAE in log10: 0.21 / 0.22 / 0.27 / 0.26; 2007 snapshot similar). That looks like the lab
+record finally earning its keep, but it is weaker than it looks: reimbursed-to-date includes money spent
+before the snapshot, and the count of lab samples before the snapshot is a direct record of that spend. Volume
+alone takes the structured model from 0.37 to 0.55; concentrations, trends and text add about +0.05. So the
+lab record mostly tells you what has already been spent, not what cleanup will cost from here. A forward cost
+test needs dated reimbursements per site, which the archive does not hold (the FY2024-25 payments file has no
+site id). The verdict stands. Also untested: mispricing. The simulation shows which
+sites close, not which are cheap; the sites the model likes may already be priced near clean. The listed
+discount versus predicted cost test on 20 powered sites needs listing data this environment does not have.
+
+**What it does to the shortlist.** Powered brownfields drops from 8/8 to about 5/8: still a business (an
+ML-underwritten brownfield developer near substations), not an unattackable one; its moat would be capital
+and execution, like any developer's. The pattern across the three backtests (grid queue: no edge; PA tanks:
++0.03 from structured fields; California: +0.08 from structured fields and +0.004 from the illegible part) is
+that in regulatory case records the legible fields carry the signal, because the regulator already writes the
+outcome-relevant facts into them. Terranox's edge survives because geology logs are illegible **and** the
+outcome (ore) is not summarised anywhere in the record. That is the property to look for next, and it is
+rare: scanned deeds and valuation maps (corridor title), scanned interconnection and system-impact studies,
+and old well logs have it; status tables, permits and advisories do not.
+
+**Reframed as a proof of concept (Dhruv, 23:58Z: "don't check your ideas on the basis of the model's
+efficiency; treat this as a PoC and idea project").** The kill bar above was our own criterion for
+"unattackable". Dropping it, what the run proves for the idea: (1) the public record is enough to rank
+California's 10,053 open contaminated sites by how fast they will close, three times better than random and
+clearly better than how buyers rank them today (0.846 vs 0.768; 75% vs 60% of a 300-site book near 230 kV
+substations closed within five years); (2) the same model ranks total cleanup spend (Spearman 0.60 vs 0.26
+for the lookup); (3) the whole pipeline runs end to end in under two hours on one machine, so the
+"ML-armed vulture" is buildable now, and the moat is speed plus doing the remediation and redevelopment
+yourself, which is the Terranox pivot (sell predictions, then do the drilling) mapped one to one. What the
+PoC does not yet show, in the order the cofounder asked: (a) that the discount exists (no price data here);
+(b) that enough built-out industrial sites exist (the top of the list is gas stations; the industrial class
+is a third of cases and needs a plant list joined in); (c) that cleanup can be done very profitably (the cost
+label is cumulative, not forward); (d) one use case, where the data points at powered load on the
+industrial and plant class.
+
+**Built-out test (16 Oct, 00:05Z; `research/owner/ca/builtout.py`, results in `results/builtout.md`).**
+Industrial-class cases only (Cleanup Program and military; no gas stations): 7,403 open today. Within 300 m of
+a 115 kV+ substation, the proxy for "the substation is on or beside the parcel": **135** (24 at 230 kV+);
+within 1.5 km: **1,443** (292); within 3 km: **2,928** (863). Alameda, Santa Clara, San Francisco and San
+Mateo hold most of the 300 m set; Los Angeles and Sacramento most of the 3 km set. Power plants are the
+cleaner test of infrastructure on the parcel: of 473 California thermal plants in EIA-860, **188** have an
+open Cleanup Program or military case within 1 km (546 cases), and **44 of the 121** retired or partly
+retired thermal plants do, several of them the plant's own case (Moss Landing, 1.7 GW retired, open
+verification monitoring at 120 m; Humboldt Bay; Burbank's Magnolia steam plant; Alamitos). Plants with any
+open case within 1 km carry 41 GW of thermal nameplate. On the industrial class alone (835 sites open at 2016
+within 3 km of 230 kV+, base five-year closure 16%), the model's top 100 closed at **68%** against 45% for
+the buyer's heuristic, median 1.5 years to close; the list with names and addresses is
+`results/top_industrial_2016.csv`. So the built-out set in California is in the low hundreds on the parcel
+and about 1,400 within 1.5 km of power: enough for one fund's book, not a national roll-up from one state.
+Caveats: GeoTracker is one point per case, so refineries, bases and plants are undercounted at 300 m; the
+substation layer misses plant switchyards; EIA-860 misses plants demolished before about 2001; nothing here
+checks parcel size, zoning or interconnection capacity. Remaining validations after this: the discount
+(next), a forward cleanup margin, and the one use case.
+
+**Discount test (16 Oct, 00:42Z; `fetch_la_roll.py`, `fetch_la_parcels.py`, `discount.py`; results in
+`results/discount.md`). Recorded prices show no stigma discount.** Under Prop 13 the assessor resets a
+parcel's value to its purchase price at every change of ownership, so LA County's public roll (2006-2025,
+from the county's ArcGIS services: 401k commercial, industrial and vacant parcels, 6.2M parcel-years) is a
+dated sale-price record. 13,834 of LA's 15,288 GeoTracker cases fall inside a parcel polygon. After screens,
+118,513 sale events on commercial and industrial parcels, 1,484 of them while a cleanup case was open.
+Hedonic model against nearby clean sales (lot, building, age, use code, sale year, 1 km cell; standard
+errors clustered by cell): open-case sales **+5.4%** [0.8, 10.3], 0-2 years after closure +11.3%, 2-5
+years +11.9%, 5+ years +7.4%. Repeat sales on the same parcel (sold while open, then after closure, 224
+pairs) **+6.9%** [0.2, 14.2] against clean repeat sales over the same years. By case type: LUST open +6.0%,
+closed +11%; Cleanup Program open +4.8%, closed 2-5 years +23% (n=50, wide). Rough margin on the 312 LA
+parcels with a Cleanup Fund reimbursed figure (309 gas stations): median parcel $1.3M, median uplift from
+closure $60k, median cleanup reimbursed $643k; uplift minus cost positive for 13%. So the "buy at a steal"
+leg fails in the record: an open case does not depress the price of a commercial or industrial parcel in
+LA, closure adds mid-single digits, and on gas stations the cleanup costs ten times the uplift. Caveats:
+assessor value at transfer, not the deed price; some resets are non-sale transfers; operating gas stations
+carry business value; a case point on the street or a neighbouring parcel biases the estimates toward
+zero; LA County only, San Francisco not run; the industrial class is thin (n=58 recently closed) and has the
+largest point estimates. Other counties (`fetch_sf_roll.py`, `discount_other.py`): San Francisco has too
+few treated sales to say anything (13 open); Alameda's parcel layer gives one rough cross-section (current
+value deflated to the latest document year): open +14.6% [-0.3, 31.7], Cleanup Program open +28% (n=160).
+Pooled industrial class, LA plus Alameda, inverse-variance: open **+7.0%** [0.5, 13.9] (n=712), closed 0-2
+years **+20.0%** [1.5, 41.9] (n=75), closed 2-5 years +25.2% [4.7, 49.8] (n=64), closed 5+ years +2.1%;
+pooled all types: open +6.4%, closed 0-2 years +14.4%. So the recovery right after closure is larger on
+industrial sites (+13 to +18 points over open) than on gas stations (+8), on thin samples. What survives
+for the thesis: any discount would have to be won off-market, and the value of a closed, powered industrial
+parcel to a load customer is not in any public price record.
+
+## The decision for Dhruv (updated after the PoC reframe)
+
+1. **Continue the brownfield PoC** against the cofounder's four validations: built-out premise and site
+   count (done: low hundreds on the parcel, about 1,400 within 1.5 km of power), discount (done: none in
+   LA's or Alameda's recorded prices; closure adds 5-7% overall, 13-18 points on industrial sites, thin n), forward cleanup margin (payment ledger fetched, model next),
+   one use case (powered load on the industrial and plant class). With the stigma discount gone, the
+   thesis has to rest on what a closed, powered industrial parcel is worth to a load customer, which no
+   public price record measures. (Current direction.)
+2. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
+   backtests say the "public data only ML can read, outcome not summarised anywhere" moat lives in geology.
+3. **One more kill test on a record with the Terranox property**: corridor title from scanned railroad
+   deeds and ICC valuation maps, or scanned interconnection studies. Expect a data-access fight first.
+
+Earlier decision list (written before round 4): take Lineage to its kill test; accept the moat is
+geological; or drop the claim requirement and rank on execution moats.
 
 Search budget used: about 360 web searches across three rounds. Government data hosts (fda.gov, sbir.gov,
 eia.gov, NRC, EMA) were blocked from this environment; datasets were checked against documentation, and

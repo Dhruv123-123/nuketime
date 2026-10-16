@@ -70,7 +70,10 @@ def one_county(args):
         d["year"] = d.year.astype(int)
         # all-parameter counts per (gid, year)
         alls.append(d.groupby(["gid", "year"]).size().rename("n_samples").reset_index())
-        allp.append(d[["gid", "year", "fpt", "par"]].drop_duplicates())
+        # field point / parameter names hashed to int64 so the distinct-tuple list stays small for Los Angeles
+        allp.append(pd.DataFrame({"gid": d.gid, "year": d.year,
+                                  "fpt": pd.util.hash_array(d.fpt.fillna("").to_numpy(dtype=object)),
+                                  "par": pd.util.hash_array(d.par.fillna("").to_numpy(dtype=object))}).drop_duplicates())
         # mapped analytes only
         d["analyte"] = d.par.map(CODE_TO_ANALYTE)
         d = d[d.analyte.notna()].copy()

@@ -1,0 +1,322 @@
+{
+  "T": 2016,
+  "n_open_sites": 11438,
+  "base_closure_rate": 0.279,
+  "ge115kV_within1.5km": {
+    "pool": 2011,
+    "pool_closure_rate": 0.269,
+    "pool_by_county_top10": {
+      "Alameda": 398,
+      "Sacramento": 251,
+      "Santa Clara": 248,
+      "Los Angeles": 199,
+      "San Mateo": 142,
+      "Kern": 86,
+      "San Joaquin": 78,
+      "Sonoma": 74,
+      "Contra Costa": 69,
+      "San Francisco": 67
+    },
+    "top50": {
+      "F": {
+        "closed_5y": 0.9,
+        "median_ttc": 0.68
+      },
+      "S": {
+        "closed_5y": 0.94,
+        "median_ttc": 0.7
+      },
+      "L2": {
+        "closed_5y": 0.8,
+        "median_ttc": 0.59
+      },
+      "L1": {
+        "closed_5y": 0.54,
+        "median_ttc": 2.29
+      },
+      "random": {
+        "closed_5y": 0.275,
+        "sd": 0.058
+      },
+      "F_minus_L2_closed_5y": 0.1
+    },
+    "top100": {
+      "F": {
+        "closed_5y": 0.88,
+        "median_ttc": 0.74
+      },
+      "S": {
+        "closed_5y": 0.87,
+        "median_ttc": 0.71
+      },
+      "L2": {
+        "closed_5y": 0.85,
+        "median_ttc": 0.65
+      },
+      "L1": {
+        "closed_5y": 0.58,
+        "median_ttc": 2.06
+      },
+      "random": {
+        "closed_5y": 0.267,
+        "sd": 0.043
+      },
+      "F_minus_L2_closed_5y": 0.03
+    },
+    "top300": {
+      "F": {
+        "closed_5y": 0.7,
+        "median_ttc": 1.23
+      },
+      "S": {
+        "closed_5y": 0.703,
+        "median_ttc": 1.25
+      },
+      "L2": {
+        "closed_5y": 0.64,
+        "median_ttc": 1.23
+      },
+      "L1": {
+        "closed_5y": 0.523,
+        "median_ttc": 1.71
+      },
+      "random": {
+        "closed_5y": 0.268,
+        "sd": 0.023
+      },
+      "F_minus_L2_closed_5y": 0.06
+    }
+  },
+  "ge115kV_within3.0km": {
+    "pool": 4216,
+    "pool_closure_rate": 0.281,
+    "pool_by_county_top10": {
+      "Alameda": 707,
+      "Los Angeles": 553,
+      "Santa Clara": 430,
+      "Sacramento": 430,
+      "San Mateo": 264,
+      "San Francisco": 187,
+      "Kern": 177,
+      "Contra Costa": 175,
+      "San Diego": 163,
+      "San Joaquin": 154
+    },
+    "top50": {
+      "F": {
+        "closed_5y": 0.96,
+        "median_ttc": 0.66
+      },
+      "S": {
+        "closed_5y": 0.98,
+        "median_ttc": 0.5
+      },
+      "L2": {
+        "closed_5y": 0.92,
+        "median_ttc": 0.73
+      },
+      "L1": {
+        "closed_5y": 0.6,
+        "median_ttc": 2.17
+      },
+      "random": {
+        "closed_5y": 0.279,
+        "sd": 0.059
+      },
+      "F_minus_L2_closed_5y": 0.04
+    },
+    "top100": {
+      "F": {
+        "closed_5y": 0.93,
+        "median_ttc": 0.69
+      },
+      "S": {
+        "closed_5y": 0.96,
+        "median_ttc": 0.6
+      },
+      "L2": {
+        "closed_5y": 0.88,
+        "median_ttc": 0.77
+      },
+      "L1": {
+        "closed_5y": 0.59,
+        "median_ttc": 1.68
+      },
+      "random": {
+        "closed_5y": 0.282,
+        "sd": 0.043
+      },
+      "F_minus_L2_closed_5y": 0.05
+    },
+    "top300": {
+      "F": {
+        "closed_5y": 0.88,
+        "median_ttc": 0.95
+      },
+      "S": {
+        "closed_5y": 0.883,
+        "median_ttc": 0.82
+      },
+      "L2": {
+        "closed_5y": 0.803,
+        "median_ttc": 0.88
+      },
+      "L1": {
+        "closed_5y": 0.613,
+        "median_ttc": 1.56
+      },
+      "random": {
+        "closed_5y": 0.283,
+        "sd": 0.023
+      },
+      "F_minus_L2_closed_5y": 0.077
+    }
+  },
+  "ge230kV_within1.5km": {
+    "pool": 426,
+    "pool_closure_rate": 0.296,
+    "pool_by_county_top10": {
+      "Los Angeles": 151,
+      "Sacramento": 106,
+      "San Diego": 40,
+      "Contra Costa": 22,
+      "Alameda": 20,
+      "San Mateo": 17,
+      "San Francisco": 13,
+      "Sonoma": 8,
+      "Santa Clara": 7,
+      "Orange": 5
+    },
+    "top50": {
+      "F": {
+        "closed_5y": 0.9,
+        "median_ttc": 1.09
+      },
+      "S": {
+        "closed_5y": 0.9,
+        "median_ttc": 1.09
+      },
+      "L2": {
+        "closed_5y": 0.8,
+        "median_ttc": 1.0
+      },
+      "L1": {
+        "closed_5y": 0.54,
+        "median_ttc": 2.07
+      },
+      "random": {
+        "closed_5y": 0.299,
+        "sd": 0.061
+      },
+      "F_minus_L2_closed_5y": 0.1
+    },
+    "top100": {
+      "F": {
+        "closed_5y": 0.74,
+        "median_ttc": 1.47
+      },
+      "S": {
+        "closed_5y": 0.73,
+        "median_ttc": 1.3
+      },
+      "L2": {
+        "closed_5y": 0.65,
+        "median_ttc": 1.24
+      },
+      "L1": {
+        "closed_5y": 0.5,
+        "median_ttc": 1.98
+      },
+      "random": {
+        "closed_5y": 0.295,
+        "sd": 0.043
+      },
+      "F_minus_L2_closed_5y": 0.09
+    }
+  },
+  "ge230kV_within3.0km": {
+    "pool": 1277,
+    "pool_closure_rate": 0.288,
+    "pool_by_county_top10": {
+      "Los Angeles": 417,
+      "Sacramento": 282,
+      "San Diego": 157,
+      "Alameda": 71,
+      "San Mateo": 68,
+      "Contra Costa": 52,
+      "San Francisco": 35,
+      "Santa Clara": 34,
+      "Orange": 24,
+      "Solano": 20
+    },
+    "top50": {
+      "F": {
+        "closed_5y": 0.98,
+        "median_ttc": 0.78
+      },
+      "S": {
+        "closed_5y": 0.96,
+        "median_ttc": 0.68
+      },
+      "L2": {
+        "closed_5y": 0.94,
+        "median_ttc": 0.88
+      },
+      "L1": {
+        "closed_5y": 0.62,
+        "median_ttc": 2.33
+      },
+      "random": {
+        "closed_5y": 0.284,
+        "sd": 0.062
+      },
+      "F_minus_L2_closed_5y": 0.04
+    },
+    "top100": {
+      "F": {
+        "closed_5y": 0.92,
+        "median_ttc": 1.03
+      },
+      "S": {
+        "closed_5y": 0.89,
+        "median_ttc": 1.0
+      },
+      "L2": {
+        "closed_5y": 0.81,
+        "median_ttc": 1.06
+      },
+      "L1": {
+        "closed_5y": 0.66,
+        "median_ttc": 1.9
+      },
+      "random": {
+        "closed_5y": 0.293,
+        "sd": 0.043
+      },
+      "F_minus_L2_closed_5y": 0.11
+    },
+    "top300": {
+      "F": {
+        "closed_5y": 0.753,
+        "median_ttc": 1.47
+      },
+      "S": {
+        "closed_5y": 0.747,
+        "median_ttc": 1.43
+      },
+      "L2": {
+        "closed_5y": 0.603,
+        "median_ttc": 1.44
+      },
+      "L1": {
+        "closed_5y": 0.567,
+        "median_ttc": 1.71
+      },
+      "random": {
+        "closed_5y": 0.289,
+        "sd": 0.023
+      },
+      "F_minus_L2_closed_5y": 0.15
+    }
+  }
+}
