@@ -241,15 +241,33 @@ PoC does not yet show, in the order the cofounder asked: (a) that the discount e
 (b) that enough built-out industrial sites exist (the top of the list is gas stations; the industrial class
 is a third of cases and needs a plant list joined in); (c) that cleanup can be done very profitably (the cost
 label is cumulative, not forward); (d) one use case, where the data points at powered load on the
-industrial and plant class. The next PoC step, started 16 Oct 00:00Z: count open industrial-class sites
-within 300 m, 1.5 km and 3 km of a live substation, and join EIA's retired-generator list to GeoTracker to
-test the built-out premise directly.
+industrial and plant class.
+
+**Built-out test (16 Oct, 00:05Z; `research/owner/ca/builtout.py`, results in `results/builtout.md`).**
+Industrial-class cases only (Cleanup Program and military; no gas stations): 7,403 open today. Within 300 m of
+a 115 kV+ substation, the proxy for "the substation is on or beside the parcel": **135** (24 at 230 kV+);
+within 1.5 km: **1,443** (292); within 3 km: **2,928** (863). Alameda, Santa Clara, San Francisco and San
+Mateo hold most of the 300 m set; Los Angeles and Sacramento most of the 3 km set. Power plants are the
+cleaner test of infrastructure on the parcel: of 473 California thermal plants in EIA-860, **188** have an
+open Cleanup Program or military case within 1 km (546 cases), and **44 of the 121** retired or partly
+retired thermal plants do, several of them the plant's own case (Moss Landing, 1.7 GW retired, open
+verification monitoring at 120 m; Humboldt Bay; Burbank's Magnolia steam plant; Alamitos). Plants with any
+open case within 1 km carry 41 GW of thermal nameplate. On the industrial class alone (835 sites open at 2016
+within 3 km of 230 kV+, base five-year closure 16%), the model's top 100 closed at **68%** against 45% for
+the buyer's heuristic, median 1.5 years to close; the list with names and addresses is
+`results/top_industrial_2016.csv`. So the built-out set in California is in the low hundreds on the parcel
+and about 1,400 within 1.5 km of power: enough for one fund's book, not a national roll-up from one state.
+Caveats: GeoTracker is one point per case, so refineries, bases and plants are undercounted at 300 m; the
+substation layer misses plant switchyards; EIA-860 misses plants demolished before about 2001; nothing here
+checks parcel size, zoning or interconnection capacity. Remaining validations: the discount on real
+listings, a forward cleanup margin (needs dated reimbursements), and the one use case.
 
 ## The decision for Dhruv (updated after the PoC reframe)
 
 1. **Continue the brownfield PoC** against the cofounder's four validations: built-out premise and site
-   count (running), discount on 20 real listings, forward cleanup margin, one use case (powered load on the
-   industrial and plant class). (Current direction.)
+   count (done: low hundreds on the parcel, about 1,400 within 1.5 km of power), discount on 20 real
+   listings, forward cleanup margin, one use case (powered load on the industrial and plant class).
+   (Current direction.)
 2. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
    backtests say the "public data only ML can read, outcome not summarised anywhere" moat lives in geology.
 3. **One more kill test on a record with the Terranox property**: corridor title from scanned railroad
