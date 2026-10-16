@@ -1,0 +1,335 @@
+pool,kV,radius_km,county,sites
+open_at_2019,115,0.3,Alameda,42
+open_at_2019,115,0.3,San Mateo,17
+open_at_2019,115,0.3,Santa Clara,15
+open_at_2019,115,0.3,Sonoma,8
+open_at_2019,115,0.3,Kern,8
+open_at_2019,115,0.3,Sacramento,7
+open_at_2019,115,0.3,Los Angeles,5
+open_at_2019,115,0.3,Yolo,4
+open_at_2019,115,0.3,San Joaquin,3
+open_at_2019,115,0.3,Fresno,3
+open_at_2019,115,0.3,San Diego,3
+open_at_2019,115,0.3,Contra Costa,3
+open_at_2019,115,0.3,Shasta,2
+open_at_2019,115,0.3,San Francisco,2
+open_at_2019,115,0.3,Santa Barbara,2
+open_at_2019,115,0.3,Butte,2
+open_at_2019,115,0.3,Marin,1
+open_at_2019,115,0.3,Madera,1
+open_at_2019,115,0.3,Solano,1
+open_at_2019,115,0.3,Merced,1
+open_at_2019,115,0.3,Stanislaus,1
+open_at_2019,115,0.3,El Dorado,1
+open_at_2019,115,0.3,Napa,1
+open_at_2019,115,1.5,Alameda,259
+open_at_2019,115,1.5,Sacramento,194
+open_at_2019,115,1.5,Santa Clara,181
+open_at_2019,115,1.5,Los Angeles,143
+open_at_2019,115,1.5,San Mateo,99
+open_at_2019,115,1.5,Kern,85
+open_at_2019,115,1.5,Contra Costa,53
+open_at_2019,115,1.5,Sonoma,40
+open_at_2019,115,1.5,San Joaquin,39
+open_at_2019,115,1.5,Santa Barbara,38
+open_at_2019,115,1.5,San Francisco,37
+open_at_2019,115,1.5,San Diego,24
+open_at_2019,115,1.5,Yolo,18
+open_at_2019,115,1.5,Napa,17
+open_at_2019,115,1.5,Solano,14
+open_at_2019,115,1.5,Marin,13
+open_at_2019,115,1.5,Fresno,12
+open_at_2019,115,1.5,Butte,10
+open_at_2019,115,1.5,Monterey,10
+open_at_2019,115,1.5,Mendocino,9
+open_at_2019,115,1.5,San Bernardino,9
+open_at_2019,115,1.5,Riverside,8
+open_at_2019,115,1.5,Shasta,8
+open_at_2019,115,1.5,Merced,8
+open_at_2019,115,1.5,Placer,8
+open_at_2019,115,1.5,Stanislaus,5
+open_at_2019,115,1.5,Orange,5
+open_at_2019,115,1.5,Santa Cruz,5
+open_at_2019,115,1.5,El Dorado,5
+open_at_2019,115,1.5,Siskiyou,4
+open_at_2019,115,1.5,Trinity,4
+open_at_2019,115,1.5,San Luis Obispo,4
+open_at_2019,115,1.5,Madera,3
+open_at_2019,115,1.5,Modoc,3
+open_at_2019,115,1.5,Lake,2
+open_at_2019,115,1.5,Imperial,1
+open_at_2019,115,1.5,Nevada,1
+open_at_2019,115,1.5,Kings,1
+open_at_2019,115,3.0,Alameda,420
+open_at_2019,115,3.0,Los Angeles,361
+open_at_2019,115,3.0,Sacramento,334
+open_at_2019,115,3.0,Santa Clara,322
+open_at_2019,115,3.0,Kern,175
+open_at_2019,115,3.0,San Mateo,167
+open_at_2019,115,3.0,Contra Costa,117
+open_at_2019,115,3.0,San Francisco,117
+open_at_2019,115,3.0,San Diego,106
+open_at_2019,115,3.0,Santa Barbara,86
+open_at_2019,115,3.0,San Joaquin,82
+open_at_2019,115,3.0,Sonoma,71
+open_at_2019,115,3.0,Solano,47
+open_at_2019,115,3.0,Fresno,39
+open_at_2019,115,3.0,Yolo,32
+open_at_2019,115,3.0,San Bernardino,31
+open_at_2019,115,3.0,Merced,29
+open_at_2019,115,3.0,Placer,24
+open_at_2019,115,3.0,Marin,21
+open_at_2019,115,3.0,Napa,21
+open_at_2019,115,3.0,Mendocino,17
+open_at_2019,115,3.0,Orange,17
+open_at_2019,115,3.0,Butte,16
+open_at_2019,115,3.0,Monterey,16
+open_at_2019,115,3.0,Riverside,15
+open_at_2019,115,3.0,Shasta,12
+open_at_2019,115,3.0,Stanislaus,12
+open_at_2019,115,3.0,San Luis Obispo,10
+open_at_2019,115,3.0,Santa Cruz,9
+open_at_2019,115,3.0,El Dorado,7
+open_at_2019,115,3.0,Sutter,7
+open_at_2019,115,3.0,Siskiyou,6
+open_at_2019,115,3.0,Madera,6
+open_at_2019,115,3.0,Trinity,5
+open_at_2019,115,3.0,Tuolumne,4
+open_at_2019,115,3.0,Lake,3
+open_at_2019,115,3.0,Nevada,3
+open_at_2019,115,3.0,Modoc,3
+open_at_2019,115,3.0,Imperial,2
+open_at_2019,115,3.0,Yuba,2
+open_at_2019,115,3.0,Humboldt,2
+open_at_2019,115,3.0,San Benito,1
+open_at_2019,115,3.0,Kings,1
+open_at_2019,115,3.0,Calaveras,1
+open_at_2019,115,3.0,Glenn,1
+open_at_2019,230,0.3,Los Angeles,5
+open_at_2019,230,0.3,Sonoma,4
+open_at_2019,230,0.3,San Diego,3
+open_at_2019,230,0.3,Sacramento,2
+open_at_2019,230,0.3,San Mateo,2
+open_at_2019,230,0.3,Kern,1
+open_at_2019,230,0.3,San Francisco,1
+open_at_2019,230,0.3,Contra Costa,1
+open_at_2019,230,0.3,Alameda,1
+open_at_2019,230,1.5,Los Angeles,111
+open_at_2019,230,1.5,Sacramento,62
+open_at_2019,230,1.5,San Diego,21
+open_at_2019,230,1.5,Contra Costa,16
+open_at_2019,230,1.5,San Mateo,13
+open_at_2019,230,1.5,Alameda,12
+open_at_2019,230,1.5,Sonoma,6
+open_at_2019,230,1.5,Orange,5
+open_at_2019,230,1.5,Santa Clara,4
+open_at_2019,230,1.5,San Francisco,3
+open_at_2019,230,1.5,Stanislaus,3
+open_at_2019,230,1.5,Solano,3
+open_at_2019,230,1.5,Placer,3
+open_at_2019,230,1.5,Modoc,3
+open_at_2019,230,1.5,Monterey,2
+open_at_2019,230,1.5,Yolo,2
+open_at_2019,230,1.5,Kern,2
+open_at_2019,230,1.5,Napa,2
+open_at_2019,230,1.5,Merced,1
+open_at_2019,230,1.5,San Luis Obispo,1
+open_at_2019,230,1.5,Imperial,1
+open_at_2019,230,1.5,Marin,1
+open_at_2019,230,1.5,Lake,1
+open_at_2019,230,3.0,Los Angeles,273
+open_at_2019,230,3.0,Sacramento,190
+open_at_2019,230,3.0,San Diego,103
+open_at_2019,230,3.0,San Mateo,48
+open_at_2019,230,3.0,Contra Costa,38
+open_at_2019,230,3.0,Alameda,34
+open_at_2019,230,3.0,Santa Clara,26
+open_at_2019,230,3.0,Orange,16
+open_at_2019,230,3.0,Solano,16
+open_at_2019,230,3.0,Sonoma,11
+open_at_2019,230,3.0,Yolo,10
+open_at_2019,230,3.0,Placer,9
+open_at_2019,230,3.0,Stanislaus,9
+open_at_2019,230,3.0,San Francisco,9
+open_at_2019,230,3.0,Marin,6
+open_at_2019,230,3.0,San Bernardino,6
+open_at_2019,230,3.0,Kern,5
+open_at_2019,230,3.0,San Joaquin,4
+open_at_2019,230,3.0,Merced,3
+open_at_2019,230,3.0,Modoc,3
+open_at_2019,230,3.0,Monterey,2
+open_at_2019,230,3.0,San Luis Obispo,2
+open_at_2019,230,3.0,Imperial,2
+open_at_2019,230,3.0,Napa,2
+open_at_2019,230,3.0,El Dorado,1
+open_at_2019,230,3.0,Glenn,1
+open_at_2019,230,3.0,Fresno,1
+open_at_2019,230,3.0,Lake,1
+open_today,115,0.3,Alameda,30
+open_today,115,0.3,Santa Clara,17
+open_today,115,0.3,San Francisco,16
+open_today,115,0.3,San Mateo,13
+open_today,115,0.3,Kern,9
+open_today,115,0.3,Sacramento,7
+open_today,115,0.3,San Diego,6
+open_today,115,0.3,Sonoma,6
+open_today,115,0.3,Los Angeles,5
+open_today,115,0.3,Yolo,4
+open_today,115,0.3,San Joaquin,3
+open_today,115,0.3,Fresno,3
+open_today,115,0.3,Contra Costa,3
+open_today,115,0.3,Shasta,2
+open_today,115,0.3,Butte,2
+open_today,115,0.3,Imperial,1
+open_today,115,0.3,Marin,1
+open_today,115,0.3,Solano,1
+open_today,115,0.3,Merced,1
+open_today,115,0.3,El Dorado,1
+open_today,115,0.3,San Bernardino,1
+open_today,115,0.3,Napa,1
+open_today,115,0.3,Santa Barbara,1
+open_today,115,0.3,San Luis Obispo,1
+open_today,115,1.5,Alameda,282
+open_today,115,1.5,Santa Clara,217
+open_today,115,1.5,Sacramento,194
+open_today,115,1.5,Los Angeles,158
+open_today,115,1.5,San Mateo,93
+open_today,115,1.5,Kern,92
+open_today,115,1.5,San Francisco,56
+open_today,115,1.5,Contra Costa,49
+open_today,115,1.5,San Joaquin,39
+open_today,115,1.5,Santa Barbara,36
+open_today,115,1.5,Sonoma,32
+open_today,115,1.5,San Diego,21
+open_today,115,1.5,Yolo,17
+open_today,115,1.5,Monterey,14
+open_today,115,1.5,Napa,13
+open_today,115,1.5,Butte,11
+open_today,115,1.5,Fresno,11
+open_today,115,1.5,Solano,10
+open_today,115,1.5,Riverside,9
+open_today,115,1.5,San Bernardino,9
+open_today,115,1.5,Merced,8
+open_today,115,1.5,Santa Cruz,8
+open_today,115,1.5,Marin,7
+open_today,115,1.5,Mendocino,6
+open_today,115,1.5,Placer,6
+open_today,115,1.5,El Dorado,6
+open_today,115,1.5,Orange,5
+open_today,115,1.5,Siskiyou,5
+open_today,115,1.5,San Luis Obispo,5
+open_today,115,1.5,Shasta,4
+open_today,115,1.5,Trinity,4
+open_today,115,1.5,Stanislaus,3
+open_today,115,1.5,Modoc,3
+open_today,115,1.5,Imperial,2
+open_today,115,1.5,Lake,2
+open_today,115,1.5,Madera,2
+open_today,115,1.5,Yuba,1
+open_today,115,1.5,Nevada,1
+open_today,115,1.5,Kings,1
+open_today,115,3.0,Alameda,473
+open_today,115,3.0,Los Angeles,426
+open_today,115,3.0,Santa Clara,399
+open_today,115,3.0,Sacramento,336
+open_today,115,3.0,Kern,181
+open_today,115,3.0,San Mateo,157
+open_today,115,3.0,San Francisco,143
+open_today,115,3.0,Contra Costa,103
+open_today,115,3.0,San Diego,83
+open_today,115,3.0,San Joaquin,82
+open_today,115,3.0,Santa Barbara,80
+open_today,115,3.0,Sonoma,55
+open_today,115,3.0,Solano,40
+open_today,115,3.0,Fresno,38
+open_today,115,3.0,San Bernardino,35
+open_today,115,3.0,Yolo,30
+open_today,115,3.0,Orange,24
+open_today,115,3.0,Merced,23
+open_today,115,3.0,Placer,22
+open_today,115,3.0,Monterey,22
+open_today,115,3.0,Santa Cruz,20
+open_today,115,3.0,Napa,18
+open_today,115,3.0,Riverside,17
+open_today,115,3.0,Butte,15
+open_today,115,3.0,Marin,13
+open_today,115,3.0,Mendocino,12
+open_today,115,3.0,Stanislaus,10
+open_today,115,3.0,San Luis Obispo,10
+open_today,115,3.0,El Dorado,8
+open_today,115,3.0,Shasta,8
+open_today,115,3.0,Siskiyou,7
+open_today,115,3.0,Madera,6
+open_today,115,3.0,Sutter,6
+open_today,115,3.0,Trinity,5
+open_today,115,3.0,Tuolumne,4
+open_today,115,3.0,Modoc,3
+open_today,115,3.0,Lake,3
+open_today,115,3.0,Imperial,2
+open_today,115,3.0,Nevada,2
+open_today,115,3.0,San Benito,1
+open_today,115,3.0,Yuba,1
+open_today,115,3.0,Kings,1
+open_today,115,3.0,Calaveras,1
+open_today,115,3.0,Glenn,1
+open_today,115,3.0,Humboldt,1
+open_today,230,0.3,San Diego,6
+open_today,230,0.3,Los Angeles,5
+open_today,230,0.3,Sonoma,3
+open_today,230,0.3,Sacramento,2
+open_today,230,0.3,Santa Clara,2
+open_today,230,0.3,San Mateo,2
+open_today,230,0.3,Imperial,1
+open_today,230,0.3,San Francisco,1
+open_today,230,0.3,Contra Costa,1
+open_today,230,0.3,Alameda,1
+open_today,230,1.5,Los Angeles,123
+open_today,230,1.5,Sacramento,62
+open_today,230,1.5,San Diego,19
+open_today,230,1.5,Alameda,17
+open_today,230,1.5,Contra Costa,15
+open_today,230,1.5,Santa Clara,14
+open_today,230,1.5,San Mateo,10
+open_today,230,1.5,Orange,4
+open_today,230,1.5,Kern,4
+open_today,230,1.5,Sonoma,4
+open_today,230,1.5,Monterey,3
+open_today,230,1.5,Modoc,3
+open_today,230,1.5,Imperial,2
+open_today,230,1.5,Yolo,2
+open_today,230,1.5,San Francisco,2
+open_today,230,1.5,Stanislaus,2
+open_today,230,1.5,Merced,1
+open_today,230,1.5,San Luis Obispo,1
+open_today,230,1.5,Placer,1
+open_today,230,1.5,Napa,1
+open_today,230,1.5,Solano,1
+open_today,230,1.5,Lake,1
+open_today,230,3.0,Los Angeles,310
+open_today,230,3.0,Sacramento,190
+open_today,230,3.0,San Diego,80
+open_today,230,3.0,Alameda,51
+open_today,230,3.0,San Mateo,44
+open_today,230,3.0,Santa Clara,42
+open_today,230,3.0,Contra Costa,29
+open_today,230,3.0,Orange,20
+open_today,230,3.0,Solano,13
+open_today,230,3.0,San Francisco,11
+open_today,230,3.0,Yolo,9
+open_today,230,3.0,Placer,8
+open_today,230,3.0,Stanislaus,8
+open_today,230,3.0,Kern,8
+open_today,230,3.0,San Bernardino,7
+open_today,230,3.0,San Joaquin,6
+open_today,230,3.0,Sonoma,6
+open_today,230,3.0,Marin,4
+open_today,230,3.0,Monterey,3
+open_today,230,3.0,Modoc,3
+open_today,230,3.0,Imperial,2
+open_today,230,3.0,Merced,2
+open_today,230,3.0,San Luis Obispo,2
+open_today,230,3.0,Santa Barbara,1
+open_today,230,3.0,Napa,1
+open_today,230,3.0,Glenn,1
+open_today,230,3.0,Lake,1
+open_today,230,3.0,Shasta,1
