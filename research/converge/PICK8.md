@@ -280,14 +280,21 @@ LA, closure adds mid-single digits, and on gas stations the cleanup costs ten ti
 assessor value at transfer, not the deed price; some resets are non-sale transfers; operating gas stations
 carry business value; a case point on the street or a neighbouring parcel biases the estimates toward
 zero; LA County only, San Francisco not run; the industrial class is thin (n=58 recently closed) and has the
-largest point estimates. What survives for the thesis: any discount would have to be won off-market, and
-the value of a closed, powered industrial parcel to a load customer is not in any public price record.
+largest point estimates. Other counties (`fetch_sf_roll.py`, `discount_other.py`): San Francisco has too
+few treated sales to say anything (13 open); Alameda's parcel layer gives one rough cross-section (current
+value deflated to the latest document year): open +14.6% [-0.3, 31.7], Cleanup Program open +28% (n=160).
+Pooled industrial class, LA plus Alameda, inverse-variance: open **+7.0%** [0.5, 13.9] (n=712), closed 0-2
+years **+20.0%** [1.5, 41.9] (n=75), closed 2-5 years +25.2% [4.7, 49.8] (n=64), closed 5+ years +2.1%;
+pooled all types: open +6.4%, closed 0-2 years +14.4%. So the recovery right after closure is larger on
+industrial sites (+13 to +18 points over open) than on gas stations (+8), on thin samples. What survives
+for the thesis: any discount would have to be won off-market, and the value of a closed, powered industrial
+parcel to a load customer is not in any public price record.
 
 ## The decision for Dhruv (updated after the PoC reframe)
 
 1. **Continue the brownfield PoC** against the cofounder's four validations: built-out premise and site
    count (done: low hundreds on the parcel, about 1,400 within 1.5 km of power), discount (done: none in
-   LA's recorded prices; closure adds 5-7%), forward cleanup margin (payment ledger fetched, model next),
+   LA's or Alameda's recorded prices; closure adds 5-7% overall, 13-18 points on industrial sites, thin n), forward cleanup margin (payment ledger fetched, model next),
    one use case (powered load on the industrial and plant class). With the stigma discount gone, the
    thesis has to rest on what a closed, powered industrial parcel is worth to a load customer, which no
    public price record measures. (Current direction.)
