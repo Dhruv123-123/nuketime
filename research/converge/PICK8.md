@@ -228,17 +228,32 @@ outcome (ore) is not summarised anywhere in the record. That is the property to 
 rare: scanned deeds and valuation maps (corridor title), scanned interconnection and system-impact studies,
 and old well logs have it; status tables, permits and advisories do not.
 
-## The decision for Dhruv (updated after round 5)
+**Reframed as a proof of concept (Dhruv, 23:58Z: "don't check your ideas on the basis of the model's
+efficiency; treat this as a PoC and idea project").** The kill bar above was our own criterion for
+"unattackable". Dropping it, what the run proves for the idea: (1) the public record is enough to rank
+California's 10,053 open contaminated sites by how fast they will close, three times better than random and
+clearly better than how buyers rank them today (0.846 vs 0.768; 75% vs 60% of a 300-site book near 230 kV
+substations closed within five years); (2) the same model ranks total cleanup spend (Spearman 0.60 vs 0.26
+for the lookup); (3) the whole pipeline runs end to end in under two hours on one machine, so the
+"ML-armed vulture" is buildable now, and the moat is speed plus doing the remediation and redevelopment
+yourself, which is the Terranox pivot (sell predictions, then do the drilling) mapped one to one. What the
+PoC does not yet show, in the order the cofounder asked: (a) that the discount exists (no price data here);
+(b) that enough built-out industrial sites exist (the top of the list is gas stations; the industrial class
+is a third of cases and needs a plant list joined in); (c) that cleanup can be done very profitably (the cost
+label is cumulative, not forward); (d) one use case, where the data points at powered load on the
+industrial and plant class. The next PoC step, started 16 Oct 00:00Z: count open industrial-class sites
+within 300 m, 1.5 km and 3 km of a live substation, and join EIA's retired-generator list to GeoTracker to
+test the built-out premise directly.
 
-1. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
+## The decision for Dhruv (updated after the PoC reframe)
+
+1. **Continue the brownfield PoC** against the cofounder's four validations: built-out premise and site
+   count (running), discount on 20 real listings, forward cleanup margin, one use case (powered load on the
+   industrial and plant class). (Current direction.)
+2. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
    backtests say the "public data only ML can read, outcome not summarised anywhere" moat lives in geology.
-   Terranox has it. (Recommended.)
-2. **Keep brownfields as a developer play** with ML underwriting and an execution moat. It is a real edge
-   over today's buyers (+15 points of closure in a 300-site portfolio near 230 kV) but it is copyable, and
-   the cost and mispricing legs are unproven.
 3. **One more kill test on a record with the Terranox property**: corridor title from scanned railroad
-   deeds and ICC valuation maps (6/10 in round 4; transmission and fibre siting), or scanned interconnection
-   studies. Expect a data-access fight before any modelling.
+   deeds and ICC valuation maps, or scanned interconnection studies. Expect a data-access fight first.
 
 Earlier decision list (written before round 4): take Lineage to its kill test; accept the moat is
 geological; or drop the claim requirement and rank on execution moats.
