@@ -1,0 +1,13 @@
+case class,treatment,n,pooled %,95% CI,by county
+Cleanup Program,open,712,7.0,"[0.5, 13.9]",Los Angeles 4.8% (n=552); Alameda 28.3% (n=160)
+Cleanup Program,closed_0_2,75,20.0,"[1.5, 41.9]",Los Angeles 13.3% (n=58); Alameda 49.0% (n=17)
+Cleanup Program,closed_2_5,64,25.2,"[4.7, 49.8]",Los Angeles 23.4% (n=50); Alameda 37.7% (n=14)
+Cleanup Program,closed_5p,1119,2.1,"[-2.4, 6.8]",Los Angeles 0.2% (n=1020); Alameda 25.7% (n=99)
+LUST,open,1064,5.4,"[-0.2, 11.4]",Los Angeles 6.1% (n=929); San Francisco 7.4% (n=12); Alameda -0.1% (n=123)
+LUST,closed_0_2,329,13.1,"[4.2, 22.8]",Los Angeles 11.0% (n=274); San Francisco 14.1% (n=10); Alameda 26.0% (n=45)
+LUST,closed_2_5,388,14.7,"[6.6, 23.4]",Los Angeles 11.1% (n=335); San Francisco -4.8% (n=10); Alameda 50.1% (n=43)
+LUST,closed_5p,3040,11.5,"[7.7, 15.5]",Los Angeles 10.2% (n=2270); San Francisco 6.5% (n=167); Alameda 17.8% (n=603)
+all,open,1777,6.4,"[2.0, 11.0]",Los Angeles 5.4% (n=1481); San Francisco 21.4% (n=13); Alameda 14.7% (n=283)
+all,closed_0_2,404,14.4,"[6.3, 23.1]",Los Angeles 11.3% (n=332); San Francisco 15.4% (n=10); Alameda 31.8% (n=62)
+all,closed_2_5,453,15.3,"[7.8, 23.4]",Los Angeles 12.0% (n=385); San Francisco -3.8% (n=10); Alameda 45.1% (n=58)
+all,closed_5p,4161,9.4,"[6.3, 12.6]",Los Angeles 7.4% (n=3290); San Francisco 6.7% (n=168); Alameda 19.0% (n=703)
