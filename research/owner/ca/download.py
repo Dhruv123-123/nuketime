@@ -77,7 +77,7 @@ def download(url, dest, retries=3, min_bytes=200):
     for i in range(retries):
         try:
             req = urllib.request.Request(url, headers=UA)
-            with urllib.request.urlopen(req, timeout=120) as r, open(tmp, "wb") as f:
+            with urllib.request.urlopen(req, timeout=300) as r, open(tmp, "wb") as f:
                 while True:
                     b = r.read(1 << 20)
                     if not b:
@@ -95,7 +95,8 @@ def download(url, dest, retries=3, min_bytes=200):
             return True
         except Exception as e:  # noqa: BLE001
             msg = str(e)
-            if "404" in msg or "403" in msg:
+            # 403/404, or the 127-byte JavaScript redirect stub geotracker.waterboards.ca.gov serves for files
+            if "404" in msg or "403" in msg or "tiny response" in msg:
                 log(f"  {url}: {msg}")
                 break
             log(f"  retry {i+1} {url}: {msg}")
@@ -148,7 +149,7 @@ def main():
                 name = f"{c}{kind}.zip"
                 dest = os.path.join(DATA, "geo_by_county", name)
                 cands = [link_for(gt_links, name)] if link_for(gt_links, name) else []
-                cands += [f"{GT}/data_download/geo_by_county/{name}", f"{GTD}/data_download/geo_by_county/{name}",
+                cands += [f"{GTD}/data_download/geo_by_county/{name}", f"{GT}/data_download/geo_by_county/{name}",
                           f"{GT}/data_download/geo_by_county/{c}_{kind}.zip", f"{GT}/datadownload/geo_by_county/{name}"]
                 if not first_ok(cands, dest, a.retries):
                     failed.append(name)
@@ -158,7 +159,7 @@ def main():
             name = f"{c}EDF.zip"
             dest = os.path.join(DATA, "edf_by_county", name)
             cands = [link_for(gt_links, name)] if link_for(gt_links, name) else []
-            cands += [f"{GT}/data_download/edf_by_county/{name}", f"{GTD}/data_download/edf_by_county/{name}",
+            cands += [f"{GTD}/data_download/edf_by_county/{name}", f"{GT}/data_download/edf_by_county/{name}",
                       f"{GT}/data_download/edf_by_county/{c}_EDF.zip", f"{GT}/datadownload/edf_by_county/{name}"]
             if not first_ok(cands, dest, a.retries):
                 failed.append(name)

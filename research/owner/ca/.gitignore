@@ -2,3 +2,4 @@ data/*
 !data/ca_substations.csv
 work/
 __pycache__/
+!data/cuf/

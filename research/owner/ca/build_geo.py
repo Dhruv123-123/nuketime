@@ -1,8 +1,7 @@
-"""Per-site features from the county geo files (GeoXY, GeoZ, GeoWell, FieldPoints) -> work/geo_static.pkl
-and work/geo_dtw_year.pkl (gid, year, dtw_med, n_meas) for time-aware use.
-
-geo_static per gid: n_fpt, n_wells, n_borings, depth_max, depth_med, spread_km (bounding-box diagonal of
-field points), first_year, last_year. Column names are detected at run time.
+"""Per-site features from the county geo files (GeoXY, GeoZ, GeoWell, FieldPoints) -> work/geo_fpt.pkl
+(gid, fpt, first_date, depth, lat, lon, cls, is_well, is_boring) and work/geo_dtw_year.pkl (gid, year, dtw_med,
+n_meas). Both are dated so build_panel.py aggregates them using only records before each snapshot.
+Column names are detected at run time.
 """
 import os
 import re
@@ -58,32 +57,31 @@ well = pd.concat(well, ignore_index=True) if well else pd.DataFrame(columns=["gi
 fp = pd.concat(fp, ignore_index=True) if fp else pd.DataFrame(columns=["gid", "fpt", "cls"])
 log(f"geoxy {len(xy):,}  geoz {len(zz):,}  geowell {len(well):,}  fieldpoints {len(fp):,}")
 
-parts = []
-if len(fp):
-    parts.append(fp.groupby("gid").agg(
-        n_fpt=("fpt", "nunique"),
-        n_wells=("cls", lambda s: int(s.str.contains(r"MW|WELL|EW|PZ|PIEZ", regex=True).sum())),
-        n_borings=("cls", lambda s: int(s.str.contains(r"SB|BOR|HP|DP|CPT", regex=True).sum()))))
+# One row per (gid, field point) with the first date the point appears in any dated geo table, so that
+# build_panel.py can count only wells/borings that existed before each snapshot T. (An all-time count leaks
+# the future: sampling and new wells stop when a case closes.) Undated points are dropped.
+keys = ["gid", "fpt"]
+fd = pd.concat([d[keys + ["date"]] for d in (xy, zz, well) if len(d)], ignore_index=True).dropna(subset=["date"])
+fd = fd[(fd.date.dt.year >= 1970) & (fd.date.dt.year <= 2026)]
+g = fd.groupby(keys).date.min().rename("first_date").to_frame()
 if len(well):
-    parts.append(well.groupby("gid").agg(depth_max=("depth", "max"), depth_med=("depth", "median"), n_well_rows=("fpt", "nunique")))
+    g = g.join(well.groupby(keys).depth.max())
 if len(xy):
-    bb = xy.dropna(subset=["lat", "lon"]).groupby("gid").agg(lat0=("lat", "min"), lat1=("lat", "max"), lon0=("lon", "min"), lon1=("lon", "max"), n_xy=("fpt", "nunique"))
-    bb["spread_km"] = haversine_km(bb.lat0.to_numpy(), bb.lon0.to_numpy(), bb.lat1.to_numpy(), bb.lon1.to_numpy())
-    parts.append(bb[["spread_km", "n_xy"]])
-dates = pd.concat([d[["gid", "date"]] for d in (xy, zz, well) if len(d) and "date" in d], ignore_index=True) if any(len(d) for d in (xy, zz, well)) else pd.DataFrame(columns=["gid", "date"])
-if len(dates):
-    dates = dates.dropna()
-    parts.append(dates.groupby("gid").date.agg(first_year=lambda s: s.min().year, last_year=lambda s: s.max().year))
-if len(zz):
-    parts.append(zz.groupby("gid").agg(dtw_med_all=("dtw", "median")))
-geo = pd.concat(parts, axis=1) if parts else pd.DataFrame()
-geo.index.name = "gid"
-geo = geo.reset_index()
-geo.to_pickle(os.path.join(WORK, "geo_static.pkl"))
+    g = g.join(xy.dropna(subset=["lat", "lon"]).groupby(keys)[["lat", "lon"]].median())
+if len(fp):
+    g = g.join(fp.drop_duplicates(keys).set_index(keys).cls)
+for c in ("depth", "lat", "lon", "cls"):
+    if c not in g:
+        g[c] = np.nan if c != "cls" else ""
+g["cls"] = g.cls.fillna("").astype(str)
+g["is_well"] = g.cls.str.contains(r"MW|WELL|EW|PZ|PIEZ", regex=True).astype(int)
+g["is_boring"] = g.cls.str.contains(r"SB|BOR|HP|DP|CPT", regex=True).astype(int)
+geo = g.reset_index()
+geo.to_pickle(os.path.join(WORK, "geo_fpt.pkl"))
 if len(zz):
     z = zz.dropna(subset=["date", "dtw"]).copy()
     z["year"] = z.date.dt.year
     z.groupby(["gid", "year"]).agg(dtw_med=("dtw", "median"), n_meas=("dtw", "size")).reset_index().to_pickle(os.path.join(WORK, "geo_dtw_year.pkl"))
 else:
     pd.DataFrame(columns=["gid", "year", "dtw_med", "n_meas"]).to_pickle(os.path.join(WORK, "geo_dtw_year.pkl"))
-log(f"geo_static: {len(geo):,} sites, columns {list(geo.columns)}")
+log(f"geo_fpt: {len(geo):,} dated field points at {geo.gid.nunique():,} sites")
