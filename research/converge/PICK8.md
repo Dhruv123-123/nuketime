@@ -290,14 +290,40 @@ industrial sites (+13 to +18 points over open) than on gas stations (+8), on thi
 for the thesis: any discount would have to be won off-market, and the value of a closed, powered industrial
 parcel to a load customer is not in any public price record.
 
+## Feasibility verdict (17 Oct, after Dhruv's "do it for feasibility, not implementation")
+
+The question: is an ML-armed brownfield developer feasible, one that finds failing contaminated industrial
+sites in public records faster than incumbents, buys them cheap, remediates, and sells or leases them as
+powered land? Five premises, each tested on real California data, plus the one that could not be tested.
+
+| Premise | Test | Result | Verdict |
+|---|---|---|---|
+| 1. Public records can rank which open sites will close, better than buyers do today | 27,956 cases at six snapshots, no future data; buying simulation at 2016 | AUC 0.846 vs 0.768 for the buyer heuristic; top 300 near 230 kV close at 75% vs 60% vs 29% random; industrial top 100 at 68% vs 45% | **Feasible**, buildable in weeks from a 40 MB table; copyable for the same reason |
+| 2. ML is what makes it solvable (the Terranox test) | Full model vs structured fields only; cost model with and without the lab record | +0.004 AUC; +0.05 Spearman on cost | **Not supported**: the regulator already writes the signal into the legible fields |
+| 3. Enough built-out sites exist | Industrial-class open cases near substations; EIA-860 plants joined to GeoTracker | 135 within 300 m of a 115 kV+ substation, 1,443 within 1.5 km; 188 of 473 thermal plants with an open case within 1 km, 44 of 121 retired | **Feasible for one fund's book** in California (low hundreds); a national count is unverified |
+| 4. They can be bought at a steal | 118,513 LA commercial and industrial sales from the assessor roll (Prop 13 resets), plus Alameda and SF | Open-case parcels sell at +5% to +7% against clean ones, not a discount; closure adds +11-12% (industrial +20-25%, n=75 and 64) | **Not supported** in recorded prices; any discount is off-market and unproven |
+| 5. Cleanup is very profitable | Cleanup Fund claims (2020: 3,779 claims; FY2024-25 payments: $123M over 866 claims) against the closure uplift | Gas-station cleanup: median $617k-808k reimbursed over a median 29 years since discovery, $25k-57k a year; closure uplift median $60k on a $1.3M parcel; 13% positive | **Not for gas stations.** On industrial sites the uplift is about $260k on a median parcel and the cost is in no public record |
+| 6. A closed industrial parcel with a live substation is worth a multiple of its dirt to a load customer | None possible: no public record prices powered land | Untested | **The whole thesis now rests here** |
+
+Reading. Feasible: a data-enabled brownfield developer that uses public records to pick the sites that
+will close soonest, buys them at market, and makes its money on execution and capital, like any developer.
+Not feasible on this evidence: a company whose edge is mispriced contaminated land, or ML reading data
+nobody else can read. What would make it YC-sized is premise 6, which the public record cannot test: that
+data centres and electrified industry waiting years for interconnection will pay a multiple for a closed
+industrial parcel with a live 115 kV+ substation. That is a ten-phone-call test (powered-land brokers,
+data-centre site selectors, a utility's interconnection queue), not a dataset test, and it is the one to
+run next. The forward cleanup-cost model was dropped under the feasibility steer; the Fund's dated payment
+ledger (121,252 payments, FY1992-93 to date) sits in Dhruv's data folder (`~/data/geotracker/cuf/`) if it
+is ever wanted.
+
 ## The decision for Dhruv (updated after the PoC reframe)
 
 1. **Continue the brownfield PoC** against the cofounder's four validations: built-out premise and site
    count (done: low hundreds on the parcel, about 1,400 within 1.5 km of power), discount (done: none in
-   LA's or Alameda's recorded prices; closure adds 5-7% overall, 13-18 points on industrial sites, thin n), forward cleanup margin (payment ledger fetched, model next),
+   LA's or Alameda's recorded prices; closure adds 5-7% overall, 13-18 points on industrial sites, thin n), forward cleanup margin (closed with Fund facts: $25-57k a year for decades on gas stations),
    one use case (powered load on the industrial and plant class). With the stigma discount gone, the
    thesis has to rest on what a closed, powered industrial parcel is worth to a load customer, which no
-   public price record measures. (Current direction.)
+   public price record measures: ten calls, not another dataset. (Current direction.)
 2. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
    backtests say the "public data only ML can read, outcome not summarised anywhere" moat lives in geology.
 3. **One more kill test on a record with the Terranox property**: corridor title from scanned railroad
