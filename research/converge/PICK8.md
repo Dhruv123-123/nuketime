@@ -316,18 +316,76 @@ run next. The forward cleanup-cost model was dropped under the feasibility steer
 ledger (121,252 payments, FY1992-93 to date) sits in Dhruv's data folder (`~/data/geotracker/cuf/`) if it
 is ever wanted.
 
-## The decision for Dhruv (updated after the PoC reframe)
+## Feasibility across the hunt (17 Oct): which public-dataset play has a real gap
 
-1. **Continue the brownfield PoC** against the cofounder's four validations: built-out premise and site
-   count (done: low hundreds on the parcel, about 1,400 within 1.5 km of power), discount (done: none in
-   LA's or Alameda's recorded prices; closure adds 5-7% overall, 13-18 points on industrial sites, thin n), forward cleanup margin (closed with Fund facts: $25-57k a year for decades on gas stations),
-   one use case (powered load on the industrial and plant class). With the stigma discount gone, the
-   thesis has to rest on what a closed, powered industrial parcel is worth to a load customer, which no
-   public price record measures: ten calls, not another dataset. (Current direction.)
-2. **Build the application around Terranox and what it already proves.** Eight hunts and three real-data
-   backtests say the "public data only ML can read, outcome not summarised anywhere" moat lives in geology.
-3. **One more kill test on a record with the Terranox property**: corridor title from scanned railroad
-   deeds and ICC valuation maps, or scanned interconnection studies. Expect a data-access fight first.
+Dhruv's question: of everything seen in eight hunts, which public-dataset play has a gap, and can ML be
+the radically more efficient way to rebuild old factories, or only a nice-to-have?
+
+**The law, restated with the evidence.** Public data plus ML is a company-making edge only where four
+things hold at once: the record is illegible to incumbents at scale; the outcome that matters is not
+summarised in any legible field; the right can be bought from people who cannot read the record; and the
+buyer realises the value itself. Regulatory and administrative records fail the second condition, every
+time we tested it: the regulator writes the answer into the status fields, so a lookup table gets within
+0.03 to 0.08 AUC of the best model (grid queue 0.727 vs 0.721; Pennsylvania tanks 0.695 vs 0.727;
+California 0.768 vs 0.846, with the 230M-row lab record worth +0.004). Geology passes because nobody
+summarises where the ore is. That is the whole finding of the hunt, and it is why the shortlist below is
+short.
+
+| Play | Record | Is there a gap? | What ML is | Verdict |
+|---|---|---|---|---|
+| Geology (Terranox: SMAD and the other forced-public assessment files; US scanned well and gamma logs) | Scanned logs, decades deep, no outcome column | **Yes, verified by Terranox's own existence** and by eight hunts failing to find a second | The only way to read the record at scale | **The one proven play.** It is Dhruv's own company |
+| Powered brownfields (GeoTracker, assessor rolls, substations, EIA-860) | Legible case tables; lab record adds nothing | **Partial**: sourcing edge real (+0.08 AUC, 75% vs 60% closure); no discount; cleanup cost dwarfs uplift on gas stations | A 5-10% sourcing edge, copyable in weeks | **Feasible as a developer, not as an ML company**; the open question is the powered-land premium (ten calls) |
+| Rail corridor rights (scanned ICC valuation maps, 1910s deeds, STB abandonment dockets) for transmission and fibre routes | Truly illegible, truly unsummarised: who holds the reversion or easement on an abandoned corridor is in nobody's table | **Untested, and the only candidate with all four conditions** | Reading 100-year-old maps and deed books at scale | **The one to test next** if a second company idea is wanted: one state, two weeks, label = corridors later sold or built on. Doubts: big railroads hold the best corridors; siting approval |
+| Interconnection system-impact studies (ISO and utility PDFs) | Illegible part untested; structured queue has no edge | Probably occupied (GridCARE, Cloverleaf, Tract read grid data) | Reading study PDFs for cheap-upgrade positions | **Not a gap** on the evidence; expect incumbents |
+| Alberta closure-liability underwriter (AER ST37, Petrinex, Orphan Well labels) | Semi-legible; regulator's own rating is crude (C$36.6B official vs about C$260B leaked) | **Yes, but capped** by Alberta's producer base and politics; rejected by Dhruv as too small; drilling-adjacent | Scoring wells the regulator mis-rates | **Feasible, small**; proof never run (data hosts blocked) |
+| Lineage (SBIR Phase III rights, FPDS) | Legible; matching is a join | Weak: Phase III is a preference, old data rights lapse, primes already price lineage | A join, not a necessity | **Feasible as an M&A roll-up**, 5/10; no data gap |
+| Orphaned ICS/OT software lines (CISA advisories, vendor EOL notices) | Legible | No: value is M&A skill and capital | Target finding | **Feasible business, not a data play** |
+| Underperforming solar and wind fixed with robotic O&M (EIA-860M and 923) | Legible; the gap is visible in any diligence pack | No information gap | A screen | **An operations business**, not a data play |
+| Foreign-approved drugs missing in the US (DrugCentral, EMA, FDA letters) | Legible; IQVIA and Citeline list them | No; pool about 7 a year | Diligence | **Not a gap**; off-sector anyway |
+| Grid-queue attrition and powered-land options (LBNL Queued Up) | Legible | No: AUC 0.721 vs 0.727 lookup; position held by Cloverleaf (7 GW sold), Tract, GridCARE | None over a lookup | **Killed** |
+| Assets with an owner who sells by tender (idle turbines, telco copper, nuclear sites, IPv4, transformers) | Legible | No: the owner runs the auction | Nothing | **Killed** |
+| Rights that are auctioned or cost a dossier (spectrum, drug exclusivities, grid connections, aquaculture) | Varies | No: the price is set by the auction | Nothing | **Killed** |
+| Illegible records with non-exclusive rights (FAA PMA parts, DLA alternate sourcing, mitigation credits) | Illegible | No: reading it first wins nothing exclusive | Reading | **Killed** |
+| Nuclear picks from hunts 1-6 (TRISO sorter, nuclear-qualified manufacturer, Margin, hafnium) | Not public-data plays | Gaps are named and occupied, or under $300M a year | Engineering productivity | Recorded for completeness; Dhruv rejected or scrapped each |
+
+**The straight answer on rebuilding old factories.** Many firms do it, and the job's cost and time sit
+in acquisition, due diligence, remediation, permits, interconnection, construction and leasing.
+Identification is one or two percent of it. Our model does that one or two percent well: it scores all
+10,053 open California sites in two hours and beats the buyer's heuristic by +0.08 AUC. That is a real
+edge and it is copyable in weeks, because the signal sits in a 40 MB table the state publishes. For ML to
+be the radically more efficient way to do the whole job it would have to shorten the part that takes
+decades, and the data says that part is not a knowledge problem. The lab record and boring logs, read
+in full, improve the cost prediction by +0.05 Spearman and the closure prediction by +0.004 AUC. Closure
+drags because of regulatory process and monitoring, and the one thing that did compress it was policy:
+California's 2012 Low-Threat Closure Policy, after which open cases fell from 22,226 (2004) to 10,053
+(2019). An AI that drafts closure reports is a consultant productivity tool (Liora sells that as a
+service) and the cofounder's "hardly tech" objection applies to it. Remediation itself is excavation,
+pump-and-treat and vapour extraction; robots are marginal. So in brownfields ML is a sourcing edge, not
+the engine; the engine is capital, powered-land scarcity and execution speed. The one corner of the
+record that is illegible, pre-database industrial parcels readable only from Sanborn fire-insurance maps
+and old aerials, does not help either: knowing a parcel is dirty is a reason to pay less, not a way to buy
+it cheaper, and the infrastructure that makes it valuable is visible in any GIS layer.
+
+**What I would back.** For the application: Terranox's own thesis, because it is the only public-dataset
+play that passed every test, and eight hunts of looking for a second one are themselves evidence for how
+rare the property is. If a second company idea is wanted: a two-week test of rail corridor title, the
+only untested candidate with all four conditions, before any more brownfield work. Brownfields only as
+a developer with an execution moat, and only after the ten-call test on the powered-land premium says
+there is a multiple to earn.
+
+## The decision for Dhruv (updated 17 Oct after the cross-hunt verdict)
+
+1. **Build the application around Terranox and what it already proves.** Eight hunts, three real-data
+   backtests and the California feasibility study all say the "public data only ML can read, outcome
+   summarised nowhere" moat lives in geology. (Recommended.)
+2. **If a second company idea is wanted: a two-week test of rail corridor title** from scanned ICC
+   valuation maps, deed books and STB abandonment dockets, the only untested candidate with the full
+   property. Expect a data-access fight first.
+3. **Brownfields as a developer, not an ML company**, and only after the ten-call test on the
+   powered-land premium (powered-land brokers, data-centre site selectors, a utility's interconnection
+   queue) says a closed industrial parcel with a live substation earns a multiple. The California
+   evidence: sourcing edge real, built-out set low hundreds, no discount, closure adds 5-7%, cleanup
+   cost dwarfs the uplift on gas stations, industrial cost in no public record.
 
 Earlier decision list (written before round 4): take Lineage to its kill test; accept the moat is
 geological; or drop the claim requirement and rank on execution moats.
