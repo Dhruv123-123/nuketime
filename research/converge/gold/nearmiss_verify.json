@@ -1,0 +1,347 @@
+[
+ {
+  "finalist": "Land-promotion junior: option farmland, win planning consent, sell consented land to housebuilders (UK first; US entitlement, Australia later). Proving step: outline permission plus appeal; \u00a325-40k per gross acre or \u00a3250k-1M per site; 2-5 years; p 0.3-0.67 (Gladman about 2/3; appeals 60% won where the council lacks a 5-year land supply vs 30% where it has one); lever 1.5-3x. Step-up: farmland \u00a321k/ha to consented \u00a31-6M/ha (50-300x); promoter keeps 20-25% under an exclusive option. Pool \u00a310-20B/yr consented-land value (estimate); Gladman sold 2,796 plots/yr; Barratt bought Gladman for \u00a3250M. Incumbents: Gladman, Catesby, Richborough, Rosconn, Hallam; LandTech and Searchland legibilise part of the data. Doubt: p is high and the 5-year land supply and Housing Delivery Test are legible fields. Note for the rubric: the base hit rate that matters is not the promoter's success rate on sites it chose, but the base rate across all candidate farmland of becoming consented; consider whether ML over planning appeal letters, local plan evidence, SHLAA/HELAA call-for-sites PDFs picks winners before options are signed.",
+  "verifiers": [
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 3,
+     "c2": 2,
+     "c3": 2,
+     "c4": 2,
+     "c5": 3
+    },
+    "evidence": "Raw land step-up (real, but below 10^3): agricultural land is about \u00a321-22.5k/ha (CPP/IEA; Knight Frank Q3 2023 \u00a38,951/acre, about \u00a322k/ha). Real outline-consented greenfield sales: Sudbury, 14.87 acres for about \u00a36M (about \u00a3400k per gross acre); Hereford, 11.7 acres sold to Barratt for \u00a35.7M (about \u00a3490k per gross acre). Both are about \u00a31.0-1.2M per gross ha, so roughly 45-55x farmland. The often-cited 275x (CPP 2018, \u00a36.2M/ha) and the MHCLG appraisal values are per net ha, assume no s106, CIL or affordable housing, and include London; MHCLG itself says they are not market values. Crest Nicholson (Housing Today): consented greenfield is worth \u00a31-1.5M/acre, but infrastructure (about \u00a3400k), affordable cross-subsidy (about \u00a3400k) and s106 (about \u00a3300k) absorb most of it, and landowners actually received \u00a3100-150k per gross acre. That realised uplift is about 11-17x on agricultural value.\n\nThe promoter's own step-up is much smaller. The promoter does not own the land at \u00a31/ha. Under a promotion agreement it gets its costs back plus 5-20% of net proceeds (Farrer: 5-20%; HCR, Harold Benjamin and Devonshires: a share of net after costs). The landowner keeps 80-95% and is usually protected by a minimum price. Under an option the promoter buys at market value minus a 10-20% discount, so it again captures only a slice. The promoter's real equity is its promotion spend (about \u00a3250k-1M a site). A hit returns roughly 3-10x that spend, and about 2-5x in expectation once p of 0.3-0.67 is applied. That is well under the 30x refutation threshold.\n\nGladman's own figures confirm this. In FY to March 2021 it sold 2,796 plots on 18 sites for turnover of \u00a329.9M (about \u00a310.7k per plot, against a gross consented plot value of perhaps \u00a340-60k) and made a pre-tax profit of \u00a36.9M on gross assets of \u00a3212.3M. Before the pandemic it averaged about 4,156 plots sold a year. Barratt paid \u00a3250M debt-free, cash-free, about 1.2x gross assets.\n\nThe buyer is real and does pay at once: Barratt, Persimmon, Crest and other housebuilders buy outline-consented sites unconditionally. Market size: Gladman alone made 15-18 site sales a year; the total UK promoter fee pool is probably about \u00a30.5-1.5B a year (my estimate). The \u00a310-20B pool of consented-land value belongs mostly to landowners, not promoters.\n\nData and rights: owners of land on the urban edge are advised by agents such as Savills, Strutt & Parker and Carter Jonas and already price in hope value. The 5-year land supply, the Housing Delivery Test and the HELAA site assessments are legible, and LandTech and Searchland already index the data. The right is not bought cheaply from owners who cannot read the data.\n\nLadder: the climb to housebuilding exists, but housebuilders bought the promoters (Barratt bought Gladman) rather than promoters growing into housebuilders.",
+    "killer": "The promoter never owns the near-zero asset. Under a promotion agreement or option it captures only 5-25% of net uplift, and the landowner, advised by agents and protected by a minimum price, keeps the rest. On real sales (about \u00a3400-490k per gross acre against about \u00a39k/acre farmland) the gross land step-up is only about 45-55x after s106 and infrastructure, not 10^3-10^4. The promoter's own return on promotion capital is about 3-10x per hit (Gladman: \u00a329.9M turnover and \u00a36.9M PBT on 2,796 plots). That is below the 30x threshold.",
+    "sources": [
+     "https://www.pbctoday.co.uk/news/planning-construction-news/land-promoter/104723/",
+     "https://housingtoday.co.uk/news/barratt-buys-land-trader-gladman/5115838.article",
+     "https://www.thebusinessdesk.com/eastmidlands/?p=2055774",
+     "https://housingtoday.co.uk/news/landowners-dont-pocket-huge-sums-when-selling-says-housebuilder/5101805.article",
+     "https://www.struttandparker.com/case-studies/waldingfield-road-sudbury-suffolk",
+     "https://www.alderking.com/strategic-greenfield-site-in-hereford-sold-for-residential-development/",
+     "https://lichfields.uk/blog/2023/june/8/abandon-all-hope-ye-who-enter-here",
+     "https://iea.org.uk/?p=43538",
+     "https://www.gov.uk/government/publications/land-value-estimates-for-policy-appraisal-2023/land-value-estimates-for-policy-appraisal-guidelines-for-use",
+     "https://www.farrer.co.uk/news-and-insights/promoting-development-opportunities/",
+     "https://www.hcrlaw.com/news-and-insights/what-is-a-land-promotion-agreement/",
+     "https://landcommission.gov.scot/our-work/housing-development/housing/castle-gardens-pencaitland",
+     "https://www.knightfrank.co.uk/research/article/2023/10/uk-farmland-values-hit-record-high",
+     "https://fwi.co.uk/business/housing-need-pushes-farmland-1macre"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 2,
+     "c2": 4,
+     "c3": 1,
+     "c4": 1,
+     "c5": 3
+    },
+    "evidence": "STEP-UP IS REAL: Residential land values (MHCLG land value estimates, dated 1 Oct 2023, residual-model values per council) have a floor set at no less than 10x agricultural value. Consented greenfield land in most of England is worth roughly \u00a31-6M/ha, against farmland at about \u00a320-25k/ha (memory, consistent with the brief), a step-up of about 50-300x. The promoter keeps only 20-25% of that, and it collects only after selling at a competitive sale. C2 = 4.\n\nHIT RATE IS HIGH, SO THE LEVER IS SMALL: Mac Mic reports a 76% promotion success rate on its own website. Gladman secured consent on 2,760 plots across 15 sites in its last full year before Barratt bought it in Jan 2022 for \u00a3250m (Construction Enquirer and Housing Today; pipeline of about 406 sites averaging 242 plots). Pre-pandemic, Gladman averaged 4,230 consented plots a year. The national appeal allow rate is about 28-35% across all appeal types: PINS figure cited by York, 28% for Q4 2024; long-run average about 34-35% since the NPPF, per West Norfolk and BCP. CPRE found 72% of greenfield major-housing appeals succeeded where the council lacked a 5-year supply, versus 35% overall. Lichfields' 'Refused for good reason?' found 65% of appeals allowed where members overturned the officer, versus 40% otherwise. With base p of about 0.67-0.76, the ML lever is capped at 1.3-1.5x, not 10x. The 'base rate across all farmland' framing does not rescue the case. Candidate sites are already filtered on legible features: settlement edge, Green Belt or Grey Belt, flood zone, HELAA 'deliverable/developable' category, 5YHLS shortfall and HDT result. The binding constraint is landowner signature and the local plan cycle, not knowing which field wins. The physical and political proving step is the work: 2-5 years of consultants, technical reports, committee and appeal. Discovery is maybe 10-20% of the work, not 80%+, so C1 = 2.\n\nDATA IS LEGIBLE AND ALREADY SOLD: The outcome drivers sit in fields the regulator publishes. 5YHLS position statements, Housing Delivery Test percentages (e.g. Lichfield 209%, which sets the buffer), local plan allocations (an allocation is the answer), HELAA site categorisation, and the PINS casework open dataset with outcome fields (opendatacommunities). Vendors already turn this into products:\n- LandTech/LandInsight: AI planning-history summaries since Dec 2024, an AI assistant over 40+ datasets, Green/Grey Belt overlays.\n- Searchland: planning appeals data, SHLAA data and AI-assisted automated site sourcing; \u00a34,800/yr vs LandInsight \u00a36,000.\n- GapSense (July 2026): grades a site's 'realistic route to planning permission' from the local plan, the NPPF, 15 constraint datasets and nearby decisions.\n- Planning Appeals platform: sells appeal probability by LPA, case type and procedure.\n- Nimbus Maps: constraints; clients include Barratt.\n\nRIGHTS ARE NOT CHEAP OR UNCONTESTED: Land agents (Savills, Strutt & Parker, etc.) represent landowners and run competitive promoter tenders. Landowners keep 75-80% of the net uplift under promotion agreements, and option agreements require an upfront premium plus all promotion costs (Shoosmiths; Stephens Scown). Landowners can read the data through their agents. There is no illiteracy discount.\n\nTHE SPACE IS FULL: Land promoters deliver more than 40% of residential outline consents a year (LPDF letter to the CMA). They account for 58% of plots delivered by six large housebuilders, ranging from Barratt 76% to Bellway 41% (Lichfields for the LPDF). They hold about 50% of pre-application work (Lichfields 2018). Named incumbents: Gladman (Barratt), Catesby, Richborough, Hallam, Rosconn and Mac Mic, plus every PLC housebuilder's strategic land team. An AI-native attempt has already failed. Tract (London; Ada Ventures and Concept Ventures; \u00a3744k pre-seed plus a further round) used AI to find sites, assess planning risk from historic applications and run land promotion. It shut down in March 2025 after about 2 years with no meaningful revenue. The founders cited a fragmented market, low willingness to pay and the 'timeline and operational problems' of land promotion (TechFundingNews).\n\nLADDER: A ladder exists (promoter, then housebuilder, then build-to-rent), and Barratt buying Gladman shows the integration. But UK housebuilding is a cyclical, low-margin business worth tens of billions, not a trillion-dollar chain. C5 = 3.",
+    "killer": "The variables that decide consent are already in legible public fields: 5-year supply position, HDT %, local plan allocation, HELAA category, Green/Grey Belt and flood zone, and PINS appeal outcomes. LandTech, Searchland, GapSense and Planning Appeals already package them. Promoters already win about 67-76% of the sites they pick, so ML can lift the hit rate by at most about 1.3-1.5x. Landowners are represented by land agents who tender options competitively and keep 75-80% of the uplift. The one AI-native land-promotion startup, Tract, shut down in March 2025 with no revenue, citing land-promotion timelines. Discovery is not 80% of the rung: the 2-5 year political and legal proving step is.",
+    "sources": [
+     "https://techfundingnews.com/london-based-ai-startup-tract-shuts-down-is-the-uk-proptech-sector-dead/",
+     "https://siliconcanals.com/tract-raises-funding/",
+     "https://www.land.macmicgroup.co.uk/what-we-do/planning-strategy",
+     "https://housingtoday.co.uk/news/barratt-buys-land-trader-gladman/5115838.article",
+     "https://www.constructionenquirer.com/?p=459667",
+     "https://lichfields.uk/content/insights/realising-potential-the-scale-and-role-of-specialist-land-promoters-in-housing-delivery",
+     "https://assets.publishing.service.gov.uk/media/647df5dc103ca60013039983/Land_Promoters_and_Developers_Federation.pdf",
+     "https://www.localgovernmentlawyer.co.uk/planning/401-planning-news/19870-cpre-concern-at-council-decisions-on-greenfield-land-being-overturned-on-appeal",
+     "https://www.pbctoday.co.uk/news/planning-construction-news/housing-refusals/45912/",
+     "https://democracy.york.gov.uk/%28S%28iezd4m45k3tmf22josjfte55%29%29/documents/s182561/Appeals Report to 31 December 2024.pdf",
+     "https://www.lichfielddc.gov.uk/downloads/file/2711/five-year-housing-land-supply-addendum-january-2025-",
+     "https://opendatacommunities.org/data/planning-inspectorate-casework",
+     "https://digitalplanningdirectory.org/?p=3798",
+     "https://land.tech/assess-sites/ai-assistant",
+     "https://searchland.co.uk/competitors/searchland-vs-landtech",
+     "https://theintermediary.co.uk/2026/07/gapsense-launches-ai-planning-screening-tool-for-brokers-and-lenders/",
+     "https://www.shoosmiths.com/insights/articles/a-comeback-for-option-agreements-14296",
+     "https://www.stephens-scown.co.uk/property/strategic-land-promotion-key-points-land-owners/",
+     "https://www.gov.uk/government/publications/land-value-estimates-for-policy-appraisal-2023/land-value-estimates-for-policy-appraisal-guidelines-for-use"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 2,
+     "c2": 2,
+     "c3": 2,
+     "c4": 1,
+     "c5": 3
+    },
+    "evidence": "1) Gross step-up is real but smaller than claimed. MHCLG's land value estimates (Oct 2023 values, published March 2026) put farmland at \u00a310k-37k/ha, with the 'medium' grade at \u00a320k-27k/ha. Residential land is \u00a30.3M-9M/ha (e.g. Bassetlaw \u00a30.63M, Blaby \u00a32.34M, Basingstoke \u00a34.23M, Barnet \u00a38.31M at 40 dwellings/ha). Those residential figures assume NIL affordable housing and are net, not gross, developable area. After 30-40% affordable housing, S106/infrastructure and roughly 60% net-to-gross, a typical edge-of-town site comes to about \u00a30.5-2M per gross ha. That makes the gross step-up about 20-100x, not 50-300x (my estimate from the MHCLG figures).\n2) The promoter captures only a slice, which kills the 'buy the right cheaply' leg. Practitioner sources (Catesby, Wright Hassall, Stephens Scown, Clifton Ingram, FWI) say the promoter's fee is 10-30% of net sale proceeds, or that options are exercised at a 10-20% discount to market value. Landowners keep 70-90% of the uplift. Owners do not need to read the data themselves. Edge-of-settlement farmland is already priced with hope value (Savills' example: about 2.5x agricultural value). Outright sales carry overage clawback of 30-50% for 20-30 years (live listings: Bude, 50% for 20 years; Gloucestershire, 30% for 30 years). 'Half a dozen specialist promoters' compete for the best sites, and landowners hire agents.\n3) Promoter economics are a fee business with only a few-fold return. When Barratt bought Gladman (Jan 2022, \u00a3250m, debt-free/cash-free), Gladman's 3-year average to March 2019 was \u00a352.5m sales and \u00a318.7m operating profit. It averaged 4,230 plots consented and 4,156 plots sold 'for its promotion partners' each year. That is about \u00a312.6k revenue and about \u00a38k operating cost per plot (my arithmetic from the reported averages), so the return on the promoter's own capital is about 1.5-3x after failures, not 10^3-10^4x. Gladman's own disclosures describe selling land for partners, which is a service to landowners. Under a promotion agreement this sits next to the 'sell a service' exclusion. Under an option the promoter does hold a right, but only to buy at about 80-90% of consented market value.\n4) The physical/proving step dominates and is not trivial. Outline consent costs \u00a3250k-1M+ per site and takes 2-5+ years (often 5-10-year option terms), with highways, ecology, BNG, nutrient neutrality, flood work and appeals. Planning appeals are adversarial and political, and after Gladman's failed High Court challenge, permission is not 'automatic' even without a 5-year supply. Compared with the drill in the Terranox frame, this proving step is the bulk of the cost and time, so discovery is well under 80%.\n5) The hit-rate lever and the data edge are weak. Rates found: council-level appeal allow rates of about 28-35% (York quoted 28% nationally for Q4 2024, all appeal types), Gladman's claimed 41 of 43 in 2015, and the finalist's 60% vs 30% split depending on 5-year supply. All the dominant predictors are legible fields: 5-year housing land supply, Housing Delivery Test, local plan allocations, green/grey belt status and HELAA site assessments. Landowners submit their own sites to councils' call-for-sites exercises, so the candidate set is self-identified, and LandTech and Searchland already structure much of this data. The lever is capped at about 1.5-3x on the sites a promoter would choose anyway.\n6) The ladder exists (promoter, then master developer, then housebuilder; Barratt vertically absorbed Gladman), but the next rung is low-margin, capital-heavy housebuilding with no ML edge.",
+    "killer": "The right cannot be bought cheaply from owners who cannot read the data. Edge-of-settlement landowners already price hope value, sell only with 30-50% overage, and lose nothing by signing standard promotion or option terms. Those terms leave the promoter 10-30% of net proceeds, or an option at a 10-20% discount to market. Gladman's own numbers show about \u00a312.6k revenue and \u00a38k cost per plot, a fee-for-service business returning a few-fold on capital, not a 10^3-10^4 owned step-up. The proving step itself (a planning campaign costing \u00a3250k-1M+ over 2-5 years, plus appeals) is the bulk of the cost and is decided by legible fields (5-year supply, Housing Delivery Test, allocations). So discovery is not the 80% rung, and ML has little to add.",
+    "sources": [
+     "https://www.gov.uk/government/publications/land-value-estimates-for-policy-appraisal-2023",
+     "https://assets.publishing.service.gov.uk/media/69b2d95f912f3f96bf687b1c/Land_value_estimates_for_policy_appraisal_2023.xlsx",
+     "https://www.barrattredrow.co.uk/news/2022/pr-31-01-2022",
+     "https://www.pbctoday.co.uk/news/planning-construction-news/land-promoter/104723/",
+     "https://www.catesbyestates.co.uk/news-videos/other/land-promotion-agreements",
+     "https://wrighthassall.co.uk/knowledge-base/land-promotion-agreements-what-are-they-and-how-do-they-work",
+     "https://www.stephens-scown.co.uk/property/strategic-land-promotion-key-points-land-owners/",
+     "https://cliftoningram.co.uk/news/latest-news/development-land-agreements",
+     "https://lawscot.org.uk/members/journal/issues/vol-52-issue-01/not-the-best-option/",
+     "https://www.savills.co.uk/blog/article/218780/residential-property/in-plain-english-hope-value.aspx",
+     "https://brutonknowles.co.uk/property-search/property/5910-ruscombe-road-gloucestershire",
+     "https://www.planningresource.co.uk/article/1676515/gladman-announces-avoiding-appeals-system-following-failed-high-court-challenge",
+     "https://democracy.york.gov.uk/%28S%28iezd4m45k3tmf22josjfte55%29%29/documents/s182561/Appeals Report to 31 December 2024.pdf",
+     "https://moderngov.hinckley-bosworth.gov.uk/documents/s43861/Planning%20Appeals%20report%20December%202025.pdf"
+    ]
+   }
+  ]
+ },
+ {
+  "finalist": "Mitigation-bank junior: buy drained or hydric farmland bilaterally, win Interagency Review Team approval, sell wetland and species credits or the approved bank. Proving: IRT instrument approval, average 1,100-1,200 days (496 banks), $1-5M per bank; p(sells out in 5 years) 0.3-0.5 (estimate); about 70% of released credits ever sold. Step-up: farmland $3-10k/acre to credits $8.6k (MS) to $134k (NC) to $675k (NJ) per acre; 10-100x on credit-bearing acres, 3-10x per parcel. Pool about $3-8B/yr credit demand; 1,200+ banks; EIP funds $181M, $303M, $454.5M; banks trade before sell-out. Incumbents: EIP, RES, Westervelt, Wildlands; no ML seen. Doubt: Sackett 2023 shrank jurisdiction; hidden state is demand, not approval; RIBITS supply side is legible.",
+  "verifiers": [
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 1.5,
+     "c2": 2,
+     "c3": 1,
+     "c4": 1.5,
+     "c5": 2
+    },
+    "evidence": "1) Prices for a whole approved bank put the step-up near 1-10x, not 10^3-10^4x. The Pineywoods bank (East Texas, 19,079 acres) was fully permitted by the Corps and offered as a whole in 2009. Its NPV was about $40M at an 18% discount rate, which is about $2,100/acre. Its undiscounted potential credit value was $85M, about $4,450/acre. Regional timberland at the time was roughly $1.5-2k/acre (memory). So the approved bank was worth about 1-1.5x the land on an NPV basis, and about 2-3x even if every credit sold. The Figliuzzi bank (Beltrami County, MN) is 163 acres with about 147.85 credits, all released in Oct 2017 and still listed for sale in April 2026 at $22,500/credit. That is about $3.3M, or about $20k/acre, for a bank with no risk left. Local farmland is about $2-4k/acre (memory), so 5-10x. Approved credits sitting unsold for about 9 years shows that demand, not approval, is the binding risk. The Hatchineha Ranch bank (Polk County, FL) has 259 potential state credits on 2,056 acres, about 0.126 credits/acre. At FL list prices of $145k-$300k/credit (MBG price sheets, 2025), that is about $18-38k/acre gross over a decade, against ranchland of about $5-10k/acre (memory). Gross 3-5x, before earthwork, planting, monitoring, endowment and financial assurance. The finalist's own figures of $134k-$675k per credit-acre are prices per credit, not per acre bought. Most parcels yield well under 1 credit/acre: Oregon is 2 acres per credit, Florida UMAM about 0.13/acre.\n2) Nothing jumps immediately on a hit. At instrument approval only about 15-30% of credits are released. Wisconsin caps it at 20%, the Chicago District at 30/20/20/30, and the Mobile District at 20/15/15/15/15/20. The rest is released over 5-10+ years of performance monitoring. Each credit buyer is a permittee who buys only when an impact happens in that service area, in small lots (MN statewide demand is about 171 credits/yr, about $10-17M/yr). The buyers of whole banks (EIP, whose Fund V closed at about $400M against a $650M target, and RES and Westervelt) price on NPV at about 15-18% discount rates.\n3) Market size: annual demand is about $1.5-5.7B (Ecosystem Marketplace 2017). The 2019 direct output was $3.54B (PLoS ONE 2023). EASI claims $8B/yr, an advocacy figure. There were about 2,200 approved banks by Oct 2022, up from 1,800 in 2013, a net of about 44 new banks per year. That makes about 50-100 proving events per year nationally, mostly by incumbents.\n4) Per-credit cost build-ups (Penn State: site/permit $30k, land $25k, construction $50k, monitoring $25k for a 0.5-acre impact; endowment adds about $7.5k/credit in Oregon) show the physical and long-tail work is a large share of the cost. Discovery is not 80%+ of it.",
+    "killer": "On credit-bearing acres the gross per-parcel step-up is about 3-10x, and the NPV of a whole approved bank was about 1-1.5x land (Pineywoods: about $2,100/acre at 18% discount). That is far below the 30x refutation threshold. Value also does not jump on approval: only about 15-30% of credits release at instrument signing, and the rest trickles out over 5-10 years. They sell only when an outside permittee needs them: Figliuzzi's credits were fully released in 2017 and are still unsold in 2026. The real hidden state is local permit demand, not approvability. The physical restoration, monitoring and perpetual endowment are a large share of cost. No capitalised buyer pays a 10^3x premium at once.",
+    "sources": [
+     "https://landreport.com/for-sale-pineywoods-mitigation-bank",
+     "https://www.einpresswire.com/article/906353460/figliuzzi-wetland-mitigation-bank-now-available-for-acquisition-in-minnesota",
+     "https://mitigationbankinginc.com/?p=6279",
+     "https://mitigationbankinginc.com/mitigation-banks-for-sale/",
+     "https://mitigationbankinginc.com/wp-content/uploads/2025/02/MBG-Pricing-Sheet-02-06-25.pdf",
+     "https://mitigationbankinginc.com/wp-content/uploads/2025/05/MBG_Pricing_Sheet-05-22-25.pdf",
+     "https://docs.legis.wisconsin.gov/statutes/statutes/281/iii/36/4/e",
+     "https://19january2021snapshot.epa.gov/sites/static/files/2015-07/documents/3rd_party_requirements.pdf",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC10529541/",
+     "https://ecosystempartners.com/400m-us-based-impact-fund-secures-backing-from-european-investors/",
+     "https://bwsr.state.mn.us/sites/default/files/2023-01/Wetland%20Banking_2022%20Average%20Cost%20Per%20Credit.pdf",
+     "https://pwe.eugene-or.gov/PWESewerConn/0/doc/300290/Page3.aspx",
+     "https://www.tesc.psu.edu/assets/Session PDFS/4C-Johnston.pdf",
+     "https://www.easillc.com/2026/06/22/2026-review-u-s-mitigation-credit-marketplace-nears-500-billion/"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 2,
+     "c2": 2,
+     "c3": 1,
+     "c4": 1,
+     "c5": 2
+    },
+    "evidence": "APPROVAL TIME (confirmed): An EPIC/ERBA study of Corps ORM timestamps for FY2014-2021 kept 496 bank records after cleaning. Full approval averaged 1,099 days (range 78 days to 12 years); the Corps-responsible part averaged 336 days against a 225-day target in the 2008 Rule. Banks are slow to approve but rarely fail. The 2013 Corps RIBITS deck counted 1,805 bank sites: 65% operational, 16% pending, 11% sold out, 2% suspended and only 6% terminated or withdrawn. That makes the base 'hit rate' of IRT approval roughly 80-90%+ (estimate from the status split; I found no direct denial-rate figure). The lever is capped at 1/p, so about 1.1-1.3x, not 10x. The proving step is slow and costs money ($1-5M, plus 5-10 years of construction and monitoring before full credit release), but it does not mostly fail. ML cannot shorten a regulator's queue.\n\nLEGIBILITY (refutes C4): All the inputs needed to pick sites are already structured and free or sold. SSURGO hydric-soil ratings and NWI wetlands are standard GIS layers. RIBITS publishes bank status, service areas and credit ledgers. EASI sells a Mitigation Credit Price Report with about 2,700 price points (Jan 2024) filterable by state, county and credit type. Virginia DEQ and Water Ledger launched the SWaN exchange (Dec 2025/Jan 2026) with a dashboard of available credits by watershed. TNC Ohio and other in-lieu-fee programs publish fee schedules per service area. Ohio DOT and SCDOT already fund GIS demand-forecasting models (ODOT finished 2022), and a TxDOT deep-learning model predicts mitigation needs. Consultancies (CEC Inc., Wildlands Engineering) already sell GIS tools that select and rank mitigation bank sites. The hidden variable is demand and policy, not unread documents: the April 2025 coverage cites Sackett and state rollbacks in NC, IN and TN.\n\nCOMPETITION (occupied): EIP Fund IV closed Feb 2020 at a $454.5M hard cap (42 LPs; Fund III $303M, Fund II $181M). EIP has done 44 projects in 12 states covering 44,000 acres, and targets $10-50M per project. In Jan 2021 RES and EIP formed a joint venture that bought 11 Georgia banks from Mitigation Resource Group, and RES bought Blueway separately. RES had already bought EBX in 2014 (41 banks permitted). Other operators include Naturion, Westervelt and Wildlands. Landowners are actively marketed to (EASI's MCPR is aimed at rural landowners), so the 'owners cannot read the data' discount is weak.\n\nSTEP-UP: The 10-100x on credit-bearing acres is real, but per parcel it is 3-10x. Value arrives in tranches over years of credit releases and slow sales, not immediately on a hit.",
+    "killer": "ML has no edge to sell here. Site-selection inputs (hydric soils, NWI wetlands, RIBITS ledgers and service areas, priced credit databases such as EASI MCPR and Virginia SWaN) are already legible and are already run through GIS by incumbents (EIP with $454.5M, RES, Wildlands, CEC). IRT approval almost always succeeds eventually (about 6% terminated or withdrawn in RIBITS), so raising a hit rate cannot cut capex 10x. The real risks are a roughly 1,100-day regulatory queue and post-Sackett demand, and no amount of reading illegible data fixes either.",
+    "sources": [
+     "https://www.policyinnovation.org/blog/new-research-finds-that-wetland-and-stream-mitigation-banks-take-over-1000-days-to-approve",
+     "https://nawm.org/pdf_lib/stream_webinar/ribits_stream_martin.pdf",
+     "https://ecosystempartners.com/ecosystem-investment-partners-closes-454-5-million-eip-iv/",
+     "https://www.businesswire.com/news/home/20210105005634/en/RES-and-EIP-launch-new-Joint-Venture-to-Acquire-and-Develop-Mitigation-Banks-in-Georgia",
+     "https://res.us/wp-content/uploads/2018/05/RES-Acquires-Environmental-Banc.pdf",
+     "https://www.easillc.com/mitigation-credit-price-report-mcpr/",
+     "https://virginiamercury.com/2026/01/15/virginia-launches-website-to-make-wetland-credits-more-transparent/",
+     "https://www.nature.org/content/dam/tnc/nature/en/documents/oh-omp/2026-TNC-ILF-Mitigation-Credit-Prices.pdf",
+     "https://www.cecinc.com/project/gis-based-mitigation-banking-site-selection-tool/",
+     "https://www.wildlandseng.com/portfolio_page/wetland-mitigation-identification-and-prioritization-project/",
+     "https://rip.trb.org/View/1723551",
+     "https://tennesseelookout.com/2025/04/14/wetlands-protections-built-an-industry-for-mitigation-banking-rollbacks-could-erode-it/"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 1,
+     "c2": 2,
+     "c3": 1,
+     "c4": 1,
+     "c5": 2
+    },
+    "evidence": "PHYSICAL STEP DOMINATES (the geothermal failure mode). A mitigation bank is a built ecological project, not a paper approval. In the City of Eugene's bank records, restoration construction averaged about $26,000/acre on sites with cost tracking. Generating 1 credit took about 2 acres of restoration, at a land-replacement cost of $20-30k per credit. Long-term endowment for perpetual maintenance came to about $600k for one city's sites, or $7,500 added per credit (Eugene WEW bank document). The Penn State example for a 0.5-acre impact: site selection, design and permitting $30k; land $25k; construction $50k; monitoring $25k; total $130k. On those numbers, discovery and site selection is roughly 20-25% of cost, not 80%+.\n\nSTEP-UP IS NOT IMMEDIATE. Credit release is tied to milestones: instrument approval, as-built construction sign-off, then interim and final performance standards over several growing seasons. Agencies are told to hold back a significant share of credits until performance standards are met (WI NR 350.008; EPA third-party guidance). In one Oregon monitoring report, a credit tranche is released only at the 5th-growing-season standard. So IRT approval unlocks only part of the value, and the rest depends on years of hydrology and vegetation actually working.\n\nPROVING IS SLOW, NOT MOSTLY FAILING. EPIC/ERBA analysis of Corps data found an average of 1,099 days to approval (range 78 days to 12 years). Time on the regulator's desk averaged 336 days against the 225-day limit in the 2008 Rule. The 2022-23 data improved by only 17 days, which is not statistically significant. Delay is driven by IRT disagreement and back-and-forth with the sponsor, not by proposals being rejected. A low base hit rate is not shown, so the 1/base-hit-rate ML lever is small: ML cannot shorten an agency's review queue.\n\nRIGHT IS NOT CHEAPLY BUYABLE FROM UNINFORMED OWNERS. The site-screening signal is legible: SSURGO hydric soils is a georeferenced public dataset, and the NWI and RIBITS supply side are public. Incumbents already run GIS site-selection tools; for example, CEC's tool flagged 49 candidate parcels across two Ohio counties from ownership and site criteria. Landowners are actively informed. Texas A&M extension and LandCAN pages tell them that sponsors may buy their land or profit-share. Wildlands advertises fee purchase, easement purchase or a profit-share agreement. Mitigation Resources of North America bought 958 acres in Wilson County, TN outright. I found no evidence of an informational purchase discount. Owners can also become sponsors or take revenue-share deals themselves, which caps any arbitrage. WA rules steer banks away from prime farmland.\n\nDEMAND RISK. The hidden variable is demand, which is regulatory and shrinking. After Sackett (2023), the March 2025 joint guidance and the Nov 17, 2025 proposed WOTUS rule cover a wetland only if it has wet-season surface water and physically abuts a jurisdictional water. That narrows the acreage needing CWA permits and therefore credits (TN Ecological Restoration Association: \"we will see a decrease in demand\"). NC and IN have loosened state rules since Sackett. One offsetting view: John Paul Woodley (former Army assistant secretary, past chair of the National Environmental Banking Association) says the impact so far has been limited.\n\nEXCLUSIONS. Not drilling or prospecting, and it is owned-asset rather than a service. But \"wetland mitigation banks\" is already on the previously-killed list, and this rescore gives no reason to lift it. The finalist's credit prices ($8.6k MS to $675k NJ per credit) are per credit, not per acre. With about 2 acres of restoration per credit plus construction and endowment, the net uplift per parcel is about 3-10x and arrives over 3-8+ years.",
+    "killer": "The proving step is not a cheap, binary discovery event. It is a multi-year bespoke restoration project: about $26k/acre construction, 5+ growing seasons of monitoring, perpetual endowment, and credits released in performance tranches. The work sits in the physical and regulatory step, exactly the geothermal-plant failure mode. Meanwhile the site signal (SSURGO hydric soils, NWI, RIBITS) is public and legible, and landowners are courted by sponsors offering purchase or profit-share. So there is no illegible-data edge and no informational discount on the right. IRT approval is slow (about 1,100 days on average) but rarely fails, so ML cannot cut discovery capex 10x.",
+    "sources": [
+     "https://www.policyinnovation.org/blog/new-research-finds-that-wetland-and-stream-mitigation-banks-take-over-1000-days-to-approve",
+     "https://policyinnovation.org/blog/mbi-timelines-2024-update",
+     "https://pwe.eugene-or.gov/PWESewerConn/0/doc/300290/Page3.aspx",
+     "https://www.tesc.psu.edu/assets/Session PDFS/4C-Johnston.pdf",
+     "https://docs.legis.wisconsin.gov/document/administrativecode/NR 350.008(1)(g)",
+     "https://19january2021snapshot.epa.gov/sites/static/files/2015-07/documents/3rd_party_requirements.pdf",
+     "https://www.mitigationcreditdebit.com/CoyotePrairieNorth2016MonitoringReport.pdf",
+     "https://www.cecinc.com/project/gis-based-mitigation-banking-site-selection-tool/",
+     "https://valuewetlands.tamu.edu/2015/04/10/mitigation-bank-credit-landownersdevelopers-and-aggregators",
+     "https://www.idaholandcan.org/article/Mitigation-and-Conservation-Banking/71",
+     "https://www.wkrn.com/news/local-news/environmental-company-buys-958-acres-in-wilson-county-to-preserve-protect-wetlands/amp/",
+     "https://tennesseelookout.com/2025/04/14/wetlands-protections-built-an-industry-for-mitigation-banking-rollbacks-could-erode-it/",
+     "https://www.bracewell.com/resources/army-corps-and-epa-propose-new-definition-of-waters-of-the-united-states/",
+     "https://lawfilesext.leg.wa.gov/Law/WACArchive/2023/htm/WAC%20173%20%20TITLE/WAC%20173%20-700%20%20CHAPTER/WAC%20173%20-700%20-303.htm"
+    ]
+   }
+  ]
+ },
+ {
+  "finalist": "Orphaned-source NSNs: buy drawings, tooling and approved-source status of defunct sole-source part makers, re-approve through DLA. Proving: Source Approval Request plus first article, $25-250k per NSN, about 1 year; p 10% (2009-11 sample) to 49% of decided (FY17). Comparable: $925k for a whole light-aircraft type-certificate line plus tooling. Pool $7.9B sole-source spares on 136 large contracts FY15-19; 4M consumable NSNs. Incumbents: TransDigm, HEICO, Ontic, PE roll-ups, DLA reverse engineering. Doubt: proven state is an operating business with small dollars per NSN; AMSC codes are a legible field.",
+  "verifiers": [
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 2,
+     "c2": 1,
+     "c3": 1,
+     "c4": 2,
+     "c5": 3
+    },
+    "evidence": "1) What a proven NSN is worth. DLA Land and Maritime, NDIA 2016 SAR/casting-forging deck (primary, text extracted from the PDF). For the cast/forged NSN population (20,325 NSNs), DLA placed 13,014 contracts in 12 months worth $9.6M in total, about $740 per contract. The program \"Approved 55 packages\" with \"$2.35M potential annual savings\", about $43k per NSN per year. The other 184 pending packages carried $28.5M of potential savings, about $155k per NSN per year at the top end. The RPPOB/reverse-engineering route is closed to NSNs with less than $10,000 annual buy value. For a ceiling, the DoD IG (DODIG-2019-060) sample of TransDigm's best sole-source parts was 46 parts sold for $26.2M over 2 years, about $285k per part, with $16.1M of excess profit. So a typical proven NSN earns somewhere between $1k and $150k a year. Valued at 3-8x margin, it is worth roughly $10k-$500k.\n2) What an unproven right costs. Orphan type-certificate, drawing and tooling packages sell at distressed prices. The Jetcruzer TC, drawings and tooling drew a top bid of $125k against about $100M of development spend (AvWeb). Lake Aircraft drew no bids at its first auction. The finalist's own comparable is $925k for a whole TC line. Spread across hundreds of part numbers, that makes the per-NSN purchase price near zero, so on purchase price alone the paper step-up could reach 100x or more. The proving step itself, though, costs $25-250k per NSN (SAR, first article, 12-18 months, per the DLA deck). That is about as much as the proven NSN is worth. Measured as value after proving divided by total capital in, the step-up is about 1-3x, not 10^3-10^4x.\n3) There is no capitalised buyer who pays the step-up at once. DLA buys parts, not rights, and the deck itself is about creating competition (savings). DAG 17.7501-6 protects a newly approved source only by multi-source award for at least 1 year from approval or first award, or 40% of the award if the source is not low but fair and reasonable. After that the NSN is competed and the price falls. Approval is tied to a CAGE code and a facility: GAO B-298993 (Gear Wizzard) rejected an offer because the part would be made at a non-approved facility. So the proven status is hard to sell as a standalone asset. The value comes out over years through an operating parts business, which matches the stated doubt.\n4) The hit-rate lever is weak. In the same deck, 40 of 55 decided casting SARs were approved (4 rejected, 11 pending, about 91% of decided), and the deck reports a \"90% VE package acceptance rate\". Failures come mostly from incomplete packages, not from an unknown physical outcome. ML can therefore raise the hit rate by much less than 2x, nowhere near 10x.\n5) The data is already legible. DLA publishes SAR candidate lists and AMSC/AMC codes. The drawings that carry the signal are private, owned by the defunct maker, not public and illegible files.\n6) The ladder is real. TransDigm and HEICO show that sole-source aftermarket roll-ups can become very large companies. Market size is a $7.9B sole-source spares pool on 136 large contracts in FY15-19 (GAO-21-388), but the value per NSN is small and spread thin.",
+    "killer": "The proven asset is non-exclusive, approved-source status tied to one CAGE code and one facility. DLA protects it only by multi-source award for about 1 year (or a 40% share) under DAG 17.7501-6, and then competes it away. The typical NSN buy is small: about $740 per contract for castings, and about $43k a year in savings per approved SAR. The $25-250k proving cost is about equal to the proven value, so the real step-up over capital deployed is about 1-3x, not 10^3-10^4x. No capitalised buyer pays it at once: DLA buys parts over years, and the hit rate is already about 90% of decided SARs, which leaves ML little to raise.",
+    "sources": [
+     "https://ndia.dtic.mil/wp-content/uploads/2016/DLA/SourceApprovalRequestsCastingandForging.pdf",
+     "https://media.defense.gov/2019/Feb/27/2002093922/-1/-1/1/DODIG-2019-060.PDF",
+     "https://insidedefense.com/share/202513",
+     "https://media.defense.gov/2021/Dec/13/2002908344/-1/-1/1/DODIG-2022-043.PDF",
+     "https://www.gao.gov/assets/d21388.pdf",
+     "https://www.govinfo.gov/content/pkg/GAOREPORTS-B-298993/html/GAOREPORTS-B-298993.htm",
+     "https://avweb.com/briefs/jetcruzer-goes-for-125000/",
+     "https://avweb.com/briefs/lake-on-auction-block-at-airventure/",
+     "https://media.defense.gov/2016/Sep/08/2001774201/-1/-1/1/DODIG-2016-047.pdf"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 2,
+     "c2": 2,
+     "c3": 1,
+     "c4": 1,
+     "c5": 3
+    },
+    "evidence": "Lens: data and competition. Refuted on four counts.\n\n1) The outcome is already in legible fields, and DLA publishes the target list.\n- DLA codes every NSN with an AMC/AMSC. AMC 3/4/5 marks a sole-source item, and AMSC B/C/D marks source-controlled, source-restricted, or code-and-part-number items. These are exactly the SAR-eligible items (NDIA/DLA SAR briefings, 2018 and 2024).\n- DLA's Value Engineering office publishes a \"SAR Candidate List\" and an RPPOB Candidate List. These are NSNs DLA wants new sources for, with a minimum of $40,000 Annual Demand Value (DLA Value Engineering flyers, 2022 and 2026).\n- Annual demand and procurement history are visible in DIBBS. Drawings sit in DIBBS Collaboration Folders.\n- Commercial vendors already join NSN, CAGE status, price history and alternate sources: Accuris Haystack Gold (350M+ part references, 70+ datasets) and LogiQuest. The orphaned-source signal (defunct CAGE + AMC 3/4/5 + ADV) is a SQL join on legible fields, so ML has nothing illegible to extract.\n\n2) The right is free and first-come, not bought.\n- Anyone can submit a SAR at any time, without an active solicitation (DLA 2024 briefing).\n- Through RPPOB, DLA will let a business inspect, borrow or buy government-owned parts to reverse-engineer them. Because of this, buying the defunct maker's drawings or tooling is optional, not a gate.\n- Approved-source status \"only grants the right to compete\" (DLA 2024 slide note). It is not an exclusive asset.\n\n3) The space is occupied.\n- From FY15 to FY18, DLA started more than 1,600 reverse-engineering projects for sole-source parts with 124 contractors, 103 of them small businesses (GAO-19-586).\n- Ontic (CVC) has built a business on buying legacy product-line rights and licences: Meggitt 2019, Flightline 2020, Triumph Staverton 2021, Ultra PCS and Marsh Bellofram 2022. TransDigm and HEICO run the same playbook at scale.\n- Accio3D, and DLA's own SBIR work with Quantum Research Sciences on obsolescence prediction, are applying AI to this sourcing.\n\n4) The hit rate is not low, and failures are not discovery failures.\n- FY17: 282 packages received, 111 approved, 114 rejected, 144 pending, which is about 49% of decided (DLA SAR briefing, NDIA 2018).\n- The listed rejection reasons are incomplete packages and lack of economic feasibility (low consumption rate, low dollar value). Neither is a search problem ML would solve.\n- At about 50% base rate, the lever is capped at about 2x, not 10x.\n- The proving clock is administrative, not costly discovery: engineering support activity (ESA) review has a 90-day response time, plus 15-30 day steps.\n\nStep-up and payoff:\n- A newly approved source gets 40-60% of awards for one year after approval (DLA 2014 guidance, cited in the 2018 and 2024 briefings).\n- At about $40k+ ADV per NSN, the proven state is a small manufacturing revenue stream, not a 10^3x asset revaluation.\n- The proving cost of $25-250k per NSN is (estimate) and stays unverified.\n\nFigures I could not confirm:\n- The \"$7.9B on 136 contracts\" figure. GAO-21-388 confirms 136 DLA sole-source spare-parts contracts in FY15-19, but the product page gives no dollar total. The figure looks conflated across reports.\n- The \"p = 10% (2009-11 sample)\" figure was not found.\n- The $925k type-certificate comparable was not checked.\n\nC5 (ladder) is the only real strength: the TransDigm/Ontic proprietary-aftermarket roll-up is a proven path to a very large company. But incumbents with capital and the same legible data already own that path.",
+    "killer": "Orphaned sole-source NSNs are already flagged by legible public fields: the AMC/AMSC code, CAGE status and DIBBS annual demand. DLA also publishes its own SAR/RPPOB candidate lists with a $40k minimum annual demand. Anyone can get approved-source status by filing a free SAR, with parts lent by DLA for reverse engineering, so nothing scarce has to be bought. About 49% of decided SARs are approved, which caps any ML lever at about 2x. More than 120 contractors (1,600+ reverse-engineering projects in FY15-18), plus Ontic, TransDigm and HEICO, already work this pool. ML has no illegible signal to extract and no exclusive right to capture.",
+    "sources": [
+     "https://ndia.dtic.mil/wp-content/uploads/2018/dla/SARBriefing_SC.pdf",
+     "https://ndia.dtic.mil/wp-content/uploads/2024/dla/Tue_Breakout_SAR_RPPOB.pdf",
+     "https://www.dla.mil/Portals/104/Documents/SmallBusiness/DB Flyers/2025 Flyers/VALUE ENGINEERING SB - V-1-14-2026.pdf",
+     "https://www.dla.mil/Portals/104/Documents/SmallBusiness/VALUE ENGINEERING SB - V-9-28-2022.pdf",
+     "https://www.gao.gov/products/gao-19-586",
+     "https://www.gao.gov/products/gao-21-388",
+     "https://accuristech.com/supply-chain-intelligence/haystack-gold/",
+     "https://ainonline.com/aviation-news/business-aviation/2019-07-08/ontic-takes-more-meggitt-legacy-parts-work",
+     "https://www.businesswire.com/news/home/20220511005269/en",
+     "https://ncms.org/accio3d/",
+     "https://www.purdue.edu/newsroom/2025/Q1/quantum-research-sciences-wins-dla-contract-to-develop-product-obsolescence-prediction-tool/"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 1,
+     "c2": 2,
+     "c3": 1,
+     "c4": 1,
+     "c5": 3
+    },
+    "evidence": "1) Approval is not exclusive and does not secure the revenue. DLA's 2024 AO/SAR briefing (J. Spangler, NDIA, Apr 2024) says: \"Becoming an Approved Source only grants the opportunity to compete to supply the item - it does not guarantee future contracts or orders.\" It adds that DLA may split awards, with the best-value offer getting \"not less than 60%\" of the requirement. The proven asset is therefore a bid ticket that others can also earn, not an owned monopoly position. Its value falls as more sources qualify, and adding sources is DLA's stated goal (\"going from single source... to multiple sources of supply\").\n\n2) No right has to be bought, which breaks the \"bought, not free first-come\" test. Under DLA's RPPOB program anyone can buy or borrow the government's own stock of a part, reverse-engineer it at their own expense and file a Category IV SAR. DLA also gives the applicant the demand data, the purchase cost and any available data. Per GAO-19-586, DLA started over 1,600 reverse-engineering projects in FY15-18 (about 1,000 funded by DLA, 600 by contractors) with 124 contractors, 103 of them small businesses. The race is already crowded and DLA subsidises it. Buying a defunct maker's drawings only moves you from Category IV to Category I/II, which saves time and does not create exclusivity. Approved-source status belongs to a manufacturing facility. GAO B-293529 says a change of ownership or location triggers re-evaluation, and a defunct maker usually has no facility left to inherit, so the status is often not transferable.\n\n3) The data is legible. AMSC codes are public in DLA PUB LOG (the \"MOE Rule\" tab, which the briefing itself points vendors to). Demand is disclosed on request. DLA posts Sources Sought notices listing NSNs with one approved source (for example a 2026 DLA Aviation notice for 33 NSNs: \"ONE APPROVED SOURCE... BOEING, CAGE 0PXV4\"). The answer sits in status fields, so the ML edge is thin.\n\n4) The hit-rate lever is small. A DLA slide (2014 onward) shows 55 SARs: 40 approved, 4 rejected, 11 pending. That is 73% of all submittals and about 91% of those decided. The finalist's own figure is 49% of decided in FY17. With a base rate of 0.5 to 0.9, the maximum lever is about 1.1x to 2x, nowhere near 10x. The low 10% figure (2009-11) probably counts incomplete packages, which is fixed by better paperwork rather than by better discovery.\n\n5) The physical step dominates and is not abstracted. It needs complete signed drawings, a manufacturing plan, master-tooling certifications, a possible site inspection, a first article, and review taking more than 180 days (12-18 months per the RPPOB slide). After that the asset is an ongoing job-shop manufacturing business with small dollars per NSN. RPPOB is refused for items under $10k of annual demand, which shows how small many NSNs are. This looks more like the bespoke-plant counter-example than like drilling.\n\n6) The ladder is real (the TransDigm/HEICO model of proprietary parts bought at high multiples, then PMA, then MRO). That is why C5 gets 3. But those buyers pay for proprietary sole-source positions, not for non-exclusive DLA approvals. No hard exclusion applies: the company owns and makes the parts, so it is not a service sold to incumbents.",
+    "killer": "DLA approval only grants \"the opportunity to compete,\" and DLA itself sells or lends the part (RPPOB) and funds reverse engineering for anyone, at about 1,600 projects in FY15-18. So there is no scarce right worth buying from defunct owners. The orphan status is legible in PUB LOG AMSC codes and Sources Sought notices. Base approval rates of about 49-91% of decided SARs cap the ML lever at about 2x. The proven state is a non-exclusive, manufacturing-heavy bid position, not a 10^3-10^4 step-up.",
+    "sources": [
+     "https://ndia.dtic.mil/wp-content/uploads/2024/dla/Tue_Breakout_SAR_RPPOB.pdf",
+     "https://ndia.dtic.mil/wp-content/uploads/2023/dla/Reverse_Engineering.pdf",
+     "https://www.gao.gov/assets/gao-19-586-highlights.pdf",
+     "https://www.gao.gov/products/b-293529",
+     "https://www.dla.mil/Portals/104/Documents/Aviation/IndustryDays/2019/Source%20Approval.pdf",
+     "https://www.dla.mil/Portals/104/Documents/SmallBusiness/AVN SAR Submit Instructions SAFE-updates 12-14-2022.pdf",
+     "https://www.dla.mil/Portals/104/Documents/SmallBusiness/VALUE ENGINEERING SB - V-1-14-2026.pdf",
+     "https://app.g2xchange.com/opportunities/sam/014ab43b-57ef-4d42-af94-5032ab8afa6a"
+    ]
+   }
+  ]
+ },
+ {
+  "finalist": "Unenforced commercial civil judgments: buy judgments at pennies, find assets with ML over public records, enforce. Proving: enforcement and asset discovery, $1-10k and 6-24 months per judgment; p 0.15-0.25 (80% of US judgments never enforced), lever 4-7x. Step-up: bought at 2c (small) to 73c (large collectible); proven at 100c plus 6-10% interest; per-hit 10-50x, blended 2-10x. Pool $97B unpaid federal judgments; state commercial pool > $100B (estimate). Incumbents: Encore, PRA (consumer), small recovery shops; no ML buyer found. Doubt: private bureau data may already make the join legible.",
+  "verifiers": [
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 2,
+     "c2": 2,
+     "c3": 2,
+     "c4": 2,
+     "c5": 1
+    },
+    "evidence": "PRICE OF THE UNPROVEN RIGHT (real transactions):\n- Zeek Rewards receivership sale: Big Sky Research paid $10M for about $178.5M face of net-winner judgments, which is 5.6c on the dollar. This is the cleanest real portfolio price found (behindmlm, via search summary; the page returned 403 on fetch).\n- FTC 2013 debt-buyer study: average about 4c per dollar across $143B face (5,000+ portfolios). By age, about 2.2c for debt 6-15 years old and about 7.9c for debt under 3 years old (secondhand summary). These are not judgment-specific.\n- Judgment-buyer guides: pennies up to 50c. Anything above 50c is described as not legitimate. An old anecdote puts it at 10-15c unless the debtor owns real estate.\n- Large collectible judgment: a $16.5M judgment listed at $12M, about 73c, or 69c counting interest (Small Business Trends, 2012, one listing).\n\nPRICE OF THE PROVEN RIGHT:\n- No secondary buyer pays 100c for a judgment once assets are located. A proven judgment is realised by collecting from the debtor, not by selling to a capitalised buyer. Judgments with known reachable assets trade at about 50-73c, which is the top of the market.\n- Gross collected value is 100c plus statutory interest. Net of enforcement cost (contingency 10-25%, litigated 33-35%, per Kaplan Group; LA City Attorney says 28% is below market), the realised value is about 65-90c.\n\nSTEP-UP:\n- Small or old judgment bought at 2-6c and collected at about 65-90c net: about 11-40x per hit, and only on hits.\n- Large collectible judgment at 73c collected to 100c: about 1.4x.\n- Blended across a pool that is 80% uncollected: about 2-5x.\n- Under the cleaner definition (resale value of an \"assets located\" judgment at 50-73c over 5c), the step-up is about 10-15x.\n- The finalist's own top estimate (10-50x) is barely above the 30x refute line, and only in the best case. The rubric's target is 10^3-10^4x.\n\nBUYER: Not a capitalised developer. The counterparty is the debtor, who is by selection asset-light, evasive, or bankruptcy-prone. Payment comes through garnishment or levy over 6-24 months, not all at once.\n\nMARKET SIZE:\n- The $97B unpaid federal judgments figure could not be verified. Search found only the 2015 Portman/McCaskill PSI inquiry, which says reporting is \"limited.\"\n- The 80% unenforced figure is a repeated industry claim with no primary study (ABA Journal opinion piece; collection-firm press releases).\n- Volume: about 4M debt-collection suits a year (Pew 2020), almost all consumer. No count of commercial judgments was found.\n- Burford survey: 78% of 500+ financiers say their companies are owed at least $10M in judgments.\n\nDATA LEGIBILITY: Judgments are already legible fields in court dockets, LexisNexis and credit-bureau data, so the outcome-in-a-field problem the rubric warns about applies.",
+    "killer": "The proving step tops out at about 10-40x on the small subset of cheap judgments that actually get collected, and blends to about 2-5x across a pool. That is far below 10^3-10^4x and mostly under the 30x refute line. Worse, no capitalised buyer pays the proven value up front. The 'buyer' is the judgment debtor, chosen for being unable or unwilling to pay, and they pay slowly through garnishment, net of 25-35% enforcement cost. The best secondary price for a judgment with assets already located is about 50-73c, so the realisable step-up from the 5.6c Zeek portfolio price is about 10-15x. The $97B pool figure could not be verified.",
+    "sources": [
+     "https://behindmlm.com/companies/zeek-rewards/approval-to-sell-zeek-rewards-net-winner-judgments-sought",
+     "https://smallbiztrends.com/2012/05/judgment-marketplace.html",
+     "https://www.cgaa.org/article/sell-judgment-to-collection-agency",
+     "https://www.ftc.gov/node/46255",
+     "https://clpblog.citizen.org/ftc-study-on-the-debt-buying-industry/",
+     "https://www.abajournal.com/voice/article/why-do-80-of-judgments-remain-uncollected",
+     "https://www.hsgac.senate.gov/?p=107550",
+     "https://www.burfordcapital.com/insights-news-events/news-press-releases/law-gazette-reports-on-prevalence-of-unenforced-judgments-citing-burford-research/",
+     "https://www.kaplancollectionagency.com/collection-litigation-information/",
+     "https://cityclerk.lacity.org/onlinedocs/2015/15-1390_rpt_ATTY_02-19-2016.pdf",
+     "https://www.pew.org/en/research-and-analysis/reports/2020/05/how-debt-collectors-are-transforming-the-business-of-state-courts"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 1,
+     "c2": 2,
+     "c3": 2,
+     "c4": 1,
+     "c5": 1
+    },
+    "evidence": "1) The headline figures do not hold up. The \"80% of judgments never enforced\" number appears only in an ABA Journal opinion column and in collection-agency marketing (InsideARM press item, Southwest Recovery, eInvestigator), and none of them names a primary study. I could not find any source for the \"$97B unpaid federal judgments\" figure. The closest is a DOJ figure, via AP, of about $35B in criminal and civil fines owed to the US government. That is government debt you cannot buy at a discount, so it is not a pool this company could acquire. The \"state commercial pool > $100B\" figure is still an unsourced estimate. Burford's 2019 survey is self-reported: 78% of 500+ finance officers said their companies are owed at least $10M in judgments.\n2) Real prices and recoveries are far below the claimed step-up. Gagnon & Wendt, a cash judgment buyer, says it aims to buy below 5c on the dollar and recover 20-30% of face. That is about a 4-6x gross multiple on a portfolio before costs. Forum and industry reports put buy prices at 10-30c for collectible paper and 10-15c at most for judgments. Contingency recovery firms take 40-60% of what they collect. Southwest Recovery says successful collections recover 30-60% of the award, not 100c plus interest.\n3) The data is already legible, and the cash usually sits outside public records. The judgments themselves are structured and sold: abstracts of judgment and judgment liens are on file, and UniCourt (Enterprise API, from about $2,250/month) and Trellis (2.5B+ state trial court records, with a normalized API and Claude/ChatGPT connectors as of Aug 2026) sell court data. The public-record assets (real property, vehicles, FAA aircraft, corporate filings and DBAs, UCC) are already pulled together in LexisNexis Accurint for Legal Professionals, TLOxp, IRB and similar tools. LexisNexis PAYMETRIX AI is an existing AI asset-search product sold for collections. What actually pays off a judgment (bank balances, receivables, wages) is not in public records. It is reached through legal process: information subpoenas, debtor exams, levies and garnishments. ML over public records cannot see it.\n4) The space is occupied. Burford (July 2026) says it funds enforcement or buys judgments and awards outright, and points to its in-house asset tracing. Omni Bridgeway buys or advances cash against judgments, awards and portfolios, runs proprietary asset-tracing databases, and since Nov 2024 has offered a pre-award \"asset monitoring and enforcement funding\" product. At the small end, Great Lakes Strategic Capital (May 2026 press release) buys commercial civil judgments nationwide, Gagnon & Wendt buys pools, and many contingency recovery shops operate. On the consumer side, Encore and PRA buy debt and pursue judgments. SmallClaims (Denmark) raised a EUR 2M seed for AI-run small-claims cases through enforcement. I found no ML buyer of US commercial judgments, but the big-ticket end, where the money is, already has well-funded buyers with tracing teams.\n5) Rubric fit:\n- C1 (frame): enforcement is lawyers, levies and months of court process. That is the bulk of the work, not a trivial physical step, and there is no capitalised buyer that pays a 10^4 premium for a proven rung.\n- C2 (step-up): about 20x per hit at most (5c to 100c), and about 4-6x blended.\n- C3 (hit-rate lever): the main reason judgments fail is a judgment-proof debtor, and ML cannot create assets. That caps the lever well below the stated 4-7x.\n- C4 (data and right): the data is legible and sold, and the key assets are non-public.\n- C5 (ladder): litigation finance and debt buying are not a trillion-dollar vertical chain.",
+    "killer": "The edge rests on finding assets with ML over public records. But the public-record assets (real estate, vehicles, aircraft, UCC filings, corporate links) are already compiled and sold by LexisNexis Accurint, TLOxp and IRB, and LexisNexis even sells an AI asset-search product (PAYMETRIX AI) to collectors. The judgments themselves are structured data from UniCourt and Trellis. The assets that actually pay a judgment (bank balances, receivables, wages) are not public at all and are reached only through subpoenas and levies. And most uncollected judgments go unpaid because the debtor has nothing to collect, not because assets are hidden in illegible records. Real economics, buying at under 5c and recovering 20-30% of face, mean about a 4-6x blended return, not 10^3. The big-ticket end is already worked by Burford and Omni Bridgeway, which buy judgments outright and run in-house asset tracing.",
+    "sources": [
+     "https://www.abajournal.com/voice/article/why-do-80-of-judgments-remain-uncollected",
+     "https://www.insidearm.com/news/00012215-an-estimated-1-billion-worth-of-court-awa/",
+     "https://www.wfmz.com/online_features/press_releases/small-claims-court-vs-debt-collection-why-judgment-doesnt-guarantee-payment/article_36f60c5e-1308-59b6-9592-d8eef2a907a2.html",
+     "https://www.nbcnews.com/id/wbna11877818",
+     "https://www.burfordcapital.com/insights-news-events/insights-research/video-follow-the-money-ar/",
+     "https://www.burfordcapital.com/insights-news-events/news-press-releases/law-gazette-reports-on-prevalence-of-unenforced-judgments-citing-burford-research/",
+     "https://omnibridgeway.com/litigation-funding/judgment-enforcement",
+     "https://omnibridgeway.com/insights/blog/blog-posts/blog-details/global/2024/11/27/introducing-omni-bridgeway's-asset-monitoring-and-enforcement-funding-arrangement",
+     "https://gust.com/companies/Gagnon-and-Wendt",
+     "https://www.myknoxcountynews.com/online_features/press_releases/article_b3ccffb4-cbdb-5608-8968-e4a5e41145b8.html",
+     "https://beta.lexisnexis.com/en-us/products/accurint-for-legal-professionals.page",
+     "https://risk.lexisnexis.com/products/paymetrix-ai",
+     "https://support.trellis.law/trellis-api",
+     "https://www.vaquill.ai/blog/trellis-api-state-court-data-what-it-offers",
+     "https://techsavvy.media/en/handled-3200-cases-in-2025-ai-startup-secures-million-dollar-investment/",
+     "https://ibiblio.org/archives-archivists/msg18186.html"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "c1": 2,
+     "c2": 2,
+     "c3": 2,
+     "c4": 2,
+     "c5": 1
+    },
+    "evidence": "THE RIGHT CAN BE BOUGHT, BUT NOT CLEANLY AT SCALE, AND MUCH OF THE ADVERTISED POOL IS NOT FOR SALE.\n- The $97B federal pool looks wrong. I found no $97B figure. The nearest primary number is GAO 2018: $110B of federal criminal restitution was outstanding at end-2016, and US Attorney's Offices classed $100B of it (about 91%) as uncollectable because offenders could not pay. Collections were $2.95B over 2014-2016. Restitution owed to the government or to victims is not a tradable commercial judgment, so most of the headline pool is neither buyable nor collectible.\n- The 80% unenforced figure has no primary source. It appears only in collection-industry press releases and InsideARM. The most rigorous lead is a CFPB-linked paper that says about three-quarters of judgments are never satisfied, and InsideARM disputes its data. Much of this gap is judgment-proof debtors with no assets, not hidden assets. ML cannot raise the hit rate above the share of debtors who actually hold assets.\n- Legal friction to buying:\n  - New York Judiciary Law 489 makes it a misdemeanor for corporations or collection agencies to buy claims or judgments in order to sue on them. The safe harbor only covers purchases of at least $500k, and bills are still trying to narrow or restore the champerty defense.\n  - Washington RCW 19.16.260 bars an unlicensed collection agency from suing on its own or assigned claims.\n  - A New Jersey ethics opinion flags assign-and-share structures as possible unauthorized practice of law.\n  - Every state needs separate legal work, so this is not a uniform national market.\n- Pricing (anecdotal sources only): judgments that look hard to collect sell for 1-3c, and the general range runs from pennies to 50c. Large collectible judgments sell close to face; one JudgmentMarketplace listing offered a $16.5M judgment for $12M (73c). Sellers and buyers both run due diligence before pricing, so the good paper is already priced up.\n\nTHE PROVING STEP IS NOT TRIVIAL.\n- Enforcement is litigation, and on large judgments it is bespoke: debtor examinations, third-party subpoenas, levies, garnishment, fraudulent-transfer and alter-ego suits, and sometimes action in several countries at once. That is the geothermal-plant failure mode: the hard part is the physical/legal step, not the finding. Small judgments can be enforced by routine writs, but they are worth too little.\n\nTHE DATA EDGE IS WEAK.\n- Most of the signal is already legible: property, UCC and corporate filings, plus private aggregators such as Accurint and TLO.\n- More importantly, the right itself carries cheap compulsory discovery. Debtor examinations and subpoenas to banks, employers and accountants force the debtor to disclose assets, which undercuts any ML-over-public-records advantage.\n\nINCUMBENTS AND EXCLUSIONS.\n- An incumbent already owns the large-judgment tier: Omni Bridgeway buys judgments and awards outright or advances cash on them, non-recourse, and runs in-house asset tracing and freezing teams across jurisdictions.\n- It does not hit a hard exclusion. There is no drilling, and the company owns the asset by assignment. But the most common market structure is contingency-fee recovery, which drifts toward selling a service.\n\nLADDER.\n- The chain above this rung is judgment buying, then litigation finance, then specialty credit. That is a niche financial business, not a trillion-dollar chain.",
+    "killer": "The uncollected pool is mostly debtors with no assets, not hidden assets: GAO says $100B of $110B of federal restitution is uncollectable for inability to pay, and that pool cannot be bought anyway. Enforcement is bespoke litigation (fraudulent-transfer and alter-ego suits, cross-border freezes), not a trivial physical step. Owning the judgment already gives cheap compulsory asset discovery through debtor exams and subpoenas, which removes the illegible-data edge. Buying is restricted by champerty and licensing rules (NY Judiciary Law 489, WA RCW 19.16.260), and incumbents like Omni Bridgeway already buy the large collectible tier at prices close to face.",
+    "sources": [
+     "https://www.gao.gov/products/t-ggd-90-62",
+     "https://journalistsresource.org/criminal-justice/criminal-restitution-debt-victims/",
+     "https://www.accountsrecovery.net/2018/02/05/gao-report-highlights-problems-collecting-restitution-debt/",
+     "https://www.hsgac.senate.gov/?p=107550",
+     "https://www.abajournal.com/voice/article/why-do-80-of-judgments-remain-uncollected",
+     "https://www.insidearm.com/news/00012215-an-estimated-1-billion-worth-of-court-awa/",
+     "https://legislation.nysenate.gov/pdf/bills/2023/S5623A",
+     "https://www.newyorklegalethics.com/?p=273",
+     "https://njlaw.rutgers.edu/collections/ethics/cuap/cua37_1.html",
+     "https://lawfilesext.leg.wa.gov/law/RCW/RCW%20%2019%20%20TITLE/RCW%20%2019%20.%2016%20%20CHAPTER/RCW%20%2019%20.%2016%20.260.htm",
+     "https://smallbiztrends.com/judgment-marketplace/",
+     "https://www.cgaa.org/article/sell-judgment-to-collection-agency",
+     "https://omnibridgeway.com/litigation-funding/judgment-enforcement",
+     "https://omnibridgeway.com/insights/blog/blog-posts/blog-details/global/2024/11/27/introducing-omni-bridgeway's-asset-monitoring-and-enforcement-funding-arrangement",
+     "https://www.alperlaw.com/asset-protection/creditor-discovery/"
+    ]
+   }
+  ]
+ }
+]
