@@ -145,3 +145,35 @@ That is why Terranox exists and why this hunt, like the eight before it, keeps c
 2. **No buyer pays at the proof stage.** A flask assay, a gram-scale magnet button or a coin-cell cycle is not a proof a capitalised buyer prices. Buyers pay after scale-up, qualification or field trials, which is the bespoke build. Examples: Niron took 13 years and $150M+ to make iron nitride; Merck's sitagliptin enzyme needed a 25,000-fold engineered improvement over any wild type; Osmo's captive-odorant auction shows no clearing price.
 
 **What geology has that nothing else has:** a *standardised proof language* that buyers price at once. NI 43-101 and JORC make a drill-core assay a regulated, comparable disclosure, and juniors are repriced the day an intercept is announced. Any domain without an accepted proof standard leaves the buyer to do its own proving, so the step-up does not land on the discoverer. The question to hunt next is therefore not "where is the answer hidden" but "where does an accepted proof standard turn a cheap test into a price".
+
+## Round 3: markets with an accepted proof standard
+
+12 generators produced 88 ideas, which merged to 64, each scored by one agent. The top 8 got 3 verifiers each, and the top 3 got deep dives (`gold/proof_results.json`). The markets covered: bankable energy-yield reports, gem, pearl, coin and stamp grading, carbon verification, engineering certifications, land and survey standards, seed and appellation standards, regulatory designations, appraisal standards, data-centre will-serve letters and lab reference standards.
+
+**Result: same null.** Best score 12/25. None of the 64 scored 4 or more on frame or lever, and all 8 finalists were refuted (7 at 3/3, 1 at 2/3).
+
+| # | Candidate | Scorer | Verified | Refuted | Killer |
+|---|---|---|---|---|---|
+| 1 | LoadStudy Land (greenfield large-load study options, ERCOT/SPP) | 12 | 10.3 | 3/3 | The roughly 10^2x step-up depends on an unverified $800k/acre 'power-ready' price. That price belongs to sites with near-term energized MW, mostly in Northern Virginia. A greenfield Texas or SPP optio... |
+| 2 | Entitled Acre (data center rezoning arbitrage) | 12 | 10.3 | 3/3 | The step-up the rezoning creates and an option holder can actually capture is usually under 30x. In Northern Virginia, the only market where gross multiples reach 50-100x+, landowners now sign contrac... |
+| 3 | Old Master Sleeper Attribution (Sleeper / Sleeper Atelier / Sleeper Masters / Provenance Capital) | 12 | 10.0 | 2/3 | The 10^3-10^4x step-up does not reach the buyer. Sleepers are bought at open online-bid auctions, and specialist dealers bid any lot that looks promising up to $70k-$1.2M at the hammer: the Nutley Rem... |
+| 4 | Aircraft LLP Back-to-Birth Trace Reconstruction (Back-to-Birth / Unbroken Chain) | 11 | 9.7 | 3/3 | The step-up is not 10^3-10^4x. It is not even reliably 30x. Serviceable CFM56 LLPs are worth $250-480K each and a full stack $1.4-1.8M (Safe Fly), and teardown engines already sell for $1.2-1.8M, so t... |
+| 5 | Unrecognised Signed and Association Copies / Manuscripts (InkProof / Hand of History) | 12 | 8.7 | 3/3 | The 10^3-10^4x step-up is supported only by anecdotes like the $2.48-to-$477,650 Stone Declaration, which is a printed document recognisable on sight, not a hand-matched find. The repeatable hit is a ... |
+| 6 | Rare Stamp Varieties in Bulk Mixtures (Philatelix) | 11 | 8.7 | 3/3 | The 10^3x step-up appears only after selecting the one stamp that hits. The asset actually bought is the lot, and kiloware already sells at about 5% of catalogue value (Linn's, via Wikipedia), so the ... |
+| 7 | Natural Pearls in Estate Jewellery (Nacre / NaturalPearl / Nacre Lab) | 12 | 8.3 | 3/3 | The proven buyer is not reliably there and does not pay a large multiple: a GIA-certified natural saltwater rope at Skinner (est. $2,500-3,500) went unsold, and typical certified strands (often mixed ... |
+| 8 | SoleSource (orphan tech-data packages to DLA source approval) | 12 | 8.3 | 3/3 | DLA's own SAR procedure ("Sole Source Breakout", DAG 17.7501-6) makes an approved SAR an ADDED source that is guaranteed only about 40% of awards for about a year, at lower prices. The 111 FY17 approv... |
+
+**The third law.** A proof standard is not enough on its own. Where the standard test is cheap, everyone tests everything, so the hit-rate lever disappears. A GIA natural-pearl report costs $50 a strand, so dealers X-ray every plausible lot, and open auctions price sleepers before the test. Where the test is expensive, it is usually the bespoke build, as with load studies under SB6 or DLA source approval.
+
+Geology is the one place where all of the following hold together:
+- The proof is **expensive** (a drill programme costs hundreds of thousands to millions).
+- It is **abstracted** (contract drillers do it).
+- It is **standardised** (NI 43-101 and JORC).
+- It **usually fails**.
+- It sits on a **right bought cheaply from the state before testing**.
+
+Three rounds and 398 scored ideas, plus about 115 from the previous thread, found no second instance.
+
+## Overall conclusion
+
+Under the gold rubric as written, the only company shape that passes is ML-led discovery on subsurface tenure, which is Terranox's own category and is excluded. The rubric is a precise description of geology. A new company that keeps every leg will not be found by widening the search further. Either one leg is relaxed deliberately (the step-up bar, the cheap-right leg, or the exclusion), or the YC application has to win on a different thesis.
