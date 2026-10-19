@@ -1,0 +1,132 @@
+<title>Drill Hole Cost Hunt</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column styled like a core log, with a depth-scale bar chart and a scored table. */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --fg:#1d2529; --muted:#5b6870; --rule:#d5dbde;
+  --accent:#b07a1e; --accent-soft:#f1e3c8; --bar:#3e5865; --kill:#a23a2c; --keep:#2f6b4f;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151b1e; --panel:#1d2529; --fg:#e4e9eb; --muted:#9aa8af; --rule:#33424a;
+  --accent:#e0a94a; --accent-soft:#3a2f1c; --bar:#7fa3b3; --kill:#e07b6c; --keep:#74c39c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151b1e; --panel:#1d2529; --fg:#e4e9eb; --muted:#9aa8af; --rule:#33424a;
+  --accent:#e0a94a; --accent-soft:#3a2f1c; --bar:#7fa3b3; --kill:#e07b6c; --keep:#74c39c; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.6}
+.wrap{max-width:860px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:36px}
+h1,h2{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:2.6rem;letter-spacing:.01em}
+h2{font-size:1.6rem}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+p{margin:0;max-width:68ch}
+section{display:flex;flex-direction:column;gap:14px}
+.verdict{background:var(--panel);border-left:4px solid var(--accent);padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.verdict p{font-size:1.05rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.stat{background:var(--panel);padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.stat b{font-family:var(--display);font-size:1.9rem;font-weight:600;font-variant-numeric:tabular-nums}
+.stat span{font-size:.85rem;color:var(--muted)}
+.chart{background:var(--panel);padding:18px 18px 12px;display:flex;flex-direction:column;gap:8px}
+.row{display:grid;grid-template-columns:minmax(0,13rem) 1fr 4.5rem;gap:10px;align-items:center;font-size:.88rem}
+.row .lab{min-width:0;overflow-wrap:anywhere}
+.track{height:14px;background:var(--rule);position:relative}
+.fill{position:absolute;inset:0 auto 0 0;background:var(--bar)}
+.fill.hi{background:var(--accent)}
+.val{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.note{font-size:.8rem;color:var(--muted)}
+.tbl{overflow-x:auto;background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.86rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.s{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pip{display:inline-block;width:42px;height:6px;background:var(--rule);margin-left:6px;vertical-align:middle;position:relative}
+.pip i{position:absolute;inset:0 auto 0 0;background:var(--kill)}
+ol{margin:0;padding-left:1.3rem;display:flex;flex-direction:column;gap:10px;max-width:70ch}
+ol b{color:var(--keep)}
+.watch{background:var(--accent-soft);padding:14px 18px}
+code{font-family:var(--mono);font-size:.85em}
+@media (max-width:520px){.row{grid-template-columns:1fr 3.8rem}.row .lab{grid-column:1/-1}h1{font-size:2.1rem}}
+</style>
+
+<div class="wrap">
+  <header style="display:flex;flex-direction:column;gap:10px">
+    <div class="eyebrow">Terranox pipeline pain point · exploratory drilling · 19 Oct 2026</div>
+    <h1>Drill hole cost hunt</h1>
+    <p>Is there a new company in making exploratory holes cheaper, fewer or more informative? Fourteen research agents covered costs, the global market, rigs, sensing, business models, public data, operations and other industries that pay for expensive proving holes.</p>
+  </header>
+
+  <div class="verdict">
+    <div class="eyebrow">Verdict</div>
+    <p><strong>No separate venture-scale company.</strong> A hole's cost is people, days on site and logistics, not rock physics. Contractors, Imdex and the targeting companies already hold every part that can be squeezed. The large lever, drilling fewer holes, only pays whoever owns the ground, which is what Terranox already does. The output is four Terranox features.</p>
+  </div>
+
+  <section>
+    <div class="stats">
+      <div class="stat"><b>C$550/m</b><span>median all-in, 14 Athabasca programs</span></div>
+      <div class="stat"><b>C$0.2–1M</b><span>per exploratory hole</span></div>
+      <div class="stat"><b>C$1–1.5M</b><span>fixed cost per project-season</span></div>
+      <div class="stat"><b>3%</b><span>of cost is assays (IsoEnergy 2025)</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What a metre costs</h2>
+    <div class="chart" role="img" aria-label="All-in cost per metre by program, from 365 to 1,650 Canadian dollars">
+      <div class="row"><span class="lab">Paladin PLS, H1 2026 (road, camp)</span><div class="track"><div class="fill" style="width:22%"></div></div><span class="val">365</span></div>
+      <div class="row"><span class="lab">Denison Wheeler River 2025</span><div class="track"><div class="fill" style="width:28.6%"></div></div><span class="val">472</span></div>
+      <div class="row"><span class="lab">IsoEnergy Larocque East 2025</span><div class="track"><div class="fill" style="width:33.3%"></div></div><span class="val">549</span></div>
+      <div class="row"><span class="lab">NexGen PCE 2024 (before camp)</span><div class="track"><div class="fill" style="width:44.6%"></div></div><span class="val">736</span></div>
+      <div class="row"><span class="lab">IsoEnergy Hawk 2025 (900 m holes)</span><div class="track"><div class="fill hi" style="width:69.1%"></div></div><span class="val">1,140</span></div>
+      <div class="row"><span class="lab">Refined Energy 2026 (3 holes, heli)</span><div class="track"><div class="fill hi" style="width:100%"></div></div><span class="val">1,650</span></div>
+      <p class="note">C$ per metre, all-in. Contractor rate alone is C$250–400/m. Short and remote programs cost 2–3x because the season's fixed cost is spread over few metres. Sources: company filings, lane A and r2_verification.</p>
+    </div>
+    <p>Cost per metre has not fallen in decades. Quebec's census went from C$110/m in 2006 to C$170/m in 2018, and Australia from A$89/m to A$207/m over 1997–2017. It follows the drilling cycle. The world now drills about 700,000 m per discovery, up from 200,000 m in 1985, so the waste is in how many holes it takes.</p>
+  </section>
+
+  <section>
+    <h2>Why the pool is small</h2>
+    <p>Contracted exploration and resource drilling is about USD 7.5B a year worldwide, and true discovery holes about USD 1.5–2B. Uranium is USD 0.35–0.6B. The biggest contractor-manufacturer, Boart Longyear, was taken private for about USD 371M in 2024. Imdex, the tool leader, takes about A$2.40 of every A$100 spent on exploration. Those are the sizes a drilling service or tool reaches.</p>
+  </section>
+
+  <section>
+    <h2>Every shape tested</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Shape</th><th>Rubric /6</th><th>Why it dies</th><th>Already owned by</th></tr></thead>
+        <tbody>
+          <tr><td>Geothermal prove-and-sell</td><td class="s">3.5<span class="pip"><i style="width:58%"></i></span></td><td>Proven-unbuilt resource sells near USD 0.25M/MW vs 4.4M/MW operating</td><td>Zanskar, Ormat, Invenergy</td></tr>
+          <tr><td>Drill-for-royalty underwriter</td><td class="s">3<span class="pip"><i style="width:50%"></i></span></td><td>1% NSR costs ~C$1M; needs 5–11% program hit rate</td><td>VerAI, Earth AI, Lithosquare</td></tr>
+          <tr><td>Stake covered ground, then strat-drill</td><td class="s">3<span class="pip"><i style="width:50%"></i></span></td><td>Neighbours stake next door; buyers pay by earn-in</td><td>Nobody private</td></tr>
+          <tr><td>Re-enter old holes that stopped short</td><td class="s">2.5<span class="pip"><i style="width:42%"></i></span></td><td>One-time pool of ~493 holes, C$20–60M</td><td>Nobody</td></tr>
+          <tr><td>Neighbour drill-data market</td><td class="s">2<span class="pip"><i style="width:33%"></i></span></td><td>C$3–25M/yr traded; data is public after 3 years</td><td>Nobody</td></tr>
+          <tr><td>Drill planner sold to juniors</td><td class="s">2<span class="pip"><i style="width:33%"></i></span></td><td>~60 buyers; big only with royalties</td><td>KoBold in-house</td></tr>
+          <tr><td>Crew-light automated operator</td><td class="s">1.5<span class="pip"><i style="width:25%"></i></span></td><td>Only 12–20% cheaper all-in; physical work is the product</td><td>Durin, XtremeX, Boart, Epiroc</td></tr>
+          <tr><td>Groundwater rights via test wells</td><td class="s">1.5<span class="pip"><i style="width:25%"></i></span></td><td>Permits, not wells, are the hard step</td><td>Vidler (sold USD 291M), Cadiz</td></tr>
+          <tr><td>Shared logistics, basin operator</td><td class="s">1<span class="pip"><i style="width:17%"></i></span></td><td>Waste is 5–12% of program cost</td><td>CorePlan, Seequent</td></tr>
+          <tr><td>At-rig sensing, core scanning</td><td class="s">1<span class="pip"><i style="width:17%"></i></span></td><td>Tool-sized</td><td>Imdex, Epiroc, Boart, GeologicAI</td></tr>
+          <tr><td>Cheaper rig hardware</td><td class="s">0.5<span class="pip"><i style="width:8%"></i></span></td><td>Chips can't replace Athabasca core at 400–800 m</td><td>Contractors, MinEx CRC</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Rubric: discovery dominates a sellable rung · ML on public illegible data is required · cheap unproven right · buyer pays a step-up · a ladder · a very large ceiling. Nothing passes the first and last together.</p>
+  </section>
+
+  <section>
+    <h2>Take into Terranox instead</h2>
+    <ol>
+      <li><b>Sequential drill planner.</b> Pick the next hole from what earlier holes found, and decide when to wedge or walk away. A Stanford/KoBold paper matched a grid's go/no-go accuracy with under half the holes in simulation. Each avoided hole saves C$200k–550k.</li>
+      <li><b>Stopped-short hole list.</b> 493 historic holes of 100 m or more have no recorded unconformity while holes within 2 km reach it deeper. Median length 192 m, median shortfall 84 m, about 120k m already drilled.</li>
+      <li><b>Buy neighbours' misses.</b> Pay juniors for unreleased logs on adjacent claims, partly in royalty, the way oil explorers have done for a century.</li>
+      <li><b>Sell targets on ground Terranox doesn't want</b> for 1–2% royalties, and build the hole-outcome base rates for its own stop-or-continue calls.</li>
+    </ol>
+  </section>
+
+  <div class="watch"><strong>Watch:</strong> the 15% and 30% flow-through exploration credits lapse on 31 March 2027 unless extended. Uranium is on the 30% list, so that hits every junior's 2027 financing, Terranox's included.</div>
+
+  <p class="note">Full memo and 14 lane files: <code>research/drillhole/</code> in the nuketime repo. Several lane figures are marked memory or estimate because search budgets ran out; the memo lists the gaps.</p>
+</div>
