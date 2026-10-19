@@ -240,3 +240,40 @@ Mineral tenure is the deliberate exception. Free-entry staking at a fixed fee pe
 There were about 490 distinct ideas and 519 scorings across five rounds, with every leg of the rubric probed in turn. The result is consistent: the gold rubric describes free-entry mineral tenure. Every leg Terranox relies on (an expensive, abstracted, standardised and usually failing proof, illegible public data, and a cheap transferable right at a fixed administrative price) holds there only because mineral law was designed to make it hold. Another round will not find a second instance.
 
 The options left for the application are a different thesis, or deliberately dropping the step-up leg (C2). The other legs have now each been relaxed or searched and still fail.
+
+## Round 6: step-up leg dropped, value made by developing or operating (19 Oct)
+
+The coordinator ran this on its recommended option while Dhruv was away. C2 became "value capture": return on total capital and prize size when the company develops or operates the asset itself. All other legs kept their relaxed form. 19 near misses from every hunt were rescored (powered brownfields, land promotion, mitigation banking, orphan patents, powered-land options, state-trust data-centre sites, corridors and others), alongside 31 fresh ideas from 54 raw, for 50 scored. The top 10 got 3 verifiers each, and the top 3 got deep dives. The Ni-Cu conductor and paper-survey leads were left out because they are prospecting.
+
+**Result: same null.** Best scorer total 15/25 (UK land promotion). All 10 finalists were refuted, 9 at 3/3 and 1 at 2/3.
+
+**Method caveat.** One of the three verifier lenses still carried the old ">=30x step-up" refutation line. The other two lenses (data and competition, right and frame) refuted every finalist on their own, so the verdict does not rest on the stale lens.
+
+| # | Candidate | Scorer | Verified | Data/competition killer |
+|---|---|---|---|---|
+| 1 | Powered-Land Options: farmland options proven by utility load studies | 14 | 12.7 | The edge this idea depends on, finding substation load headroom before others do, is already a commercial data product. LandGate sells modelled offtake capacity for every US substation (98% coverage),... |
+| 2 | Entitlement arbitrage on exurban residential land (ML over planning records) | 14 | 12.7 | The supposed hidden signal is already being extracted and sold to the buyers named in the thesis. Shovels, through its January 2026 acquisition of ReZone, sells a Decisions API covering 600+ cities an... |
+| 3 | Entitled Acre (data center rezoning arbitrage) | 14 | 12.3 | The supposedly illegible signals are already turned into products and sold to the same capitalised buyers this company would sell to. Paces sells AI power and permitting site screening to data center ... |
+| 4 | UK land promotion / grey-belt freehold (hunt 9) | 15 | 11.3 | The signal that predicts grey belt consent is already in legible public fields: Green Belt review purpose scores, 5-year housing land supply, Housing Delivery Test results and local plan age. LandTech... |
+| 5 | Local-permit-first utility solar and BESS projects in moratorium-risk counties | 14 | 11.3 | The outcome is already sold as a legible product. Heatmap Pro publishes an Opposition Risk Score for every US county, trained on project outcomes and backed by an ordinance and moratorium database bui... |
+| 6 | Senior surface water right change-of-use decrees (Colorado and Western prior appropriation) | 13 | 11.3 | The supposed ML edge, reconstructing transferable consumptive use from illegible records, is already done in legible form. The state's CDSS StateCU/StateMod models estimate consumptive use for each st... |
+| 7 | Orphaned defense spare-part production lines, re-qualified as the DLA source | 14 | 11.0 | DLA itself publishes SAR candidate lists of obsolete and limited-competition NSNs, AMSC codes already flag restricted status, and DLA tells bidders to screen with DIBBS, Haystack and SERVA. So the dem... |
+| 8 | Reviving zombie subdivisions (lapsed or antiquated plats) | 13 | 10.3 | The candidate signal is legible and already commercialised. Vacant-platted-lot ratios come from a plain assessor and plat join, which Lincoln did by hand for 50 counties. Zonda already sells lot-pipel... |
+| 9 | Orphan Patent Evidence-of-Use (bankrupt estates, FCC/teardown proof; incl. semiconductor, photonics, mature-node) | 14 | 10.0 | Incumbents already own the edge, and one runs this exact model. TechInsights sells teardown-based EoU charts to licensing entities from more than 1M archived images. Patlytics, XLSCOUT and Lumenci sel... |
+| 10 | Reuse-Rights Pipeline Easements: abandoned-in-place pipelines for CO2, H2 and fiber | 13 | 9.0 | The decisive outcome, whether the easement survives abandonment and allows CO2, H2 or fiber, is a legal question. It is resolved per parcel by reading the instrument's granting clause under state law,... |
+
+**The sixth law.** Without the step-up leg, what survives is a developer business in an informed market, and the signal ML would read has already been productised for the same buyers:
+- LandGate (substation offtake);
+- Shovels and ReZone (600+ cities of rezoning decisions);
+- Heatmap (county opposition scores);
+- Zonda (lot pipelines);
+- Colorado CDSS (consumptive use);
+- DLA SAR lists.
+
+So the moat would be execution, not ML. That is the brownfields verdict again, at scale.
+
+## Final conclusion after six rounds
+
+There were about 520 distinct ideas and 569 scorings. Dhruv's rubric, and every relaxation of it, has been searched. The ML-native, own-the-asset company he describes exists only on free-entry mineral tenure. Anywhere else the choice is:
+- an execution-moat developer that uses data well (land, power, water), where ML is a tool and not the company; or
+- a different thesis, such as Charlie's vertical-integration ladder, which starts from the physical rung and adds ML second.
