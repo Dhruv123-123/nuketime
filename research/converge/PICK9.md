@@ -177,3 +177,36 @@ Three rounds and 398 scored ideas, plus about 115 from the previous thread, foun
 ## Overall conclusion
 
 Under the gold rubric as written, the only company shape that passes is ML-led discovery on subsurface tenure, which is Terranox's own category and is excluded. The rubric is a precise description of geology. A new company that keeps every leg will not be found by widening the search further. Either one leg is relaxed deliberately (the step-up bar, the cheap-right leg, or the exclusion), or the YC application has to win on a different thesis.
+
+## Round 4: "usually fails" relaxed (Dhruv, 19 Oct)
+
+Rubric change: C3 now gives full marks to an expensive proving step with a 30-70% base success rate where ML lifts the hit rate 1.5-3x. Every other leg is unchanged. The round ran 125 agents:
+- deep re-dives on UK land promotion (including a variant that buys grey-belt farmland outright) and US mitigation banking;
+- 12 generators producing 73 new ideas, 47 after merging;
+- rescoring of the 30 best earlier near misses;
+- 3 verifiers on each of the top 10, and deep dives on the top 3.
+
+**Result: same null.** Best scorer total 15/25, for an air-permitted behind-the-meter power pad for data-centre campuses and for data-centre rezoning options. All 10 finalists were refuted 3/3. Land promotion re-scored 12/25 and mitigation banking 10/25 (`gold/round4_seed_*.md`).
+
+| # | Candidate | Scorer | Verified | Killer |
+|---|---|---|---|---|
+| 1 | Reviving zombie subdivisions (lapsed or antiquated plats) | 14 | 12.3 | The capitalised buyers pay cost, not a step-up. Millrose's 10-K says its takedown price is its own acquisition cost plus the development budget, at an 8.5-11% yield, with no appraisals. Implied values... |
+| 2 | Powered-Land Options: farmland options proven by utility load studies | 14 | 11.7 | The 10^2-10^3x jump goes to committed load, not to the proving step. Altus Group found committed utility load was the strongest predictor of price. In Northern Virginia, power adds only about 1.5x ove... |
+| 3 | Australian rural-to-urban rezoning (NSW, SEQ and Victorian growth corridors) | 13 | 11.7 | The step-up is far below 30x where it matters. A Cushman & Wakefield estimate prices land likely to be included in the next Melbourne growth-boundary expansion at $125-250k/ha. The Beveridge sale paid... |
+| 4 | Entitled Acre (data center rezoning arbitrage) | 15 | 11.2 | The step-up from zoning alone is about 3-10x off a strike price that farmers have already raised to 5-10x farmland value because developers make offers before any rezoning. Even counted as leverage on... |
+| 5 | Air-permitted behind-the-meter power pad for DC campuses | 15 | 11.0 | The value is not in the permit. Texas issues behind-the-meter gas permits for up to 500 MW within weeks under simplified procedures. 59 data-center projects plan about 90 GW of on-site generation, but... |
+| 6 | Cryptic Clusters / Legacy Actinomycete Libraries: orphaned natural-product collections re-read for novel clusters | 14 | 11.0 | An FDA-APPROVED novel antibacterial clears at $14-16M (Achaogen/plazomicin ~$16M in Chapter 11 after >$1B spend; Tetraphase/eravacycline ~$14M cash to La Jolla), so the terminal buyer for the candidat... |
+| 7 | DeadPatent Hits: re-proving unlicensed university compound patents against new targets | 14 | 10.7 | The 10^3-10^4x step-up is not paid at signing. Cash at signing rises only about 5-25x (a roughly $20k TTO option against a $0-500k upfront for a hit-stage licence). The rest is milestones that depend ... |
+| 8 | Floodway Narrowing for Urban Infill Parcels | 14 | 10.7 | The 10^3-10^4 step-up is not real. A narrowed floodway leaves the parcel in the 100-year fringe. Elevation (500-year level plus 2-3 ft in Houston and Harris County), no-net-fill, insurance and an extr... |
+| 9 | German Bauerwartungsland: picking farmland ahead of a Bebauungsplan | 13 | 10.7 | Gutachterausschuss transaction data shows the market prices Bauerwartung before any FNP decision. In the Berliner Umland, unzoned fields with any development expectation sold at an average 16% of the ... |
+| 10 | Reuse-Rights Pipeline Easements: abandoned-in-place pipelines for CO2, H2 and fiber | 14 | 10.0 | No public transaction shows anyone paying a step-up price for a third-party-assembled, title-proven abandoned pipeline corridor. Every real conversion (Tallgrass Trailblazer to CO2, Williams/WilTel fi... |
+
+**The fourth law.** Relaxing the lever exposed the constraint that actually binds: where a human-made asset has a big step-up, the seller already prices the hope. Examples:
+- German edge-of-town fields trade at 15-40% of the Bauland price before any plan exists (Gutachterausschuss data).
+- UK Green Belt farmland carries hope value that tribunals recognise.
+- Data-centre farmers ask 5-10x farmland value before rezoning.
+- Millrose buys entitled lots at cost plus an 8.5-11% yield, not at a step-up.
+
+Agents, appraisers and data vendors (LandTech, LandGate, Zonda) close the information gap. In geology the seller is the state, and it prices tenure **administratively** (a fixed fee per hectare) whatever the hope value. That administrative price is the cheap-right leg.
+
+**Implication.** The only place left untested is rights sold by a public body at a fixed schedule price rather than a market price, where the proof step-up still lands on the buyer of the right.
