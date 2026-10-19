@@ -18,3 +18,15 @@ Passes after web checks (17+, no leg 0-1, path to large company):
 Shape-fits that fail size: bulk-coin varieties 20, Old Master sleepers 17, historic letters 17, unbanked ERCs 17, DLA surplus 17, captive odorants 17.
 Finding: once ML is scored on plausibility, the ideas that fit the Terranox shape best are mostly boutique markets; in large markets the step-up is priced or capital holds the rung. The size rule is now the binding constraint.
 Next: adversarial deep checks on the three passes.
+
+## Deep checks on the three passes (adversarial, web-checked)
+
+| Idea | Paper score | After deep check | What brought it down | File |
+|---|---|---|---|---|
+| ML crop actives, licensed to majors | 18 | **15** | Deal terms tiny (Evogene ag segment $1-3M/yr despite Bayer and Corteva licences); greenhouse hit to registered active ~1 in 140-160k, $307M, 11 yrs; buyer pool shrinking (FMC exploring sale); public labelled data small; ladder to $1B+ needs $200-350M and 12-15 yrs | `deep_crop_actives.md` |
+| Lapse-rescue life settlements | 17 | **13** | A capital and origination business; Coventry/Abacus hold it; buyer return ~1.5-2.5x; life-expectancy blow-ups | `deep_life_settlements.md` |
+| Unenforced judgments | 17 | **15** | A $20-100M/yr specialty fund; champerty and licensing limits; LLC veil problem | `deep_judgments.md` |
+
+**V4 verdict: null after deep checks.** Scoring ML on plausibility removed the "untested" kill as Dhruv asked, and three ideas passed on paper. All three failed on the other legs (step-up, buyer, size), not on ML. The binding constraint is now size and the slow proof, not ML lift.
+
+Cheapest live test: crop-actives hindcast, ~$5-15k, 4-6 weeks (rank each active registered 2011-26 against its own patent family's never-developed siblings vs a Tanimoto baseline; pass at 3x+ top-1% enrichment, kill under 1.5x). Both it and a $30-60k greenhouse test passing restores 17, but the size and time problems remain.
