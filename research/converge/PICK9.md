@@ -210,3 +210,33 @@ Rubric change: C3 now gives full marks to an expensive proving step with a 30-70
 Agents, appraisers and data vendors (LandTech, LandGate, Zonda) close the information gap. In geology the seller is the state, and it prices tenure **administratively** (a fixed fee per hectare) whatever the hope value. That administrative price is the cheap-right leg.
 
 **Implication.** The only place left untested is rights sold by a public body at a fixed schedule price rather than a market price, where the proof step-up still lands on the buyer of the right.
+
+## Round 5: rights a public body sells at a fixed price (19 Oct)
+
+Round 5 ran 82 agents: 10 generators produced 60 ideas, 44 after merging. Each was scored on the relaxed rubric, the top 8 got 3 verifiers each, and the top 3 got deep dives. The rights covered were state trust leases, Crown land tenures, BLM and USFS rights-of-way, FERC preliminary permits, oyster-ground leases, DOE service contracts abroad, maritime concessions, communication sites, billboard permits and tax-sale land.
+
+**Result: same null.** The best scorer total was 15/25, for a powered data-centre site on state trust land. No candidate scored 4 or more on C4, and all 8 finalists were refuted 3/3.
+
+| # | Candidate | Scorer | Verified | Killer |
+|---|---|---|---|---|
+| 1 | Closed-loop pumped storage sites via FERC preliminary permits (federal, state trust and optioned private land) | 14 | 13.0 | The right cannot be bought cheaply from someone who cannot read the data. It is a free, first-to-file FERC preliminary permit that by statute cannot be assigned (16 U.S.C. 798(d)). It is noticed publi... |
+| 2 | Old-dam-site pumped hydro on Crown land (NSW/Qld) | 13 | 12.3 | The unproven right cannot be bought cheaply at a fixed fee from owners who cannot read the data. The public body that holds the old investigation files also controls the land: WaterNSW, Crown Lands an... |
+| 3 | Philippine DOE wind and solar pre-development service contracts | 13 | 12.3 | The unproven right is a fixed-fee state grant, not an asset bought from an owner who cannot read the data. The regulator already does the resource legibility work: pre-determined areas are identified ... |
+| 4 | Large-load powered site on state trust land (data centre) | 15 | 12.0 | Every named state trust board must get fair market value for the proposed use. Montana requires an RFP (77-1-904 MCA). ND trust land can be leased only for pasture and meadow (ND Constitution). SD auc... |
+| 5 | Crown land wind investigative licences with met-mast proof (BC, Ontario, Newfoundland) | 13 | 11.0 | The unproven right is not bought cheaply from owners who cannot read the data. In Newfoundland it is auctioned through a scored Call for Bids. That call has a pass/fail screen on wind-farm constructio... |
+| 6 | BLM solar ROW applications outside designated leasing areas, cleared of NEPA fatal flaws | 13 | 10.7 | The right is not bought cheaply from owners who cannot read the data. It is a first-come, fixed-fee application ($15/acre plus cost recovery, 43 CFR 2804.12(c)) to BLM, the most informed party. BLM al... |
+| 7 | Build-ready cell tower entitlements (zoning permit at fixed fee on optioned land) | 13 | 10.7 | The right cannot be proven without the buyer. Tower zoning approval, and the Telecom Act protection behind it, usually depends on a specific carrier's coverage gap and RF justification, often with a c... |
+| 8 | Chilean maritime concessions with approved RCA for desalination and seawater intakes | 13 | 10.3 | The unproven right is a discretionary supreme-decree grant whose binding DGA report can reject it outright. Each application is published in the Diario Oficial with a 60-day opposition window, which t... |
+
+**The fifth law.** Public bodies do not leave hope value on the table, except for mineral tenure. Where a public body sells a right at a fixed price, at least one of these happens:
+1. It must get fair market value for the proposed use, so it reprices or auctions. State school trusts are bound by their constitutions: Montana requires an RFP (77-1-904 MCA), and Arizona sold Mesa trust land to Novva at an appraised data-centre value of about $380k/acre.
+2. It reads its own files and tenders the best sites. WaterNSW and Queensland Hydro do this with old dam investigations, Newfoundland runs a scored call for bids for wind, and the Philippine DOE pre-screens areas for competitive auctions.
+3. It makes the right free, first-come and non-transferable, so there is nothing to buy and flip. FERC preliminary permits cannot be assigned (16 U.S.C. 798(d)), and BLM solar ROWs are a $15/acre application.
+
+Mineral tenure is the deliberate exception. Free-entry staking at a fixed fee per hectare, assignable, with the discoverer keeping the uplift, is a policy built to subsidise private exploration. No other body of law found across five rounds copies it.
+
+## Overall conclusion after five rounds
+
+There were about 490 distinct ideas and 519 scorings across five rounds, with every leg of the rubric probed in turn. The result is consistent: the gold rubric describes free-entry mineral tenure. Every leg Terranox relies on (an expensive, abstracted, standardised and usually failing proof, illegible public data, and a cheap transferable right at a fixed administrative price) holds there only because mineral law was designed to make it hold. Another round will not find a second instance.
+
+The options left for the application are a different thesis, or deliberately dropping the step-up leg (C2). The other legs have now each been relaxed or searched and still fail.
