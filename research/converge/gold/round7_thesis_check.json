@@ -1,0 +1,317 @@
+[
+ {
+  "name": "Nodal (integrated Texas power company starting with distressed batteries)",
+  "verifiers": [
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 3,
+     "l2": 2,
+     "l3": 3,
+     "l4": 4,
+     "l5": 1,
+     "l6": 2
+    },
+    "evidence": "The dated facts check out. The thesis fails on rung-one economics, on whether the rung is open, and on the claimed unfair advantage.\n\nCONFIRMED:\n(1) RTC+B went live on December 5, 2025, as planned. ERCOT set that target in September 2024 and issued its own go-live release on 12/5/2025.\n(2) The steep revenue decline is real and larger than the thesis implies. Modo puts ERCOT BESS revenue at $193/kW-yr in 2023, $56 in 2024 and about $29.4 in 2025 (Nowcast; about $26 through November). Modo blames ancillary-service saturation, compressed arbitrage spreads and about 9 GW of new BESS added in 2024-25.\n(3) Distress among developers is real. Modo counts 3.4 GW across 25 projects leaving the queue after signing agreements in 2025-26, against 937 MW in all prior years combined. The OBBBA tax-credit limits add to the pressure.\n(4) The 2026 numbers are volatile: Winter Storm Fern in January 2026 lifted the fleet average to $3.94/kW-month (about $46k/MW-yr), then February fell to about $15k/MW-yr and April was about $38k/MW-yr. Modo reports spreads down about 50% year on year by June 2026.\n(5) Optimizer skill varies widely. The top quartile captures 76% or more of available top-bottom spreads and the bottom quartile only 27%, so a 20% uplift over weak operators is plausible.\n(6) Texas retail of about $50B is roughly right for the whole state. Competitive-choice customers are about 75% of ERCOT load, so the addressable competitive slice is closer to $35-45B (est.). Treat this as order-of-magnitude only.\n\nCORRECTIONS / FAILURES:\n(a) Rung-one cash flow is too thin to carry the company. The 2020-22 vintage small batteries the thesis targets are mostly 1-hour; 65% of ERCOT batteries are 1-hour. Modo finds 2-hour sites earn about 50% more per MW, and since 2022 ERCOT has required 1 hour of state of charge to bid ancillary services, which caps what 1-hour units can offer. A 10 MW 1-hour unit at $30-40/kW-yr grosses about $300-400k/yr before O&M, QSE fees, insurance, degradation and augmentation. Net is roughly $150-250k/yr (est.). At the thesis's $2-6M purchase price that is a low single-digit to high single-digit yield, and the batteries carry a duration-obsolescence risk. \"Survives on rung one alone\" does not hold.\n(b) The optimization uplift is not tied to owning the asset. A seller with a bottom-quartile operator can capture the same uplift by switching optimizer (Tesla Autobidder, Gridmatic, Ascend, Habitat, Engie, Fluence Mosaic) without selling the battery. That removes the arbitrage the buy-distressed thesis depends on.\n(c) The rung and the whole ladder are already held. Gridmatic runs nearly this exact ladder: an ML power marketer, a $50M energy storage fund operating batteries (a 50 MW/100 MWh Texas site; the fund was targeting up to 500 MW), a licensed Texas REP (Gridmatic Retail), and flexible-load deals with Cholla and Satoshi Energy (Nov 2025). Base Power owns batteries behind the meter as a Texas REP. It raised $1B at a $4B valuation in Oct 2025 and reportedly about $1B at roughly $13B in 2026 (reported, unconfirmed). Tesla Electric/Autobidder and Octopus Energy, which already operates in Texas, are also present. \"Octopus model applied to Texas\" is therefore not open, and Octopus is already there.\n(d) The unfair-advantage claim is weak. ERCOT 60-day SCED and disclosure data is not illegible in the Terranox sense: Modo, Yes Energy, Ascend, GridStatus and every QSE already parse it. It is not public-but-unread data.\n(e) Retail-rung tail risk is confirmed rather than hypothetical. Fern (Jan 2026) is a recent scarcity event of the kind Uri was in 2021, and REP collateral requirements raise the capital needed for rung 3.\n\nNET: The why-now facts survive. The key claims behind L2 (a sellable, self-sustaining rung), L5 (an open rung) and the unfair advantage fail. Revised total is 15/30, down from a self-score of 21.",
+    "killer": "Rung one has no protected margin. Small 1-hour ERCOT batteries now gross about $30-40/kW-yr, and the 2-hour fleet structurally outearns them. The optimization uplift goes to any owner who switches optimizer, so buying the battery is not needed to capture it. The whole battery-plus-REP ladder is already being climbed by Gridmatic (storage fund plus Gridmatic Retail plus flexible load) and by Base Power (about $1B raised at $4B in Oct 2025, reportedly about $13B in 2026), alongside Tesla Electric and Octopus in Texas.",
+    "sources": [
+     "https://www.ercot.com/news/release/12052025-ercot-goes-live",
+     "https://ercot.com/news/release/09132024-ercot-to-implement",
+     "https://www.publicpower.org/periodical/article/texas-grid-operator-goes-live-with-real-time-co-optimization-plus-batteries",
+     "https://modoenergy.com/research/why-were-ercot-battery-revenues-so-low-in-2025-weather-energy-arbitrage-builodout",
+     "https://modoenergy.com/research/ercot-battery-revenue-benchmark-november-2025-battery-energy-storage-bess-capture-rates",
+     "https://modoenergy.com/research/february-2026-ercot-bess-benchmark-rtcb-revenues-batteries-performance",
+     "https://modoenergy.com/research/ercot-march-2026-bess-benchmark-batteries-fern-revenues",
+     "https://benchmarkdocs.modoenergy.com/docs/overview-ercot",
+     "https://modoenergy.com/research/ercot-battery-storage-2026-things-to-watch",
+     "https://modoenergy.com/research/en/ercot-bess-index-march-2024-battery-energy-storage-systems-revenues-ancillary-services-energy-arbitrage-ecrs-non-spinning-reserve-one-hour-two-hour-duration-jupiter-power-plus-power-gore-stre",
+     "https://www.businesswire.com/news/home/20251104144872/en/Gridmatic-Satoshi-Energy-and-Cholla-Inc.-Partner-to-Advance-Flexible-Load-Innovation-in-Texas",
+     "https://www.businesswire.com/news/home/20231115697337/en/Gridmatic-Closes-%2450-Million-Energy-Storage-Fund-Underscoring-Importance-of-AI-to-Optimizing-Batteries",
+     "https://www.canarymedia.com/articles/batteries/base-power-hauls-1b-for-mass-deployment-of-huge-home-batteries",
+     "https://energycapitalhtx.com/amp/base-power-1b-series-d-2677650696",
+     "https://www.ercot.com/files/docs/2025/11/17/ERCOT-Grid-Insights-Retail-Market.pdf"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 2,
+     "l2": 3,
+     "l3": 2,
+     "l4": 3,
+     "l5": 1,
+     "l6": 2
+    },
+    "evidence": "I checked rung one and the competition with 10 searches. Several of the thesis's key claims fail.\n\n1. RTC+B went live on 5 Dec 2025, as the draft says (ERCOT release). But it did not \"reset how batteries earn money.\" Modo finds it changed only the small ancillary slice of battery revenue; energy arbitrage, the bulk of revenue, was largely unchanged. Modo blames the volatility on weather, scarcity and fleet growth. So \"operators running old playbooks are losing\" is not a real wedge.\n\n2. The revenue decline is real, and it makes rung one too small to live on. Modo's averages for ERCOT batteries:\n   - 2023: $193/kW-yr\n   - 2024: $56/kW-yr\n   - 2025: about $29.4/kW-yr (Nowcast)\n   - 2026 monthly figures ran $1.11-3.94/kW-month. June was the lowest month ERCOT has recorded. A rough mean of Jan-Jun gives about $26/kW-yr.\n\n   On those numbers a 10 MW battery grosses about $260-300k a year before O&M, QSE fees, augmentation and tax. A 20% bidding uplift adds about $60k per asset. Three assets gross about $1M. That is a sellable asset but not a company. Lenders are unlikely to put debt on merchant cash flow this thin.\n\n3. I found no evidence that small ERCOT batteries are selling at distressed prices. No 10 MW-scale distressed sale turned up. The visible deals are normal-priced: Hunt bought Fort Duncan, Bimergen bought eight 9.9 MW Aggreko projects, Energy Vault bought McMurtre and Greenflash bought a 200 MW project. A reference point for cost: GoodPeak took $22M of construction debt for two 10 MW projects, about $11M per 10 MW. Even at 50% of replacement cost, a $3M seed buys at most one asset, and only with leverage that is hard to get.\n\n4. A capitalised buyer exists, so L2 holds partly. But the same buyers compete to acquire rung one. Hunt Energy Network already owns 32 distribution-level 10 MW batteries (420 MW in total). It is backed by Manulife and says it is \"actively looking to acquire additional BESS\" in ERCOT. Bimergen and its RelyEZ joint venture are buying 9.9 MW DG batteries.\n\n5. Almost every rung is already held by funded players:\n   - **Rungs 1-3 combined:** Gridmatic does ML trading, takes battery offtake, and appears to hold a Texas REP licence selling to data centres (the licence claim comes from a job listing; I could not confirm it with the PUCT). It closed a $50M storage fund for up to 500 MW and runs over 300 MW in ERCOT and CAISO.\n   - **Rung 2 (optimisation):** Tesla Autobidder, Fluence Mosaic, GridBeyond (optimising 29.7 MW in ERCOT under RTC+B), Habitat (\u00d8rsted's 250 MW), Ascend, Tyba and Enspired.\n   - **Rungs 3-5 (own-and-supply end state):** Base Power owns batteries and sells retail power in Texas. It raised a $1B Series C in Oct 2025 at $3-4B; one report describes a later $1B Series D at $13B, though I could not confirm its date. Octopus Energy US is a Texas retailer with Kraken and Lunar PowerStore batteries, and it is buying data-centre demand software.\n\n   The \"Octopus model applied to Texas\" is being executed by Octopus itself and by a company worth more than $4B.\n\n6. The \"unfair advantage\" is not unfair. Modo already publishes monthly per-asset ERCOT battery benchmarks from the 60-day data, naming optimisers such as Gridmatic and Engie. It also sells a terminal case study on Hunt's fleet. The data is already parsed and sold, unlike the illegible Terranox assessment files. The proposed 2-week test, ranking every battery by revenue per MW, is a Modo product.\n\n7. The REP rung needs $1M of shareholders' equity plus a $500k letter of credit (PUCT 25.107), on top of ERCOT collateral. It is feasible, but hedging retail load with 10-60 MW of 1-2 hour batteries does not protect against a Uri-style event. Winter Storm Fern in Jan 2026 showed that tail risk is still live.\n\n8. On software compounding, a 10-60 MW fleet produces trivial data next to optimisers running hundreds of MW to GW, so ML does not compound at rung one.\n\nRevised total: 13/30 (self-score was 21).",
+    "killer": "Rung one is a commodity merchant asset whose revenue fell from $193/kW-yr in 2023 to about $29/kW-yr in 2025, and to record lows in mid-2026. It is too small to fund a company and is not reliably available at distressed prices. Better-capitalised buyers compete for it, such as Hunt Energy Network, which has Manulife backing and owns 32 batteries of 10 MW. The rungs above are already held: Gridmatic does trading, offtake and data-centre retail. Base Power ($1B Series C at $3-4B, with a reported later round at $13B) and Octopus Energy US already run the integrated own-and-supply Texas end state. The claimed data edge, ERCOT's 60-day disclosure, is already parsed and sold by Modo.",
+    "sources": [
+     "https://www.ercot.com/news/release/12052025-ercot-goes-live",
+     "https://modoenergy.com/research/ercot-battery-storage-2026-things-to-watch",
+     "https://modoenergy.com/research/why-were-ercot-battery-revenues-so-low-in-2025-weather-energy-arbitrage-builodout",
+     "https://modoenergy.com/research/ercot-battery-revenue-benchmark-november-2025-battery-energy-storage-bess-capture-rates",
+     "https://modoenergy.com/research/en/ercot-june-2026-benchmark-spreads-fall-50-battery-bess-revenues-cycling",
+     "https://modoenergy.com/research/en/ercot-march-2026-bess-benchmark-batteries-fern-revenues",
+     "https://modoenergy.com/research/en/ercot-battery-energy-storage-revenue-benchmark-april-february-2025-optimizers-spreads-rabbit-hill-north-fork-engie-gridmatic",
+     "https://modoenergy.com/terminal/case-studies/hunt-energy-network",
+     "https://recurrentenergy.com/?p=21035",
+     "https://www.barchart.com/story/news/529188/bimergen-energy-completes-acquisition-of-79-2-mw-of-late-stage-dg-battery-energy-storage-projects-in-ercot-south-from-aggreko-and-executes-simultaneous-financing",
+     "https://www.businesswire.com/news/home/20231115697337/en/Gridmatic-Closes-%2450-Million-Energy-Storage-Fund-Underscoring-Importance-of-AI-to-Optimizing-Batteries",
+     "https://energy-storage.news/tag/gridmatic",
+     "https://canarymedia.com/articles/batteries/base-power-hauls-1b-for-mass-deployment-of-huge-home-batteries",
+     "https://raising.fi/news/base-power-series-d-august-2026",
+     "https://www.ess-news.com/?p=8790",
+     "https://www.semafor.com/article/10/08/2026/octopus-looks-to-buy-software-startups-to-manage-data-center-demand",
+     "https://www.smartestenergy.com/en_US/insights2/GridBeyond-launches-commercial-optimization-of-29.7-MW-battery-portfolio-in-ERCOT-new-co-optimized-market",
+     "https://energycapitalhtx.com/amp/trending-news-goodpeak-energy-storage-2671743114",
+     "https://www.puc.texas.gov/industry/electric/business/rep/rep_qa/Default.aspx"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 3,
+     "l2": 2,
+     "l3": 2,
+     "l4": 3,
+     "l5": 1,
+     "l6": 1
+    },
+    "evidence": "The two \"why now\" facts hold up, but the ladder built on them fails.\n\n(1) Rung-one revenue has collapsed. Modo puts ERCOT battery revenue at $193/kW in 2023, $56/kW in 2024 and about $29/kW in 2025; Enverus projects $17/kW for 2025. Monthly figures for 2026 run about $1.1-3.9/kW-month, with June 2026 the lowest ERCOT has recorded ($1.11), so roughly $25-30/kW-yr. A 15 MW battery therefore earns about $250-450k a year gross, before O&M, augmentation, insurance and QSE fees. The thesis's own 20% optimisation uplift is worth about $50-90k a year per asset. Rung one cannot carry a company. It is a merchant bet on scarcity events, not a revenue engine. \"Distressed\" also cuts both ways: buyers price these assets for the saturated market, so a cheap entry does not lead to a jump in value.\n\n(2) RTC+B went live on Dec 5, 2025. It did reset bidding, but Ascend says thermal generators, not batteries, took most of the early ancillary-service premium. Gas peakers also became more competitive.\n\n(3) The edge from optimisation is real but crowded. In Feb 2026 Habitat captured 84% of the benchmark spread against a fleet median of 35%. Habitat (730 MW for UBS), GridBeyond, Tesla, Fluence, Ascend and Gridmatic all compete in this space. The 60-day/SCED data is already parsed by Modo, GridStatus, Yes Energy, Enverus and Ascend, so the \"illegible public data\" advantage that worked for Terranox does not carry over.\n\n(4) Software does not compound at every rung. 20-60 MW of our own dispatch adds almost nothing to the price and congestion forecasts, because the whole fleet's bids and dispatch are public after 60 days anyway. Retail load data does help hedging, but every REP has that. The data from siting new batteries is commoditised.\n\n(5) Competitors already hold rungs one to three. Gridmatic runs a $50M storage fund with tolls and offtakes for up to 500 MW in ERCOT and CAISO, plus a licensed REP (Gridmatic Retail, launched Oct 2024). That is literally rungs 1-3. Base Power, with a $1B Series C in Oct 2025 at a $3-4B valuation, is already \"Octopus in Texas\": a REP plus a battery fleet it owns. Hunt Energy Network, backed by Manulife, is buying merchant ERCOT batteries (Fort Duncan, 100 MW, Feb 2026) and started with 10 MW distribution-level sites. Jupiter and Spearmint hold scale.\n\n(6) The end state is mis-specified. ERCOT separates the wires business, which is a regulated monopoly at the transmission and distribution utilities, so there is no \"integrated Texas utility\" to become. The real end state is a Vistra- or NRG-style generation-plus-retail company. That revenue pool is large (about $40-50B, est.) but incumbents dominate it, and it needs balance-sheet capital.\n\n(7) The REP rung is easy to enter on paper. PUCT asks for about $1M in equity plus a letter of credit, or $100k cash under some tests. But ERCOT collateral and the tail risk of a Winter Storm Uri event (Griddy) scale with the customer book.",
+    "killer": "Commodity pricing plus competitors holding every rung. ERCOT battery revenue fell from $193/kW in 2023 to about $17-30/kW in 2025, and 2026 has set record monthly lows. A $2-6M rung of 10-20 MW nets low six figures a year at best. Gridmatic (tolls plus fund plus REP) and Base Power ($1B, own batteries plus REP) already run this exact ladder, and Habitat, Tesla and Fluence already win on optimisation. The data on rung one is the same public 60-day data every competitor sees, so nothing compounds into a moat. The climb above rung three also hits a wall: the retail rung carries Uri-style tail and collateral risk, and the generation rung needs a balance sheet. \"Integrated utility\" is not even available in ERCOT, where the wires business is separate.",
+    "sources": [
+     "https://modoenergy.com/research/en/why-were-ercot-battery-revenues-so-low-in-2025-weather-energy-arbitrage-builodout",
+     "https://modoenergy.com/research/en/ercot-battery-revenue-benchmark-november-2025-battery-energy-storage-bess-capture-rates",
+     "https://modoenergy.com/research/en/ercot-june-2026-benchmark-spreads-fall-50-battery-bess-revenues-cycling",
+     "https://modoenergy.com/research/february-2026-ercot-bess-benchmark-rtcb-revenues-batteries-performance",
+     "https://www.enverus.com/newsroom/ercot-battery-profits-drop-as-market-saturation-reshapes-texas-storage",
+     "https://blog.gridstatus.io/rtc-b-60-days-later-in-ercot/",
+     "https://www.ascendanalytics.com/blog/ercot-rtcb-battery-optimization-strategies",
+     "https://www.businesswire.com/news/home/20231115697337/en/Gridmatic-Closes-%2450-Million-Energy-Storage-Fund-Underscoring-Importance-of-AI-to-Optimizing-Batteries",
+     "https://rejobs.org/nl/duurzame-energie-vacatures/137846-senior-analyst-retail-operations-gridmatic",
+     "https://www.canarymedia.com/articles/batteries/base-power-hauls-1b-for-mass-deployment-of-huge-home-batteries",
+     "https://electrek.co/2025/10/08/base-power-raises-1b-to-reinvent-texas-grid-with-home-batteries/",
+     "https://www.huntconsolidated.com/?p=6567",
+     "https://pv-magazine-usa.com/?p=12969",
+     "https://www.puc.texas.gov/industry/electric/business/rep/rep_qa/Default.aspx",
+     "https://energy-storage.news/developer-solvent-to-sell-tranche-of-2.5gw-ercot-bess-portfolio"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Loopworks (advanced-reactor test loops climbing to qualified components)",
+  "verifiers": [
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 3,
+     "l2": 2,
+     "l3": 2,
+     "l4": 2,
+     "l5": 1,
+     "l6": 2
+    },
+    "evidence": "I checked nine searches and two fetches against the thesis's dated claims and its competitor list.\n\nCONFIRMED:\n(1) The nuclear executive orders were signed on May 23, 2025. EO 14301 created the DOE reactor pilot programme outside the national labs, with a goal of at least three reactors critical by July 4, 2026. The orders also set an 18-month cap for NRC decisions on new reactor applications. Some summaries instead tie the 18 months to completing the rulemaking, so the thesis wording is loosely right.\n(2) DOE announced 11 pilot projects from 10 companies on Aug 12, 2025: Aalo, Antares, Atomic Alchemy, Deep Fission, Last Energy, Oklo, Natura, Radiant, Terrestrial and Valar. DOE provides no funding to them.\n(3) GAIN vouchers exist and are still being awarded in FY2026 rounds, with a 20% recipient cost share, for work at ORNL, Argonne and INL. National-lab test work is therefore subsidised.\n\nRESOLVED \"verify first\" item (the thesis left it open): the July 4 goal was met and exceeded.\n- Antares Mark-0 at INL, June 4, 2026.\n- Valar Ward 250 in Utah, June 18.\n- Deployable Energy Unity at INL, July 1. It came through DOE's Nuclear Energy Launch Pad, not the original 11.\n- Aalo-X at INL, July 4. DOE counted it as the fourth.\nAll four were zero-power criticality demonstrations with no heat removal or power conversion. This undercuts the thesis's \"why now\":\n- Developers reached the milestone without third-party heat-transport test loops.\n- ANS's July 2026 status review describes no test-loop or national-lab queue bottleneck.\nThe claim that national-lab test queues are the bottleneck remains unsupported.\n\nFAILED:\n(a) The claim \"Alpha Tech Research and Curtiss-Wright already run some of these loops\" is wrong about Alpha Tech. AlphaTech Research Corp (Matt Memmott, American Fork, Utah) is a molten-salt reactor developer that also produces purified salt under a BYU licence. I found no evidence that it sells test-loop campaigns.\n(b) The thesis leaves out the players who actually hold rung one:\n- Copenhagen Atomics sells commercial pumped-loop and static molten-salt testing (fluoride, chloride, nitrate, up to 600C) in Copenhagen or at the customer's site. It also sells custom loops to nuclear companies, labs and universities, with a listed offer price around $100k. That undercuts the thesis's $0.3-2M per campaign.\n- Kinectrics, which BWXT finished acquiring in May 2025, built a non-nuclear Helium Test Facility in Oak Ridge to qualify Xe-100 components. X-energy, the main helium customer, is therefore captive to BWXT.\n(c) The major named customers already test in-house:\n- Kairos has run its Salt Lab in Alameda since 2020, plus Engineering Test Units 1-3 (more than 2,000 hours of pumped FLiBe).\n- Aalo runs its own skid-mounted sodium test loop in Austin and at INL.\n- TerraPower has a sodium test-and-fill facility in Wyoming and a University of Wisconsin integral test loop.\n- The national labs run INL METL (sodium, operating since 2018), ORNL's Liquid Salt Test Loop and INL's helium component test facility.\nThe thesis says the customer base is \"~15 customers, some test in-house\". The truth is closer to \"most well-funded customers test in-house or with a captive partner, and the rest get subsidised lab time or cheap Copenhagen Atomics campaigns.\"\n\nRevised scores:\n- L5 (open rung) drops to 1.\n- L2 drops to 2: the buyer base is thin and campaign prices are lower.\n- L3 drops to 2: each developer's coolant chemistry and alloys are proprietary, so cross-customer data pooling is weak, and regulators are conservative about ML extrapolation.\n- L4 stays at 2: the ASME III component end state needs N-stamp certification, competes with Curtiss-Wright, Flowserve and BWXT, and depends on reactors being deployed.\n- L6 at 2: customer concentration and subsidised competition.\n- L1 at 3: loops are buildable at seed scale, but sodium and beryllium FLiBe handling adds permitting and safety cost.\nTotal 12/30, against the thesis's self-score of 18.",
+    "killer": "Rung one is already held. Copenhagen Atomics sells commercial molten-salt loop campaigns at about $100k-scale prices. BWXT's Kinectrics owns the helium test facility for X-energy. Kairos, Aalo and TerraPower run their own salt and sodium loops, and the national labs offer GAIN-subsidised time. The \"lab queue bottleneck\" is unsupported: four pilot reactors reached zero-power criticality by July 4, 2026 without third-party loops. That leaves a handful of price-sensitive customers whose proprietary data does not pool into a shared model.",
+    "sources": [
+     "https://www.energy.gov/articles/department-energy-celebrates-fourth-criticality-ahead-july-4th-goal",
+     "https://ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program",
+     "https://www.energy.gov/ne/us-department-energy-reactor-pilot-program",
+     "https://neutronbytes.com/2025/08/17/doe-selects-11-firms-for-advanced-reactor-pilot-program/",
+     "https://www.americanactionforum.org/insight/trumps-nuclear-executive-orders-overview-and-analysis/",
+     "https://www.balch.com/insights/publications/2025/05/executive-orders-unlocking-nuclear-energy",
+     "https://copenhagenatomics.com/products/testing-services/",
+     "https://www.kinectrics.com/media-center/news-releases/2023-kinectrics-announces-purchase-of-site-in-oak-ridge-tennessee-to-build-helium-test-facility",
+     "https://secure.businesswire.com/news/home/20250521859912/en/BWXT-Closes-Acquisition-of-Kinectrics",
+     "https://www.kairospower.com/updates/the-engineering-test-unit-program-learning-how-to-build-kairos-power-reactors",
+     "https://www.neimagazine.com/news/aalo-unveils-critical-test-reactor/",
+     "https://nric.inl.gov/content/uploads/34/2025/08/Experimental-Infrastructure-Overview.pdf",
+     "https://www.ornl.gov/project/liquid-salt-test-loop",
+     "https://www.techbuzznews.com/molten-salt-alphatech-research-corp/",
+     "https://sltrib.com/renewable-energy/2022/07/28/can-science-keep-utahs-coal",
+     "https://www.ans.org/news/step-1775671272/"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 2,
+     "l2": 2,
+     "l3": 2,
+     "l4": 2,
+     "l5": 1,
+     "l6": 1
+    },
+    "evidence": "Loopworks fails the rung-one and competition test on three counts: the price, who already holds the rung, and the competitor list in the draft.\n\n1) The rung is already held, and the draft names the wrong competitors.\n- Alpha Tech Research is a reactor developer, not a test-loop vendor. Its GAIN voucher paid Argonne to test Alpha Tech's own moderator in salt (gain.inl.gov/alphatechresearchcorp_abstract_23-3).\n- The real direct competitor is Copenhagen Atomics, a venture-funded molten-salt reactor company. It already sells pumped fluoride and chloride loops (up to 600C) to MIT, Berkeley and national labs. It also sells \"Molten Salt Testing Services\": corrosion, materials-compatibility and component-validation campaigns in its Copenhagen facility, with live redox and flow data online, plus private rooms for customer equipment. It has logged two years of continuous pump and loop operation.\n- Helium: X-energy partnered with Kinectrics to build and operate a commercial-scale Helium Test Facility for Xe-100 components. Kinectrics was bought by BWXT in 2025 (my knowledge, not checked in this run). The site and current status were not found.\n\n2) The capitalised buyers mostly test in-house, not just Kairos.\n- Kairos runs its Alameda Salt Lab, ETU 1 (more than 2,000 hours of Flibe at 3,000 gpm) and now ETU 2 and ETU 3, and makes its own salt.\n- TerraPower has its Integrated Effects Test multi-loop facility in Everett and a Sodium Test and Fill Facility at Kemmerer.\n- Aalo built its own sodium loop and is building Aalo-0, a non-nuclear integral test unit. Antares built electrically heated heat-pipe test units.\n- Four Pilot Program reactors (Antares, Valar, Deployable Energy, Aalo) reached criticality by July 4, 2026, using in-house non-nuclear testing, so the \"lab queue bottleneck\" did not block them. The draft's executive-order and pilot-program claims check out, but they do not create demand for a third-party loop vendor.\n\n3) Price and subsidy undercut the draft's campaign pricing (est. $0.3-2M per campaign).\n- Copenhagen Atomics' testing page shows a $100k offer price in its structured data, though the page does not say what it covers.\n- Thorizon says corrosion loops cost \u20ac50-100k each.\n- DOE money funds the labs: Sandia got $2.5M to restart a shared molten-salt test loop with streamlined company agreements; INL opened a new molten-salt loop in 2025; Argonne's METL sodium loop is being expanded; INL's DOME test bed opened in April 2026. GAIN vouchers pay for lab work with only a 20% in-kind cost share (Hayward Tyler is testing sodium bearings at METL under one).\n\nRevised scores, 10/30:\n- L1 = 2: two founders can build salt corrosion loops on seed money. High-pressure helium at 750C or more, sodium-fire safety, and beryllium handling for Flibe are much harder.\n- L2 = 2: the revenue unit is small, and subsidised substitutes exist.\n- L3 = 2: customers' degradation data is proprietary and won't pool. ASME III Div 5 material qualification needs long creep tests that ML cannot shortcut. N-stamp and NQA-1 certification is a slow, separate wall.\n- L4 = 2: the end state depends on the reactors actually getting built, and the developers vertically integrate their own components.\n- L5 = 1: Copenhagen Atomics, Kinectrics/BWXT, the national labs and in-house programs already hold the rung.\n- L6 = 1: about 15 customers, each building in-house, against free DOE lab capacity.",
+    "killer": "The rung is already commoditised and subsidised. Copenhagen Atomics already sells molten-salt loops and testing campaigns (the only price signal is $100k). Kinectrics/BWXT runs X-energy's helium test facility. DOE-funded labs (INL's salt loop, Argonne's METL sodium loop, the restarted Sandia loop, the DOME test bed) take GAIN vouchers that cover all but a 20% in-kind cost share. The best-funded buyers (Kairos, TerraPower, Aalo, Antares) built their own loops and reached their milestones without third-party test vendors. That leaves no room for a $0.3-2M campaign business with only about 15 customers, and their proprietary data blocks the ML flywheel.",
+    "sources": [
+     "https://gain.inl.gov/alphatechresearchcorp_abstract_23-3",
+     "https://copenhagenatomics.com/product/testing-services/",
+     "https://copenhagenatomics.com/products/molten-salt-loop",
+     "https://world-nuclear-news.org/articles/copenhagen-atomics-reaches-pump-testing-milestone",
+     "https://kinectrics.com/media-center/news-releases/partnership-with-x-energy-for-helium-test-facility",
+     "https://world-nuclear-news.org/articles/partnership-unveils-plan-for-helium-test-facility",
+     "https://www.kairospower.com/iterative-development",
+     "https://kairospower.com/?p=960",
+     "https://www.energy.gov/node/4842331",
+     "https://www.power-eng.com/nuclear/terrapower-southern-co-build-facility-to-test-next-gen-reactor-technology/",
+     "https://en.wikipedia.org/wiki/Kemmerer_Power_Station",
+     "https://www.aalo.com/post/aalos-2026-plan-criticality-and-beyond",
+     "https://www.energy.gov/articles/department-energy-celebrates-fourth-criticality-ahead-july-4th-goal",
+     "https://ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program",
+     "https://www.sandia.gov/labnews/2025/05/29/molten-salt-facility-awarded-2-5m-to-restart-testing/",
+     "https://www.neimagazine.com/?p=95795",
+     "https://www.energy.gov/node/4850048",
+     "https://neutronbytes.com/2026/04/11/idaho-lab-opens-its-dome-nuclear-test-bed/",
+     "https://gain.inl.gov/tag/hayward-tyler",
+     "https://www.ans.org/news/tag-nano%20nuclear%20energy"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 2,
+     "l2": 2,
+     "l3": 1,
+     "l4": 2,
+     "l5": 1,
+     "l6": 1
+    },
+    "evidence": "Refuted. The climb is blocked at three points: rung one is already held by subsidised or well-funded players, the data flywheel does not work, and rung three runs into incumbents that are already qualified.\n\n(1) Rung one is not open (L5).\n- National labs already run these loops and fund them through GAIN vouchers: INL debuted a molten salt test loop in 2025, and Argonne's METL/THETA sodium facility ran Oklo's campaign under a GAIN voucher. A FY2025 voucher has Hayward Tyler, a pump maker, testing sodium bearing wear in METL. Developers therefore get lab testing at little or no cost.\n- Helium testing is taken. Kinectrics is building a dedicated helium test facility in Oak Ridge for X-energy's Xe-100, covering the circulator, purification and reactivity control. BWXT bought Kinectrics for about US$525M, closing May 20, 2025.\n- The largest salt customer tests in-house. Kairos has had its own Salt Lab in Alameda since 2020, and its ETU 1.0 ran over 2,000 hours of pumped Flibe before ETU 2.0. Kairos built in-house salt production and component capability on the way.\n- Alpha Tech is itself a developer (the ARC microreactor) and tests at Argonne on a voucher, not as a vendor. So the draft's named competitor is wrong, and the real incumbents (labs, BWXT/Kinectrics, in-house rigs) are stronger.\n\n(2) Software does not compound at every rung (L3).\n- ASME III Div 5 qualification depends on time. Supporting 100,000 hours of service needs about 33,000 hours (about 3.75 years) of creep data. Getting Alloy 617 into the code took INL a 12-year campaign. Campaigns of $0.3-2M lasting weeks to months cannot produce labels that count for qualification. Code allowables are set from measured tertiary-creep, rupture and 1%-strain limits, not from ML extrapolation.\n- Paying developers normally own their campaign data, and each test is specific to one coolant and one design (Flibe, chloride salt, sodium and helium are different physics and different hardware). So the pooled data the flywheel needs does not form.\n- Rung two (selling materials ML models) is software sold to incumbents, which is the excluded pattern and the Margin-adjacent space.\n\n(3) Rung three is a wall (L4, L6).\n- The N-stamp and Appendix B/NQA-1 path took Fluor about 19 months of documentation in its case, and NEI (Aug 2026) reports that NQA-1 programs are expensive to maintain.\n- The bigger problem is that the slots are already filled. Curtiss-Wright has been X-energy's preferred supplier for the circulator, fuel handling and reactivity control since 2022. It estimates more than $100M of content per four-unit plant and moved to prototype manufacturing in May 2026. It also holds Natrium controls and simulation contracts.\n- The end state is small and split up. One market report puts global nuclear pumps and valves at about $4.8B in 2025, including the whole light-water reactor (LWR) fleet. Advanced-reactor component demand is a fraction of that and spread across 3-4 coolant families. The draft's own $10B+ needs fleet deployment it does not control.\n\n(4) The \"why now\" is half true and works against the thesis.\n- The pilot program did hit its target: Antares, Valar, Deployable and Aalo-X reached zero-power criticality by July 4, 2026, all at INL.\n- That shows developers got through on lab and in-house infrastructure without private loops, and the pre-criticality testing rush is now passing.\n\n(5) The customer base is about 15 venture-funded developers, several of which test in-house. That is extreme concentration and exposure to the funding cycle.\n\nRevised total is about 9 out of 30, against the draft's 18.",
+    "killer": "Two things stop the climb. Rung one faces subsidised national-lab loops (GAIN vouchers at INL and Argonne's METL), BWXT/Kinectrics' dedicated helium facility for X-energy, and developers' own rigs (the Kairos Salt Lab and its engineering test units). Rung three's qualified-component slots are already held by Curtiss-Wright, which has more than $100M of content per Xe-100 plant and is in prototype manufacturing. Between the two, code qualification needs tens of thousands of hours of measured creep data that customers own, so short campaigns never build a data flywheel that compounds.",
+    "sources": [
+     "https://www.energy.gov/articles/department-energy-celebrates-fourth-criticality-ahead-july-4th-goal",
+     "https://ans.org/news/2026-07-02/article-8178/the-deadline-arrives-checking-in-on-the-reactor-pilot-program",
+     "https://gain.inl.gov/tag/advanced-moderator-module-validation",
+     "https://www.kinectrics.com/media-center/news-releases/partnership-with-x-energy-for-helium-test-facility",
+     "https://world-nuclear-news.org/articles/partnership-unveils-plan-for-helium-test-facility",
+     "https://www.bwxt.com/?p=2507",
+     "https://www.kairospower.com/iterative-development",
+     "https://world-nuclear-news.org/articles/molten-salt-test-system-reaches-operational-milest",
+     "https://ans.org/news/article-5888/gain-awards-include-plan-to-integrate-fast-reactor-test-vehicle-in-oklos-aurora",
+     "https://gain.inl.gov/tag/hayward-tyler",
+     "https://hdiac.dtic.mil/articles/idaho-national-laboratory-unveils-first-of-a-kind-molten-salt-test-loop",
+     "https://inl.gov/nuclear-energy/a-new-material-expands-nuclear-operating-temperature",
+     "https://federallabs.org/communications/federal-lab-news/inl-led-team-completes-12-year-quest-to-add-alloy-to-asme-toolkit",
+     "https://www.businesswire.com/news/home/20220915005467/en",
+     "https://www.bicmagazine.com/resources/products-services/curtiss-wright-advances-prototype-manufacturing-for-x-energy-xe-100-reactor-components/",
+     "https://world-nuclear-news.org/articles/curtiss-wright-wins-natrium-contracts",
+     "https://www.power-eng.com/nuclear/stamp-of-approval/",
+     "https://www.nrc.gov/docs/ML2621/ML26219A186.pdf",
+     "https://www.dri.co.jp/auto/report/lpi/260105-global-nuclear-pumps-and-valves-market.html"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Overwatch (BVLOS drone network over the grid climbing to grid maintenance)",
+  "verifiers": [
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 3,
+     "l2": 2,
+     "l3": 3,
+     "l4": 3,
+     "l5": 2,
+     "l6": 2
+    },
+    "evidence": "I checked each dated fact in the Overwatch thesis as of 2026-10-19.\n\nCONFIRMED:\n(1) Executive Order 14307, \"Unleashing American Drone Dominance\", was signed on June 6, 2025 and published in the Federal Register on June 11, 2025. It directed the FAA to finalise BVLOS rules within 240 days.\n(2) The Part 108 proposed rule (NPRM) was published on Aug 7, 2025. Comments closed on Oct 6, 2025, with about 3,100 received.\n(3) The Moore County substation attack took place on Dec 3, 2022, and the E-ISAC reported a rise in physical attacks in 2022. One E-ISAC-based figure is +71% on 2021; another counts about 1,700 incidents, +10.5%. The two figures use different definitions.\n(4) The end-state size is roughly right. US utility vegetation management alone is about $8B a year (Harris Williams) or $8.7-9.4B (Straits Research, 2025-26), so \"$10B+ including inspection\" holds.\n\nFAILED OR MATERIALLY WRONG:\n(a) The why-now rests on Part 108 \"making routine flights without an observer on site legal\". As of Oct 2026 the rule is NOT final. The FAA sent the final rule (RIN 2120-AL82) to the White House regulatory review office (OIRA) on July 10, 2026. Trackers listed it as still \"Pending Review\" on Oct 7, 2026, past the 90-day mark. It missed the executive order's deadline (about Feb-Apr 2026). The FAA reopened comments in Jan 2026 on ADS-B, electronic conspicuity and detect-and-avoid. Right-of-way is still contested: AOPA, EAA and NATA oppose it. The FAA's own target is publication by end-2026, and compliance dates will be staggered after that. So when the YC application is due in Nov 2026, rung one has to run on per-operator Part 107 waivers or 44807 exemptions, not on a rule.\n(b) \"Drone supply is constrained by the NDAA rules\" understates the problem. On Dec 22, 2025 the FCC added ALL new foreign-made drones and their critical components to its Covered List, which blocks approval of new models (DJI, Autel and others). In Jan 2026 it exempted Blue UAS and domestic end products. In July 2026 (single source: DroneXL) it extended those exemptions to Jan 1, 2028. It also proposed banning import and sale of foreign-made DOCKING STATIONS, thermal and LiDAR drones, and drones over 25 kg. The cheap DJI Dock 3 path (about $15.9k) is effectively closed for new models. That pushes Overwatch onto Skydio, which is both its main supplier and its main competitor.\n(c) \"Copper theft at solar farms is rising\": I found no primary source for this. E-ISAC says copper theft is the most common incident at substations, but I found no solar-specific trend data.\n(d) $2-6k per dock per month: I found no public benchmark. Hardware runs from about $10k (Sunflower Labs) to $250k+ (enterprise Percepto), with site works, backhaul and maintenance extra. This figure is unverified, not wrong.\n\nRUNG-ONE OPENNESS (L5): The rung is less open than the thesis claims.\n- Skydio passed 1,070 dock installations and 4M+ flights on July 7, 2026. It sells a waiver-package service that lets dock customers fly remotely without full-time visual observers, and it markets substation alarm-response integrations directly to utilities.\n- ComEd already holds FAA waivers to run Skydio Dock BVLOS inspections with its own staff. BNSF has a national dock BVLOS approval.\n- Percepto, Asylon, and Flock (through Aerodome) cover security and drone-as-first-responder work.\n- Utilities are buying docks and running them in-house. That squeezes an owner-operator subscription rung between the vendor and a customer that does it itself.\n\nRevised scores, total 15/30 against a self-score of 20:\n- L1 = 3: a waiver path exists, but co-op procurement is slow.\n- L2 = 2: a small subscription book is a thin, hard-to-sell asset.\n- L3 = 3: flight and outage labels do compound, but the crew rungs are execution-heavy.\n- L4 = 3\n- L5 = 2\n- L6 = 2: the regulation is unfinished, the only viable supplier is also a competitor, and co-op procurement cycles are long.",
+    "killer": "The why-now is false as of Oct 2026, and that is what kills it. Part 108 is not final: it has sat at OIRA since July 10, 2026, it missed the executive order's deadline, and compliance would be staggered after publication. Meanwhile the FCC's Covered List actions (Dec 2025, with a July 2026 proposal that covers docking stations) leave US-made Skydio as the only practical dock supplier. Skydio already sells utilities docks, waiver packages and alarm-response integrations directly, and utilities like ComEd fly those docks BVLOS with their own staff. An owner-operator subscription rung is squeezed between a supplier that competes with it and customers that do the work themselves, and it gets no regulatory tailwind to open it.",
+    "sources": [
+     "https://www.govinfo.gov/content/pkg/FR-2025-06-11/html/2025-10814.htm",
+     "https://www.thedronegirl.com/2025/06/06/executive-order-bvlos/",
+     "https://www.dlapiper.com/en/insights/publications/2025/08/faa-proposes-comprehensive-bvlos-uas-regulatory-framework",
+     "https://www.droneranker.com/faa-part-108-bvlos-rule-status/",
+     "https://droneintelligence.ai/insights/part-108-oira-operators-build-ahead",
+     "https://www.theflightbrief.com/articles/faa-part-108-bvlos-update-september-2026",
+     "https://pickdrones.com/faa-part-108-bvlos-rule-delayed-oira-2026/",
+     "https://www.flyusi.org/guides/get-108-ready",
+     "https://techcrunch.com/2025/12/23/trump-administrations-ban-on-foreign-made-drones-starts-this-week-you-can-say-goodbye-to-new-dji-models/",
+     "https://insideunmannedsystems.com/fcc-moves-to-block-new-foreign-made-drone-approvals/",
+     "https://www.morganlewis.com/pubs/2026/01/fcc-exempts-certain-drones-and-components-from-covered-list-to-address-national-security-risks",
+     "https://dronexl.co/2026/07/22/fcc-sales-ban-foreign-drones/",
+     "https://pickdrones.com/skydio-dock-1070-deployments-milestone/",
+     "https://dronedj.com/guides/skydio-dock/",
+     "https://skydio.com/blog/utility-substation-monitoring-drone-dock",
+     "https://www.thedroneu.com/blog/drone-in-the-box-systems/",
+     "https://middlemarketgrowth.org/next-target-utility-vegetation-management-buzz/",
+     "https://straitsresearch.com/report/utility-vegetation-management-market",
+     "https://www.wecc.org/sites/default/files/documents/meeting/2024/3.%20CIP-014%20Adjacency.pdf",
+     "https://www.securityinfowatch.com/critical-infrastructure/article/53067505/utilities-adapt-to-changing-threat-landscape",
+     "https://www.fftsecurity.com/copper-theft-and-critical-infrastructure-how-to-stop-it/"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 2,
+     "l2": 2,
+     "l3": 3,
+     "l4": 3,
+     "l5": 1,
+     "l6": 2
+    },
+    "evidence": "The draft gets two key claims wrong or overstates them: that rung one is open, and that Part 108 is the reason to start now.\n\n1) Part 108 is not final. The final rule went to White House review (OIRA) on July 10, 2026 and was still pending in September 2026. It missed the deadline set by the executive order. The FAA reopened comments in January 2026 on ADS-B, electronic conspicuity and detect-and-avoid. Pilot and aviation groups (AOPA, EAA, NATA and others) are contesting the right-of-way provision. Publication is expected late 2026 or in 2027, with compliance dates phased in after that. Docked BVLOS flights over the grid are also already legal under waivers: ComEd, Southern Company, NYPA, AEP and AEP Texas all fly docked or remote BVLOS today, and Skydio's regulatory team helped Southern Company get its waiver. So Part 108 does not open a new window. It mainly lowers costs for incumbents who already fly under waivers.\n\n2) Rung one is already held. The draft says these firms 'could move down into operations', but they already sell autonomous docked drone networks to utilities and IPPs:\n- Percepto: about $122-139M raised (Series C of $50M in 2023, plus a late-2025 round). It is supplying FPL with drone-in-a-box units for substations: 13 at first, with a goal of hundreds over about five years.\n- Skydio: 1,070 docks installed by July 2026 and over 4M flights logged. Its Dock for X10 is marketed to utilities for outage response and site security.\n- Asylon: $24M Series B in July 2025, led by Insight Partners. It sells autonomous drones and robot patrols for critical-infrastructure security, which is the intrusion-patrol part of rung one.\n- Censys with STRIXDRONES: a dock-plus-service package, with first deployments in early 2026. AEP Texas is already flying it.\n- AEP Texas: runs its own BVLOS operation from Skydio X10 docks.\n- About 300 electric co-ops already run drone programs in-house (NRECA).\n\n3) The condition-record rung (rung two) is held too:\n- Noteworthy AI: has filed a Form D for $15M, partly converted notes. It puts cameras on utility trucks to inspect poles, and American Municipal Power offers it to member municipal utilities as a group subscription. That covers the 'condition record for every pole' more cheaply than docks do.\n- Overstory: $43M Series B. It already works with more than 50 IOUs, co-ops and municipal utilities on vegetation and wildfire risk.\n- AiDash: $50M Series C (2024), $83M raised in total, more than 150 customers.\n- Buzz Solutions and Zeitview (the former DroneBase, $55M) sell AI-labelled grid inspection.\n- Asplundh is owned by CVC and keeps buying vegetation and line firms (Fitzwater in Oct 2025, Bobcat Power in Mar 2025, Voltyx in May 2024). That makes the crew rung a PE consolidation game, which is the same failure mode as the earlier 25 candidates.\n\n4) Hardware supply is worse than 'NDAA constrained'. On Dec 23, 2025 the FCC added DJI and Autel to its Covered List, so new models from them cannot get FCC authorisation. A proposed retroactive rule (comments closed Sept 2, 2026) would also cover DJI Dock 2 and the Matrice 400. In practice the company would have to buy docks from Skydio or Percepto, which are its most direct competitors.\n\n5) Buyer and rung-one economics. Co-ops have capital but are small and slow to buy. 20-40 docks at $2-6k per month is $0.5-2.9M a year from one co-op, which is roughly that co-op's whole inspection and patrol budget, and much of it is already met by in-house Part 107 pilots and truck-camera products. Docks plus waivers plus field techs would use up most of a $3M seed before a 12-18 month procurement cycle closes. A one-customer subscription book is a weak exit asset. I found no funded startup that sells only to co-ops; that is the only part of rung one that is open, and it is open because it is the lowest-budget segment.\n\n6) The end state is weak. A municipal distribution concession is not a credible top rung. US vegetation management plus T&D inspection may be around $10B, but Asplundh, Davey, Wright Tree and the PE roll-ups hold the labour.\n\nRevised total: 13/30 (self-score was 20).",
+    "killer": "Rung one is not open. Percepto (about $130M raised, FPL substation dock rollout), Skydio (1,070 docks, its own utility waiver team), Asylon ($24M Series B, critical-infrastructure security patrols) and Censys/Strix (AEP Texas) already run docked BVLOS networks for utilities. Big utilities already fly BVLOS under waivers, so the unfinished Part 108 rule gives no head start. Since the FCC's DJI ban, the company would have to buy its docks from those same competitors. Above that, Noteworthy AI, Overstory and AiDash already hold the pole and vegetation condition data, and CVC-owned Asplundh holds the crews. What is left is the co-op segment, which has the smallest budgets and the slowest buying, and a $3M seed cannot outlast a 12-18 month co-op procurement on hardware it rents from its rivals.",
+    "sources": [
+     "https://pickdrones.com/faa-part-108-bvlos-rule-delayed-oira-2026/",
+     "https://lowaltitudeeconomy.aero/en/aam-events/faa-part-108-oira-review",
+     "https://airdata.com/blog/2026/part-108",
+     "https://www.dlapiper.com/en/insights/publications/2025/08/faa-proposes-comprehensive-bvlos-uas-regulatory-framework",
+     "https://www.unmannedairspace.info/latest-news-and-information/percepto-to-launch-hundreds-of-autonomous-drone-in-a-box-fpl-inspection-units/",
+     "https://startupim.com/company/percepto",
+     "https://www.cbinsights.com/company/percepto/financials",
+     "https://pickdrones.com/pt/skydio-1070-drones-dock-autonomo/",
+     "https://live.skydio.com/home/events/skydio-experience-day-or-medford-or-kpbgkgy5v0",
+     "https://www.businesswire.com/news/home/20250722577774/en/Asylon-Robotics-Raises-%2424-Million-Series-B-Funding-Led-by-Insight-Partners-to-Accelerate-the-Future-of-Automated-Security",
+     "https://utilitydive.com/press-release/20251008-censys-and-strixdrones-forge-partnership-to-redefine-power-grid-inspections",
+     "https://www.renewableenergyworld.com/power-grid/proof-of-concept-case-study-corridor-scale-bvlos-utility-inspection-using-lidar-and-rgb-intelligence/",
+     "https://insideunmannedsystems.com/southern-company-system-granted-faa-waiver-for-autonomous-bvlos-operations",
+     "https://www.tdworld.com/electric-utility-operations/article/21260242/nypa-receives-faa-waiver-allowing-automated-drone-operations",
+     "https://dronedj.com/2023/03/03/utility-drone-inspection-skydio-dock/",
+     "https://www.cooperative.com/remagazine/articles/Pages/co-ops-laying-groundwork-for-everyday-drone-utility-use.aspx",
+     "https://runtimewire.com/article/christopher-ricciuti-noteworthy-ai-15-million-grid-inspection",
+     "https://www.publicpower.org/node/31474",
+     "https://www.esgtoday.com/overstory-raises-43-million-to-help-utilities-avoid-wildfires-with-ai/",
+     "https://pulse2.com/aidash-50-million-funding/amp/",
+     "https://www.vcaonline.com/news/2024032006/buzz-solutions-raises-5m-to-accelerate-adoption-of-its-ai-powered-platform-for-visual-grid-infrastructure-inspections-and-monitoring/",
+     "https://www.cbinsights.com/company/asplundh-tree-expert/financials",
+     "https://preqin.com/data/profile/asset/asplundh-tree-expert--llc/319934",
+     "https://petapixel.com/2026/08/07/the-fcc-is-weighing-a-retroactive-ban-on-dji-drones-it-previously-allowed/",
+     "https://www.captureintegration.com/u-s-government-restricts-sales-of-new-dji-drones/",
+     "https://transmission.epri.com/p37_substations/public/robotics/drone_dock/overview/"
+    ]
+   },
+   {
+    "refuted": true,
+    "revised": {
+     "l1": 3,
+     "l2": 2,
+     "l3": 2,
+     "l4": 2,
+     "l5": 1,
+     "l6": 1
+    },
+    "evidence": "Overwatch fails on four separate points, and each one alone would stop the climb. Revised total: 11/30 (draft self-score was 20).\n\n1) Rung one is already occupied (L5=1).\n- Voltair, in the same YC W26 batch as Terranox, runs the exact model: fixed-wing drones charging on pole-mounted pads, inspection-as-a-service paid per pole, with Voltair owning and operating the fleet.\n- Utilities also buy docks and run them in-house: AEP, Southern Company and ComEd fly Skydio Dock under FAA waivers that allow flights beyond the pilot's line of sight (BVLOS).\n- Percepto holds the FPL substation deployment and a nationwide waiver for 30 drones per operator. Zeitview (formerly DroneBase, $174M raised) and Volatus also sell inspection services to utilities.\n\n2) Rung one is not worth enough to sell on its own (L2=2).\n- A real benchmark: Volatus won a multiyear contract covering about 100,000 miles of T&D line for about $15M through Aug 2028. That is roughly $50 per line-mile per year.\n- The thesis prices one co-op at 20-40 docks x $2-6k per month, which is $0.5-2.9M a year. That is far above what small co-ops spend on inspection.\n- An Oklahoma State extension study says local co-ops mostly inspect by driving the lines, and that fixed-wing or helicopter methods are \"typically not practical\" for them.\n- The often-quoted $200-300 per mile drone cost is Xcel's projection, and it assumes true BVLOS.\n\n3) The software does not compound up the ladder (L3=2).\n- Satellite vegetation risk is already sold at scale. Overstory raised a $43M Series B and serves more than 50 utilities, co-ops and municipalities. AiDash sells a vegetation product (IVMS) to utilities. So drone flights add no unique labels to the vegetation rung.\n- Rung 3, our own crews, is labour-bound tree trimming. Asplundh alone does about $5.7B a year. Better ML dispatch trims crew hours at the margin, so this rung is the private-equity-rolled-up services shop the draft itself says to avoid.\n- Rung 4, contracts where we bear wildfire and storm risk, is an uninsurable liability wall for a startup.\n- Rung 5, running municipal distribution systems under concession, has almost no US precedent.\n\n4) The end state is small (L4=2).\n- One paid-report summary sizes North American utility vegetation management at about $3.5B in 2025. Global estimates range from $4.5B to $27B depending on definition.\n- So the $10B+ US figure for vegetation management plus T&D inspection is at the generous end, and the climb is blocked anyway.\n\n5) What kills it (L6=1).\n- The FAA's BVLOS rule (Part 108) is still not final. It went to White House review (OIRA) on July 10, 2026, after missing its Jan and Feb 2026 statutory and executive-order deadlines. General aviation groups are contesting right-of-way, so BVLOS still needs case-by-case waivers.\n- In Dec 2025 the FCC added all foreign-produced drones and critical components, including batteries and battery management, to its Covered List. Hardware cost and supply get worse.\n\n6) Winnable with seed money? Partly (L1=3). Buying about 30 US-made docks is fundable. But slow utility procurement plus BVLOS still running on waivers makes a paid co-op network within 12-18 months doubtful.",
+    "killer": "Rung one is a crowded and cheap service. Voltair (YC W26, same batch) already owns and operates per-pole drone inspection, utilities run Skydio docks in-house, and the market pays about $50 per line-mile per year. The climb is also walled off: satellite vegetation analytics (Overstory, AiDash) already supply the labels the next rung needs, crews are labour-bound PE roll-up work, wildfire risk-bearing is uninsurable, and Part 108 is stuck at OIRA while the FCC Covered List chokes drone and battery supply.",
+    "sources": [
+     "https://pickdrones.com/faa-part-108-bvlos-rule-delayed-oira-2026/",
+     "https://airdata.com/blog/2026/part-108",
+     "https://www.startuphub.ai/ai-news/claudes-corner/2026/claudes-corner-voltair-yc-w2026.md",
+     "https://wwww.stockwatch.com/News/Item/Z-C!FLT-3731913/C/FLT",
+     "https://www.skydio.com/customer-stories/aep-secures-innovative-new-faa-waiver",
+     "https://southerncompany.mediaroom.com/2023-06-21-Southern-Company-System-Granted-FAA-Waiver-for-Autonomous-BVLOS-Operations",
+     "https://www.unmannedairspace.info/latest-news-and-information/percepto-to-launch-hundreds-of-autonomous-drone-in-a-box-fpl-inspection-units/",
+     "https://kurrant.com/kurrantly-news/overstory-secures-43-million-to-scale-ai-driven-vegetation-intelligence-and-utility-wildfire-prevention/",
+     "https://yespress.io/aidash",
+     "https://growthsharematrix.com/blogs/growth-strategy/asplundh",
+     "https://marketintelo.com/report/vegetation-management-for-utilities-market",
+     "https://www.commercialuavnews.com/fcc-covered-list-uas-drone-components-dji-autel",
+     "https://www.utilitydive.com/news/xcel-first-utility-to-get-faa-approval-to-run-inspection-drones-beyond-line/521686/",
+     "https://extension.okstate.edu:443/programs/agribusinessand-cooperative-management/site-files/docs/economic-potential-of-unmanned-aircraft-in-agricultural-and-rural-electric-cooperatives.pdf"
+    ]
+   }
+  ]
+ }
+]
