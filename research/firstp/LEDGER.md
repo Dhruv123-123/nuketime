@@ -39,3 +39,19 @@ Pass 2 = pairs of the top killers, plus the ML rule treated as a seventh law (R-
 - New proposed laws: L7 (throughput or prover ML is sold as a vendor tool, not ownable), L8 (capitalised end buyer buys or funds the proof directly; no middle rung)
 - New positive pattern: L3 INVERTS for orphaned assets (owners who moved on dump the hope: Summit ridinilazole $0.5M upfront; Galera $3.5M)
 Pass 3 = triples of the pass-2 killers (L6, R-ML, L1, L3, L2) plus a deep check of the 18/25 failed-drug rescue.
+
+## Pass 3: triples
+| Sweep | Relaxed | Best after check | Survivor? | Next killer(s) | Best idea |
+|---|---|---|---|---|---|
+| T-L1L6RML | L1+L6+R-ML | 11-13 | No (not Terranox-shaped) | C1 no discovery rung, C4 inputs at market; proposed L9: policy-shock premium has a half-life | Rent-the-factory transformers/switchgear (3rd after Ayr Energy, $25M raised, $500M+ orders) |
+| T-L3L6RML | L3+L6+R-ML | 16 -> ~14 | No (crowded, fundable) | L4 utility owns the proof (Texas DC pause 3 Aug 2026), L8, capital, L7 | Flex micro-sites 5-20 MW at co-op substations, owner equity; 10-40x on cash; Astro YC W25 precedent |
+| T-L1L3L6 | L1+L3+L6 | 16 (non-drug); drug ~20 | No outside drugs | L2, R-ML; proposed L10: insiders (creditors, JV partners, licensors) buy orphaned hardware 9/12; pooling needs a shared schema (drugs have one, hardware does not) | Grid site from bankrupt estates; orphan price inversion real (Iridium $25M vs $5B, Petra Nova half for $3.6M, GLE $20M) |
+| T-L2L3L6 | L2+L3+L6 | 14 energy; drug+ML diagnostic 18 cond. | No | Owner can never hold a bare flex allocation (contract not property); proposed L11: a regulator-accepted ML proof is a method open to all, so it cannot make an asset scarce; collateral/own generation is what is scarce | Flex land owner variant dead (13); recertified transformers 12 |
+| DEEP failed-drug rescue | (L3+L6 pair winner) | 18 -> 13 | No | R-ML CONFIRMED on trial data (Chekroud 2024 Science: YODA models at chance on other trials, pooling no help; ACCORD->VADT subgroups failed); prices are fair (EV ~0); Biossil/Pathos hold rung | Kill test $10-30k on YODA/Vivli as optional lottery ticket |
+
+## Pass 3 kill tally (4 triples + deep check)
+- R-ML: 4 of 5 (now with direct negative evidence)
+- C1/L1 proof is a trial, a plant restart or a utility allocation: 4 of 5
+- L4 utility/regulator owns the proof: 2 of 5
+- New proposed laws: L9 policy-shock premium has a half-life; L10 insiders buy orphaned hardware (9/12 estates); L11 an accepted ML proof is a method open to all, so it creates no scarcity
+Pass 4 = quads of the four surviving killers.
