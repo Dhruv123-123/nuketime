@@ -55,3 +55,12 @@ Pass 3 = triples of the pass-2 killers (L6, R-ML, L1, L3, L2) plus a deep check 
 - L4 utility/regulator owns the proof: 2 of 5
 - New proposed laws: L9 policy-shock premium has a half-life; L10 insiders buy orphaned hardware (9/12 estates); L11 an accepted ML proof is a method open to all, so it creates no scarcity
 Pass 4 = quads of the four surviving killers.
+
+## Pass 4: quads
+| Sweep | Relaxed | Best after check | Survivor? | Next killer(s) | Best idea |
+|---|---|---|---|---|---|
+| Q-L2L3L4L6 | L2+L3+L4+L6 | 15-16 | No on gold frame; first case where ML decides AND asset owned | C2 no step-up (yield not jump), L7, risk-premium not ML, regulator may cut speculators; proposed L12: where ML is the private decider the asset is a priced claim, so edge = yield | Congestion-rights book (FTRs, $4.27B/yr profit pool, DC Energy ~$553M) + owned flex/storage in pockets; kill test: 2019-26 FTR backtest $30-60k |
+| Q-L1L3L6RML | L1+L3+L6+R-ML | 14-15 | No; survivors are ordinary developers/manufacturers | L10, L4, L8, size; proposed L13: without ML, reading illegible data is a one-off expert job owners can hire, so L2 is only an edge together with R-ML | PSD netting from retired fossil units (Homer City), flex micro-sites, orphaned isotope plants (ASP) |
+
+## Stop rule reached
+The remaining killers (L10 insiders, size, L4 gatekeepers, L8 direct buyers, L7 rentable ML) are facts about markets, not rubric choices worth dropping. Further combinations only remove the rubric's identity.
