@@ -1,0 +1,51 @@
+## Airborne survey costs in northern Saskatchewan: what is structural and what could be removed (ops view)
+
+**How well this is sourced:** the search budget shared by all the workflow's agents (200 calls per turn) was already used up before this agent's first query. All three searches came back empty. Most direct fetches also failed (403/404/DNS), and three pages loaded: Wikipedia AS350, Geotech VTEM, SkyTEM. As a result, most numbers below come from my own industry knowledge and are marked **(estimate)**. A second pass is needed to check rate cards, TSB report numbers and Saskatchewan assessment rules against primary sources.
+
+### 1. What a "~US$100k survey" is actually made of (all estimates)
+| Component | Typical range (CAD) | Share of a ~C$135k / US$100k job |
+|---|---|---|
+| Mobilisation/demobilisation (aircraft + EM system + crew, ferry from Ontario or Alberta base) | C$15k–50k flat, or ferry hours at wet rate | 15–35% |
+| Line-km production, helicopter TDEM (VTEM, HeliTEM, Xcite-class) with mag | C$150–250/line-km | 55–70% |
+| Helicopter mag/radiometrics only | C$40–90/line-km | — |
+| Fixed-wing TDEM, large blocks | C$60–110/line-km | — |
+| Weather/standby days | C$2.5k–6k/day after a free allowance | 0–15% |
+| Processing, inversion, report | C$5k–15k | 5–10% |
+
+- **Survey size:** US$100k buys roughly **450–700 line-km (estimate)**. At 100–200 m line spacing that is about 60–120 km² of a claim block. Even at 600 line-km, the fixed overhead (mob/demob, crew days, standby) is a large share of the bill, and it stays fixed as the job gets smaller.
+- **Production rate:** an AS350 B3 has about **4 h 06 min endurance and 245 km/h cruise** ([Wikipedia](https://en.wikipedia.org/wiki/Eurocopter_AS350_%C3%89cureuil)). EM is flown much slower, around 80–100 km/h (estimate), so a good day yields about 250–400 line-km over 2–3 sorties (estimate). The airborne part of a 600 line-km job is only **2–3 flying days**. The other 5–10 days on the invoice are mobilisation, ferry and weather. **For small surveys, the cost problem is mostly logistics, not geophysics.**
+- **Scale of the contractors:** Geotech runs 30+ VTEM systems and has flown more than 2M line-km with them ([Geotech](https://geotech.ca/services/electromagnetic/vtem-versatile-time-domain-electromagnetic-system/)). SkyTEM also claims more than 2M helicopter line-km, with single jobs of 6,100 and 18,970 line-km ([SkyTEM](https://skytem.com/)). These firms are built for big blocks, and small juniors pay full mobilisation for a few days of flying.
+
+### 2. Cost drivers: structural or removable?
+
+| Driver | Detail | Structural? | Removable by software, scheduling or pooling? |
+|---|---|---|---|
+| **Helicopter wet rate** | AS350 B2/B3 about C$1,800–2,600/hr; Bell 407 about C$2,000–2,900/hr; H125 (the renamed AS350 B3e) about C$2,000–2,700/hr. Usually a 3 h/day minimum (all estimates). Fuel burn about 170–180 L/hr (estimate). | Mostly structural: airframe, maintenance, fuel. | Partly. Pooling spreads the daily minimum over several clients. Drones replace the aircraft for mag and radiometrics. |
+| **Aircraft availability vs wildfire season** | Saskatchewan's wildfire agency and other provinces take AS350/407/H125 aircraft on exclusive contracts in May–Sept, which is also the exploration season. Survey operators often own or dry-lease dedicated aircraft and EM systems (estimate). | Structural in summer. | Scheduling helps: fly EM in shoulder or winter seasons. Helicopter TDEM can be flown over snow and frozen lakes. Winter flying adds short days, cold-soak delays and icing standby. |
+| **Pilot and crew** | Low-level survey flying (aircraft at about 70–90 m AGL, bird at about 30–40 m) is aerial work under CARs 702, under an operator certificate that allows flight below normal minimum altitudes. It needs specialist pilots, and Canada has a chronic pilot shortage. Duty limits are roughly 8 flight hours and 14 duty hours per day, plus cumulative limits (estimate, from memory of the CARs). Crew is typically 1–2 pilots, an AME (aircraft maintenance engineer) and a geophysical operator, at about C$1.5k–3k/day plus camp (estimate). | Structural for crewed aircraft. | Duty limits cap daily production per crew, so software cannot remove this. Only uncrewed (BVLOS) platforms get around it. |
+| **Towed-bird / sling-load safety** | VTEM-type loops are large (often >20 m diameter, several hundred kg) and towed on a long line (about 30–50 m, estimate). Hazards include low-level CFIT (flying into terrain), wire strikes, bird oscillation, and emergency jettison. The International Airborne Geophysics Safety Association (IAGSA) sets industry practice. The TSB has investigated survey accidents, but I did not retrieve specific report numbers. | Structural. It drives insurance cost, pilot scarcity and conservative weather minimums. | No. Drones remove the human from the risk, which is the main argument for uncrewed EM. |
+| **Weather and standby** | Low-level survey needs VFR, low wind and no icing. EM data is also noise-limited by sferics (lightning) and wind-driven bird motion. Contracts usually include a few free standby days, then about C$2.5k–6k/day (estimate). | Weather itself is structural. | **Largely removable as a cost to any one client.** A contractor holding several nearby clients flies whichever block has good weather, so standby becomes production. Weather-aware dispatch (forecast-driven block choice, sferic forecasts) is a pure software win. |
+| **Remote logistics and ferry flights** | The Athabasca Basin is roughly 600–800 km by air from Saskatoon. Ferry from an Ontario or Alberta base is 6–15 hours at the wet rate (estimate). Fuel is drummed or cached; delivered Jet-A in the far north costs about C$3–8/L (estimate). Crews stay in fly-in lodges at about C$300–600/person/day (estimate). Uranium mines rely on truck haulage and private airstrips: Cigar Lake ore is trucked about 70 km to the McClean Lake mill ([Cameco](https://www.cameco.com/businesses/uranium-operations/canada/cigar-lake)). | Distance is structural. | **Highly poolable.** One mobilisation can serve 5–10 claim holders in the same basin. Shared fuel caches and camp. Cost per client could fall about 60–80% on the fixed portion (estimate). |
+| **Seasonality** | Peak demand is May–Oct. Contractor fleets are fully booked in summer and idle in winter, and Canada competes with the Southern Hemisphere season (estimate). | Partly structural. | Scheduling and pricing software can shift flexible demand to off-peak periods. Contractors would likely discount off-peak work to keep fleets utilised. |
+| **Permitting** | Saskatchewan has no specific airborne survey permit (estimate). Requirements are the operator's Transport Canada certificate, NOTAMs (notices to airmen), notice to nearby communities, and duty-to-consult and wildlife sensitivities (caribou, low-level noise near reserves). Airborne geophysics counts as assessment work to keep mineral dispositions in good standing (estimate; verify current per-hectare requirements). | Low cost, but consultation adds lead time. | Software can bundle notifications and consultation outreach across pooled clients. The assessment-credit rules make survey spend partly forced, which keeps demand steady. |
+| **Insurance** | Hull and liability for low-level towed work is priced as high risk. The contractor carries it and passes it into rates, probably about 5–10% of the rate (estimate). | Structural for crewed aircraft. | Drones lower it. Pooling does not change it. |
+
+### 3. What could support a new company
+1. **Pooled campaigns and a shared-mobilisation marketplace (Athabasca first).** Group juniors and prospectors by geography and season, buy one mobilisation and fleet time in bulk, then route the aircraft between blocks by weather. On a 600 line-km job, about 30–45% of cost (mob, ferry, standby, camp) is fixed overhead that pooling divides among clients (estimate).
+   - Competition: contractors already "chain" nearby jobs informally, and multi-client surveys exist mainly on fixed-wing.
+   - Opening: no neutral aggregator that also owns the client relationship and handles assessment-filing software.
+   - Risk: contractors may refuse to be commoditised, so the business may need its own aircraft and system later.
+2. **Uncrewed platforms (BVLOS drones).** These remove the structural costs: pilot, duty limits, towed-load risk and insurance.
+   - **Ready now:** drone magnetics and radiometrics. Radiometrics matter a lot for uranium.
+   - **Not yet competitive:** drone TDEM depth at Athabasca unconformity depths of several hundred metres.
+   - **Regulation:** Transport Canada's lower-risk BVLOS rules were scheduled to take effect in November 2025 (from memory, verify). That makes routine uncrewed survey flights over sparsely populated northern Saskatchewan newly feasible.
+3. **Pure software (dispatch, weather and sferic forecasting, QC that flags re-flights in the field).** This is useful but probably a feature-sized market on its own. It cuts standby and re-flights by about 10–20% of a survey's cost (estimate). It works best inside option 1.
+
+**Bottom line:** wet rates, crew and duty limits, towed-load safety and insurance are structural for crewed helicopters, and only drones attack them. Mobilisation, ferry, standby, camp and seasonal pricing are coordination costs. Pooling plus weather-aware scheduling can remove a large share of those per client. For the ~US$100k small-block surveys juniors buy, the coordination share is the largest part of the bill.
+
+### Sources
+- [Wikipedia: Eurocopter AS350 Écureuil](https://en.wikipedia.org/wiki/Eurocopter_AS350_%C3%89cureuil) (AS350 B3 range 662 km, endurance 4 h 06 min, cruise 245 km/h, about 7,200 built)
+- [Geotech: VTEM](https://geotech.ca/services/electromagnetic/vtem-versatile-time-domain-electromagnetic-system/) (30+ systems, 2M+ line-km, AS350B3 in fleet)
+- [SkyTEM](https://skytem.com/) (2M+ helicopter line-km; 6,100 and 18,970 line-km survey sizes)
+- [Cameco: Cigar Lake](https://www.cameco.com/businesses/uranium-operations/canada/cigar-lake) (ore trucked about 70 km to the McClean Lake mill)
+- Fetches that failed: tsb-bst.gc.ca (403), saskatchewan.ca incentives page (404), expertgeophysics.com (no content returned).
