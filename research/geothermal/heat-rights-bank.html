@@ -1,0 +1,144 @@
+<title>Geothermal Heat Rights Bank</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a single reading column like a well-file summary sheet; a temperature-gradient strip marks the score; tables scroll in their own boxes. */
+:root{
+  --bg:#f6f4f1; --surface:#ffffff; --fg:#1f1a17; --muted:#6b5f57; --rule:#ddd3cb;
+  --heat:#b4441f; --heat-soft:#f3e0d6; --good:#2f6b46; --bad:#9a2d2d;
+  --display:"Fraunces",Georgia,serif; --body:"Source Sans 3","Segoe UI",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#171311; --surface:#211b18; --fg:#f0e8e2; --muted:#b3a59b; --rule:#3a302b;
+  --heat:#f08a5d; --heat-soft:#3b2419; --good:#7cc79a; --bad:#ef8a8a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171311; --surface:#211b18; --fg:#f0e8e2; --muted:#b3a59b; --rule:#3a302b;
+  --heat:#f08a5d; --heat-soft:#3b2419; --good:#7cc79a; --bad:#ef8a8a; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:17px/1.6 var(--body)}
+.wrap{max-width:46rem;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:36px}
+h1,h2{font-family:var(--display);font-weight:650;text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:2.3rem} h2{font-size:1.45rem;margin-bottom:10px}
+p{margin:0 0 12px} ul,ol{margin:0 0 12px;padding-left:1.2rem} li{margin-bottom:6px}
+.eyebrow{font:600 .75rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.15rem;color:var(--fg)}
+.score{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:18px}
+.score b{font:650 2.6rem/1 var(--display);color:var(--heat)}
+.score b small{font-size:1rem;color:var(--muted)}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}
+.strip div{font:.72rem/1.3 var(--mono);color:var(--muted)}
+.strip i{display:block;height:8px;border-radius:2px;background:var(--rule);margin-bottom:4px;overflow:hidden}
+.strip i span{display:block;height:100%;background:var(--heat)}
+.tbl{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:600 .72rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ok{color:var(--good);font-weight:600} .no{color:var(--bad);font-weight:600}
+.callout{background:var(--heat-soft);border-radius:6px;padding:16px 18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.two>div{min-width:0;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.two h3{font:600 .8rem/1.2 var(--mono);text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
+@media (max-width:620px){.two{grid-template-columns:1fr}.score{grid-template-columns:1fr}h1{font-size:1.9rem}}
+a{color:var(--heat)} a:focus-visible{outline:2px solid var(--heat);outline-offset:2px}
+footer{font-size:.85rem;color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header style="display:grid;gap:12px">
+  <div class="eyebrow">Terranox for geothermal · 21 Oct 2026 · 99 agents, 72 evidence files</div>
+  <h1>Geothermal Heat Rights Bank</h1>
+  <p class="lede">A Terranox-shaped geothermal company exists. It is a neutral owner of hot-ground rights that sells to every developer for a carry or a royalty. Zanskar can't be that company, because it builds its own plants and competes with the buyers.</p>
+</header>
+
+<section class="score" aria-label="Score">
+  <b>20<small>/25</small></b>
+  <div>
+    <div>Scored 21, then three skeptics each cut it (20, 18, 19). None killed it.</div>
+    <div class="strip">
+      <div><i><span style="width:100%"></span></i>Proving step 5</div>
+      <div><i><span style="width:80%"></span></i>Hidden data 4</div>
+      <div><i><span style="width:80%"></span></i>Cheap right 4</div>
+      <div><i><span style="width:60%"></span></i>Step-up buyer 3</div>
+      <div><i><span style="width:80%"></span></i>Size ladder 4</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>What the company does</h2>
+  <ol>
+    <li><strong>Reads records nobody has read.</strong> The Chevron/Phillips temperature-gradient hole archive has 786 released holes, 116 of them hot, across 28 prospects. Nevada geothermal well files roll off 5-year confidentiality (938 wells, 299 already public, the 2021-26 boom releasing through about 2031). Mining drill holes found about 250 MW of Nevada plants by accident, and no published work pulls their temperatures.</li>
+    <li><strong>Takes the right quietly, off-auction.</strong> Ranch heat (Raser leased 4,444 Nevada acres for $5k), state first-file leases at about $1/acre/yr, and leftover BLM parcels at $1/acre/yr (53,686 acres were open on 10 Sep 2026).</li>
+    <li><strong>Carries the best prospects to a confirmation well with other people's money.</strong> DOE cost-share and Crump-style farm-ins, where the developer pays the first $15M and the originator keeps at least 20%.</li>
+    <li><strong>Sells to everyone.</strong> Ormat must find up to 150 MW for Google by 2028-30. Fervo has a 3 GW Google framework. Invenergy, NV Energy's Clean Transition Tariff and California's 1 GW firm-power mandate are buyers too. The bank keeps a 20%+ carry or a $3-5/MWh royalty.</li>
+    <li><strong>Holds an EGS option on the same acres.</strong> Fervo-grade land went from about $4 to $344-1,207/acre at auction. That is the size ladder after about 2032.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Zanskar, and the gap</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Zanskar has</th><th>Zanskar lacks (the gap)</th></tr></thead>
+    <tbody>
+      <tr><td>18 BLM auction parcels, about 50,000 acres, all Nevada, about $764k in bids</td><td>No private, state, Texas or Canadian land found. Added only 872 acres in 2025.</td></tr>
+      <tr><td>Builds, owns and operates plants; $180M equity, 100 MW NV Energy PPA</td><td>Can't supply Ormat, Fervo or Invenergy. Needs about $1.1B against $180M. "Dozens" of anomalies it can't drill.</td></tr>
+      <tr><td>Old oil/gas and federal wells, geophysics, an open-source ML pipeline on public layers</td><td>No mention of the gradient-hole archive, confidentiality roll-off, mining holes or geochemistry.</td></tr>
+      <tr><td>3 of 3 blind discoveries claimed (self-reported); about 5 holes disclosed</td><td>Its own announcement repriced the next parcel from $2 to $232/acre. Auctions leak.</td></tr>
+      <tr><td>Hydrothermal at moderate temperatures</td><td>Avoids EGS, has no lithium, no hyperscaler PPA. CTO says interconnection is the bottleneck.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="callout">
+  <h2>Does geothermal break the repricing law?</h2>
+  <p>Partly. The law holds at the auction: nominated acreage rose from 26k (2020) to over 1M (2025), bids are published, and land reprices 116x once someone discloses a find. It breaks once a right is held. Issued BLM leases are never re-based to market (rent $1-3/acre, royalty 1.75% then 3.5%, transfers cost $115). Private heat has no public price at all, and Texas created a new, unpriced heat estate for surface owners in 2023. The real limit is the 51,200-acre-per-state federal cap, not price.</p>
+  <p style="margin:0">So the rule is: take rights quietly, hold them, and never disclose before the whole fairway is locked.</p>
+</section>
+
+<section>
+  <h2>Four-part test</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Leg</th><th>Result</th><th>Numbers</th></tr></thead>
+    <tbody>
+      <tr><td>Expensive, usually-failing proving step</td><td class="ok">Pass</td><td>About 50% of first wells in a new field succeed. Play-fairway work hit 2 of 2 blind systems for $1.5M of shallow holes.</td></tr>
+      <tr><td>Public but illegible data</td><td class="ok">Pass</td><td>Public ML maps all score F1 under 0.10; the limit is input data. The unread labels above are the edge.</td></tr>
+      <tr><td>Cheap right</td><td class="ok">Pass</td><td>$1/acre/yr leftover BLM; about $1-10/acre ranch heat. Leftover parcels are adversely selected, so only new-label targets count.</td></tr>
+      <tr><td>Buyer pays a step-up at once</td><td class="no">Weak</td><td>Land rises 25-116x at recognition. A confirmed resource without a PPA trades at only about $0.1M/MW. Operating plants fetch $4.3-5.6M/MW.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Is it big enough</h2>
+  <p>USGS puts undiscovered hydrothermal at 30 GW against 9 GW identified, and the hidden Great Basin resource at 23 GW (P50). 1 GW under a $5/MWh royalty is about $39M a year, roughly $0.6B in value. Hydrothermal alone supports a $0.3-1B company. The multi-billion case needs EGS acreage under royalty after about 2032, against comps like Texas Pacific Land ($23.75B) and Viper ($18B EV).</p>
+</section>
+
+<div class="two">
+  <div>
+    <h3>Cheapest first test · 90 days · $150-250k</h3>
+    <ul>
+      <li>Re-screen the 28 hot prospects and 299+ released Nevada wells against current lease status.</li>
+      <li>File on 10-20 open parcels; option about 30k ranch acres for under $100k.</li>
+      <li>Pitch one farm-in package to Ormat's Google sourcing team.</li>
+    </ul>
+    <p style="margin:0"><strong>Pass:</strong> 5+ hot targets on open ground, 15k+ acres locked, and an LOI at a 20%+ carry or $3-5/MWh within 6-9 months.</p>
+  </div>
+  <div>
+    <h3>What kills it</h3>
+    <ul>
+      <li>Buyers won't pay before a PPA, so the bank turns into a capital-heavy developer like Zanskar.</li>
+      <li>Buyers source their own land: Ormat holds 434k acres, Fervo 596k, and land is under 2% of capex.</li>
+      <li>Data rooms leak to many buyers; Enverus already owns 8M+ raster logs.</li>
+      <li>Raser held 250k+ acres, built one plant, and was wiped out in 2011.</li>
+    </ul>
+  </div>
+</div>
+
+<section>
+  <h2>Plays that were tried and refuted</h2>
+  <p>Texas Deep-Estate Bank and Oil-Patch EGS Land Bank both scored 21 but were refuted 3 of 3. Texas Pacific Land already owns the hot Delaware heat, lithium sits with the mineral estate and is leased up, and buyers chose Nevada over Texas. Alberta's first-come leases are cheap but too small. Superhot rock and closed loop are upside, not a beachhead. 30 plays were scored in all.</p>
+</section>
+
+<footer>Full memo, 24 deep literature reviews and all evidence files: research/geothermal/ in Dhruv123-123/nuketime, branch claude/project-thread-6k37ry.</footer>
+</div>
