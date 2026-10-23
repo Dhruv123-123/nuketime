@@ -1,0 +1,781 @@
+{
+ "date": "2026-10-23",
+ "selection_rule": "Pick by red-team revised total (median of 3 votes). Ties broken by median rights alpha, then buildability. Builds not red-teamed get a provisional total = first pass minus the mean red-team drop, and cannot outrank a red-teamed build unless their provisional total is higher.",
+ "mean_red_team_drop": 5.0,
+ "smallest_red_team_drop": 3.5,
+ "pick": {
+  "id": "P02",
+  "name": "Logging Heat-Flux Dart v1.1 (3 m, clustered, campaign mode)",
+  "revised_total": 15,
+  "tie_with": "P04 (15), broken on rights alpha 3 vs 2.5",
+  "refuted_votes": "1/3",
+  "robustness": "Even if every unvetted build lost only the smallest red-team drop (3.5), the best unvetted build would be 13.5 < 15."
+ },
+ "variant_notes": {
+  "P24a_cartridge_only_outside_lab": "About 16/25 per two red-team voters (single-voter estimates, not a 3-vote median). Adopted as the add-on to the ranch visit, not as the pick.",
+  "P12_lite_contractor_referral": "Fold into the drop-probe visit as a referral channel (20-30 min T/EC/P log, $150-250).",
+  "P07_mining_heat_desk": "$0-hardware data deals + driller hot-water bounty first; pre-plug log service second."
+ },
+ "builds": [
+  {
+   "id": "P02",
+   "name": "Logging Heat-Flux Dart (3 m)",
+   "first_pass": {
+    "model_alpha": 4,
+    "rights_alpha": 4,
+    "buildability": 4,
+    "cost_scale": 3.5,
+    "moat": 3
+   },
+   "first_pass_total": 18.5,
+   "red_team": {
+    "votes": [
+     {
+      "refuted": true,
+      "revised_total": 15,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 3,
+       "buildability": 3.5,
+       "cost_scale": 3.5,
+       "moat": 2
+      }
+     },
+     {
+      "refuted": false,
+      "revised_total": 14.5,
+      "subs": {
+       "model_alpha": 3.5,
+       "rights_alpha": 2.5,
+       "buildability": 3,
+       "cost_scale": 3,
+       "moat": 2.5
+      }
+     },
+     {
+      "refuted": false,
+      "revised_total": 15,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 3,
+       "buildability": 3,
+       "cost_scale": 4,
+       "moat": 2
+      }
+     }
+    ],
+    "refuted_votes": "1/3",
+    "median_subs": {
+     "model_alpha": 3,
+     "rights_alpha": 3,
+     "buildability": 3,
+     "cost_scale": 3.5,
+     "moat": 2
+    },
+    "revised_total_median": 15
+   },
+   "ranking_total": 15,
+   "ranking_basis": "red-team median",
+   "rank": 1
+  },
+  {
+   "id": "P04",
+   "name": "Wellhead Clamp fleet",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 5,
+    "buildability": 5,
+    "cost_scale": 5,
+    "moat": 2.5
+   },
+   "first_pass_total": 20.5,
+   "red_team": {
+    "votes": [
+     {
+      "refuted": true,
+      "revised_total": 15.5,
+      "subs": {
+       "model_alpha": 2,
+       "rights_alpha": 4,
+       "buildability": 4,
+       "cost_scale": 4,
+       "moat": 1.5
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 15,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 2.5,
+       "buildability": 4,
+       "cost_scale": 3.5,
+       "moat": 2
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 14.5,
+      "subs": {
+       "model_alpha": 2.5,
+       "rights_alpha": 2,
+       "buildability": 4.5,
+       "cost_scale": 4,
+       "moat": 1.5
+      }
+     }
+    ],
+    "refuted_votes": "3/3",
+    "median_subs": {
+     "model_alpha": 2.5,
+     "rights_alpha": 2.5,
+     "buildability": 4,
+     "cost_scale": 4,
+     "moat": 1.5
+    },
+    "revised_total_median": 15
+   },
+   "ranking_total": 15,
+   "ranking_basis": "red-team median",
+   "rank": 2
+  },
+  {
+   "id": "P26",
+   "name": "Water-Point Ledger (Cl-flux)",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 3.5,
+    "buildability": 5,
+    "cost_scale": 5,
+    "moat": 2.5
+   },
+   "first_pass_total": 19.5,
+   "red_team": {
+    "votes": [
+     {
+      "refuted": true,
+      "revised_total": 14.5,
+      "subs": {
+       "model_alpha": 2.5,
+       "rights_alpha": 2.5,
+       "buildability": 4.5,
+       "cost_scale": 3.5,
+       "moat": 1.5
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 13.5,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 2,
+       "buildability": 3,
+       "cost_scale": 4,
+       "moat": 1.5
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 15,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 2,
+       "buildability": 4,
+       "cost_scale": 4,
+       "moat": 2
+      }
+     }
+    ],
+    "refuted_votes": "3/3",
+    "median_subs": {
+     "model_alpha": 3,
+     "rights_alpha": 2,
+     "buildability": 4,
+     "cost_scale": 4,
+     "moat": 1.5
+    },
+    "revised_total_median": 14.5
+   },
+   "ranking_total": 14.5,
+   "ranking_basis": "red-team median",
+   "rank": 3
+  },
+  {
+   "id": "P12",
+   "name": "Pump-Puller Open-Hole Sonde",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 4.5,
+    "buildability": 4,
+    "cost_scale": 4,
+    "moat": 3.5
+   },
+   "first_pass_total": 19.5,
+   "red_team": {
+    "votes": [
+     {
+      "refuted": true,
+      "revised_total": 14,
+      "subs": {
+       "model_alpha": 2.5,
+       "rights_alpha": 3.5,
+       "buildability": 3.5,
+       "cost_scale": 2.5,
+       "moat": 2
+      }
+     },
+     {
+      "refuted": false,
+      "revised_total": 14,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 3,
+       "buildability": 3,
+       "cost_scale": 3,
+       "moat": 2
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 13.5,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 2.5,
+       "buildability": 4,
+       "cost_scale": 2,
+       "moat": 2
+      }
+     }
+    ],
+    "refuted_votes": "2/3",
+    "median_subs": {
+     "model_alpha": 3,
+     "rights_alpha": 3,
+     "buildability": 3.5,
+     "cost_scale": 2.5,
+     "moat": 2
+    },
+    "revised_total_median": 14
+   },
+   "ranking_total": 14,
+   "ranking_basis": "red-team median",
+   "rank": 4
+  },
+  {
+   "id": "P07",
+   "name": "Drill-Rig Ride-Along pucks + grout-in strings",
+   "first_pass": {
+    "model_alpha": 4,
+    "rights_alpha": 4,
+    "buildability": 3.5,
+    "cost_scale": 4,
+    "moat": 4
+   },
+   "first_pass_total": 19.5,
+   "red_team": {
+    "votes": [
+     {
+      "refuted": true,
+      "revised_total": 14.5,
+      "subs": {
+       "model_alpha": 2.5,
+       "rights_alpha": 4,
+       "buildability": 3,
+       "cost_scale": 2.5,
+       "moat": 2.5
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 13,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 3,
+       "buildability": 2.5,
+       "cost_scale": 2.5,
+       "moat": 2
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 14,
+      "subs": {
+       "model_alpha": 3.5,
+       "rights_alpha": 2,
+       "buildability": 3.5,
+       "cost_scale": 3,
+       "moat": 2
+      }
+     }
+    ],
+    "refuted_votes": "3/3",
+    "median_subs": {
+     "model_alpha": 3,
+     "rights_alpha": 3,
+     "buildability": 3,
+     "cost_scale": 2.5,
+     "moat": 2
+    },
+    "revised_total_median": 14
+   },
+   "ranking_total": 14,
+   "ranking_basis": "red-team median",
+   "rank": 5
+  },
+  {
+   "id": "P24",
+   "name": "Field Gas Lab (He/Ne cartridge + valley 3He/4He lab)",
+   "first_pass": {
+    "model_alpha": 4.5,
+    "rights_alpha": 4,
+    "buildability": 3,
+    "cost_scale": 3.5,
+    "moat": 4
+   },
+   "first_pass_total": 19,
+   "red_team": {
+    "votes": [
+     {
+      "refuted": true,
+      "revised_total": 15,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 3,
+       "buildability": 2,
+       "cost_scale": 3,
+       "moat": 4
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 14,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 2,
+       "buildability": 3,
+       "cost_scale": 3,
+       "moat": 3
+      }
+     },
+     {
+      "refuted": true,
+      "revised_total": 13,
+      "subs": {
+       "model_alpha": 3,
+       "rights_alpha": 2,
+       "buildability": 2,
+       "cost_scale": 3,
+       "moat": 3
+      }
+     }
+    ],
+    "refuted_votes": "3/3",
+    "median_subs": {
+     "model_alpha": 3,
+     "rights_alpha": 2,
+     "buildability": 2,
+     "cost_scale": 3,
+     "moat": 3
+    },
+    "revised_total_median": 14
+   },
+   "ranking_total": 14,
+   "ranking_basis": "red-team median",
+   "rank": 6
+  },
+  {
+   "id": "P01",
+   "name": "Ranch Well Sentinel 2.0 (resident)",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 4,
+    "buildability": 4,
+    "cost_scale": 3,
+    "moat": 3
+   },
+   "first_pass_total": 17,
+   "red_team": null,
+   "ranking_total": 12.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 7
+  },
+  {
+   "id": "P19",
+   "name": "Kite semi-airborne EM",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 4,
+    "buildability": 2.5,
+    "cost_scale": 4,
+    "moat": 3
+   },
+   "first_pass_total": 17,
+   "red_team": null,
+   "ranking_total": 12.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 8
+  },
+  {
+   "id": "P09",
+   "name": "Legacy Hole Rescue (CollarFinder + Needle Logger)",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 3,
+    "buildability": 4,
+    "cost_scale": 3,
+    "moat": 3.5
+   },
+   "first_pass_total": 17,
+   "red_team": null,
+   "ranking_total": 12.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 9
+  },
+  {
+   "id": "P29",
+   "name": "Archive Truth Lab",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 3,
+    "buildability": 4,
+    "cost_scale": 3.5,
+    "moat": 3
+   },
+   "first_pass_total": 17,
+   "red_team": null,
+   "ranking_total": 12.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 10
+  },
+  {
+   "id": "P20",
+   "name": "Plume Rover (towed tTEM)",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 3.5,
+    "buildability": 3.5,
+    "cost_scale": 4,
+    "moat": 2.5
+   },
+   "first_pass_total": 16.5,
+   "red_team": null,
+   "ranking_total": 11.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 11
+  },
+  {
+   "id": "P27",
+   "name": "Thermal Calibration Chain (LST posts, snow melt-out)",
+   "first_pass": {
+    "model_alpha": 2.5,
+    "rights_alpha": 3.5,
+    "buildability": 3.5,
+    "cost_scale": 4.5,
+    "moat": 2.5
+   },
+   "first_pass_total": 16.5,
+   "red_team": null,
+   "ranking_total": 11.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 12
+  },
+  {
+   "id": "P25",
+   "name": "Soil-Gas Integrator cups",
+   "first_pass": {
+    "model_alpha": 2.5,
+    "rights_alpha": 3,
+    "buildability": 5,
+    "cost_scale": 4,
+    "moat": 2
+   },
+   "first_pass_total": 16.5,
+   "red_team": null,
+   "ranking_total": 11.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 13
+  },
+  {
+   "id": "P06",
+   "name": "Valley Pressure-and-InSAR Array",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 3,
+    "buildability": 4,
+    "cost_scale": 3,
+    "moat": 3
+   },
+   "first_pass_total": 16,
+   "red_team": null,
+   "ranking_total": 11.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 14
+  },
+  {
+   "id": "P14",
+   "name": "DART-60 Thermal Push Rig",
+   "first_pass": {
+    "model_alpha": 4,
+    "rights_alpha": 2.5,
+    "buildability": 4,
+    "cost_scale": 2.5,
+    "moat": 3
+   },
+   "first_pass_total": 16,
+   "red_team": null,
+   "ranking_total": 11.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 15
+  },
+  {
+   "id": "P10",
+   "name": "Slickline Trailer + Deep Grab",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 3,
+    "buildability": 3.5,
+    "cost_scale": 2.5,
+    "moat": 3
+   },
+   "first_pass_total": 15.5,
+   "red_team": null,
+   "ranking_total": 10.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 16
+  },
+  {
+   "id": "P03",
+   "name": "E-MT Node 2.0 (drone-placed carpet)",
+   "first_pass": {
+    "model_alpha": 4,
+    "rights_alpha": 3,
+    "buildability": 2.5,
+    "cost_scale": 3,
+    "moat": 3
+   },
+   "first_pass_total": 15.5,
+   "red_team": null,
+   "ranking_total": 10.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 17
+  },
+  {
+   "id": "P28",
+   "name": "Parcel Structure Payloads (structure day)",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 3.5,
+    "buildability": 3.5,
+    "cost_scale": 3,
+    "moat": 2
+   },
+   "first_pass_total": 15,
+   "red_team": null,
+   "ranking_total": 10.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 18
+  },
+  {
+   "id": "P13",
+   "name": "Drone Dart Carpet (1 m)",
+   "first_pass": {
+    "model_alpha": 2.5,
+    "rights_alpha": 3.5,
+    "buildability": 3,
+    "cost_scale": 4,
+    "moat": 2
+   },
+   "first_pass_total": 15,
+   "red_team": null,
+   "ranking_total": 10.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 19
+  },
+  {
+   "id": "P23",
+   "name": "Mc-Gap Sentries + Walk-Along HVSR",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 2.5,
+    "buildability": 4,
+    "cost_scale": 3.5,
+    "moat": 2
+   },
+   "first_pass_total": 15,
+   "red_team": null,
+   "ranking_total": 10.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 20
+  },
+  {
+   "id": "P16",
+   "name": "Slim-Hole Confirmation Package",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 3.5,
+    "buildability": 3,
+    "cost_scale": 2,
+    "moat": 3
+   },
+   "first_pass_total": 14.5,
+   "red_team": null,
+   "ranking_total": 9.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 21
+  },
+  {
+   "id": "P05",
+   "name": "Pump-Cycle Mixing Sampler",
+   "first_pass": {
+    "model_alpha": 2.5,
+    "rights_alpha": 3,
+    "buildability": 4,
+    "cost_scale": 2,
+    "moat": 3
+   },
+   "first_pass_total": 14.5,
+   "red_team": null,
+   "ranking_total": 9.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 22
+  },
+  {
+   "id": "P08",
+   "name": "Mine-Water Heat Audit",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 3,
+    "buildability": 3,
+    "cost_scale": 2,
+    "moat": 3
+   },
+   "first_pass_total": 14.5,
+   "red_team": null,
+   "ranking_total": 9.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 23
+  },
+  {
+   "id": "P15",
+   "name": "PACKSACK-CORE portable corer",
+   "first_pass": {
+    "model_alpha": 3.5,
+    "rights_alpha": 2.5,
+    "buildability": 3,
+    "cost_scale": 2,
+    "moat": 3.5
+   },
+   "first_pass_total": 14.5,
+   "red_team": null,
+   "ranking_total": 9.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 24
+  },
+  {
+   "id": "P22",
+   "name": "Corridor Fibre and Rail Lines",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 2.5,
+    "buildability": 2,
+    "cost_scale": 3.5,
+    "moat": 3.5
+   },
+   "first_pass_total": 14.5,
+   "red_team": null,
+   "ranking_total": 9.5,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 25
+  },
+  {
+   "id": "P11",
+   "name": "Slim-Hole Permeability Wireline Kit",
+   "first_pass": {
+    "model_alpha": 3,
+    "rights_alpha": 2.5,
+    "buildability": 3.5,
+    "cost_scale": 2,
+    "moat": 3
+   },
+   "first_pass_total": 14,
+   "red_team": null,
+   "ranking_total": 9.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 26
+  },
+  {
+   "id": "P18",
+   "name": "Coded-Source Transmitter",
+   "first_pass": {
+    "model_alpha": 2.5,
+    "rights_alpha": 2.5,
+    "buildability": 3.5,
+    "cost_scale": 3,
+    "moat": 2.5
+   },
+   "first_pass_total": 14,
+   "red_team": null,
+   "ranking_total": 9.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 27
+  },
+  {
+   "id": "P21",
+   "name": "Tidal Permeability Seismics (dv/v)",
+   "first_pass": {
+    "model_alpha": 2.5,
+    "rights_alpha": 2.5,
+    "buildability": 3,
+    "cost_scale": 3,
+    "moat": 3
+   },
+   "first_pass_total": 14,
+   "red_team": null,
+   "ranking_total": 9.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 28
+  },
+  {
+   "id": "P17",
+   "name": "Mini-Frac Stress Kit",
+   "first_pass": {
+    "model_alpha": 2.5,
+    "rights_alpha": 3,
+    "buildability": 2.5,
+    "cost_scale": 2,
+    "moat": 3
+   },
+   "first_pass_total": 13,
+   "red_team": null,
+   "ranking_total": 8.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 29
+  },
+  {
+   "id": "P30",
+   "name": "Muon Well-Puck",
+   "first_pass": {
+    "model_alpha": 2,
+    "rights_alpha": 1,
+    "buildability": 2.5,
+    "cost_scale": 1.5,
+    "moat": 2
+   },
+   "first_pass_total": 9,
+   "red_team": null,
+   "ranking_total": 4.0,
+   "ranking_basis": "provisional: first pass minus mean red-team drop (5.0)",
+   "rank": 30
+  }
+ ],
+ "model_judge_scoreboard_out_of_75": {
+  "VOI-Bank": 60,
+  "CREAM-COX": 57.5,
+  "THERMOS-B": 50.5,
+  "GHOST-SBI": 49.5,
+  "GeoFM-West": 47.5,
+  "HEATFIELD-PU": 44.5
+ },
+ "model": "SENTINEL-COX: VOI-Bank spine + CREAM-COX count + THERMOS-B 1D likelihoods + GeoFM Stage 0 + GHOST Tier 1",
+ "caveats": "No web searches were run for this synthesis (the shared budget was exhausted in the red-team turn). All prices, sensitivities and VOI figures are unverified estimates from the evidence files."
+}
