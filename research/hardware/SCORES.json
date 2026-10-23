@@ -1,0 +1,19 @@
+{
+ "date": "2026-10-23",
+ "pick": "Heat-rights bank + own sensor kit (ranch water-well drop probe + casual-use 2 m probes and E-field MT nodes)",
+ "legs": ["c1_proving_step","c2_proprietary_data","c3_cheap_right","c4_step_up_buyer","c5_size_ladder"],
+ "ranked": [
+  {"name":"Heat-rights bank + own sensor kit","scores":[4,4,4,3,3],"total":18,"redteam":"V01: 18"},
+  {"name":"Logger as landman (H06)","scores":[3,4,5,3,3],"total":18},
+  {"name":"Own light gradient rig (H11)","scores":[5,4,4,3,3],"total":19,"after_redteam":18},
+  {"name":"EGS block-rating kit (H12)","scores":[4,4,3,4,4],"total":19,"redteam":"none"},
+  {"name":"Dense E-field MT bank (H03)","scores":[4,4,4,3,3],"total":18},
+  {"name":"Heat carpet 2 m probes (H01)","scores":[4,4,3,3,3],"total":17},
+  {"name":"Natural H2/He seep nodes (H09)","scores":[3,4,4,2,3],"total":16},
+  {"name":"Brine lithium sensing (H08)","scores":[3,4,2,4,3],"total":16},
+  {"name":"Grid headroom bank (H07/H14)","scores":[3,2,2,5,3],"total":15,"first_pass":21,"redteam":"V02: 15"},
+  {"name":"Soil gas / helium isotopes (H04)","scores":[3,3,4,2,3],"total":15},
+  {"name":"Old-well temperature census (H02)","scores":[3,4,3,2,3],"total":15},
+  {"name":"Quantum / novel sensors (H05)","scores":[2,2,3,2,2],"total":11}
+ ]
+}

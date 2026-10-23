@@ -1,0 +1,137 @@
+<title>Heat Sensor Kit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column like a field notebook, with a score table drawn as temperature bars */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --ink:#18232b; --muted:#56656f; --rule:#d5dce0;
+  --heat:#c2410c; --heat-soft:#fde3d3; --cool:#2f6f8f; --bad:#8a1c1c;
+  --display:"Archivo Narrow","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#111a20; --panel:#18232b; --ink:#e6ecef; --muted:#9aaab4; --rule:#2c3a43;
+  --heat:#fb8a4c; --heat-soft:#3a2418; --cool:#7cb8d6; --bad:#f08a8a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111a20; --panel:#18232b; --ink:#e6ecef; --muted:#9aaab4; --rule:#2c3a43;
+  --heat:#fb8a4c; --heat-soft:#3a2418; --cool:#7cb8d6; --bad:#f08a8a; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:2.4rem;letter-spacing:.01em}
+h2{font-size:1.5rem;border-bottom:1px solid var(--rule);padding-bottom:6px;margin-bottom:12px}
+h3{font-size:1.15rem;margin-bottom:6px}
+p{margin:0 0 10px}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.eyebrow{font:600 .75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--heat)}
+.lede{font-size:1.15rem;color:var(--ink)}
+.verdict{background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--heat);padding:16px 18px;border-radius:4px}
+.score{font:700 2rem var(--display);color:var(--heat)}
+.muted{color:var(--muted)}
+.kit{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.kit > div{background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:14px 16px;min-width:0}
+.tag{font:600 .7rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--cool)}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.95rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--rule);vertical-align:middle}
+th{font:600 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+td.n{font-family:var(--mono);text-align:right;width:3ch}
+.bar{height:10px;background:var(--rule);border-radius:2px;min-width:90px;position:relative}
+.bar i{position:absolute;inset:0 auto 0 0;background:var(--heat);border-radius:2px}
+tr.pick td{background:var(--heat-soft)}
+tr.killed .bar i{background:var(--muted)}
+.kill{color:var(--bad)}
+.mono{font-family:var(--mono);font-size:.9em}
+a{color:var(--cool)}
+a:focus-visible{outline:2px solid var(--heat);outline-offset:2px}
+footer{font-size:.9rem;color:var(--muted)}
+</style>
+
+<main>
+<header>
+  <div class="eyebrow">Nuketime research · 23 Oct 2026</div>
+  <h1>Heat Sensor Kit</h1>
+  <p class="lede">What hardware should the new company build itself? A field kit that collects heat data only we own, carried by the same team that signs the heat rights.</p>
+</header>
+
+<section class="verdict">
+  <div class="score">18 / 25</div>
+  <p><strong>Build the sensor as the heat-rights bank's moat, not as a separate company.</strong> The kit makes our data private and our first screen about 100x cheaper per basin. It does not raise what a buyer pays before a power contract, so it does not lift the bank above its 20/25. Nothing outside geothermal beat it: the grid-headroom sensor play fell from 21 to 15 under red team.</p>
+  <p class="muted">14 research files and 2 red-team files. The web budget ran out partway, so prices marked unverified in the evidence are estimates.</p>
+</section>
+
+<section>
+  <h2>The kit</h2>
+  <div class="kit">
+    <div><div class="tag">Product 1 · now</div><h3>Ranch water-well drop probe</h3>
+      <p>A 16 mm probe that fits the pump tube logs temperature, pressure and conductivity in private wells. The rancher gets a free well check; we sign a geothermal option at about $1/acre/yr on the same visit.</p>
+      <p class="mono">Prototype $10-15k · 6-10 weeks</p></div>
+    <div><div class="tag">Product 2 · now</div><h3>No-permit open-land screen</h3>
+      <p>Logging 2 m temperature probes plus electric-field MT nodes. BLM IM 2026-024 makes them casual use until Sep 2029, and data from unleased land never has to be filed.</p>
+      <p class="mono">$2-8k per km² · one gradient hole buys a basin</p></div>
+    <div><div class="tag">Later rung</div><h3>Own gradient rig + EGS rating</h3>
+      <p>A light 500 m rig with fibre temperature sensing, then thermistor strings plus seismic nodes to rate EGS blocks before auction. Utah EGS land already clears at up to $1,207/acre.</p>
+      <p class="mono">Rig $1.1-1.5M · $60-120k per hole</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Why it helps, and where it doesn't</h2>
+  <ul>
+    <li><strong>Copyable data: fixed.</strong> Ranch-well profiles and year-long probe series are in no public database. State well logs have depth and water level, no temperature.</li>
+    <li><strong>Cheap right: improved.</strong> Private ranch heat leased for about $2/acre against about $40/acre at BLM auction (Raser). Private land also sits outside the 51,200-acre federal cap.</li>
+    <li><strong>Expensive proof: partly fixed.</strong> Owning a rig is a 2-5x gain, not the 12x first claimed.</li>
+    <li><strong>Weak step-up: not fixed.</strong> Buyers re-drill before committing capital, so cheap proof lowers our cost, not their price.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Every candidate</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th>Play</th><th>Score</th><th></th><th>Why</th></tr></thead>
+    <tbody>
+      <tr class="pick"><td>Bank + own sensor kit (pick)</td><td class="n">18</td><td><div class="bar"><i style="width:72%"></i></div></td><td>Moat for the bank. Red-teamed.</td></tr>
+      <tr><td>EGS block-rating kit</td><td class="n">19</td><td><div class="bar"><i style="width:76%"></i></div></td><td>Best ladder rung; not red-teamed.</td></tr>
+      <tr><td>Own light gradient rig</td><td class="n">18</td><td><div class="bar"><i style="width:72%"></i></div></td><td>19 first pass; real gain 2-5x.</td></tr>
+      <tr><td>Logger as landman</td><td class="n">18</td><td><div class="bar"><i style="width:72%"></i></div></td><td>Best single device. Product 1.</td></tr>
+      <tr><td>Dense E-field MT</td><td class="n">18</td><td><div class="bar"><i style="width:72%"></i></div></td><td>Folded into Product 2.</td></tr>
+      <tr><td>2 m probe heat carpet</td><td class="n">17</td><td><div class="bar"><i style="width:68%"></i></div></td><td>About 6 of 11 valleys came back blank.</td></tr>
+      <tr><td>Natural H₂ / He seep nodes</td><td class="n">16</td><td><div class="bar"><i style="width:64%"></i></div></td><td>Few buyers until a well flows.</td></tr>
+      <tr><td>Brine lithium sensing</td><td class="n">16</td><td><div class="bar"><i style="width:64%"></i></div></td><td>Texas gives produced water to the E&amp;P.</td></tr>
+      <tr class="killed"><td>Grid headroom bank</td><td class="n">15</td><td><div class="bar"><i style="width:60%"></i></div></td><td class="kill">Was 21. Queue studies decide, not line flow.</td></tr>
+      <tr><td>Soil gas / helium isotopes</td><td class="n">15</td><td><div class="bar"><i style="width:60%"></i></div></td><td>Faint signal; add-on to visits.</td></tr>
+      <tr><td>Old-well temperature census</td><td class="n">15</td><td><div class="bar"><i style="width:60%"></i></div></td><td>Few open wells where the heat is.</td></tr>
+      <tr><td>Quantum / novel sensors</td><td class="n">11</td><td><div class="bar"><i style="width:44%"></i></div></td><td>Not field-ready; error near signal.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted">Scores out of 25 on five legs: proving step, data only we own, cheap right, buyer step-up, size ladder.</p>
+</section>
+
+<section>
+  <h2>Cheapest first test</h2>
+  <p>30 days, about $25-40k in all.</p>
+  <ul>
+    <li><strong>Ranch wells ($8-15k, 21 days).</strong> Log 15+ wells in a valley with a known system and a control valley. Pass: 60%+ logged without pulling pumps, anomaly only in the known valley, 3+ ranchers sign $1/acre options.</li>
+    <li><strong>Recall check (about $15k, 90 days logging).</strong> 40 logging probes over a known blind system and a producing field. Pass: anomaly 3x background, noise under 0.3 °C.</li>
+    <li><strong>EGS desk test ($0-20k, 2-3 weeks).</strong> On public FORGE data, shallow holes predict 3 km temperature within 25 °C and surface seismic predicts stress direction within 20°.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Kill conditions</h2>
+  <ul>
+    <li>More than half of known fields show no shallow or ranch-well anomaly.</li>
+    <li>Ranch wells can't be logged without pulling pumps, or ranchers won't sign alongside the free check.</li>
+    <li>BLM field offices rule that probes left out for weeks are not casual use.</li>
+    <li>No developer will price an anomaly-stage package, even with our private data.</li>
+    <li>Zanskar or Ormat starts a private-land programme before we lock 15k+ acres.</li>
+  </ul>
+</section>
+
+<footer>Memo and evidence: <span class="mono">research/hardware/</span> in the nuketime repo. Builds on the neutral heat-rights bank (20/25).</footer>
+</main>
