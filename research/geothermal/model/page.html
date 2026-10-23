@@ -1,0 +1,196 @@
+<title>Heat-Flux Dart and SENTINEL-COX</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column of field-report sections; wide tables scroll in their own box */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --fg:#1b2328; --muted:#5a6870; --line:#d5dde1;
+  --accent:#c2410c; --accent-soft:#fde7dc; --cool:#2563a6; --good:#2f7d4f; --bad:#a3302a;
+  --display:"Barlow Semi Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171a; --panel:#1a2125; --fg:#e4eaed; --muted:#9aa8b0; --line:#2c363c;
+  --accent:#f0773d; --accent-soft:#3a2216; --cool:#6aa5e0; --good:#5fbf86; --bad:#e2766f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12171a; --panel:#1a2125; --fg:#e4eaed; --muted:#9aa8b0; --line:#2c363c;
+  --accent:#f0773d; --accent-soft:#3a2216; --cool:#6aa5e0; --good:#5fbf86; --bad:#e2766f; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+main{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:700}
+h2{font-size:1.6rem;font-weight:600;padding-bottom:6px;border-bottom:2px solid var(--line)}
+h3{font-size:1.2rem;font-weight:600}
+p{margin:0;max-width:68ch}
+section{display:flex;flex-direction:column;gap:14px}
+.eyebrow{font:500 .78rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:1.15rem;color:var(--muted)}
+.verdict{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.verdict>div{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.verdict .k{font:500 .75rem var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.big{font:600 1.35rem var(--display)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+ul,ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px;max-width:70ch}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--panel)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);white-space:nowrap}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.pick td{background:var(--accent-soft)}
+.pill{display:inline-block;font:500 .72rem var(--mono);padding:1px 7px;border-radius:999px;white-space:nowrap}
+.pill.ok{color:var(--good);border:1px solid var(--good)}
+.pill.no{color:var(--bad);border:1px solid var(--bad)}
+.pill.na{color:var(--muted);border:1px solid var(--line)}
+.dartwrap{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start}
+.dartwrap svg{width:100%;height:auto;max-width:220px}
+.dartwrap>div{min-width:0;display:flex;flex-direction:column;gap:10px}
+.callout{border-left:3px solid var(--cool);padding:4px 0 4px 14px;color:var(--muted)}
+footer{font-size:.85rem;color:var(--muted)}
+a{color:var(--cool)}
+@media (max-width:640px){.verdict,.dartwrap{grid-template-columns:1fr}.dartwrap svg{max-width:180px}}
+</style>
+
+<main>
+<header style="display:flex;flex-direction:column;gap:12px">
+  <span class="eyebrow">Heat-rights bank · research 23 Oct 2026</span>
+  <h1>Heat-Flux Dart and SENTINEL-COX</h1>
+  <p class="lede">How to estimate hidden hydrothermal with real error bars, and the one sensor to build. Built from 109 agents: 34 data reviews, 6 rival model designs and 3 judges, 30 physical-build deep-dives, a scorer and 18 red-team votes.</p>
+</header>
+
+<section class="verdict">
+  <div><span class="k">Sensor to build</span><span class="big">Clustered 3 m logging heat-flux dart</span>
+  <p>Six temperature sensors from 0.5 to 2.95 m plus a heater that measures rock conductivity in place, so it reads heat flux rather than a temperature. Darts go in clusters of 3. About <span class="num">$160-230</span> in parts and <span class="num">$300</span> installed per dart. 30 units in 6-8 weeks.</p></div>
+  <div><span class="k">Model</span><span class="big">SENTINEL-COX</span>
+  <p>A value-of-information land engine (risked NPV per acre on 500 m parcels) wrapped around a Cox-process count of hidden systems that corrects for who searched where and how hard. AI extraction of scanned old temperature logs supplies the main new data.</p></div>
+</section>
+
+<section>
+  <h2>What dominates the uncertainty</h2>
+  <p>Ranked by how much each unknown moves the answer. The top three are what a sensor can shrink.</p>
+  <ol>
+    <li><b>Detection gap.</b> How many systems hide where nobody has looked. This moves the hidden count by 2-5x, and 97% of the Great Basin has no 2 m reading.</li>
+    <li><b>Permeability and flow per well.</b> About 10x on MWe at a fixed temperature.</li>
+    <li><b>Hydrologic masking and lid thickness.</b> A shallow sensor's hit rate runs from about 0.8 down to about 0, depending on the cover (Argenta, Granite Springs, Kimama).</li>
+    <li><b>Reliability of each cheap sensor under each cover type.</b> Nothing has been published on this, and it swings value of information by more than 2x.</li>
+    <li><b>Temperature at 0.5-2 km.</b> There is almost no public data between 300 and 1,500 m.</li>
+  </ol>
+  <p class="callout">The red team found one lesson that runs through every well-based tool: ranch wells sample outflow on valley floors. They mostly find again the kind of system that is already known. Masked ground needs a detector that reads heat flux, not water temperature.</p>
+</section>
+
+<section>
+  <h2>How much is hidden</h2>
+  <div class="scroll"><table>
+    <tr><th>Estimate</th><th>Value</th><th>Status</th></tr>
+    <tr><td>USGS 2008, western US, undiscovered</td><td class="n">30.0 GWe mean (F95 7.9, F5 73.3)</td><td>Published</td></tr>
+    <tr><td>NREL/UNR, Great Basin hidden</td><td class="n">23 GW P50</td><td>Published</td></tr>
+    <tr><td>Our prior, Great Basin</td><td class="n">≈12-24 GWe</td><td>Our calculation, not yet fitted</td></tr>
+    <tr><td>Our prior, bankable on land we can still lock</td><td class="n">≈1-6 GWe</td><td>Our calculation; brackets the 2 GWe kill line</td></tr>
+  </table></div>
+  <p>The first desk fit has to pin down the bankable slice. If it comes in under about 2 GWe P50, the company is too small. The goal is to narrow USGS's uniform 11.6x band (F5/F95) to under 4x in the first three states.</p>
+</section>
+
+<section>
+  <h2>The model</h2>
+  <ul>
+    <li><b>L1, readings.</b> Each source gets its own error model: equilibrium logs, censored cold holes, skewed oil-well temperatures, mixed driller readings, 2 m and dart flux, chemistry.</li>
+    <li><b>L2, column.</b> Each 500 m cell carries a latent temperature column with a conductive part, an upflow term, an outflow plume along groundwater heads, a cover type and a permeability class.</li>
+    <li><b>L3, count.</b> A log-Gaussian Cox process on a 2 km mesh. Detection is thinned by dated search effort per channel and cover type, and sizes follow a lognormal-Pareto tail.</li>
+    <li><b>L4, decisions.</b> VOI-Bank ranks every next action (buy, place darts, visit a well, drill) by expected value of sample information per dollar. The rule is to lock ground wherever RNPV per acre exceeds 3x the 10-year holding cost.</li>
+    <li><b>Certainty.</b> About 4,000 joint posterior draws are summed draw by draw into regional MWe bands. They are checked by simulation-based calibration on synthetic Nevadas and by hindcasts frozen at past dates. USGS and NREL totals are held out as checks and never fitted.</li>
+  </ul>
+  <p><b>Cheapest first validation (desk, about $5k, 10 weeks).</b> First, benchmark AI log extraction against the 786-hole USGS archive (pass: median gradient error ≤10%). Second, fit Nevada with calibration on 20 synthetic Nevadas. Third, replay the bank from 2005 (pass: lift ≥1.5x over "lock the USGS top 10%").</p>
+  <p>Judge scores, out of 75: VOI-Bank 60, CREAM-COX 57.5, THERMOS-B 50.5, GHOST-SBI 49.5, GeoFM-West 47.5, HEATFIELD-PU 44.5. The final model is a hybrid built on VOI-Bank.</p>
+</section>
+
+<section>
+  <h2>The dart</h2>
+  <div class="dartwrap">
+    <svg viewBox="0 0 220 340" role="img" aria-label="Cross-section of the 3 m dart with six sensors at depth">
+      <rect x="0" y="40" width="220" height="300" fill="var(--accent-soft)"/>
+      <line x1="0" y1="40" x2="220" y2="40" stroke="var(--fg)" stroke-width="1.5"/>
+      <text x="6" y="32" font-size="11" font-family="var(--mono)" fill="var(--muted)">ground surface</text>
+      <rect x="96" y="18" width="16" height="22" fill="var(--muted)"/>
+      <rect x="100" y="40" width="8" height="285" fill="var(--panel)" stroke="var(--fg)" stroke-width="1"/>
+      <g fill="var(--accent)">
+        <circle cx="104" cy="88" r="4.5"/><circle cx="104" cy="136" r="4.5"/><circle cx="104" cy="184" r="4.5"/>
+        <circle cx="104" cy="232" r="4.5"/><circle cx="104" cy="280" r="4.5"/><circle cx="104" cy="312" r="4.5"/>
+      </g>
+      <rect x="99" y="250" width="10" height="14" fill="var(--cool)"/>
+      <g font-size="10" font-family="var(--mono)" fill="var(--fg)">
+        <text x="120" y="91">0.5 m</text><text x="120" y="139">1.0 m</text><text x="120" y="187">1.5 m</text>
+        <text x="120" y="235">2.0 m</text><text x="120" y="283">2.5 m</text><text x="120" y="315">2.95 m ×2</text>
+        <text x="14" y="261" fill="var(--cool)">heater k</text>
+      </g>
+      <text x="6" y="334" font-size="10" font-family="var(--mono)" fill="var(--muted)">1.25 in tube, sand slurry fill</text>
+    </svg>
+    <div>
+      <p>It reads <b>heat flux</b> (the temperature gradient times the rock's conductivity measured in place). Flux survives a dry lid that hides heat from a single 2 m reading. At Granite Springs, gradient holes run above 220 C/km, yet the 2 m survey peaked at only 3.4 C and missed it.</p>
+      <p><b>After the red team, the claim is smaller.</b> Flux sensitivity is about 2-3x better than the logged 2 m probe, not the 8-15x first claimed. It reaches 100 C fluid at about 260-570 m under a dry lid, not 1 km.</p>
+      <p><b>Two modes.</b> On BLM land it runs 30-60 day campaigns under casual use. On optioned private land and our own leases it records for 12 months.</p>
+      <p><b>Cost.</b> About $4-5k per km² the first time, and $2.5-3k per km² when the hardware is reused. It goes on lines and high-value cells, not wall to wall.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>All 30 builds, ranked</h2>
+  <p>The top six were red-teamed (median of 3 votes). The rest are scored first-pass minus 5, which was the red team's average drop.</p>
+  <div class="scroll"><table>
+    <tr><th>#</th><th>Build</th><th>First pass</th><th>Ranked</th><th>Red team</th></tr>
+    <tr class="pick"><td class="n">1</td><td><b>Logging Heat-Flux Dart (3 m)</b></td><td class="n">18.5</td><td class="n"><b>15</b></td><td><span class="pill ok">1/3 refuted</span></td></tr>
+    <tr><td class="n">2</td><td>Wellhead Clamp fleet</td><td class="n">20.5</td><td class="n">15</td><td><span class="pill no">3/3 refuted</span></td></tr>
+    <tr><td class="n">3</td><td>Water-Point Ledger (chloride flux)</td><td class="n">19.5</td><td class="n">14.5</td><td><span class="pill no">3/3 refuted</span></td></tr>
+    <tr><td class="n">4</td><td>Pump-Puller Open-Hole Sonde</td><td class="n">19.5</td><td class="n">14</td><td><span class="pill no">2/3 refuted</span></td></tr>
+    <tr><td class="n">5</td><td>Drill-Rig Ride-Along pucks</td><td class="n">19.5</td><td class="n">14</td><td><span class="pill no">3/3 refuted</span></td></tr>
+    <tr><td class="n">6</td><td>Field Gas Lab (He/Ne)</td><td class="n">19</td><td class="n">14</td><td><span class="pill no">3/3 refuted</span></td></tr>
+    <tr><td class="n">7</td><td>Ranch Well Sentinel 2.0 (resident)</td><td class="n">17</td><td class="n">12</td><td><span class="pill na">not tested</span></td></tr>
+    <tr><td class="n">8</td><td>Kite semi-airborne EM</td><td class="n">17</td><td class="n">12</td><td><span class="pill na">not tested</span></td></tr>
+    <tr><td class="n">9</td><td>Legacy Hole Rescue</td><td class="n">17</td><td class="n">12</td><td><span class="pill na">not tested</span></td></tr>
+    <tr><td class="n">10</td><td>Archive Truth Lab</td><td class="n">17</td><td class="n">12</td><td><span class="pill na">not tested</span></td></tr>
+    <tr><td class="n">11-13</td><td>Towed tTEM rover, thermal calibration chain, soil-gas cups</td><td class="n">16.5</td><td class="n">11.5</td><td><span class="pill na">not tested</span></td></tr>
+    <tr><td class="n">14-15</td><td>Valley pressure and InSAR array, push rig</td><td class="n">16</td><td class="n">11</td><td><span class="pill na">not tested</span></td></tr>
+    <tr><td class="n">16-30</td><td>Slickline, drone MT carpet, drone darts, fibre, stress kits, muon puck and others</td><td class="n">9-15.5</td><td class="n">4-10.5</td><td><span class="pill na">not tested</span></td></tr>
+  </table></div>
+  <p>No build cleared 15/25, so the earlier conclusion holds: the bank is the company and the sensor is its moat. The five well and rig builds all failed for the same reason. They see water that has already left the upflow.</p>
+</section>
+
+<section>
+  <h2>Against the earlier sensor pick</h2>
+  <ul>
+    <li><b>Kept:</b> casual-use sensing on open land under IM 2026-024, hand-placed E-field MT nodes for thick lids, and the ranch-well visit as the way we sign options.</li>
+    <li><b>Changed:</b> the 2 m probe becomes the 3 m dart cluster. The logged 2 m probe stays only as a baseline on test lines.</li>
+    <li><b>Changed:</b> the ranch-well visit is no longer the main detector. It is now the second detector for swept ground, and it carries a helium sampler and a temperature port.</li>
+    <li><b>Changed:</b> no same-day e-signing. Expect a letter of intent, then a notarised option within 7 days.</li>
+    <li><b>Changed:</b> lock rights up-gradient of a warm well, at the range front, not only on the farm that showed the warm water.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>First tests</h2>
+  <div class="scroll"><table>
+    <tr><th>Test</th><th>Cost, time</th><th>Pass</th><th>Kill</th></tr>
+    <tr><td>Dart simulation rerun</td><td class="n">$0, 2 wk</td><td>Cluster floor ≤0.15 W/m² at 1σ</td><td>&gt;0.3 W/m²: keep the logged 2 m probe</td></tr>
+    <tr><td>Install pilot, 50 holes on a stony fan</td><td class="n">$3-5k, 1 wk</td><td>≥70% reach 2.9 m</td><td>&lt;50%: use a hired push rig</td></tr>
+    <tr><td>BLM casual-use ruling</td><td class="n">$5-10k, 30 d</td><td>Written OK for 30-60 day campaigns</td><td>Private land and own leases only</td></tr>
+    <tr><td>Granite Springs line vs control</td><td class="n">$15-25k, 6-12 mo</td><td>≥3σ excess; flux within 30% of TG holes</td><td>Not separable at 12 months</td></tr>
+    <tr><td>Dart vs logged 2 m probe</td><td>Same line</td><td>≥1.5x lower flux error</td><td>&lt;1.5x: kill the dart</td></tr>
+    <tr><td>Model desk gates</td><td class="n">≈$5k, 10 wk</td><td>Extraction error ≤10%; replay lift ≥1.5x</td><td>Lift &lt;1.2x: land-first strategy</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>Kill conditions</h2>
+  <ul>
+    <li>The bankable hidden resource on land we can lock is under about 2 GWe P50.</li>
+    <li>Replay lift is under 1.2x against "lock the USGS top 10%".</li>
+    <li>Sensors can shrink less than 30% of the regional band. Then the company is a plain land bank.</li>
+    <li>Options cost more than $20/ac, or more than 70% of owners refuse.</li>
+    <li>The dart's field floor is above 0.4 W/m², or its gain over the 2 m probe is under 1.5x.</li>
+  </ul>
+</section>
+
+<footer>Full memo, model design, scores and 91 evidence files are in <code>research/geothermal/model/</code>, <a href="https://github.com/Dhruv123-123/nuketime/pull/10">draft PR #10</a>. Prices are estimates and were not checked. The shared web search budget ran out during the red-team step.</footer>
+</main>
